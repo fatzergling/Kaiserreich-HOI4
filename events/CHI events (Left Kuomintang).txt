@@ -1086,7 +1086,7 @@ country_event = { #The Death of Liao Zhongkai
 			base = 34
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_liao_zhongkai = { kill_character = yes }
@@ -1102,11 +1102,11 @@ country_event = { #The Death of Liao Zhongkai
 			base = 66
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_liao_zhongkai = { kill_character = yes }
@@ -1133,7 +1133,7 @@ country_event = { #The Wrath of the Party
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		deactivate_advisor = CHI_wang_jingwei_sic
@@ -1149,7 +1149,7 @@ country_event = { #The Wrath of the Party
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_political_power = -10
@@ -1187,7 +1187,7 @@ country_event = { #The Limits of Power
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_political_power = -40
@@ -1216,7 +1216,7 @@ country_event = { #A look at Wang's faction
 			base = 33
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -1229,7 +1229,7 @@ country_event = { #A look at Wang's faction
 			base = 33
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -1242,7 +1242,7 @@ country_event = { #A look at Wang's faction
 			base = 34
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -1268,7 +1268,7 @@ country_event = { #The Gathering Opposition
 			base = 33
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -1280,7 +1280,7 @@ country_event = { #The Gathering Opposition
 			base = 33
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -1295,7 +1295,7 @@ country_event = { #The Gathering Opposition
 			base = 34
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -1322,7 +1322,7 @@ country_event = { #The Divided Sister Party
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -1336,11 +1336,11 @@ country_event = { #The Divided Sister Party
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -1376,11 +1376,11 @@ country_event = { #A Midnight Meeting
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -1393,7 +1393,7 @@ country_event = { #A Midnight Meeting
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_sub_rad_medium_effect = yes
@@ -1419,11 +1419,11 @@ country_event = { #Moves and Countermoves
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -1437,7 +1437,7 @@ country_event = { #Moves and Countermoves
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_sub_rad_medium_effect = yes
@@ -1463,7 +1463,7 @@ country_event = { #The Four Elders Denounce Wang
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_LCS_medium_effect = yes
@@ -1476,11 +1476,11 @@ country_event = { #The Four Elders Denounce Wang
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -1508,7 +1508,7 @@ country_event = { #Hot of the Presses
 			base = 33
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -1520,7 +1520,7 @@ country_event = { #Hot of the Presses
 			base = 33
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -1554,7 +1554,7 @@ country_event = { #The Yiguandao Intrigue
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -1567,11 +1567,11 @@ country_event = { #The Yiguandao Intrigue
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -1598,11 +1598,11 @@ country_event = { #The Bankers' Scandal!
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -1615,7 +1615,7 @@ country_event = { #The Bankers' Scandal!
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -1640,7 +1640,7 @@ country_event = { #Clashing Titans
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -1654,11 +1654,11 @@ country_event = { #Clashing Titans
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -1686,11 +1686,11 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_political_power = -25
@@ -1707,7 +1707,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_stability = -0.025
@@ -1737,7 +1737,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_LCS_medium_effect = yes
@@ -1752,7 +1752,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_CRS_medium_effect = yes
@@ -1781,11 +1781,11 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_stability = -0.10
@@ -1799,7 +1799,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_political_power = -50
@@ -1825,11 +1825,11 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_stability = -0.10
@@ -1843,7 +1843,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_political_power = -15
@@ -1868,7 +1868,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		add_stability = -0.25
@@ -1885,7 +1885,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_stability = -0.25
@@ -1902,11 +1902,11 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_stability = -0.10
@@ -2053,7 +2053,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_stability = -0.025
@@ -2067,11 +2067,11 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_political_power = -25
@@ -2100,7 +2100,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		add_political_power = -50
@@ -2115,7 +2115,7 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_stability = -0.10
@@ -2160,11 +2160,11 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_popularity = { ideology = social_conservative popularity = 0.02 }
@@ -2178,7 +2178,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		name = CHI.midgame.031.b #An accord remains elusive.
@@ -2204,7 +2204,7 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_stability = 0.03
@@ -2218,7 +2218,7 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		add_political_power = 35
@@ -2232,7 +2232,7 @@ country_event = {
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_war_support = 0.03
@@ -2262,7 +2262,7 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -2282,11 +2282,11 @@ country_event = {
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -2325,7 +2325,7 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		add_political_power = -50
@@ -2338,11 +2338,11 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_PAC_large_effect = yes
@@ -2376,11 +2376,11 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		add_war_support = 0.10
@@ -2394,7 +2394,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_stability = -0.10
@@ -2459,11 +2459,11 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_popularity = { ideology = paternal_autocrat popularity = 0.03 }
@@ -2491,7 +2491,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_war_support = 0.10
@@ -2516,11 +2516,11 @@ country_event = {
 			base = 90
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_PAC_large_effect = yes
@@ -2536,11 +2536,11 @@ country_event = {
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_war_support = -0.03
@@ -2568,7 +2568,7 @@ country_event = {
 			base = 90
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_stability = 0.03
@@ -2582,11 +2582,11 @@ country_event = {
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_war_support = -0.03
@@ -2619,11 +2619,11 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_CSP_RAD_effect = yes
@@ -2643,7 +2643,7 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_WRD_SOC_effect = yes
@@ -2668,7 +2668,7 @@ country_event = {
 			base = 60
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_political_power = -50
@@ -2685,11 +2685,11 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_stability = -0.10
@@ -2723,7 +2723,7 @@ country_event = {
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_political_power = -40
@@ -2752,7 +2752,7 @@ country_event = {
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_rca_victory = yes
+				CHI_game_rule_rca_victory = yes
 			}
 		}
 		add_political_power = -40
@@ -2781,7 +2781,7 @@ country_event = {
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_rca_victory = yes
+				CHI_game_rule_rca_victory = yes
 			}
 		}
 		add_command_power = -50
@@ -2810,7 +2810,7 @@ country_event = {
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_war_support = -0.03
@@ -2839,7 +2839,7 @@ country_event = {
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_stability = -0.03
@@ -2882,7 +2882,7 @@ country_event = { #The WMARCA Prevails
 			base = 75
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_political_power = -50
@@ -2896,7 +2896,7 @@ country_event = { #The WMARCA Prevails
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		name = CHI.midgame.201.b
@@ -2918,11 +2918,11 @@ country_event = { #Red Napoleon
 			base = 75
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -2935,7 +2935,7 @@ country_event = { #Red Napoleon
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -2955,11 +2955,11 @@ country_event = { #Triumph of the Young Guard
 			base = 75
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_political_power = -50
@@ -2976,7 +2976,7 @@ country_event = { #Triumph of the Young Guard
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -2996,7 +2996,7 @@ country_event = { #Allow Syndicalists to Apply to Whampoa
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_LCS_medium_effect = yes
@@ -3009,11 +3009,11 @@ country_event = { #Allow Syndicalists to Apply to Whampoa
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_LCS_medium_effect = yes
@@ -3026,7 +3026,7 @@ country_event = { #Allow Syndicalists to Apply to Whampoa
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_CRS_medium_effect = yes
@@ -3049,7 +3049,7 @@ country_event = { #The Propaganda Department
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -3061,7 +3061,7 @@ country_event = { #The Propaganda Department
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -3073,7 +3073,7 @@ country_event = { #The Propaganda Department
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_CRS_medium_effect = yes
@@ -3115,7 +3115,7 @@ country_event = { #The Fujian Naval Community
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		add_war_support = 0.05
@@ -3130,7 +3130,7 @@ country_event = { #The Fujian Naval Community
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		navy_experience = 20
@@ -3159,11 +3159,11 @@ country_event = { #The Central Naval Academy
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -3182,7 +3182,7 @@ country_event = { #The Central Naval Academy
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		add_popularity = { ideology = paternal_autocrat popularity = 0.02 }
@@ -3212,7 +3212,7 @@ country_event = { #Fired from Eyes in the Dark Focus
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -3248,7 +3248,7 @@ country_event = { #Fired from Eyes in the Dark Focus
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_CRS_large_effect = yes
@@ -3286,7 +3286,7 @@ country_event = { #Fired from Eyes in the Dark Focus
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_CRS_small_effect = yes
@@ -3335,7 +3335,7 @@ country_event = { #Heroics of the Red Squad
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -3354,7 +3354,7 @@ country_event = { #Heroics of the Red Squad
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_LCS_medium_effect = yes
@@ -3392,7 +3392,7 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_CRS_large_effect = yes
@@ -3406,11 +3406,11 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_intel = { target = QIE civilian_intel = 10 army_intel = 10 }
@@ -3647,7 +3647,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_stability = -0.05
@@ -3660,7 +3660,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_political_power = -25
@@ -3848,11 +3848,11 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_popularity = { ideology = paternal_autocrat popularity = 0.015 }
@@ -3873,7 +3873,7 @@ country_event = {
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -4255,7 +4255,7 @@ country_event = {
 			base = 34
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -4268,11 +4268,11 @@ country_event = {
 			base = 66
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -4298,7 +4298,7 @@ country_event = {
 			base = 60
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		add_stability = 0.05
@@ -4311,7 +4311,7 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_war_support = 0.05
@@ -4336,7 +4336,7 @@ country_event = {
 			base = 45
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_LCS_small_effect = yes
@@ -4349,7 +4349,7 @@ country_event = {
 			base = 35
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_LCS_medium_effect = yes
@@ -4362,7 +4362,7 @@ country_event = {
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_LCS_large_effect = yes
@@ -4388,7 +4388,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_LCS_medium_effect = yes
@@ -4404,7 +4404,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -4454,7 +4454,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_rca_victory = yes
+				CHI_game_rule_rca_victory = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -4472,7 +4472,7 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -4514,7 +4514,7 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -4531,7 +4531,7 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_LCS_medium_effect = yes
@@ -4549,7 +4549,7 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -4889,7 +4889,7 @@ country_event = { #Interpreting the New Culture Movement
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -4902,7 +4902,7 @@ country_event = { #Interpreting the New Culture Movement
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -4968,7 +4968,7 @@ country_event = { #Censorship and the Arts
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		add_war_support = 0.02
@@ -4982,11 +4982,11 @@ country_event = { #Censorship and the Arts
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_stability = 0.01
@@ -5219,9 +5219,7 @@ country_event = { #White Sun over China (donotlog)
 	is_triggered_only = yes
 	major = yes
 
-	show_major = {
-		regional_china_news = yes
-	}
+	show_major = { regional_china_news = yes }
 
 	option = {
 		name = CHI.midgame.817.a
@@ -5277,7 +5275,6 @@ news_event = {
 	is_triggered_only = yes
 
 	trigger = { wants_world_news = yes }
-
 	show_major = { regional_asia_news = yes }
 
 	option = {
@@ -5303,11 +5300,11 @@ country_event = { #FROM.FROM Becomes our Vassal!
 	}
 	title = {
 		text = CHI.midgame.851.t.rep
-		trigger = { FROM.FROM = { china_is_aligned_with_republicans = yes } }
+		trigger = { FROM.FROM = { china_is_aligned_with_southern_republicans = yes } }
 	}
 	title = {
 		text = CHI.midgame.851.t.other
-		trigger = { FROM.FROM = { china_is_aligned_with_republicans = no } }
+		trigger = { FROM.FROM = { china_is_aligned_with_southern_republicans = no } }
 	}
 
 	desc = {
@@ -5320,11 +5317,11 @@ country_event = { #FROM.FROM Becomes our Vassal!
 	}
 	desc = {
 		text = CHI.midgame.851.d.rep
-		trigger = { FROM.FROM = { china_is_aligned_with_republicans = yes } }
+		trigger = { FROM.FROM = { china_is_aligned_with_southern_republicans = yes } }
 	}
 	desc = {
 		text = CHI.midgame.851.d.other
-		trigger = { FROM.FROM = { china_is_aligned_with_republicans = no } }
+		trigger = { FROM.FROM = { china_is_aligned_with_southern_republicans = no } }
 	}
 
 	picture = GFX_report_event_CHI_wang_jingwei_with_army
@@ -5340,7 +5337,7 @@ country_event = { #FROM.FROM Becomes our Vassal!
 		log = "[GetLogInfo]: event CHI.midgame.851 option CHI.midgame.851.a"
 		name = CHI.midgame.851.a #A necessary evil I suppose...
 		ai_chance = { base = 100 } #Allow a subject player to at least somewhat influence their master
-		trigger = { FROM.FROM = { china_is_aligned_with_republicans = no } }
+		trigger = { FROM.FROM = { china_is_aligned_with_southern_republicans = no } }
 		CHI_LCS_medium_effect = yes
 		CHI_CSP_RAD_effect = yes
 		CHI_CRS_medium_effect = yes
@@ -5368,7 +5365,7 @@ country_event = { #FROM.FROM Becomes our Vassal!
 		ai_chance = { base = 100 } #Allow a subject player to at least somewhat influence their master
 		trigger = {
 			FROM.FROM = {
-				china_is_aligned_with_republicans = yes
+				china_is_aligned_with_southern_republicans = yes
 				china_alignment_left_kuomintang = no
 				china_alignment_right_kuomintang = no
 			}
@@ -5420,7 +5417,7 @@ country_event = { #FROM Rejects Authority!
 			add_political_power = -35 #How dare they???
 		}
 		else_if = {
-			limit = { FROM.FROM = { china_is_aligned_with_republicans = yes } }
+			limit = { FROM.FROM = { china_is_aligned_with_southern_republicans = yes } }
 			add_political_power = -25 #How dare they???
 		}
 		else = {
@@ -5932,18 +5929,18 @@ country_event = { #National Anthem
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_LCS_medium_effect = yes
 		CHI_CRS_medium_effect = yes
 		if = {
 			limit = { has_global_flag = allow_sound_events_flag }
-			hidden_effect = { scoped_play_song = chinese_int }
+			hidden_effect = { scoped_play_song = chinese_int } # Will never play unless the KR Music: Internationales submod is on
 		}
 	}
 	after = {
@@ -6031,7 +6028,7 @@ country_event = { #Xu Qian Passes Away
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -6044,11 +6041,11 @@ country_event = { #Xu Qian Passes Away
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -6082,11 +6079,11 @@ country_event = { #The Chen Bijun Incident
 			base = 60
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -6099,7 +6096,7 @@ country_event = { #The Chen Bijun Incident
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_CRS_small_effect = yes
@@ -6135,7 +6132,7 @@ country_event = { #Anarchism and the Party-State
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_LCS_small_effect = yes
@@ -6179,11 +6176,11 @@ country_event = { #Wang Leping Murdered!
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -6196,11 +6193,11 @@ country_event = { #Wang Leping Murdered!
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -6245,7 +6242,7 @@ country_event = { #The Church in Nationalist China
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -6324,19 +6321,19 @@ country_event = { #Formation of the League of Civil Rights
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		add_stability = -0.03
@@ -6351,7 +6348,7 @@ country_event = { #Formation of the League of Civil Rights
 			base = 60
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_small_effect = yes
@@ -6390,7 +6387,7 @@ country_event = { #Charity and Cunning in China
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -6402,7 +6399,7 @@ country_event = { #Charity and Cunning in China
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		CHI_RCA_small_effect = yes
@@ -6439,7 +6436,7 @@ country_event = { #The Shifting Underground
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		add_political_power = -35
@@ -6453,7 +6450,7 @@ country_event = { #The Shifting Underground
 			base = 60
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_popularity = { ideology = authoritarian_democrat popularity = 0.03 }
@@ -6490,11 +6487,11 @@ country_event = { #The Cult of the Chairman
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 		}
 		CHI_RCA_medium_effect = yes
@@ -6506,7 +6503,7 @@ country_event = { #The Cult of the Chairman
 			base = 60
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_RCF_medium_effect = yes
@@ -6547,7 +6544,7 @@ country_event = { #Liu Shaoqi in Fujian
 			base = 60
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_PAC_medium_effect = yes
@@ -6631,11 +6628,11 @@ country_event = { #Federalist Principles in the movement?
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		trigger = { any_subject_country = { china_alignment_federalists = yes } }
@@ -6676,7 +6673,7 @@ country_event = { #Federalist Principles in the movement?
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		name = CHI.lategame.062.c
@@ -6727,7 +6724,7 @@ country_event = { #Reconciling with the Kuomintang's Right?
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_war_support = 0.03
@@ -6741,7 +6738,7 @@ country_event = { #Reconciling with the Kuomintang's Right?
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		add_political_power = 35
@@ -6795,7 +6792,7 @@ country_event = { #Fate of Puyi
 			base = 25
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_stability = 0.01
@@ -6815,11 +6812,11 @@ country_event = { #Fate of Puyi
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		set_temp_variable = { ideology_change_var = 5 }
@@ -6859,11 +6856,11 @@ country_event = { #Developing our Rule in Mongolia
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		add_political_power = 40
@@ -6876,7 +6873,7 @@ country_event = { #Developing our Rule in Mongolia
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_war_support = 0.05
@@ -6886,7 +6883,7 @@ country_event = { #Developing our Rule in Mongolia
 		log = "[GetLogInfo]: event CHI.lategame.067 option CHI.lategame.067.c"
 		name = CHI.lategame.067.c
 		ai_chance = { base = 30 }
-		add_popularity = { ideology = social_conservative popularity = 0.03 }
+		add_popularity = { ideology = market_liberal popularity = 0.03 }
 		CHI_RCF_medium_effect = yes
 		every_owned_state = {
 			limit = {
@@ -6904,7 +6901,7 @@ country_event = { #Developing our Rule in Mongolia
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_stability = 0.05
@@ -6930,11 +6927,11 @@ country_event = { #The Situation in Tibet
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		add_political_power = 40
@@ -6947,7 +6944,7 @@ country_event = { #The Situation in Tibet
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_war_support = 0.05
@@ -6975,7 +6972,7 @@ country_event = { #The Situation in Tibet
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_stability = 0.05
@@ -7000,7 +6997,7 @@ country_event = { #Intrigues in Xinjiang
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_political_power = 40
@@ -7013,11 +7010,11 @@ country_event = { #Intrigues in Xinjiang
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		add_war_support = 0.05
@@ -7030,7 +7027,7 @@ country_event = { #Intrigues in Xinjiang
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_stability = 0.05
@@ -7070,7 +7067,7 @@ country_event = { #The Taiwan Dilemma
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		add_political_power = 40
@@ -7083,7 +7080,7 @@ country_event = { #The Taiwan Dilemma
 			base = 10
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		add_war_support = 0.05
@@ -7113,11 +7110,11 @@ country_event = { #The Taiwan Dilemma
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_RCA_victory = yes
+				CHI_game_rule_RCA_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		add_stability = 0.05
@@ -7688,7 +7685,7 @@ country_event = { #The Impeachment Vote
 		if = {
 			limit = {
 				OR = {
-					has_game_rule = { rule = CHI_path option = DEFAULT } #NOT HAVING THE DEFAULT GAMERULE RIGS THE OUTCOME OF THE GAME FOR THE AI
+					has_game_rule = { rule = CHI_path option = DEFAULT } #NOT HAVING THE DEFAULT GAME RULE RIGS THE OUTCOME OF THE GAME FOR THE AI
 					is_ai = no
 				}
 			}
@@ -7716,22 +7713,22 @@ country_event = { #The Impeachment Vote
 			}
 		}
 		else = {
-			#Cheaty, cheaty gamerules
+			#Cheaty, cheaty game rules
 			if = {
 				limit = {
-					CHI_gamerule_scenario_3 = yes
+					CHI_game_rule_scenario_3 = yes
 				}
 				hidden_effect = { country_event = { id = CHI.lategame.350 days = 1 } } #Chaos on the Convention Floor
 			}
 			else_if = {
 				limit = {
-					CHI_gamerule_song_victory = yes
+					CHI_game_rule_song_victory = yes
 				}
 				hidden_effect = { country_event = { id = CHI.lategame.300 days = 1 } } #Wang is ousted from power!
 			}
 			else_if = {
 				limit = {
-					CHI_gamerule_wang_victory = yes
+					CHI_game_rule_wang_victory = yes
 				}
 				hidden_effect = { country_event = { id = CHI.lategame.250 days = 1 } } #Wang Carries the Day!
 			}
@@ -7758,7 +7755,7 @@ country_event = { #The Kuomintang National Congress
 			base = 30
 			modifier = {
 				factor = 1.5
-				china_is_aligned_with_republicans = yes
+				china_is_aligned_with_southern_republicans = yes
 			}
 			modifier = {
 				factor = 2
@@ -7781,7 +7778,7 @@ country_event = { #The Kuomintang National Congress
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_wang_victory = yes
+				CHI_game_rule_wang_victory = yes
 			}
 		}
 		effect_tooltip = { CHI = { CHI_RCA_large_effect = yes } }
@@ -7794,7 +7791,7 @@ country_event = { #The Kuomintang National Congress
 			base = 30
 			modifier = {
 				factor = 1.5
-				china_is_aligned_with_republicans = yes
+				china_is_aligned_with_southern_republicans = yes
 			}
 			modifier = {
 				factor = 2
@@ -7815,7 +7812,7 @@ country_event = { #The Kuomintang National Congress
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		effect_tooltip = { CHI = { CHI_PAC_large_effect = yes } }
@@ -7832,11 +7829,11 @@ country_event = { #The Kuomintang National Congress
 			}
 			modifier = {
 				factor = 2
-				china_is_aligned_with_republicans = no
+				china_is_aligned_with_southern_republicans = no
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		if = {
@@ -8779,7 +8776,7 @@ country_event = { #The Fujian Rebellion
 			modifier = {
 				factor = 2
 				is_chinese_tag = yes
-				china_is_aligned_with_republicans = no
+				china_is_aligned_with_southern_republicans = no
 			}
 			modifier = {
 				factor = 2
@@ -8818,7 +8815,7 @@ country_event = { #The Fujian Rebellion
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 
@@ -9551,7 +9548,7 @@ country_event = { #Wang Jingwei Falls From Power
 			modifier = {
 				factor = 2
 				is_chinese_tag = yes
-				china_is_aligned_with_republicans = no
+				china_is_aligned_with_southern_republicans = no
 			}
 			modifier = {
 				factor = 2
@@ -9590,7 +9587,7 @@ country_event = { #Wang Jingwei Falls From Power
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 
@@ -9882,7 +9879,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_recruit_RCF_generals_effect = yes
@@ -9912,7 +9909,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_recruit_RCF_generals_effect = yes
@@ -9972,7 +9969,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		hidden_effect = { FROM = { country_event = { id = CHI.lategame.361 days = 3 random_days = 7 } } }
@@ -9989,7 +9986,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		hidden_effect = { FROM = { country_event = { id = CHI.lategame.362 days = 3 random_days = 7 } } }
@@ -10024,7 +10021,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				is_chinese_tag = yes
-				china_is_aligned_with_republicans = no
+				china_is_aligned_with_southern_republicans = no
 			}
 			modifier = {
 				factor = 2
@@ -10063,7 +10060,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		hidden_effect = { FROM = { country_event = { id = CHI.lategame.364 days = 3 random_days = 7 } } }
@@ -10121,7 +10118,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 
 			modifier = {
@@ -10178,7 +10175,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 
 			modifier = {
@@ -10289,7 +10286,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				is_chinese_tag = yes
-				china_is_aligned_with_republicans = no
+				china_is_aligned_with_southern_republicans = no
 			}
 			modifier = {
 				factor = 2
@@ -10337,7 +10334,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		#Penalty depending on your alignment - PP and Stab already deducted earlier. Cheaper than Others since CHI collapsed
@@ -10533,7 +10530,7 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		hidden_effect = { FROM = { country_event = { id = CHI.lategame.366 days = 2 } } }
@@ -10551,7 +10548,7 @@ country_event = {
 			base = 30
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		hidden_effect = { FROM = { country_event = { id = CHI.lategame.368 days = 2 } } }
@@ -10563,7 +10560,7 @@ country_event = {
 			base = 20
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		hidden_effect = { FROM = { country_event = { id = CHI.lategame.369 days = 2 } } }
@@ -10652,7 +10649,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_rca_civ_war_add_2_effect = yes
@@ -10666,7 +10663,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_pac_civ_war_add_2_effect = yes
@@ -10691,7 +10688,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_rca_civ_war_add_2_effect = yes
@@ -10704,11 +10701,11 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_pac_civ_war_add_2_effect = yes
@@ -10733,7 +10730,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_crs_civ_war_add_2_effect = yes
@@ -10746,11 +10743,11 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_gov_civ_war_add_2_effect = yes
@@ -10774,7 +10771,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_pac_civ_war_add_2_effect = yes
@@ -10788,7 +10785,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_crs_civ_war_add_2_effect = yes
@@ -10812,7 +10809,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_crs_civ_war_add_2_effect = yes
@@ -10825,11 +10822,11 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_gov_civ_war_add_2_effect = yes
@@ -10853,7 +10850,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_scenario_3 = yes
+				CHI_game_rule_scenario_3 = yes
 			}
 		}
 		CHI_rca_civ_war_add_2_effect = yes
@@ -10866,7 +10863,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_gov_civ_war_add_2_effect = yes
@@ -10938,7 +10935,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_crs_civ_war_add_2_effect = yes
@@ -10952,7 +10949,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_pac_civ_war_add_2_effect = yes
@@ -10977,11 +10974,11 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_crs_civ_war_add_2_effect = yes
@@ -10994,7 +10991,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_rca_civ_war_add_2_effect = yes
@@ -11019,7 +11016,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_hu_victory = yes
+				CHI_game_rule_hu_victory = yes
 			}
 		}
 		CHI_crs_civ_war_add_2_effect = yes
@@ -11032,7 +11029,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_pac_civ_war_add_2_effect = yes
@@ -11056,7 +11053,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_rca_civ_war_add_2_effect = yes
@@ -11069,7 +11066,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_pac_civ_war_add_2_effect = yes
@@ -11094,7 +11091,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_pac_civ_war_add_2_effect = yes
@@ -11107,7 +11104,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_pac_civ_war_add_2_effect = yes
@@ -11131,7 +11128,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_song_victory = yes
+				CHI_game_rule_song_victory = yes
 			}
 		}
 		CHI_pac_civ_war_add_2_effect = yes
@@ -11144,7 +11141,7 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 1000
-				CHI_gamerule_chen_victory = yes
+				CHI_game_rule_chen_victory = yes
 			}
 		}
 		CHI_rca_civ_war_add_2_effect = yes
@@ -14728,7 +14725,7 @@ country_event = { #Unity of Peasants and Workers
 	immediate = {
 		if = {
 			limit = { has_global_flag = allow_sound_events_flag }
-			hidden_effect = { scoped_play_song = chinese_int }
+			hidden_effect = { scoped_play_song = chinese_int } # Will never play unless the KR Music: Internationales submod is on
 		}
 	}
 	option = { #A partnership to last.
@@ -14904,7 +14901,12 @@ country_event = { #The Traitors in Our Ranks
 		add_popularity = { ideology = national_populist popularity = 0.02 }
 		CHI_purge_RCF_generals_effect = yes
 		every_unit_leader = {
-			limit = { NOT = { has_trait = CHN_LKT_officer_trait } }
+			limit = {
+				NOT = {
+					has_trait = CHN_LKT_officer_trait
+					has_character_flag = YUN_BSS_character_flag
+				}
+			}
 			retire = yes
 		}
 	}
@@ -14915,7 +14917,16 @@ country_event = { #The Traitors in Our Ranks
 		add_popularity = { ideology = social_democrat popularity = 0.02 }
 		add_popularity = { ideology = national_populist popularity = 0.03 }
 		every_unit_leader = {
-			limit = { NOT = { has_trait = CHN_LKT_officer_trait } }
+			limit = {
+				NOT = {
+					has_character_flag = CHI_CRS_military_loyalist_flag
+					has_character_flag = CHI_RCA_military_loyalist_flag
+					has_character_flag = CHI_PAC_military_loyalist_flag
+					has_character_flag = YUN_BSS_character_flag
+					has_character_flag = YUN_WPC_character_flag
+					has_character_flag = YUN_CEC_character_flag
+				}
+			}
 			retire = yes
 		}
 	}
@@ -15305,6 +15316,7 @@ country_event = { #Chinese Irredentism
 				OR = {
 					state = 336 #Singapore
 					state = 324 #Bhutan
+					state = 888 #Sikkim
 					state = 408 #Vladivostok
 					state = 409 #Khabarovsk
 					state = 657 #Blagoveshchensk

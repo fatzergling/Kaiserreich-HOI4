@@ -10984,7 +10984,7 @@ focus_tree = {
 				limit = { NOT = { has_character = YUN_teng_jie } }
 				YUN = { YUN_teng_jie = { custom_effect_tooltip = character_becomes_a_general } }
 				hidden_effect = {
-			YUN = {
+					YUN = {
 						YUN_teng_jie = {
 							remove_second_in_command_role = yes
 							CHN_recruit_character_effect = yes
@@ -11011,18 +11011,18 @@ focus_tree = {
 				YUN = { YUN_liu_jianqun = { custom_effect_tooltip = character_becomes_a_general } }
 				hidden_effect = {
 					YUN = {
-				YUN_liu_jianqun = {
+						YUN_liu_jianqun = {
 							CHN_recruit_character_effect = yes
-					add_corps_commander_role = {
-						desc = YUN_liu_jianqun_sic_desc
-						traits = { CHN_RKT_officer_trait light_infantry_officer politically_connected harsh_leader }
-						skill = 1
-						attack_skill = 1
-						defense_skill = 1
-						planning_skill = 1
-						logistics_skill = 1
-					}
-				}
+							add_corps_commander_role = {
+								desc = YUN_liu_jianqun_sic_desc
+								traits = { CHN_RKT_officer_trait light_infantry_officer politically_connected harsh_leader }
+								skill = 1
+								attack_skill = 1
+								defense_skill = 1
+								planning_skill = 1
+								logistics_skill = 1
+							}
+						}
 					}
 				}
 			}
@@ -11733,7 +11733,7 @@ focus_tree = {
 				hidden_trigger = { always = yes }
 			}
 			else = {
-			totalist > 0.35
+				totalist > 0.35
 			}
 		}
 		prerequisite = { focus = CHI_towards_the_idea_of_true_freedom }

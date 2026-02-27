@@ -3307,12 +3307,12 @@ focus_tree = {## Early Game Tree
 				limit = {
 					owns_state = 1072 #Taiyuan
 				}
-			1072 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
+				1072 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
 					}
 				}
 			}
@@ -4287,10 +4287,6 @@ focus_tree = {## Early Game Tree
 				factor = 2
 				date > 1939.01.01
 			}
-					modifier = {	# Beeline forpol if set to in game rules
-				factor = 10
-				SHX_forpol_game_rule_set = yes
-			}
 			modifier = {
 				factor = 0
 				NOT = {
@@ -4301,6 +4297,10 @@ focus_tree = {## Early Game Tree
 				}
 
 				}
+			}
+			modifier = {	# Beeline forpol if set to in game rules
+				factor = 10
+				SHX_forpol_game_rule_set = yes
 			}
 		}
 		available = {
@@ -4378,7 +4378,13 @@ focus_tree = {## Early Game Tree
 		x = -3
 		y = 1
 
-		ai_will_do = { base = 100 }
+		ai_will_do = {
+			base = 100
+			modifier = {	# Beeline forpol if set to in game rules
+				factor = 10
+				SHX_forpol_game_rule_set = yes
+			}
+		}
 		prerequisite = {
 			focus = SHX_out_of_beijing
 		}

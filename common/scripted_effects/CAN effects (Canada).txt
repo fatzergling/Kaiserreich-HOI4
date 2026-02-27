@@ -1037,18 +1037,18 @@ CAN_create_republic = {
 		set_cosmetic_tag = CAN
 	}
 	hidden_effect = {
-	if = {
+		if = {
 			limit = { has_character = CAN_john_buchan }
 			CAN_john_buchan = { remove_all_country_leader_roles = yes }
-	}
-	if = {
+		}
+		if = {
 			limit = { has_character = CAN_ernest_makins }
 			CAN_ernest_makins = { remove_all_country_leader_roles = yes }
-	}
-	if = {
+		}
+		if = {
 			limit = { has_character = CAN_andrew_mcnaughton }
 			CAN_andrew_mcnaughton = { remove_all_country_leader_roles = yes }
-	}
+		}
 	}
 	if = {
 		limit = { has_character = GBR_albert_windsor }
@@ -1066,8 +1066,8 @@ CAN_create_republic = {
 		GBR_louis_mountbatten = {
 			hidden_effect = { remove_all_country_leader_roles = yes }
 			set_nationality = GBR
-	}
 		}
+	}
 	if = {
 		limit = { has_character = GBR_john_vereker }
 		custom_effect_tooltip = tooltip_white_line

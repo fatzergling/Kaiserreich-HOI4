@@ -2752,16 +2752,16 @@ chinese_unification = {
 			FROM = {
 				OR = {
 					any_neighbor_country = {
-							is_ally_with = ROOT
+						is_ally_with = ROOT
 					}
 					any_subject_country = {
 						any_neighbor_country = {
-								is_ally_with = ROOT
-							}
+							is_ally_with = ROOT
 						}
 					}
 				}
 			}
+		}
 		target_root_trigger = {
 			if = {
 				limit = { tag = FNG }
@@ -2837,16 +2837,22 @@ chinese_unification = {
 			FROM = {
 				OR = {
 					any_neighbor_country = {
-							is_ally_with = ROOT
+						is_ally_with = ROOT
 					}
 					any_subject_country = {
 						any_neighbor_country = {
-								is_ally_with = ROOT
-							}
+							is_ally_with = ROOT
 						}
 					}
 				}
 			}
+		target_root_trigger = {
+			if = {
+				limit = { tag = FNG }
+				has_completed_focus = FNG_Begin_the_War_of_National_Reclamation
+			}
+			NOT = { owns_state = 1048 } #Wuhan
+		}
 		target_root_trigger = {
 			if = {
 				limit = { tag = FNG }
@@ -3787,9 +3793,9 @@ chinese_unification = {
 				HNN = { country_event = china_events.3003 } #FROM chickened out, refueses to join
 			}
 			else = {
-			declare_war_on = {
-				target = GXC
-				type = annex_everything
+				declare_war_on = {
+					target = GXC
+					type = annex_everything
 				}
 			}
 		}
@@ -4882,11 +4888,11 @@ chinese_unification = {
 							original_tag = SZC
 						}
 						china_is_aligned_with_southern_republicans = yes
-							exists = yes
-							is_subject = no
-							NOT = { has_war_with = ROOT }
-							china_refused_alliance = no
-						}
+						exists = yes
+						is_subject = no
+						NOT = { has_war_with = ROOT }
+						china_refused_alliance = no
+					}
 				}
 			}
 			else_if = {
@@ -5385,7 +5391,7 @@ chinese_unification = {
 			else_if = {
 				limit = { tag = SZC }
 				OR = {
-				has_completed_focus = SZC_The_Lord_Of_Sichuan
+					has_completed_focus = SZC_The_Lord_Of_Sichuan
 					AND = {
 						has_country_leader = { character = SZC_deng_xihou }
 						has_completed_focus = SZC_The_Diarchy
@@ -5450,10 +5456,10 @@ chinese_unification = {
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
-					YUN = {
-						exists = yes
+				YUN = {
+					exists = yes
 					china_is_unaligned = no
-					}
+				}
 			}
 		}
 		complete_effect = {
@@ -5766,14 +5772,14 @@ chinese_unification = {
 				tag = SZC
 					country_exists = UPC
 				NOT = { country_exists = RKT }
-					NOT = { has_country_flag = SZC_opium_crisis_solved }
+				NOT = { has_country_flag = SZC_opium_crisis_solved }
 			}
 			modifier = {
 				factor = 0
 				tag = SZC
-					NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
+				NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
 				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_LKT } }
-				}
+			}
 			modifier = {
 				factor = 0
 				tag = YUN
@@ -5899,10 +5905,10 @@ chinese_unification = {
 						original_tag = SZC
 					}
 					china_is_aligned_with_left_kmt = yes
-						exists = yes
-						is_subject = no
-						NOT = { has_war_with = ROOT }
-						china_refused_alliance = no
+					exists = yes
+					is_subject = no
+					NOT = { has_war_with = ROOT }
+					china_refused_alliance = no
 				}
 			}
 			modifier = {

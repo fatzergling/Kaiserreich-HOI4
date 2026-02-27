@@ -1724,7 +1724,7 @@ GXC_KMT_clash_for_canton_decision_category = {
 
 			modifier = {
 				factor = 0
-					has_game_rule = { rule = GXC_forpol option = GXC_FORPOL_GXC }
+				has_game_rule = { rule = GXC_forpol option = GXC_FORPOL_GXC }
 			}
 		}
 		custom_cost_trigger = {

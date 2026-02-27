@@ -270,9 +270,9 @@ focus_tree = {
 				limit = { FNG_JAP_hostile = no }
 				custom_effect_tooltip = FNG_jpn_hostile_econ_notice
 				custom_effect_tooltip = tooltip_white_line
-			add_stability = 0.10
-			country_event = fengtian_events.58
-			custom_effect_tooltip = tooltip_white_line
+				add_stability = 0.10
+				country_event = fengtian_events.58
+				custom_effect_tooltip = tooltip_white_line
 			}
 			else = {
 				add_political_power = 30
@@ -334,8 +334,8 @@ focus_tree = {
 				limit = { FNG_JAP_hostile = no }
 				custom_effect_tooltip = FNG_jpn_hostile_econ_notice
 				custom_effect_tooltip = tooltip_white_line
-			country_event = fengtian_events.60
-			china_add_research_slots = yes
+				country_event = fengtian_events.60
+				china_add_research_slots = yes
 			}
 			else = {
 				china_add_research_slots = yes
@@ -371,30 +371,39 @@ focus_tree = {
 				limit = { FNG_JAP_hostile = no }
 				custom_effect_tooltip = FNG_jpn_hostile_econ_notice
 				custom_effect_tooltip = tooltip_white_line
-			add_stability = 0.10
-			custom_effect_tooltip = FNG_mantetsu_collaboration_unlock
-			custom_effect_tooltip = tooltip_white_line
-			add_offsite_building = {
-				type = industrial_complex
-				level = 1
-			}
-			add_opinion_modifier = {
-				target = JAP
-				modifier = FNG_mantetsu_collab
-			}
-			custom_effect_tooltip = tooltip_white_line
-			set_temp_variable = { ZCPOP = -5 }
-			FNG_ZCPOP = yes
-			FNG_JAP_investment_large = yes
-			if = {
-				limit = { has_dlc_lar = yes }
-				JAP = {
-					add_intel = {
-						target = FNG
-						civilian_intel = 5
+				add_stability = 0.10
+				custom_effect_tooltip = FNG_mantetsu_collaboration_unlock
+				custom_effect_tooltip = tooltip_white_line
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+				add_opinion_modifier = {
+					target = JAP
+					modifier = FNG_mantetsu_collab
+				}
+				custom_effect_tooltip = tooltip_white_line
+				set_temp_variable = { ZCPOP = -5 }
+				FNG_ZCPOP = yes
+				FNG_JAP_investment_large = yes
+				if = {
+					limit = { has_dlc_lar = yes }
+					JAP = {
+						add_intel = {
+							target = FNG
+							civilian_intel = 5
+						}
 					}
 				}
 				}
+			}
+			else = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 1
+				}
+				set_temp_variable = { CCPOP = 3 }
+				FNG_CCPOP = yes
 			}
 			else = {
 				add_offsite_building = {
@@ -2993,7 +3002,7 @@ focus_tree = {
 		available = {
 			if = {
 				limit = {
-			OR = {
+					OR = {
 						is_ai = no
 						NOT = { has_game_rule = { rule = FNG_path option = FNG_PATH_GAMBIT_PATAUT } }
 					}

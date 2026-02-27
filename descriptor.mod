@@ -82,8 +82,8 @@ tags={
 	"National Focuses"
 	"Gameplay"
 }
-picture="KR.jpg"
-version="1.6.1"
-supported_version="1.17.3.*"
+picture = "KR.jpg"
+version = "1.6.2"
+supported_version = "1.17.4.*"
 path="C:/Users/mw/Documents/Paradox Interactive/Hearts of Iron IV/mod/Kaiserreich"
-remote_file_id="1521695605"
+remote_file_id = "1521695605"

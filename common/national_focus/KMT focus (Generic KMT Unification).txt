@@ -2218,8 +2218,8 @@ shared_focus = {
 				tooltip = RKT_freed_india_tt
 				OR = {
 					AND = {
-				RAJ = { exists = no }
-				PRF = { exists = no }
+						RAJ = { exists = no }
+						PRF = { exists = no }
 					}
 					AND = {
 						RAJ = { exists = no }

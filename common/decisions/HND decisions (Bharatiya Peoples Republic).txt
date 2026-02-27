@@ -271,7 +271,7 @@ foreign_politics = {
 					has_completed_focus = SHX_from_china_to_world
 				}
 				else = {
-				has_completed_focus = KMT_lead_the_liberation_of_asia
+					has_completed_focus = KMT_lead_the_liberation_of_asia
 				}
 			}
 			NOT = {

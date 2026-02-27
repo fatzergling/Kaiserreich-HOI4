@@ -191,113 +191,113 @@ RKT_set_leader_effect = {
 	hidden_effect = {
 		if = {
 			limit = { NOT = { tag = HNN } } #PLACEHOLDER - REMOVE IF HNN RECEIVES A REWORK
-		if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var = 1.0 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 1.0 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = 1.0
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var = 1.0 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 1.0 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = 1.0
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else_if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.89 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.9 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = 0.8
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else_if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.89 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.9 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = 0.8
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else_if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.79 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.8 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = 0.6
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else_if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.79 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.8 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = 0.6
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else_if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.69 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.7 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = 0.4
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else_if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.69 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.7 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = 0.4
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else_if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.59 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.6 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = 0.2
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else_if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.59 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.6 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = 0.2
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else_if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.49 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.5 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = 0.0
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else_if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.49 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.5 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = 0.0
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else_if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.39 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.4 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = -0.2
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else_if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.39 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.4 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = -0.2
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else_if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.29 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.3 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = -0.4
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else_if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.29 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.3 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = -0.4
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else_if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.19 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.2 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = -0.6
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else_if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.19 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.2 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = -0.6
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else_if = {
-			limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.09 } }
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.1 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = -0.8
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else_if = {
+				limit = { check_variable = { global.RKT_revolutionary_zeal_var > 0.09 } }
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.1 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = -0.8
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
+				}
 			}
-		}
-		else = {
-			set_variable = { global.RKT_revolutionary_zeal_var = 0.05 }
-			set_power_balance = {
-				id = RKT_power_balance
-				set_value = -0.9
-				left_side = RKT_low_zeal_side
-				right_side = RKT_high_zeal_side
+			else = {
+				set_variable = { global.RKT_revolutionary_zeal_var = 0.05 }
+				set_power_balance = {
+					id = RKT_power_balance
+					set_value = -0.9
+					left_side = RKT_low_zeal_side
+					right_side = RKT_high_zeal_side
 				}
 			}
 		}
@@ -1378,25 +1378,25 @@ CHN_add_to_civil_war_preparation_effect = {
 		limit = { is_chinese_or_potential_chinese_tag = yes }
 		if = {
 			limit = { is_subject = yes }
-		if = {
-			limit = { CHN_has_civil_war_prep_trigger = yes }
-			add_to_variable = {
-				var = CHN_civil_war_preparation_var
-				value = 1
-				tooltip = CHN_add_to_civil_war_preparation_tt
+			if = {
+				limit = { CHN_has_civil_war_prep_trigger = yes }
+				add_to_variable = {
+					var = CHN_civil_war_preparation_var
+					value = 1
+					tooltip = CHN_add_to_civil_war_preparation_tt
+				}
 			}
-		}
-		else = {
-			add_to_variable = {
-				var = CHN_civil_war_preparation_var
-				value = 1
-				tooltip = CHN_begin_civil_war_preparation_tt
+			else = {
+				add_to_variable = {
+					var = CHN_civil_war_preparation_var
+					value = 1
+					tooltip = CHN_begin_civil_war_preparation_tt
+				}
+				ROOT.overlord = {
+					country_event = { id = china_events.62 days = 3 }
+				}
 			}
-			ROOT.overlord = {
-				country_event = { id = china_events.62 days = 3 }
-			}
-		}
-		#The formula should be 1 via generic decision + 1 via overlord's event chain + 2 via satellite content. 5 and up should be due to unplanend stuff.
+			#The formula should be 1 via generic decision + 1 via overlord's event chain + 2 via satellite content. 5 and up should be due to unplanend stuff.
 		}
 	}
 }

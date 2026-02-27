@@ -138,7 +138,7 @@ ROM_fabrica_de_arme_cugir_organisation = { #TODO: make improved one
 	icon = GFX_idea_fabrica_de_arme_cugir
 
 	allowed = {
-			original_tag = ROM
+		original_tag = ROM
 	}
 
 	available = {
@@ -151,24 +151,7 @@ ROM_udr_organisation = { #TODO: add foreign artillery company?
 	icon = GFX_idea_udr
 
 	allowed = {
-			original_tag = ROM
-	}
-
-	available = {
-		FROM = { controls_state = 84 } #Brasov
-	}
-}
-
-ROM_udr_organisation = { #TODO: add foreign artillery company?
-	include = generic_artillery_organization
-	name = udr
-	icon = GFX_idea_udr
-
-	allowed = {
-		OR = {
-			is_danubian_tag = yes
-			original_tag = ROM
-		}
+		original_tag = ROM
 	}
 
 	available = {

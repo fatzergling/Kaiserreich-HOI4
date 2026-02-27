@@ -1828,10 +1828,6 @@ defined_text = {
 		localization_key = STATE_145 #Åland
 	}
 	text = {
-		trigger = { original_tag = FIN }
-		localization_key = STATE_145_FINNISH #Ahvenanmaa
-	}
-	text = {
 		trigger = { is_russian_tag = yes }
 		localization_key = STATE_145_RUSSIAN #Alandskiye Ostrova
 	}
@@ -6204,14 +6200,6 @@ defined_text = {
 		localization_key = STATE_610_MONGOLIAN #Khaluungol
 	}
 	text = {
-		trigger = { original_tag = JAP }
-		localization_key = STATE_610_JAPANESE #Netsuka
-	}
-	text = {
-		trigger = { original_tag = KOR }
-		localization_key = STATE_610_KOREAN #Yeolha
-	}
-	text = {
 		trigger = { is_russian_tag = yes }
 		localization_key = STATE_610_RUSSIAN #Zhekhe
 	}
@@ -7540,14 +7528,6 @@ defined_text = {
 		localization_key = STATE_715 #Liaobei
 	}
 	text = {
-		trigger = { original_tag = JAP }
-		localization_key = STATE_715_JAPANESE #Ryōhoku
-	}
-	text = {
-		trigger = { original_tag = KOR }
-		localization_key = STATE_715_KOREAN #Yobuk
-	}
-	text = {
 		trigger = { is_russian_tag = yes }
 		localization_key = STATE_715_RUSSIAN #Lyaobei
 	}
@@ -7562,14 +7542,6 @@ defined_text = {
 		localization_key = STATE_716 #Liaoning
 	}
 	text = {
-		trigger = { original_tag = JAP }
-		localization_key = STATE_716_JAPANESE #Ryōnei
-	}
-	text = {
-		trigger = { original_tag = KOR }
-		localization_key = STATE_716_KOREAN #Yoryeong
-	}
-	text = {
 		trigger = { is_russian_tag = yes }
 		localization_key = STATE_716_RUSSIAN #Lyaonin
 	}
@@ -7582,14 +7554,6 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
 		localization_key = STATE_717 #Hejiang
-	}
-	text = {
-		trigger = { original_tag = JAP }
-		localization_key = STATE_717_JAPANESE #Gōkō
-	}
-	text = {
-		trigger = { original_tag = KOR }
-		localization_key = STATE_717_KOREAN #Hapgang
 	}
 	text = {
 		trigger = { is_russian_tag = yes }
@@ -9673,10 +9637,6 @@ defined_text = {
 		localization_key = "[GetVictoryPointName_7832]"
 	}
 	text = {
-		trigger = { original_tag = JAP }
-		localization_key = STATE_883_JAPANESE #Kokuryūkō
-	}
-	text = {
 		localization_key = "[GetVictoryPointName_7832]"
 	}
 }
@@ -9695,14 +9655,6 @@ defined_text = {
 		localization_key = STATE_884_CHINESE #Hulunbei'er
 	}
 	text = {
-		trigger = { original_tag = JAP }
-		localization_key = STATE_884_JAPANESE #Furunboiru
-	}
-	text = {
-		trigger = { original_tag = KOR }
-		localization_key = STATE_884_KOREAN #Hulunbeieol
-	}
-	text = {
 		trigger = { is_russian_tag = yes }
 		localization_key = STATE_884_RUSSIAN #Khulunbuir
 	}
@@ -9715,14 +9667,6 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
 		localization_key = STATE_885 #Songjiang
-	}
-	text = {
-		trigger = { original_tag = JAP }
-		localization_key = STATE_885_JAPANESE #Shōkō
-	}
-	text = {
-		trigger = { original_tag = KOR }
-		localization_key = STATE_885_KOREAN #Songgang
 	}
 	text = {
 		trigger = { is_russian_tag = yes }
@@ -10994,14 +10938,6 @@ defined_text = {
 	text = {
 		trigger = { is_chinese_tag = yes }
 		localization_key = STATE_996_CHINESE #Ba'erhu
-	}
-	text = {
-		trigger = { original_tag = JAP }
-		localization_key = STATE_996_JAPANESE #Baruga
-	}
-	text = {
-		trigger = { original_tag = KOR }
-		localization_key = STATE_996_KOREAN #Bareuga
 	}
 	text = {
 		localization_key = STATE_996 #Barga

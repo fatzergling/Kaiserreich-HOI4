@@ -1417,7 +1417,7 @@ GXC_KMT_clash_for_canton_decision_category = {
 			}
 			modifier = {
 				factor = 0
-					has_game_rule = { rule = GXC_forpol option = GXC_FORPOL_GXC }
+				has_game_rule = { rule = GXC_forpol option = GXC_FORPOL_GXC }
 			}
 		}
 		custom_cost_trigger = {
@@ -2202,7 +2202,7 @@ GXC_NPA_intrigue_in_lingnan_decision_category = {
 				NOT = {
 					AND = {
 						has_game_rule = { rule = GXC_forpol option = GXC_FORPOL_NZH }
-				OR = {
+						OR = {
 							china_is_aligned_with_northern_zhili = yes
 							china_is_aligned_with_southern_zhili = yes
 						}
@@ -2211,7 +2211,7 @@ GXC_NPA_intrigue_in_lingnan_decision_category = {
 				NOT = {
 					AND = {
 						has_game_rule = { rule = GXC_forpol option = GXC_FORPOL_AGJ }
-							china_is_aligned_with_fengtian = yes
+						china_is_aligned_with_fengtian = yes
 					}
 				}
 			}

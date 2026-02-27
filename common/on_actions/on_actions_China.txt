@@ -1148,98 +1148,98 @@ on_actions = {
 			# South China War Mechanics
 			if = {
 				limit = { NOT = { has_global_flag = china_united } }
-			if = {
-				limit = {
-					OR = {
-						AND = {
-							ROOT = {
-								tag = HNN
-								is_subject = no
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								ROOT = {
+									tag = HNN
+									is_subject = no
+								}
+								FROM = {
+									tag = YUN
+									is_subject = no
+								}
 							}
-							FROM = {
-								tag = YUN
-								is_subject = no
+							AND = {
+								ROOT = {
+									tag = YUN
+									is_subject = no
+								}
+								FROM = {
+									tag = HNN
+									is_subject = no
+								}
 							}
 						}
-						AND = {
-							ROOT = {
-								tag = YUN
-								is_subject = no
-							}
-							FROM = {
-								tag = HNN
-								is_subject = no
-							}
+						GXC = {
+							is_subject = no
+							has_war = no
 						}
 					}
-					GXC = {
-						is_subject = no
-						has_war = no
-					}
+					GXC = { country_event = china_events.451 } #A War for the South? [GXC Variant]
 				}
-				GXC = { country_event = china_events.451 } #A War for the South? [GXC Variant]
-			}
-			else_if = {
-				limit = {
-					OR = {
-						AND = {
-							ROOT = {
-								tag = GXC
-								is_subject = no
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								ROOT = {
+									tag = GXC
+									is_subject = no
+								}
+								FROM = {
+									tag = YUN
+									is_subject = no
+								}
 							}
-							FROM = {
-								tag = YUN
-								is_subject = no
+							AND = {
+								ROOT = {
+									tag = YUN
+									is_subject = no
+								}
+								FROM = {
+									tag = GXC
+									is_subject = no
+								}
 							}
 						}
-						AND = {
-							ROOT = {
-								tag = YUN
-								is_subject = no
-							}
-							FROM = {
-								tag = GXC
-								is_subject = no
-							}
+						HNN = {
+							is_subject = no
+							has_war = no
 						}
 					}
-					HNN = {
-						is_subject = no
-						has_war = no
-					}
+					HNN = { country_event = china_events.452 } #A War for the South? [HNN Variant]
 				}
-				HNN = { country_event = china_events.452 } #A War for the South? [HNN Variant]
-			}
-			else_if = {
-				limit = {
-					OR = {
-						AND = {
-							ROOT = {
-								tag = GXC
-								is_subject = no
+				else_if = {
+					limit = {
+						OR = {
+							AND = {
+								ROOT = {
+									tag = GXC
+									is_subject = no
+								}
+								FROM = {
+									tag = HNN
+									is_subject = no
+								}
 							}
-							FROM = {
-								tag = HNN
-								is_subject = no
+							AND = {
+								ROOT = {
+									tag = HNN
+									is_subject = no
+								}
+								FROM = {
+									tag = GXC
+									is_subject = no
+								}
 							}
 						}
-						AND = {
-							ROOT = {
-								tag = HNN
-								is_subject = no
-							}
-							FROM = {
-								tag = GXC
-								is_subject = no
-							}
+						YUN = {
+							is_subject = no
+							has_war = no
 						}
 					}
-					YUN = {
-						is_subject = no
-						has_war = no
-					}
-				}
-				YUN = { country_event = china_events.453 } #A War for the South? [YUN Variant]
+					YUN = { country_event = china_events.453 } #A War for the South? [YUN Variant]
 				}
 			}
 		}

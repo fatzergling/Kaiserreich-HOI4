@@ -409,7 +409,7 @@ focus_tree = {
 			has_country_flag = ANQ_friendly_japan
 			custom_override_tooltip = {
 				tooltip = ANQ_abandons_reclamation_NOT
-			NOT = { has_country_flag = ANQ_abandons_reclamation }
+				NOT = { has_country_flag = ANQ_abandons_reclamation }
 			}
 		}
 
@@ -1457,7 +1457,10 @@ focus_tree = {
 		available = {
 			has_country_flag = ANQ_peace
 			country_exists = QIE
-			NOT = { has_country_flag = ANQ_chen_alone }
+			custom_override_tooltip = {
+				tooltip = ANQ_chen_alone_NOT
+				NOT = { has_country_flag = ANQ_chen_alone }
+			}
 		}
 
 		completion_reward = {
@@ -1569,7 +1572,7 @@ focus_tree = {
 			country_exists = QIE
 			custom_override_tooltip = {
 				tooltip = ANQ_chen_alone_NOT
-			NOT = { has_country_flag = ANQ_chen_alone }
+				NOT = { has_country_flag = ANQ_chen_alone }
 			}
 		}
 
