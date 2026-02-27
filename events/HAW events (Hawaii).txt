@@ -15,7 +15,12 @@ country_event = { # The Territory of Hawaii Revolts
 	immediate = {
 		hidden_effect = {
 			every_state = {
-				limit = { is_american_pacific_islands = yes }
+				limit = { 
+					is_american_pacific_islands = yes 
+					#NOT = { state = 727 }
+					#NOT = { state = 642 }
+					#NOT = { state = 726 }
+				}
 				add_core_of = HAW
 				remove_core_of = USA
 				add_claim_by = USA
@@ -1317,12 +1322,22 @@ country_event = { #Hawaii wishes to rejoin America
 		ai_chance = {
 			base = 90
 			modifier = {
+				factor = 10
+				OR = {
+					tag = JAP
+					AND = {
+						has_socialist_government = no
+						FROM = { has_socialist_government = yes }
+					}
+				}
+			}
+			modifier = {
 				factor = 0
 				NOT = {
 					tag = JAP
 					AND = {
 						has_socialist_government = no
-						event_target:america = { has_socialist_government = yes }
+						FROM = { has_socialist_government = yes }
 					}
 				}
 			}
@@ -1697,24 +1712,10 @@ country_event = { #Hawaii Requests Intervention
 		log = "[GetLogInfo]: event hawaii_events.121 option hawaii_events.121.a"
 		name = hawaii_events.121.a
 		ai_chance = {
-			base = 10
+			base = 90
 			modifier = {
-				add = 80
+				factor = 10
 				OR = {
-					tag = JAP
-					AND = {
-						has_socialist_government = no
-						event_target:america = { has_socialist_government = yes }
-					}
-					AND = {
-						has_socialist_government = yes
-						event_target:america = { has_socialist_government = no }
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				NOT = {
 					tag = JAP
 					AND = {
 						has_socialist_government = no
@@ -1778,7 +1779,7 @@ country_event = { #Hawaii Requests Intervention
 		log = "[GetLogInfo]: event hawaii_events.121 option hawaii_events.121.b"
 		name = hawaii_events.121.b
 		ai_chance = {
-			base = 90
+			base = 10
 			modifier = {
 				add = -80
 				OR = {
@@ -2234,6 +2235,7 @@ country_event = { #FROM Refuses To Return Hawaii
 				strength_ratio = { tag = FROM ratio < 1 }
 			}
 		}
+
 		declare_war_on = {
 			target = FROM
 			type = annex_everything

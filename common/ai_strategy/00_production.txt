@@ -10,7 +10,8 @@ division_limiter = {
 
 	#AI roles
 	ai_strategy = { type = build_army id = armor_role			value = -1000 }
-	ai_strategy = { type = build_army id = infantry				value = -1000 }
+	ai_strategy = { type = build_army id = motorized				value = -1000 }
+	ai_strategy = { type = build_army id = mechanized				value = -1000 }
 	ai_strategy = { type = build_army id = marine				value = -1000 }
 	ai_strategy = { type = build_army id = mountaineer			value = -1000 }
 	ai_strategy = { type = build_army id = suppression			value = -1000 }
@@ -26,16 +27,16 @@ default_unit_production = {
 		value = 100
 	}
 
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = light_tank_chassis
-		value = -100
-	}
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = heavy_tank_chassis
-		value = -100
-	}
+	#ai_strategy = {
+	#	type = equipment_variant_production_factor
+	#	id = light_tank_chassis
+	#	value = -100
+	#}
+	#ai_strategy = {
+	#	type = equipment_variant_production_factor
+	#	id = heavy_tank_chassis
+	#	value = -100
+	#}
 }
 
 more_guns_in_the_early_game = {
@@ -114,6 +115,11 @@ default_specialised_production = {
 	ai_strategy = {
 		type = equipment_production_min_factories_archetype
 		id = anti_air_equipment
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = anti_tank_equipment
 		value = 1
 	}
 	ai_strategy = {
@@ -248,6 +254,22 @@ more_mountaineer_focused_nation = {
 		value = 100
 	}
 }
+default_mobile_production = {
+	enable = {
+		#NOT = { original_tag = GER }
+		ai_wants_divisions > 11
+		#has_tech = motorised_infantry
+	}
+	abort = {
+		ai_wants_divisions < 12
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mobile
+		value = 10
+	}
+}
 
 default_tank_production = {
 	enable = {
@@ -355,7 +377,8 @@ increased_tank_production_6 = {
 
 stockpile_less_early_game = {
 	enable = {
-		date < 1940.1.1
+		#date < 1940.1.1
+		always = no
 	}
 	abort_when_not_enabled = yes
 
@@ -433,6 +456,12 @@ DEFAULT_template_design_industrial_country = {
 		id = infantry
 		value = 70
 	}
+
+	#ai_strategy = {
+	#	type = role_ratio
+	#	id = motorized
+	#	value = 10
+	#}
 }
 
 LATE_template_design_industrial_country = {
@@ -457,7 +486,7 @@ LATE_template_design_industrial_country = {
 	ai_strategy = {
 		type = template_prio
 		id = medium_armor
-		value = 50
+		value = 20
 	}
 
 	ai_strategy = {
@@ -465,10 +494,94 @@ LATE_template_design_industrial_country = {
 		id = modern_armor
 		value = 50
 	}
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 10
+	}
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = 10
+	}
 
 	ai_strategy = {
 		type = template_prio
 		id = infantry
 		value = 30
 	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -100
+	}
+
+	#ai_strategy = {
+	#	type = role_ratio
+	#	id = motorized
+	#	value = 10
+	#}
+
+	#ai_strategy = {
+	#	type = role_ratio
+	#	id = mechanized
+	#	value = 20
+	#}
+}
+
+
+grow_your_economy_please = {
+	enable = {
+		date > 1942.1.1
+		has_global_flag = second_weltkrieg_has_ended
+		NOT = {
+			has_war = yes
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = infrastructure
+		value = 500
+	}
+
+		ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 1000
+	}
+
+}
+
+grow_your_economy_please_nuclear = {
+	enable = {
+		date > 1942.1.1
+		has_global_flag = second_weltkrieg_has_ended
+		has_tech = nuclear_reactor_heavy_water
+
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = nuclear_reactor_heavy_water
+		value = 20
+	}
+
+}
+
+grow_your_economy_please_nuclear_2 = {
+	enable = {
+		date > 1942.1.1
+		has_global_flag = second_weltkrieg_has_ended
+		has_tech = nuclear_reactor
+
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = nuclear_reactor
+		value = 10
+	}
+
 }

@@ -159,15 +159,15 @@ set_power_balance = {
 
 set_popularities = {
 	totalist = 1
-	radical_socialist = 7
+	radical_socialist = 5
 	syndicalist = 3
 	social_democrat = 5
-	social_liberal = 18
-	market_liberal = 11
+	social_liberal = 14
+	market_liberal = 7
 	social_conservative = 8
 	authoritarian_democrat = 10
 	paternal_autocrat = 5
-	national_populist = 32
+	national_populist = 42
 }
 
 add_ideas = {

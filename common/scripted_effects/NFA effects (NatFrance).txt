@@ -77,7 +77,7 @@ NFA_Economic_Reparations = {
 	NFA = {
 		add_timed_idea = {
 			idea = NFA_GER_eco_reparations_idea
-			days = 720
+			days = 1800
 		}
 	}
 }
@@ -268,8 +268,9 @@ NFA_Military_Accords = {
 	NFA = {
 		add_timed_idea = {
 			idea = NFA_Arms_Treaty_idea
-			days = 720
+			days = 1800
 		}
+				add_ideas = limited_conscription
 	}
 }
 
@@ -278,9 +279,50 @@ NFA_Military_Accords_Harsh = {
 	NFA = {
 		add_timed_idea = {
 			idea = NFA_Arms_Treaty_Harsh_idea
-			days = 720
+			days = 1800
 		}
+		add_ideas = volunteer_only
+						set_temp_variable = { BUL_mils_to_add = 0 }
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					GER = {
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+					}
 	}
+
 }
 
 #State controller scope

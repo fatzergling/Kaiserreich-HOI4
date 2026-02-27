@@ -531,7 +531,11 @@ DIPLOMACY_REQUEST_EXP_FORCE_ENABLE_TRIGGER = {
 	}
 	if = {
 		limit = {
-			FROM = { has_autonomy_state = associated_governorate } #To stop pre "Illusion of Qing Hegemony Shatters" shenanigans
+			OR = {
+				FROM = { has_autonomy_state = associated_governorate } #To stop pre "Illusion of Qing Hegemony Shatters" shenanigans
+				FROM = { has_autonomy_state = autonomous_governorate } #To stop pre "Illusion of Qing Hegemony Shatters" shenanigans
+
+			}
 		}
 		custom_override_tooltip = {
 			tooltip = REQUEST_EXP_FORCE_BLOCKED_CHINA_TT

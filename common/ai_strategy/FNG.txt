@@ -48,6 +48,69 @@ FNG_call_in_japan_if_allied = {
 	}
 }
 
+FNG_defend_against_JAP = {
+	allowed = {
+		original_tag = FNG
+	}
+	enable = {
+		has_war_with = JAP
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		id = JAP
+		value = 250
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = QIE
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = SHX
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = GXC
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = CHI
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = YUN
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = HNN
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = ANQ
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = SHD
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = LEP
+		value = -1000
+	}
+
+}
+
+
 FNG_build_army = {
 	allowed = {
 		original_tag = FNG

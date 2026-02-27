@@ -909,7 +909,7 @@ country_event = { #The Beijing Conference
 	option = {
 		log = "[GetLogInfo]: event fengtian_beijing_conference_events.000 option fengtian_beijing_conference_events.000.a"
 		name = fengtian_beijing_conference_events.000.a #The Road to Unification lies in front of us.
-		complete_national_focus = FNG_From_Beijing_to_the_Begonia_Leaf
+		#complete_national_focus = FNG_From_Beijing_to_the_Begonia_Leaf
 		country_event = { id = fengtian_beijing_conference_events.002 days = 7 } #Japan Divides the Conference
 		hidden_effect = {
 			news_event = fengtian_beijing_conference_events.001 #Zhang Calls Conference in Beijing
@@ -1139,9 +1139,9 @@ country_event = { #The Great Decision
 			}
 		}
 		ai_chance = {
-			base = 50 #Zhang will normally want to demand the concessions but can be blocked with sufficient Mantetsu influence
+			base = 1000 #Zhang will normally want to demand the concessions but can be blocked with sufficient Mantetsu influence
 			modifier = {
-				add = -25
+				add = -50
 				FNG_mantetsu_level_medium = yes
 			}
 
@@ -1195,6 +1195,10 @@ country_event = { #Zhang Invites us to Beijing
 			modifier = {
 				factor = 0
 				china_alignment_federalists = yes
+			}
+			modifier = {
+				factor = 0
+				has_country_leader = { character = ANQ_chen_tiaoyuan }
 			}
 		}
 		FNG = { country_event = { id = fengtian_beijing_conference_events.012 days = 2 random_days = 5 } } #[FROM.GetLeader] Advocates for Japan
@@ -1400,7 +1404,14 @@ country_event = { #Zhang Demands the Concessions
 			}
 		}
 		FNG = { country_event = { id = fengtian_beijing_conference_events.210 days = 3 } } #The Japanese Accept Our Terms
-
+		FNG = {
+		hidden_effect = {
+				swap_ideas = {
+					remove_idea = unequal_treaties_japan
+					add_idea = unequal_treaties_japan_lesser
+				}
+		}
+		}
 		log = "KR_Event_Logging;FNG GREAT DECISION - Fengtian joins the Sphere In Exchange for Concessions"
 	}
 

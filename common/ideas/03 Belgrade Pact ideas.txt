@@ -32,7 +32,41 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 			}
 		}
+		BUL_reparation_payments = {
+			on_add = { log = "[GetLogRoot]: add idea SER_reparation_payments" }
+			picture = FRA_factory_strikes
+			allowed = { always = no }
+			available = {
+				country_exists = SER
+				NOT = { has_war_with = SER }
+			}
 
+			targeted_modifier = {
+				tag = SER
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = ROM
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = GRE
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = SER
+				mic_to_target_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = ROM
+				mic_to_target_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = GRE
+				mic_to_target_factor = 0.2
+			}
+
+		}
 		BUL_reparation_payments_from_serbia = {
 			on_add = { log = "[GetLogRoot]: add idea BUL_reparation_payments_from_serbia" }
 			picture = generic_goods_red_bonus

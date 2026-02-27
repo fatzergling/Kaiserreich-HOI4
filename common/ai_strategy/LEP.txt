@@ -10,12 +10,18 @@ LEP_protect_nanjing = {
 		states = {
 			613
 		}
-		subtract_fronts_from_need = yes
+		#subtract_fronts_from_need = yes
 	}
 }
 
 LEP_ignore_LEC = {
-	allowed = { original_tag = LEP }
+	allowed = { OR = {
+		original_tag = LEP
+		original_tag = CHI
+		original_tag = SHD
+		original_tag = ANQ
+
+	}  }
 	enable = { NOT = { has_global_flag = LEP_league_war_over } } #disabled after the league war
 
 	abort_when_not_enabled = yes
@@ -23,6 +29,21 @@ LEP_ignore_LEC = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = LEC
+		value = -100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GXC
+		value = -100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = HNN
+		value = -100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = QIE
 		value = -100
 	}
 }
@@ -50,6 +71,7 @@ LEP_guard_against_ANQ = {
 LEP_ignore_CHI_until_volunteers_arrive = {
 	allowed = { original_tag = LEP }
 	enable = { date < 1936.3.16 } #disabled after volunteers arrive
+	#enable = { always = no } #disabled after volunteers arrive
 
 	abort_when_not_enabled = yes
 

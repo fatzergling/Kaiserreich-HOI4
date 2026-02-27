@@ -36,6 +36,19 @@ BOL_mauser_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
+
 }
 BOL_us_ordnance_corps_organisation = {
 	name = us_ordnance_export
@@ -50,6 +63,19 @@ BOL_us_ordnance_corps_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 
 ###################
@@ -68,6 +94,19 @@ BOL_bolivia_chrysler_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 BOL_somua_organisation = {
 	name = somua
@@ -82,6 +121,19 @@ BOL_somua_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 BOL_krupp_organisation = {
 	name = krupp
@@ -96,6 +148,19 @@ BOL_krupp_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
+
 }
 ##################
 ### Naval MIOs ###
@@ -169,6 +234,19 @@ BOL_morane_saulnier_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 BOL_curtiss_wright_organisation = {
 	name = USA_curtiss_wright
@@ -183,4 +261,17 @@ BOL_curtiss_wright_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }

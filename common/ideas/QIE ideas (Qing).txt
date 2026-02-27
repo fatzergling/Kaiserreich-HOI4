@@ -1181,6 +1181,11 @@ ideas = {
 			modifier = {
 				conscription_factor = -0.25
 				political_power_factor = -0.15
+				stability_factor = -0.35
+				war_support_factor = -0.25
+				compliance_gain = -0.01
+				research_speed_factor = -0.05
+				cannot_call_allies_or_join_wars = 1
 			}
 		}
 		QIE_fractured_empire2 = {
@@ -1191,6 +1196,8 @@ ideas = {
 			modifier = {
 				conscription_factor = -0.15
 				political_power_factor = -0.05
+				stability_factor = -0.25
+				war_support_factor = -0.15
 			}
 		}
 		QIE_fractured_empire3 = {
@@ -1201,6 +1208,8 @@ ideas = {
 			modifier = {
 				conscription_factor = -0.1
 				political_power_factor = -0.025
+				stability_factor = -0.15
+				war_support_factor = -0.1
 			}
 		}
 #rooting out corruption

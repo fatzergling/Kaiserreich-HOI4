@@ -33,7 +33,8 @@ peace_action_modifiers = {
 		category = events_or_focuses
 		peace_action_type = { puppet force_government }
 		enable = {
-			always = yes
+			#always = yes
+			is_ai = yes
 		}
 		cost_multiplier = 800
 	}

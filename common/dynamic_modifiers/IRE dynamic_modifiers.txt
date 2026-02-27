@@ -29,6 +29,7 @@ IRE_anti_socialist_agitation_local_modifier = {
 		check_variable = { this.IRE_antisoc_local = 0 }
 	}
 	icon = "GFX_decision_generic_wreckers"
+	local_factories = this.IRE_antisoc_local
 	local_resources_factor = this.IRE_antisoc_local
 	local_manpower = this.IRE_antisoc_local
 	army_speed_factor_for_controller = -0.25

@@ -376,7 +376,7 @@ country_event = { # Socialist Constitution - The Capital
 	option = {
 		log = "[GetLogInfo]: event america_workers_congress_events.9 option america_workers_congress_events.9.a"
 		name = america_workers_congress_events.9.a
-		ai_chance = { base = 0 }
+		ai_chance = { base = 30 }
 	}
 	option = {
 		log = "[GetLogInfo]: event america_workers_congress_events.9 option america_workers_congress_events.9.b"
@@ -384,7 +384,7 @@ country_event = { # Socialist Constitution - The Capital
 		trigger = {
 			owns_state = 361
 		}
-		ai_chance = { base = 0 }
+		ai_chance = { base = 40 }
 		set_capital = { state = 361 remember_old_capital = no }
 	}
 	option = {
@@ -393,7 +393,7 @@ country_event = { # Socialist Constitution - The Capital
 		trigger = {
 			owns_state = 360
 		}
-		ai_chance = { base = 0 }
+		ai_chance = { base = 20 }
 		set_capital = { state = 360 remember_old_capital = no }
 	}
 	option = {
@@ -402,7 +402,7 @@ country_event = { # Socialist Constitution - The Capital
 		trigger = {
 			owns_state = 358
 		}
-		ai_chance = { base = 100 }
+		ai_chance = { base = 10 }
 		set_capital = { state = 358 remember_old_capital = no }
 	}
 	after = {
@@ -4114,14 +4114,14 @@ country_event = { #Non-centralist flag choice event
 		log = "[GetLogInfo]: event america_workers_congress_events.217 option america_workers_congress_events.217.a"
 		name = america_workers_congress_events.217.a
 		ai_chance = {
-			base = 50
+			base = 5
 			modifier = {
 				factor = 0
 				NOT = { has_game_rule = { rule = WCA_flag option = DEFAULT } }
 				NOT = { has_game_rule = { rule = WCA_flag option = WCA_FLAG_WARTIME } }
 			}
 			modifier = {
-				add = 20
+				add = 2
 				has_government = radical_socialist
 				has_game_rule = { rule = WCA_flag option = DEFAULT }
 			}
@@ -4175,6 +4175,30 @@ country_event = { #Non-centralist flag choice event
 			set_cosmetic_tag = WCA_iww
 		}
 	}
+
+	option = { #Default
+		log = "[GetLogInfo]: event america_workers_congress_events.217 option america_workers_congress_events.217.a"
+		name = america_workers_congress_events.217.d
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				NOT = { has_game_rule = { rule = WCA_flag option = DEFAULT } }
+				NOT = { has_game_rule = { rule = WCA_flag option = WCA_FLAG_MODERATE } }
+			}
+			modifier = {
+				add = 20
+				has_government = radical_socialist
+				has_game_rule = { rule = WCA_flag option = DEFAULT }
+			}
+		}
+		effect_tooltip = { set_cosmetic_tag = WCA }
+		hidden_effect = {
+			set_cosmetic_tag = WCA_socialist_republic
+		}
+	}
+
+
 	after = {
 		hidden_effect = {
 			news_event = america_workers_congress_events.1000

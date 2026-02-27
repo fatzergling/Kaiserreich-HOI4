@@ -104,6 +104,17 @@ on_actions = {
 					}
 					country_event = { id = CHI.lategame.070 days = 20 } #The Taiwan Dilemma
 				}
+				if = {
+					limit = {
+						NOT = { country_exists = FNG}
+					}
+								CHI_wang_jingwei = {
+				set_portraits = {
+					civilian = { large = GFX_portrait_CHI_wang_jingwei_civilian_large }
+				}
+			}
+
+				}
 			}
 		}
 	}

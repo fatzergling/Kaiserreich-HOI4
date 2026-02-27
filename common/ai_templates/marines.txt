@@ -39,6 +39,77 @@ marine_generic = {
 				field_hospital = 1
 				anti_air = 1
 				logistics_company = 1
+				anti_tank = 1
+			}
+		}
+	}
+		marine_mid = {
+
+		upgrade_prio = {
+			base = 1
+
+			modifier = {
+				factor = 3
+				date > 1940.1.1
+			}
+		}
+
+		division_names_group = USA_MAR_01
+
+		target_template = {
+
+			support = {
+				artillery = 1
+				engineer = 1
+				field_hospital = 1
+				anti_air = 1
+				logistics_company = 1
+				anti_tank = 1
+			}
+
+			regiments = {
+				marine = 9
+				artillery_brigade = 1
+			}
+		}
+	}
+
+	marine_late_USA = {
+
+		upgrade_prio = {
+			base = 2
+
+			modifier = {
+				factor = 4
+				date > 1943.1.1
+
+				# Only if we have amphibious tanks
+				OR = {
+					has_tech = amphibious_tank
+					has_tech = amphibious_tank_chassis
+				}
+			}
+		}
+
+		division_names_group = USA_MAR_01
+
+		target_template = {
+			support = {
+				logistics_company = 1
+				maintenance_company = 1
+				artillery = 1
+				engineer = 1
+				field_hospital = 1
+				anti_air = 1
+				logistics_company = 1
+				anti_tank = 1
+			}
+
+			regiments = {
+				marine = 6
+				amphibious_armor = 2
+				amphibious_mechanized = 2
+				artillery_brigade = 1
 			}
 		}
 	}

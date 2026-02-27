@@ -5889,6 +5889,16 @@ country_event = { #Ma Zhanshan and the Heilongjiang Clique offer to Defect!
 					demote_to_general = yes
 					set_nationality = ROOT
 				}
+				transfer_units_fraction = {
+				target = ROOT
+				target_organization = 1
+				source_organization = 1
+				army_ratio = 0.2
+				stockpile_ratio = 0
+				navy_ratio = 0
+				air_ratio = 0
+			}
+
 			}
 		}
 	}
@@ -12846,7 +12856,7 @@ country_event = { #The Huanggutun Incident
 			add_war_support = -0.10
 			add_timed_idea = {
 				idea = FNG_army_purged
-				days = 180
+				days = 360
 			}
 			custom_effect_tooltip = FNG_army_purged_less_tt
 		}
@@ -12855,10 +12865,11 @@ country_event = { #The Huanggutun Incident
 			add_war_support = -0.25
 			add_timed_idea = {
 				idea = FNG_army_purged
-				days = 360
+				days = 720
 			}
 			custom_effect_tooltip = FNG_army_purged_tt
 		}
+		custom_effect_tooltip = china_men_will_begin_to_defect_tt
 		hidden_effect = {
 			set_party_name = {
 				ideology = paternal_autocrat
@@ -12877,7 +12888,6 @@ country_event = { #The Huanggutun Incident
 			country_event = { id = fengtian_events.308 days = 2 } #Restoring Order to Manchuria
 			news_event = fengtian_japan_mechanic_events.005
 			country_event = fengtian_system_events.15 # Ma Zhanshan's defection
-
 			JAP = { country_event = { id = fengtian_japan_mechanic_events.004 days = 1 } } #Huanggutuan Incident - let Japan known
 		}
 	}
@@ -12961,7 +12971,7 @@ country_event = { #Japan Enters the Fray
 	option = {
 		log = "[GetLogInfo]: event fengtian_japan_mechanic_events.030 option fengtian_japan_mechanic_events.030.a"
 		name = fengtian_japan_mechanic_events.030.a #At least this way we ensure China will have a voice in the sphere.
-		ai_chance = { base = 100 }
+		ai_chance = { base = 0 }
 		if = {
 			limit = { has_active_mission = FNG_japanese_patience_runs_thin_mission }
 			remove_mission = FNG_japanese_patience_runs_thin_mission
@@ -12978,7 +12988,7 @@ country_event = { #Japan Enters the Fray
 	option = {
 		log = "[GetLogInfo]: event fengtian_japan_mechanic_events.030 option fengtian_japan_mechanic_events.030.b"
 		name = fengtian_japan_mechanic_events.030.b #Please, we just need some more time to sort out our affairs…
-		ai_chance = { base = 0 }
+		ai_chance = { base = 100 }
 		FNG_JAP_mech_sub_time_mega_effect = yes
 		hidden_effect = {
 			JAP = { country_event = { id = fengtian_japan_mechanic_events.033 days = 1 } } #[FNG.GetNameDefCap] Stalls for Time

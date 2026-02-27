@@ -824,6 +824,31 @@ state_groups = {
 		1074 #Misiones
 	}
 
+	italian_states = {
+		1 #Corsica
+		2 #Latium
+		114 #Sardinia
+		115 #Sicily
+		116 #Malta
+		117 #Campania
+		156 #Calabria
+		157 #Marches
+		158 #Piedmont
+		159 #Lombardy
+		160 #Venetia
+		161 #Romagna
+		162 #Tuscany
+		735 #Savoy
+		742 #Abruzzo
+		759 #Friuli
+		764 #Viterbo
+		837 #Apulia
+		838 #Liguria
+		1004 #Emilia
+		1005 #Umbria
+	}
+
+
 	### is_on_continent = india
 	indian_states = {
 		281 #Maldives

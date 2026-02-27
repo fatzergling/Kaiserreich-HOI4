@@ -36,6 +36,8 @@ willing_to_send_volunteers_to_PREV = {
 		northwest_war_volunteers = yes
 		xinjiang_war_volunteers = yes
 		GEA_zhili_volunteers = yes
+		JAP_feng_volunteers = yes
+		CHI_internationale_volunteers = yes
 		ANQ_volunteers = yes
 		brazil_volunteers_to_portugal = yes
 		quechua_volunteers = yes
@@ -47,6 +49,9 @@ willing_to_send_volunteers_to_PREV = {
 		indochinese_revolution_volunteers = yes
 		arab_war_of_unification_volunteers = yes
 		assyrian_volunteers = yes
+		RKT_russia_volunteers = yes
+		american_german_sinophile = yes
+		KUM_qing_volunteers = yes
 	}
 }
 
@@ -117,8 +122,8 @@ american_civil_war_volunteers = {
 			}
 		}
 		AND = {
-			PREV = { tag = var:ACW_supported_tag }
-			num_of_military_factories > 4
+			check_variable = { var:ACW_supported_tag = PREV }
+			num_of_military_factories > 8
 		}
 	}
 	log = "willing_to_send_volunteers_to_PREV -- american_civil_war_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
@@ -135,6 +140,8 @@ fourth_balkan_war_volunteers = {
 			PREV = {
 				original_tag = BUL
 				has_socialist_government = no
+				#NOT = { 767 = { is_controlled_by = BUL }}
+				RUS = { has_socialist_government = no }
 			}
 			has_socialist_government = no
 			has_country_flag = SER_supported_bulgaria
@@ -194,6 +201,9 @@ second_weltkrieg_volunteers = {
 				is_major = yes
 				is_in_europe = yes
 				is_in_north_america = yes
+				tag = FOP
+				tag = CHL
+				tag = CEN
 				ic_ratio = { tag = INT ratio > 0.3 }
 			}
 		}
@@ -216,7 +226,19 @@ second_weltkrieg_volunteers = {
 				is_major = yes
 				is_in_europe = yes
 				is_in_north_america = yes
+				tag = BRA
+				tag = CEN
+				tag = ARG
 				ic_ratio = { tag = GER ratio > 0.3 }
+			}
+		}
+		AND = {
+			PREV = {
+				tag = RUS
+			}
+			OR = {
+				tag = MON
+				tag = ETS
 			}
 		}
 	}
@@ -281,6 +303,7 @@ south_african_civil_war_volunteers = {
 				PREV = { has_socialist_government = no }
 				has_socialist_government = no
 				OR = {
+					is_in_faction_with = ENT
 					is_ally_with = ENT
 					original_tag = GER
 					original_tag = MAF
@@ -304,6 +327,10 @@ south_african_civil_war_volunteers = {
 					original_tag = MAF
 					original_tag = HOL
 					original_tag = SWE
+					AND = {
+						SAF = { has_socialist_government = yes }
+						is_ally_with = ENT
+					}
 				}
 			}
 		}
@@ -495,14 +522,14 @@ german_austrian_volunteers = {
 WCA_internationale_volunteers = {
 	original_tag = WCA
 	OR = {
-		has_idea = WCA_lead_revolution_idea
-		has_completed_focus = WCA_good_soldier
+		#has_idea = WCA_lead_revolution_idea
+		has_completed_focus = WCA_back_in_business
 	}
 	has_socialist_government = yes
 	PREV = {
 		has_socialist_government = yes
 		num_of_civilian_factories > 10
-		has_war_with_major = yes
+		#has_war_with_major = yes
 	}
 	log = "willing_to_send_volunteers_to_PREV -- WCA_internationale_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
 }
@@ -526,6 +553,7 @@ league_collapse_volunteers = {
 						has_war_with = LEP
 						OR = {
 							has_government = authoritarian_democrat
+							has_government = paternal_autocrat
 							has_government = national_populist
 						}
 					}
@@ -603,10 +631,11 @@ league_collapse_volunteers = {
 			}
 			OR = {
 				original_tag = HND
-				original_tag = ENG
-				original_tag = FRA
+				#original_tag = ENG
+				#original_tag = FRA
 				original_tag = GXC
 				original_tag = YUN
+				original_tag = HNN
 			}
 			OR = {
 				has_socialist_government = yes
@@ -632,6 +661,13 @@ northwest_war_volunteers = {
 		}
 		AND = {
 			PREV = {
+				original_tag = MON
+				has_completed_focus = MON_riding_along_the_wide_steppe
+			}
+			original_tag = RUS
+		}
+		AND = {
+			PREV = {
 				original_tag = TIB
 				has_socialist_government = yes
 			}
@@ -643,7 +679,7 @@ northwest_war_volunteers = {
 				original_tag = TIB
 				has_government = social_democrat
 			}
-			original_tag = CHI
+			#original_tag = CHI
 			has_socialist_government = yes
 		}
 		PREV = {
@@ -653,9 +689,13 @@ northwest_war_volunteers = {
 		AND = {
 			PREV = {
 				original_tag = XSM
-				china_is_unaligned = yes
+				#china_is_unaligned = yes
 			}
+			OR = {
 			original_tag = QIE
+			original_tag = SHX
+			original_tag = SZC
+			}
 		}
 	}
 	log = "willing_to_send_volunteers_to_PREV -- northwest_war_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
@@ -689,6 +729,11 @@ xinjiang_war_volunteers = {
 				}
 			}
 		}
+		AND = {
+			PREV = { original_tag = ETS }
+				ETS = { controls_state = 617 }
+				original_tag = RUS
+		}
 	}
 	log = "willing_to_send_volunteers_to_PREV -- xinjiang_war_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
 }
@@ -713,6 +758,113 @@ GEA_zhili_volunteers = {
 	}
 	log = "willing_to_send_volunteers_to_PREV -- GEA_zhili_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
 }
+
+KUM_qing_volunteers = {
+	original_tag = KUM
+	OR = {
+		KUM = { has_country_leader = { character = KUM_nasir_shah }}
+		KUM = { has_country_leader = { character = KUM_bashir_shah }}
+		KUM = { has_country_leader = { character = KUM_yulbars_khan }}
+	}
+	PREV = {
+		original_tag = QIE
+		china_compatible_alignment_to_PREV = yes #Handles QIE
+	}
+	log = "willing_to_send_volunteers_to_PREV -- GEA_zhili_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
+}
+
+
+JAP_feng_volunteers = {
+		original_tag = JAP
+	PREV = {
+		OR = {
+			AND = {
+				original_tag = FNG
+				is_working_with_JAP = yes
+			}
+			AND = {
+				original_tag = SHD
+				is_working_with_JAP = yes
+			}
+			AND = {
+				original_tag = ANQ
+				is_working_with_JAP = yes
+			}
+		}
+	}
+	log = "willing_to_send_volunteers_to_PREV -- JAP_feng_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
+
+}
+
+american_german_sinophile = {
+	OR = {
+		AND = {
+			is_american_tag = yes
+			has_global_flag = USA_civil_war_over_flag	
+		}
+		AND = {
+			tag = GER
+			has_global_flag = second_weltkrieg_has_ended
+		}
+	}
+	PREV = {
+		tag = CHN
+		is_ai = yes
+		has_war_with = JAP
+	}
+}
+
+
+CHI_internationale_volunteers = {
+	OR = {
+		original_tag = FRA
+		original_tag = ENG
+		original_tag = HND
+	}
+	PREV = {
+				original_tag = CHI
+				is_ai = yes
+			#	NOT = { has_idea = league_collapse_CHI }
+			NOT = { has_idea = china_anti_stalemate_idea_2 }
+		
+	}
+	log = "willing_to_send_volunteers_to_PREV -- CHI_internationale_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
+}
+
+RKT_russia_volunteers = {
+	OR = {
+		original_tag = RUS
+		original_tag = ENG
+		original_tag = HND
+	}
+	PREV = {
+		OR = {
+			AND = {
+				original_tag = YUN
+				has_idea =  RUS_chinese_military_mission_idea 
+				is_ai = yes
+			}
+			AND = {
+				original_tag = GXC
+				has_idea =  RUS_chinese_military_mission_idea 
+				is_ai = yes
+			}
+			AND = {
+				original_tag = HNN
+				has_idea =  RUS_chinese_military_mission_idea 
+				is_ai = yes
+			}
+			AND = {
+				original_tag = CHI
+				has_idea =  RUS_chinese_military_mission_idea 
+				is_ai = yes
+			}
+		}
+	}
+	log = "willing_to_send_volunteers_to_PREV -- CHI_internationale_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
+}
+
+
 
 ANQ_volunteers = {
 	original_tag = ANQ
@@ -878,6 +1030,14 @@ levantine_war_volunteers = {
 			original_tag = RUS
 			both_socialist_or_both_not_socialist = yes
 		}
+		AND = {
+			PREV = {
+				original_tag = EGY
+				has_war_with = OTT
+			}
+			original_tag = MOR
+			both_socialist_or_both_not_socialist = yes
+		}
 	}
 	log = "willing_to_send_volunteers_to_PREV -- levantine_war_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
 }
@@ -921,7 +1081,8 @@ arab_war_of_unification_volunteers = {
 		}
 		AND = {
 			PREV = { original_tag = SAU }
-			original_tag = EGY
+			tag = EGY
+			tag = PER
 		}
 	}
 	log = "willing_to_send_volunteers_to_PREV -- arab_war_of_unification_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"
@@ -1289,7 +1450,7 @@ is_asian_focused_tag = {
 		original_tag = TAI
 
 		#Japan has its own logic
-
+		original_tag = JAP
 		#Korea
 		original_tag = KOR
 
@@ -1439,5 +1600,5 @@ AI_trigger_dont_hire_navy_chief_too_early = {
 
 AI_trigger_can_upgrade_in_field = {
 	surrender_progress < 0.15
-	has_reached_maximum_divisions = no
+	#has_reached_maximum_divisions = no
 }

@@ -1044,9 +1044,9 @@ focus_tree = {
 					set_character_name = CAN_iedc
 					set_character_flag = has_custom_script_handle
 					var:icon = { set_character_name = "GFX_goal_CAN_iedc" }
-					set_variable = { red = 0.470 }
-					set_variable = { green = 0.188 }
-					set_variable = { blue = 0.233 }
+					set_variable = { red = 0.588 }
+					set_variable = { green = 0 }
+					set_variable = { blue = 0.094 }
 				}
 			}
 			add_ideas = CAN_iedc_main
@@ -4602,9 +4602,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 			modifier = {
+				factor = 0
+				#has_war = yes
+				WCA = { num_of_controlled_states < 5 }
+			}
+			modifier = {
 				factor = 0.5
-				has_war = yes
-				WCA = { num_of_controlled_states < 25 }
+				#has_war = yes
+				WCA = { num_of_controlled_states < 10 }
 			}
 			modifier = {
 				factor = 0
@@ -4646,24 +4651,24 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 0
-				NOT = {
+				OR = {
 					AND = {
 						has_global_flag = CAN_supports_USA
 						country_exists = USA
-						USA = { surrender_progress < 0.50 }
-						check_variable = { USA.num_controlled_states > 5 }
+						USA = { surrender_progress < 0.40 }
+						#check_variable = { USA.num_controlled_states > 5 }
 					}
 					AND = {
 						has_global_flag = CAN_supports_ACC
 						country_exists = ACC
-						ACC = { surrender_progress < 0.50 }
-						check_variable = { ACC.num_controlled_states > 5 }
+						ACC = { surrender_progress < 0.20 }
+						#check_variable = { ACC.num_controlled_states > 5 }
 					}
 					AND = {
 						has_global_flag = CAN_supports_APG
 						country_exists = APG
-						APG = { surrender_progress < 0.50 }
-						check_variable = { ACC.num_controlled_states > 7 }
+						APG = { surrender_progress < 0.20 }
+						#check_variable = { APG.num_controlled_states > 5 }
 					}
 					AND = {
 						OR = {
@@ -4706,11 +4711,35 @@ focus_tree = {
 								add_to_temp_variable = { nonenemy_states = APG.num_controlled_states }
 								add_to_temp_variable = { nonenemy_states = USA.num_controlled_states }
 								add_to_temp_variable = { nonenemy_states = ACC.num_controlled_states }
-								check_variable = { nonenemy_states > 6 }
+								check_variable = { nonenemy_states > 25 }
 							}
 						}
 					}
 				}
+			}
+			modifier = {
+				add = 10
+				WCA = { num_of_controlled_states > 25 }
+			}
+			modifier = {
+				add = 15
+				WCA = { num_of_controlled_states > 30 }
+			}
+			modifier = {
+				add = 100
+				WCA = { controls_state = 932 }
+			}
+			modifier = {
+				add = 500
+				AND = {
+					NOT = { country_exists = USA }
+					NOT = { country_exists = APG }
+					NOT = {	has_global_flag = USA_civil_war_over_flag	}
+				}
+			}
+			modifier = {
+				add = 50
+				WCA = { num_of_controlled_states > 35 }
 			}
 		}
 
@@ -4882,7 +4911,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 5000
 			modifier = {
 				factor = 10
 				OR = {

@@ -3,7 +3,7 @@
 # and define entry_name here
 
 china_integration_acceptance_chance = {
-	base = 20
+	base = 5
 
 	### EVENTS ###
 	modifier = {
@@ -24,15 +24,15 @@ china_integration_acceptance_chance = {
 
 	### INTEGRATION LEVEL ###
 	modifier = {
-		factor = 2
+		factor = 0.75
 		has_autonomy_state = autonomous_governorate
 	}
 	modifier = {
-		factor = 3
+		factor = 0.5
 		has_autonomy_state = governorate
 	}
 	modifier = {
-		factor = 5
+		factor = 0.25
 		has_autonomy_state = integrated_governorate
 	}
 
@@ -115,10 +115,6 @@ china_integration_acceptance_chance = {
 	}
 
 	### STRENGTH RATIO ###
-	modifier = {
-		factor = 1.1
-		strength_ratio = { tag = PREV ratio < 0.9 }
-	}
 	modifier = {
 		factor = 1.1
 		strength_ratio = { tag = PREV ratio < 0.9 }
@@ -272,7 +268,7 @@ china_integration_acceptance_chance = {
 }
 
 china_integration_refusal_chance = {
-	base = 80
+	base = 195
 
 	### ALIGNMENT ###
 	modifier = {
@@ -280,17 +276,33 @@ china_integration_refusal_chance = {
 		overlord = { china_same_alignment_as_PREV = yes }
 	}
 
+	modifier = {
+		factor = 2.5
+		china_alignment_chinese_southern_republican = yes
+	}
+
+	modifier = {
+		factor = 2.5
+		china_alignment_beiyang = yes
+	}
+	modifier = {
+		factor = 5
+		china_is_northwest_tag = yes
+		NOT = { has_global_flag = china_united }
+	}
+
+
 	### INTEGRATION LEVEL ###
 	modifier = {
-		factor = 0.75
+		factor = 2
 		has_autonomy_state = autonomous_governorate
 	}
 	modifier = {
-		factor = 0.5
+		factor = 3
 		has_autonomy_state = governorate
 	}
 	modifier = {
-		factor = 0
+		factor = 4
 		has_autonomy_state = integrated_governorate
 	}
 
@@ -299,7 +311,7 @@ china_integration_refusal_chance = {
 		set_temp_variable = { num_governorates = 0 }
 		overlord = {
 			china_is_aligned_with_federalists = no
-			china_is_aligned_with_left_kmt = no
+			#china_is_aligned_with_left_kmt = no
 			all_subject_countries = {
 				if = {
 					limit = { china_is_governorate = yes }
@@ -308,15 +320,11 @@ china_integration_refusal_chance = {
 				always = yes
 			}
 		}
-		multiply_temp_variable = { num_governorates = 10 }
+		multiply_temp_variable = { num_governorates = 50 }
 		add = num_governorates
 	}
 
 	### IC RATIO ###
-	modifier = {
-		factor = 0.9
-		ic_ratio = { tag = PREV ratio < 0.9 }
-	}
 	modifier = {
 		factor = 0.9
 		ic_ratio = { tag = PREV ratio < 0.9 }

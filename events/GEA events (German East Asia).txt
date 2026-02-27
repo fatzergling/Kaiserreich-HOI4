@@ -1380,7 +1380,7 @@ country_event = { # Unrest in Burma
 	option = { # Send fleet to show our support to Burmese monarchy
 		log = "[GetLogInfo]: event german_east_asia_events.66 option german_east_asia_events.66.a"
 		name = german_east_asia_events.66.a
-		ai_chance = { base = 50 }
+		ai_chance = { base = 500 }
 		add_political_power = -25
 
 		BRM = {
@@ -1510,10 +1510,62 @@ country_event = { # Steal guns from home
 	option = {
 		log = "[GetLogInfo]: event german_east_asia_events.201 option german_east_asia_events.201.a"
 		name = german_east_asia_events.201.a
-		send_equipment = {
-			equipment = infantry_equipment
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = -2500
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = -100
+		}
+			add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = -100
+		}
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment
+			amount = -50
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment
+			amount = -50
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = -200
+		}
+				GEA = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
 			amount = 2500
-			target = GEA
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 100
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 100
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = anti_air_equipment
+			amount = 50
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment
+			amount = 50
+			producer = GER
+		}
+		add_equipment_to_stockpile = {
+			type = motorized_equipment
+			amount = 200
+			producer = GER
+		}
+
 		}
 	}
 }
@@ -1537,6 +1589,8 @@ country_event = { # give guns to lep
 			}
 		}
 		ai_chance = { base = 80 }
+					set_temp_variable = { change_league_war_morale_by = 5 }
+				china_update_morale = yes
 		add_to_variable = {
 			GEA.GEA_payback_for_lep_involvement = 1
 		}
@@ -1571,6 +1625,8 @@ country_event = { # give factories to lep
 		add_to_variable = {
 			GEA.GEA_payback_for_lep_involvement = 1
 		}
+					set_temp_variable = { change_league_war_morale_by = 5 }
+				china_update_morale = yes
 		country_event = { id = german_east_asia_events.204 days = 120 }
 	}
 

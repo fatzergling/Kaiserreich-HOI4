@@ -264,9 +264,34 @@ country_event = { #Fate of America
 			if = {
 				limit = { has_government = totalist }
 				complete_national_focus = WCA_usas
+			set_popularities = {
+				totalist = 28
+				radical_socialist = 18
+				syndicalist = 17
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
 			}
 			else = {
 				complete_national_focus = WCA_american_commonwealth
+			set_popularities = {
+				totalist = 18
+				radical_socialist = 23
+				syndicalist = 22
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+ 
 			}
 		}
 	}
@@ -304,9 +329,10 @@ country_event = { #Fate of Alaska
 	immediate = {
 		if = {
 			limit = {
-				any_state_of = {
-					target = { 385 471 637 } #Oregon, Yukon, Kamchatka
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					385 = { is_claim_or_core_of_ROOT = yes } #Oregon
+					471 = { is_claim_or_core_of_ROOT = yes } #Yukon
+					637 = { is_claim_or_core_of_ROOT = yes } #Kamchatka
 				}
 			}
 			save_event_target_as = can_annex
@@ -376,9 +402,9 @@ country_event = { #Fate of Alaska
 			modifier = {
 				factor = 0
 				annexations_can_annex = yes
-				any_state_of = {
-					target = { 385 471 } #Oregon, Yukon
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					385 = { is_claim_or_core_of_ROOT = yes } #Oregon
+					471 = { is_claim_or_core_of_ROOT = yes } #Yukon
 				}
 			}
 			modifier = {
@@ -3076,9 +3102,9 @@ country_event = { #Fate of Pastaza
 	immediate = {
 		if = {
 			limit = {
-				any_state_of = {
-					target = { 305 491 } #Quito, Loreto
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					305 = { is_claim_or_core_of_ROOT = yes } #Quito
+					491 = { is_claim_or_core_of_ROOT = yes } #Loreto
 				}
 			}
 			save_event_target_as = can_annex
@@ -3195,29 +3221,22 @@ country_event = { #Fate of Ecuador
 
 	immediate = {
 		hidden_effect = {
-			if = {
-				limit = { NOT = { country_exists = ECU } }
-				ECU = { drop_cosmetic_tag = yes }
-				every_state = {
-					if = {
-						limit = { is_ecuador = no }
-						remove_core_of = ECU
-						ECU = { PREV = { disable_state_integration = yes } }
-					}
-					else = {
-						add_core_of = ECU
-					}
-					remove_claim_by = ECU
+			every_state = {
+				if = {
+					limit = { is_ecuador = no }
+					remove_core_of = ECU
 				}
+				else = {
+					add_core_of = ECU
+				}
+				remove_claim_by = ECU
+				ECU = { PREV = { disable_state_integration = yes } }
 			}
-			else_if = {
-				limit = {
-					305 = { #Quito
-						annexations_state_owner_is_valid_grant_target = yes
-						owner = { ROOT_can_grant_land = yes }
-					}
-				}
-				var:305.owner = { save_event_target_as = ecuador add_to_array = { ROOT.potential_grant_targets = THIS } }
+			ECU = {
+				drop_cosmetic_tag = yes
+				COL = { disable_country_integration = yes }
+				VEN = { disable_country_integration = yes }
+				PAN = { disable_country_integration = yes }
 			}
 			490 = { retain_state = yes } #Pastaza
 			if = {
@@ -3232,24 +3251,6 @@ country_event = { #Fate of Ecuador
 		name = annexation_events.2024.a
 		trigger = {
 			is_subject = no
-			NOT = { country_exists = ECU }
-		}
-		ai_chance = {
-			base = 100
-			modifier = {
-				factor = 0
-				annexations_can_annex = yes
-			}
-		}
-		set_temp_variable = { tag_to_release = ECU }
-		release_targeted_tag = yes
-	}
-
-	option = { #Give to Ecuador
-		log = "[GetLogInfo]: event annexation_events.2024 option annexation_events.americas.give_to_ecuador"
-		name = annexation_events.americas.give_to_ecuador
-		trigger = {
-			has_event_target = ecuador
 		}
 		ai_chance = {
 			base = 100
@@ -5158,9 +5159,10 @@ country_event = { #Fate of Acre
 	immediate = {
 		if = {
 			limit = {
-				any_state_of = {
-					target = { 495 494 847 } #Amazonas, Cuzco, Beni
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					495 = { is_claim_or_core_of_ROOT = yes } #Amazonas
+					494 = { is_claim_or_core_of_ROOT = yes } #Cuzco
+					847 = { is_claim_or_core_of_ROOT = yes } #Beni
 				}
 			}
 			save_event_target_as = can_annex
@@ -5359,9 +5361,9 @@ country_event = { #Fate of Ponta Pora
 	immediate = {
 		if = {
 			limit = {
-				any_state_of = {
-					target = { 504 301 } #Campo Grande, Paraguay
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					504 = { is_claim_or_core_of_ROOT = yes } #Campo Grande
+					301 = { is_claim_or_core_of_ROOT = yes } #Paraguay
 				}
 			}
 			save_event_target_as = can_annex
@@ -5497,9 +5499,10 @@ country_event = { #Fate of Iguassu
 	immediate = {
 		if = {
 			limit = {
-				any_state_of = {
-					target = { 503 301 1074 } #Paraná, Paraguay, Misiones
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					503 = { is_claim_or_core_of_ROOT = yes } #Paraná
+					301 = { is_claim_or_core_of_ROOT = yes } #Paraguay
+					1074 = { is_claim_or_core_of_ROOT = yes } #Misiones
 				}
 			}
 			save_event_target_as = can_annex
@@ -6026,9 +6029,9 @@ country_event = { #Fate of Misiones
 	immediate = {
 		if = {
 			limit = {
-				any_state_of = {
-					target = { 301 510 } #Paraguay, La Mesopotamia
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					301 = { is_claim_or_core_of_ROOT = yes } #Paraguay
+					510 = { is_claim_or_core_of_ROOT = yes } #La Mesopotamia
 				}
 			}
 			save_event_target_as = can_annex
@@ -6447,9 +6450,9 @@ country_event = { #Fate of Antofagasta
 		hidden_effect = {
 			if = {
 				limit = {
-					any_state_of = {
-						target = { 848 874 } #Potosí, Atacama
-						is_claim_or_core_of_ROOT = yes
+					OR = {
+						848 = { is_claim_or_core_of_ROOT = yes } #Potosí
+						874 = { is_claim_or_core_of_ROOT = yes } #Atacama
 					}
 				}
 				save_event_target_as = can_annex
@@ -6581,9 +6584,9 @@ country_event = { #Fate of Essequibo
 	immediate = {
 		if = {
 			limit = {
-				any_state_of = {
-					target = { 687 912 } #Demerara, Bolivar
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					687 = { is_claim_or_core_of_ROOT = yes } #Demerara
+					912 = { is_claim_or_core_of_ROOT = yes } #Bolivar
 				}
 			}
 			save_event_target_as = can_annex
@@ -6706,9 +6709,9 @@ country_event = { #Fate of Putumayo
 	immediate = {
 		if = {
 			limit = {
-				any_state_of = {
-					target = { 851 490 } #Caquetá, Pastaza
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					851 = { is_claim_or_core_of_ROOT = yes } #Caquetá
+					490 = { is_claim_or_core_of_ROOT = yes } #Pastaza
 				}
 			}
 			save_event_target_as = can_annex
@@ -7953,9 +7956,10 @@ country_event = { #Fate of Tierra del Fuego
 	immediate = {
 		if = {
 			limit = {
-				any_state_of = {
-					target = { 278 507 1029 } #Buenos Aires, Magallanes, Santa Cruz
-					is_claim_or_core_of_ROOT = yes
+				OR = {
+					278 = { is_claim_or_core_of_ROOT = yes } #Buenos Aires
+					507 = { is_claim_or_core_of_ROOT = yes } #Magallanes
+					1029 = { is_claim_or_core_of_ROOT = yes } #Santa Cruz
 				}
 			}
 			save_event_target_as = can_annex
@@ -8130,10 +8134,8 @@ state_event = { #Fate of the Falkland Islands
 			if = {
 				limit = {
 					OR = {
-						any_state_of = {
-							target = { 278 1029 } #Buenos Aires, Santa Cruz
-							is_claim_or_core_of_ROOT = yes
-						}
+						278 = { is_claim_or_core_of_ROOT = yes } #Buenos Aires
+						1029 = { is_claim_or_core_of_ROOT = yes } #Santa Cruz
 						ROOT = { annexations_britain_can_annex_overseas = yes }
 					}
 				}
@@ -8308,10 +8310,8 @@ country_event = { #Fate of Tarapacá
 							492 = { is_claim_or_core_of_ROOT = yes } #Arequipa
 							owns_state = 872 #Arica
 						}
-						any_state_of = {
-							target = { 506 848 } #Antofagasta, Potosí
-							is_claim_or_core_of_ROOT = yes
-						}
+						506 = { is_claim_or_core_of_ROOT = yes } #Antofagasta
+						848 = { is_claim_or_core_of_ROOT = yes } #Potosí
 					}
 				}
 				save_event_target_as = can_annex

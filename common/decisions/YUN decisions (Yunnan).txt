@@ -450,6 +450,7 @@ RKT_zeal_decision_category = {
 				limit = { tag = RKT }
 				RKT_add_zeal_medium_effect = yes
 			}
+			add_cic = 500
 		}
 		days_remove = 180
 		modifier = {
@@ -632,6 +633,7 @@ RKT_zeal_decision_category = {
 				level = 1
 			}
 			YUN_HRY_medium_effect = yes
+			add_cic = 500
 		}
 		days_remove = 180
 		modifier = {
@@ -1058,6 +1060,7 @@ UPC_enthusiasm_decision_category = {
 				type = industrial_complex
 				level = 1
 			}
+			add_cic = 500
 			if = {
 				limit = { tag = UPC }
 				UPC_sub_enthusiasm_medium_effect = yes
@@ -1172,6 +1175,17 @@ YUN_GXC_war_decision_category = {
 			if = {
 				limit = {
 					controls_state = 594 #Nanning
+					NOT = {
+						AND = {
+							is_ai = yes
+							OR = {
+								has_game_rule = { rule = YUN_forpol option = YUN_FORPOL_NZH }
+								has_game_rule = { rule = YUN_forpol option = YUN_FORPOL_AGJ }
+								has_game_rule = { rule = YUN_forpol option = YUN_FORPOL_NPA }
+								NOT = { has_game_rule = { rule = YUN_NPA_path option = DEFAULT } }
+							}
+						}
+					}
 				}
 				YUN_GXC_increase_morale_effect = yes
 				add_war_support = 0.05 #Much harder to gain war support than it is to lose it. This is ordered so the tooltip will always be accurate - WS is added after the spirit changes.
@@ -1208,6 +1222,7 @@ YUN_GXC_war_decision_category = {
 				OR = {
 					owns_state = 594
 					is_ally_with = var:594.owner
+					overlord = { has_subject = var:594.owner }
 				}
 			}
 		}
@@ -1242,6 +1257,10 @@ YUN_GXC_war_decision_category = {
 					controls_province = 7965 #Dali
 					controls_province = 10413 #Jinghong
 				}
+				has_game_rule = { rule = YUN_NPA_path option = DEFAULT }
+				NOT = { has_game_rule = { rule = YUN_forpol option = YUN_FORPOL_NZH } }
+				NOT = { has_game_rule = { rule = YUN_forpol option = YUN_FORPOL_AGJ } }
+				NOT = { has_game_rule = { rule = YUN_forpol option = YUN_FORPOL_NPA } }
 			}
 		}
 
@@ -1270,6 +1289,7 @@ YUN_GXC_war_decision_category = {
 					OR = {
 						owns_state = 594
 						is_ally_with = var:594.owner
+						overlord = { has_subject = var:594.owner }
 					}
 				}
 			}
@@ -1305,7 +1325,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 325 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1337,7 +1357,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 325 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1371,7 +1391,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 325 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1396,7 +1416,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		allowed = { always = no } #manually activated
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1426,7 +1446,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 816 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1460,8 +1480,10 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 325 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
+
+		modifier = { civilian_factory_use = 1 }
 
 		ai_will_do = { factor = 100 }
 
@@ -1492,7 +1514,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 325 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1526,7 +1548,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 1051 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1560,7 +1582,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 592 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1594,7 +1616,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 593 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1628,7 +1650,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 800 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1662,7 +1684,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 591 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1694,7 +1716,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 594 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1728,7 +1750,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 1054 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1754,7 +1776,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 325 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1781,7 +1803,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		visible = { owns_state = 816 }
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -1819,7 +1841,7 @@ YUN_grand_southern_reconstruction_decision_category = {
 		}
 
 		cost = 30
-		days_remove = 90
+		days_remove = 360
 		fire_only_once = yes
 
 		ai_will_do = { factor = 100 }
@@ -2199,6 +2221,7 @@ YUN_dian_dragon_domain_decision_category = {
 				type = industrial_complex
 				level = 1
 			}
+						add_cic = 500
 			set_country_flag = {
 				flag = YUN_interacting_with_dian_dragons_domain_flag
 				days = 180 #AI will generally refrain from playing this game so its easier for the player
@@ -2248,10 +2271,8 @@ YUN_dian_dragon_domain_decision_category = {
 
 			modifier = {
 				factor = 0
-				NOT = {
-					has_game_rule = { rule = GXC_forpol option = DEFAULT }
-					has_game_rule = { rule = YUN_forpol option = YUN_FORPOL_ZHL }
-				}
+				NOT = { has_game_rule = { rule = YUN_forpol option = DEFAULT } }
+				NOT = { has_game_rule = { rule = YUN_forpol option = YUN_FORPOL_NZH } }
 			}
 		}
 		fire_only_once = yes
@@ -2582,31 +2603,29 @@ YUN_provisional_constitution_crisis_decisions = {
 			#Rig it if you have game rules active
 			if = {
 				limit = {
+					is_ai = yes
 					OR = {
-						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_YINGQIN_PEOPLES_PATAUT }
-						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_YINGQIN_REVOLUTIONARY_PATAUT }
-						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_YINGQIN_LUCKY_PATAUT }
-						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_YINGQIN_LIBERAL_PATAUT }
-						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_YINGQIN_BLUE_SHIRT_PATAUT }
+						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_PEOPLES_YINGQIN_PATAUT }
+						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_REVOLUTIONARY_YINGQIN_PATAUT }
+						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LUCKY_YINGQIN_PATAUT }
+						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIBERAL_YINGQIN_PATAUT }
+						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_BLUE_SHIRT_YINGQIN_PATAUT }
 					}
 				}
-				custom_effect_tooltip = YUN_he_yingqin_autocoup_mission_success_tt
 				country_event = { id = YUN.lategame.406 days = 1 } #He Yingqin Ploughs Forward!
-				custom_effect_tooltip = CHN_game_rule_rigged_warning_tt
 			}
 			else_if = {
 				limit = {
+					is_ai = yes
 					OR = {
 						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 						has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 					}
 				}
-				custom_effect_tooltip = YUN_he_yingqin_autocoup_mission_success_tt
 				country_event = { id = YUN.lategame.410 days = 1 } #Hu Hanmin Arrested!
-				custom_effect_tooltip = CHN_game_rule_rigged_warning_tt
 			}
 			#Normal Code
 			else_if = {
@@ -3007,8 +3026,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3046,8 +3065,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3119,8 +3138,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3166,8 +3185,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3205,8 +3224,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3249,8 +3268,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3288,8 +3307,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3361,8 +3380,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3408,8 +3427,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3450,8 +3469,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3529,8 +3548,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3615,8 +3634,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3713,8 +3732,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3764,8 +3783,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3805,8 +3824,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3860,8 +3879,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}
@@ -3891,8 +3910,8 @@ YUN_provisional_constitution_crisis_decisions = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_QUN_MARLIB }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_LIFU_AUTDEM }
-					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_AUTDEM }
+					has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_JITAO_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_CHENG_PATAUT }
 					#has_game_rule = { rule = YUN_KMT_path option = YUN_KMT_PATH_NATPOP }
 				}

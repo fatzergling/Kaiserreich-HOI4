@@ -1375,7 +1375,7 @@ focus_tree = {
 				}
 			}
 			add_ideas = FOP_foreign_owned_factories
-			ARG = { enable_country_integration_50_compliance = yes }
+			ARG = { enable_country_integration_80_compliance = yes }
 			hidden_effect = {
 				activate_targeted_decision = { target = THIS decision = FOP_begin_population_swapping_dec }
 				remove_targeted_decision = { target = 579 decision = FOP_infiltrate_state_decision }
@@ -2534,6 +2534,8 @@ focus_tree = {
 				}
 				country_event = { id = patagonia_events.239 days = 75 }		# Justo trial
 				country_event = { id = patagonia_events.499 days = 270 }		# A question of Andesia
+				BRA = { country_event = uruguay_events.64 }
+
 			}
 		}
 	}

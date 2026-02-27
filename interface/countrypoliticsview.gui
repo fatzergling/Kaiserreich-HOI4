@@ -588,8 +588,8 @@ guiTypes = {
 					name = "spirit_grid_over_defined"
 					position = { x = 10 y = 1 }
 					size = { width = 330 height = 68 }
-					slotsize = { width = 33 height = 34 }
-					max_slots_horizontal = 15
+					slotsize = { width = 59 height = 68 }
+					max_slots_horizontal = 8
 					format = "UPPER_LEFT"
 				}
 			}

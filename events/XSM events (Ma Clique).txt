@@ -277,7 +277,7 @@ country_event = { #Fuxiang dies, Lin takes power
 						country_leader = {
 							desc = XSM_ma_hongkui_leader_desc
 							ideology = paternal_autocrat_subtype
-							traits = { CHN_non_aligned XSM_the_hard_general }
+							traits = { CHN_beiyang_aligned XSM_the_hard_general }
 						}
 						promote_leader = yes
 					}
@@ -997,6 +997,7 @@ country_event = { #Mas win
 		hidden_effect = {
 			### Add Northwestern War Idea to aid with supply issues - will be removed after war
 			add_ideas = XSM_northwest_war_idea
+			add_ideas = has_scripted_peace
 			##Give it to TIB too
 			TIB = { add_ideas = TIB_northwest_war_idea }
 			### Delete templates - no cheating
@@ -1090,6 +1091,7 @@ country_event = { #Tibet loses
 		add_war_support = 0.05
 		hidden_effect = {
 			add_ideas = XSM_northwest_war_idea
+			add_ideas = has_scripted_peace
 		}
 	}
 }
@@ -1127,6 +1129,7 @@ country_event = { #Tie
 		hidden_effect = {
 			### Add Northwestern War Idea to aid with supply issues - will be removed after war
 			add_ideas = XSM_northwest_war_idea
+			add_ideas = has_scripted_peace
 			### Delete templates - no cheating
 			if = {
 				limit = { has_template = "Yushu Garrison" }
@@ -1281,7 +1284,7 @@ country_event = { #Tibet wins
 			### Delete templates - no cheating
 			### Add Northwestern War Idea to aid with supply issues - will be removed after war
 			add_ideas = XSM_northwest_war_idea
-
+			add_ideas = has_scripted_peace
 			##Give it to TIB too
 			TIB = { add_ideas = TIB_northwest_war_idea }
 			if = {
@@ -2127,7 +2130,6 @@ country_event = { #MON/TIB (FROM) surrender to XSM
 	picture = GFX_report_event_TIB_german_mission_tibet
 
 	is_triggered_only = yes
-
 	option = {
 		log = "[GetLogInfo]: event ma_clique_events.230 option ma_clique_events.230.a"
 		name = ma_clique_events.230.a #Yes, let's end this
@@ -2210,7 +2212,13 @@ country_event = { #MON/TIB (FROM) surrender to XSM
 	option = {
 		log = "[GetLogInfo]: event ma_clique_events.230 option ma_clique_events.230.b"
 		name = ma_clique_events.230.b #This is not over yet!
-		ai_chance = { base = 0 }
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				FROM = { tag = MON }  
+			}
+		}
 		add_stability = -0.10
 		add_war_support = -0.10
 		FROM = { country_event = ma_clique_events.231 }

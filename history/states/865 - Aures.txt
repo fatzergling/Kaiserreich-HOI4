@@ -6,8 +6,8 @@ state = {
 
 	history = {
 		owner = NFA
-		add_core_of = NFA
 		add_core_of = ALG
+		add_claim_by = NFA
 		add_to_array = { state_victory_points = 9976 }
 		add_to_array = { state_victory_points = 10059 }
 
@@ -18,6 +18,8 @@ state = {
 		}
 		victory_points = { 9976 2 } #Batna
 		victory_points = { 10059 2 } #Biskra
+		set_resistance = 0
+		set_compliance = 50
 	}
 
 	provinces = {

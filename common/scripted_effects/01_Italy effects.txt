@@ -673,6 +673,17 @@ italy_break_balance = {
 			remove_ideas = VNC_italy_balance_idea
 		}
 	}
+	SRI = {
+					add_timed_idea = {
+				idea = has_scripted_peace
+				days = 40
+			}
+
+	}
+					SIC = {
+						dismantle_faction = yes
+				}
+
 }
 
 LOM_create_marcello_visconti = {

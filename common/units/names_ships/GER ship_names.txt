@@ -550,22 +550,21 @@ GER_CV_IMPERIAL = {
 	fallback_name = "Träger %d"
 
 	ordered = {
-		1 = { "Graf Zeppelin" }
-		2 = { "Peter Strasser" }
-		3 = { "Oswald Boelcke" }
-		4 = { "Karl Allmenröder" }
-		5 = { "Walter Blume" }
-		6 = { "Otto Lilienthal" }
-		7 = { "Erich Loewenhardt" }
-		10 = { "Manfred von Richthofen" }
-		11 = { "Lothar von Richthofen" }
-		12 = { "Ernst Udet" }
-		13 = { "Max Immelman" }
-		14 = { "Werner Voss" }
-		15 = { "Helmuth Wilberg" }
-		16 = { "Heinrich Mathy" }
-		17 = { "Wilhelm Siegert" }
-		18 = { "Franz Büchner" }
+		1 = { "Peter Strasser" }
+		2 = { "Oswald Boelcke" }
+		3 = { "Karl Allmenröder" }
+		4 = { "Walter Blume" }
+		5 = { "Otto Lilienthal" }
+		6 = { "Erich Loewenhardt" }
+		7 = { "Manfred von Richthofen" }
+		8 = { "Lothar von Richthofen" }
+		9 = { "Ernst Udet" }
+		10 = { "Max Immelman" }
+		11 = { "Werner Voss" }
+		12 = { "Helmuth Wilberg" }
+		13 = { "Heinrich Mathy" }
+		14 = { "Wilhelm Siegert" }
+		15 = { "Franz Büchner" }
 	}
 }
 
@@ -788,7 +787,6 @@ GER_THEME_RIVERS_IMPERIAL = {
 		21 = { "Fulda" }
 		22 = { "Werra" }
 		23 = { "Alster" }
-		26 = { "Havel" }
 	}
 }
 

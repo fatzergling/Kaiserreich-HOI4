@@ -9124,7 +9124,21 @@ country_event = { #Fate of France
 				is_owned_by = event_target:france_exile
 			}
 		}
-		ai_chance = { base = 30 }
+		ai_chance = { 
+			base = 30 
+			modifier = {
+				add = 40
+				GER_is_du_path = yes
+			}
+			modifier = {
+				add = 20
+				GER_is_swr_path = yes
+			}
+			modifier = {
+				add = 20
+				CAN = { has_socialist_government = yes }
+			}
+		}
 		event_target:france_exile = { country_event = french_republic_events.120 }
 	}
 

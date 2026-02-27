@@ -1024,7 +1024,7 @@ focus_tree = {
 						TYPE = "Milizia Cittadina"
 					}
 					create_unit = {
-						division = "division_template = \"Milizia Cittadina\" start_experience_factor = 0.2"
+						division = "division_template = \"Milizia Cittadina\" start_experience_factor = 0.2 start_equipment_factor = 0.1"
 						owner = ROOT
 						count = 2
 					}
@@ -1150,7 +1150,7 @@ focus_tree = {
 						TYPE = "Fanteria Romana"
 					}
 					create_unit = {
-						division = "division_template = \"Fanteria Romana\" start_experience_factor = 0.1"
+						division = "division_template = \"Fanteria Romana\" start_experience_factor = 0.1 start_equipment_factor = 0.1"
 						owner = ROOT
 						count = 3
 					}
@@ -1954,8 +1954,8 @@ focus_tree = {
 			add_war_support = 0.05
 			2 = { add_manpower = 60000 }
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_1
-				amount = 2000
+				type = infantry_equipment_0
+				amount = 1000
 				producer = PAP
 			}
 		}
@@ -2019,7 +2019,7 @@ focus_tree = {
 						TYPE = "2a Guardia Palatina"
 					}
 					create_unit = {
-						division = "division_template = \"2a Guardia Palatina\" start_experience_factor = 0.1"
+						division = "division_template = \"2a Guardia Palatina\" start_experience_factor = 0.1 start_equipment_factor = 0.1"
 						owner = ROOT
 						count = 3
 					}
@@ -2093,7 +2093,6 @@ focus_tree = {
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed PAP_zouave_mobilisation"
-			add_manpower = 10000
 			custom_override_tooltip = {
 				tooltip = {
 					localization_key = tooltip_create_division_template
@@ -2130,7 +2129,7 @@ focus_tree = {
 						TYPE = "Zuavi Pontifici"
 					}
 					create_unit = {
-						division = "division_template = \"Zuavi Pontifici\" start_experience_factor = 0.2"
+						division = "division_template = \"Zuavi Pontifici\" start_experience_factor = 0.2 start_equipment_factor = 0.1"
 						owner = ROOT
 						count = 6
 					}

@@ -538,7 +538,7 @@ focus_tree = {
 			has_global_flag = spanish_civil_war
 		}
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 1500 }
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SPA_destabilise_kingdom"
@@ -569,7 +569,7 @@ focus_tree = {
 			has_global_flag = spanish_civil_war
 		}
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { factor = 1500 }
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SPA_focus_cnt"
@@ -710,7 +710,7 @@ focus_tree = {
 			has_global_flag = spanish_civil_war
 		}
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 0 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SPA_factory_sabotage"
 			41 = {

@@ -85,6 +85,33 @@ air_wings = {
 			version_name = "Fi 167"
 		}
 	}
+
+	"SMS Main" = {
+		cv_small_plane_airframe_0 = { owner = "GER" amount = 10 version_name = "Ff 68 T"}
+		cv_small_plane_airframe_0 = { owner = "GER" amount = 10 version_name = "Ff 68 T" }
+		cv_small_plane_airframe_0 = { owner = "GER" amount = 2 version_name = "Ff 68 T" }
+		cv_small_plane_naval_bomber_airframe_1 = { owner = "GER" amount = 10 version_name = "Fi 167 T" }
+		cv_small_plane_naval_bomber_airframe_1 = { owner = "GER" amount = 10 version_name = "Fi 167 T"}
+		cv_small_plane_naval_bomber_airframe_1 = { owner = "GER" amount = 2 version_name = "Fi 167 T" }
+	}
+	"SMS Havel" = {
+		cv_small_plane_airframe_0 = { owner = "GER" amount = 10 version_name = "Ff 68 T"}
+		cv_small_plane_airframe_0 = { owner = "GER" amount = 10 version_name = "Ff 68 T" }
+		cv_small_plane_airframe_0 = { owner = "GER" amount = 2 version_name = "Ff 68 T" }
+		cv_small_plane_naval_bomber_airframe_1 = { owner = "GER" amount = 10 version_name = "Fi 167 T" }
+		cv_small_plane_naval_bomber_airframe_1 = { owner = "GER" amount = 10 version_name = "Fi 167 T"}
+		cv_small_plane_naval_bomber_airframe_1 = { owner = "GER" amount = 2 version_name = "Fi 167 T" }
+	}
+	"SMS Graf Zeppelin" = {
+		cv_small_plane_airframe_0 = { owner = "GER" amount = 10 version_name = "Ff 68 T"}
+		cv_small_plane_airframe_0 = { owner = "GER" amount = 10 version_name = "Ff 68 T" }
+		cv_small_plane_airframe_0 = { owner = "GER" amount = 2 version_name = "Ff 68 T" }
+		cv_small_plane_naval_bomber_airframe_1 = { owner = "GER" amount = 10 version_name = "Fi 167 T" }
+		cv_small_plane_naval_bomber_airframe_1 = { owner = "GER" amount = 10 version_name = "Fi 167 T"}
+		cv_small_plane_naval_bomber_airframe_1 = { owner = "GER" amount = 2 version_name = "Fi 167 T" }
+	}
+
+
 }
 
 instant_effect = {

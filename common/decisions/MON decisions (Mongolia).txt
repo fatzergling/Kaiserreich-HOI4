@@ -860,8 +860,16 @@ MON_mongolian_highway_decisions = {
 		allowed = { always = no } #activated by effect
 
 		available = {
+			OR = {
 			controls_state = 612
+				overlord = { controls_state = 612 }
+
+			}
+			OR = {
 			controls_state = 330
+				overlord = { controls_state = 330 }
+
+			}
 			num_of_civilian_factories_available_for_projects > 0
 		}
 
@@ -905,8 +913,16 @@ MON_mongolian_highway_decisions = {
 		allowed = { always = no } #activated by effect
 
 		available = {
+			OR = {
 			controls_state = 348
+				overlord = { controls_state = 330 }
+
+			}
+			OR = {
 			controls_state = 330
+				overlord = { controls_state = 330 }
+
+			}
 			num_of_civilian_factories_available_for_projects > 1
 		}
 
@@ -951,7 +967,11 @@ MON_mongolian_highway_decisions = {
 
 		available = {
 			num_of_civilian_factories_available_for_projects > 0
+			OR = {
 			controls_state = 616
+				overlord = { controls_state = 616 }
+
+			}
 		}
 
 		fire_only_once = yes

@@ -37,12 +37,12 @@ characters = {
 		country_leader = {
 			desc = SIK_fan_yaonan_leader_desc
 			ideology = radical_socialist_subtype
-			traits = { CHN_non_aligned }
+			traits = { CHN_beiyang_aligned }
 		}
 		country_leader = {
 			desc = SIK_fan_yaonan_leader_desc
 			ideology = social_democrat_subtype
-			traits = { CHN_non_aligned }
+			traits = { CHN_beiyang_aligned }
 		}
 	}
 	#馬紹武

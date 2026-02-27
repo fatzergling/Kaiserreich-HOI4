@@ -195,7 +195,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed TIB_ragpa_victory"
 			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
+			#add_one_random_civilian_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1386,7 +1386,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed TIB_expand_trapichi_factory"
 			322 = { prioritize_state = yes }
 			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
+			#add_one_random_civilian_factory = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1811,7 +1811,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed TIB_expand_tip_arsenal"
-			add_one_random_military_factory = yes
+			add_offsite_building = { type = arms_factory level = 1 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}

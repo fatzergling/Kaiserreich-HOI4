@@ -55,6 +55,10 @@ on_actions = {
 							civilian_economy
 							volunteer_only
 						}
+			add_timed_idea = {
+				idea = BUL_reparation_payments
+				days = 1460
+			}
 						if = {
 							limit = {
 								has_idea = BUL_waning_hegemony

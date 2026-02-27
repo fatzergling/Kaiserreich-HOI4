@@ -368,10 +368,62 @@ puppet_released_tag_nocosmetic = {
 				clear_volunteers_to_PREV = yes
 				PREV = { clear_volunteers_to_PREV = yes }
 			}
+			add_integration_effect = yes
 		}
-	}
+		}
+	activate_targeted_decision = { decision = GER_deploy_troops_to_occupation_zones target = var:tag_to_release }
 }
 
+add_integration_effect = {
+			every_owned_state = {
+			if = {
+				limit = { 
+					OR = {
+					is_core_of = var:tag_to_release 
+					is_claimed_by = var:tag_to_release 
+					}
+					}
+						remove_core_of = var:tag_to_release
+						add_claim_by = var:tag_to_release
+						enable_state_integration_80_compliance = yes
+						if = {
+							limit = { is_capital = yes }
+							add_compliance = 70
+						}
+						else = {
+									random_list = {
+											25 = {
+												add_compliance = 60
+											}
+											25 = {
+												add_compliance = 70
+											}
+											25 = {
+												add_compliance = 50
+											}
+											25 = {
+												add_compliance = 40
+											}
+											25 = {
+												add_compliance = 30
+											}
+											25 = {
+												add_compliance = 20
+											}
+											25 = {
+												add_compliance = 10
+											}
+											25 = {
+												add_compliance = 1
+											}
+
+									}
+						}
+
+			}
+		}
+
+}
 ### COUNTRY-SPECIFIC EFFECTS ###
 release_spain = {
 	hidden_effect = {
@@ -394,6 +446,62 @@ release_spain = {
 				set_capital = { state = 41 remember_old_capital = no }
 			}
 		}
+	if = {
+		limit = { has_socialist_government = yes}
+		if = {
+			limit = {has_government = totalist}
+			SWF = {
+			set_popularities = {
+				totalist = 28
+				radical_socialist = 18
+				syndicalist = 17
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+			}
+		}
+		else_if = {
+			limit = {has_government = radical_socialist}
+			SWF = {
+				set_popularities = {
+				totalist = 18
+				radical_socialist = 23
+				syndicalist = 22
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+			}
+ 
+		}
+		else = {
+			SWF = {
+				set_popularities = {
+				totalist = 18
+				radical_socialist = 22
+				syndicalist = 23
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+			}
+		
+		}
+		
+	}
 	}
 }
 
@@ -771,6 +879,56 @@ release_canada = {
 	}
 	puppet = CAN
 	CAN = {
+		every_owned_state = {
+			if = {
+				limit = { 
+					OR = {
+						is_core_of = CAN 
+						is_claimed_by = CAN 
+					}
+					}
+						remove_core_of = CAN
+						add_claim_by = CAN
+						enable_state_integration_80_compliance = yes
+						if = {
+							limit = { is_capital = yes }
+							add_compliance = 70
+						}
+						else = {
+									random_list = {
+											25 = {
+												add_compliance = 60
+											}
+											25 = {
+												add_compliance = 70
+											}
+											25 = {
+												add_compliance = 50
+											}
+											25 = {
+												add_compliance = 40
+											}
+											25 = {
+												add_compliance = 30
+											}
+											25 = {
+												add_compliance = 20
+											}
+											25 = {
+												add_compliance = 10
+											}
+											25 = {
+												add_compliance = 1
+											}
+
+									}
+						}
+
+			}
+		}
+
+	}
+	CAN = {
 		hidden_effect = {
 			mark_focus_tree_layout_dirty = yes
 			transfer_technology_without_doctrines = yes
@@ -867,6 +1025,64 @@ release_canada = {
 				}
 			}
 		}
+	}
+	else_if = {
+		limit = { has_socialist_government = yes}
+		if = {
+			limit = {has_government = totalist}
+			CAN = {
+
+			set_popularities = {
+				totalist = 28
+				radical_socialist = 18
+				syndicalist = 17
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+			}
+
+		}
+		else_if = {
+			limit = {has_government = radical_socialist }
+			CAN = {
+				set_popularities = {
+				totalist = 18
+				radical_socialist = 23
+				syndicalist = 22
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+			}
+ 
+		}
+		else = {
+			CAN = {
+				set_popularities = {
+				totalist = 18
+				radical_socialist = 22
+				syndicalist = 23
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+			}
+		
+		}
+		
 	}
 }
 
@@ -1597,6 +1813,8 @@ annexations_reset_central_american_tags = {
 		limit = { NOT = { country_exists = CEN } }
 		CEN = {
 			clear_cores_of_tag_if_possible = yes
+			311 = { disable_state_integration = yes } # Belize
+			474 = { disable_state_integration = yes } # Yucatan
 			CEN_reset_ideas = yes
 			every_character = {
 				limit = { has_character_flag = COS_character }
@@ -2078,6 +2296,64 @@ annexations_release_italy = {
 				limit = { NOT = { has_completed_focus = SRD_italia_riunita } }
 				complete_national_focus = SRD_italia_riunita
 			}
+		}
+	else_if = {
+		limit = { has_socialist_government = yes}
+		if = {
+			limit = {has_government = totalist}
+						SRI = {
+			set_popularities = {
+				totalist = 28
+				radical_socialist = 18
+				syndicalist = 17
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+						}
+
+		}
+		else_if = {
+			limit = {has_government = radical_socialist}
+			SRI = {
+				set_popularities = {
+				totalist = 18
+				radical_socialist = 23
+				syndicalist = 22
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+			}
+ 
+		}
+		else = {
+						SRI = {
+
+				set_popularities = {
+				totalist = 18
+				radical_socialist = 22
+				syndicalist = 23
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+						}
+		
+		}
+		
 		}
 	}
 	hidden_effect = {

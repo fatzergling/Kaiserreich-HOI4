@@ -650,7 +650,7 @@ foreign_politics = {
 		cost = 0
 
 		ai_will_do = {
-			factor = 10
+			factor = 100
 			modifier = {
 				factor = 0
 				has_political_power > 50
@@ -682,24 +682,44 @@ foreign_politics = {
 		custom_cost_trigger = {
 			has_manpower > 40000
 			has_equipment = { infantry_equipment > 5000 }
-			has_equipment = { support_equipment > 1000 }
+			if = {
+				limit = { is_ai = no }
+				has_equipment = { support_equipment > 1000 }
+			}
 		}
 		custom_cost_text = GER_deploy_troops_cost
 
 		visible = {
-			is_faction_leader = yes
+			#is_faction_leader = yes
 			country_exists = FROM
 			FROM = {
 				is_subject_of = ROOT
-				GER_is_military_governorate = yes
+			#	GER_is_military_governorate = yes
 			}
+				FROM = {
+				every_owned_state = {
+					is_claimed_by = FROM
+					NOT = { is_core_of = FROM }
+				}
+				}
 		}
 		modifier = { political_power_gain = -0.1 }
 
 		days_remove = 30
 		cancel_if_not_visible = yes
 
-		ai_will_do = { base = 100 }
+		ai_will_do = { 
+			base = 0
+			modifier = {
+				add = 1000
+				FROM = {
+					any_owned_state = { 
+						resistance > 30
+				}
+				}
+			}
+
+		}
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete GER_deploy_troops_to_occupation_zones"

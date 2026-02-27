@@ -84,9 +84,9 @@ ideas = {
 			picture = usa_great_depression_2
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = 0.3
-				industrial_capacity_factory = -0.20
-				industrial_capacity_dockyard = -0.20
+				consumer_goods_factor = 0.6
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
 			}
 		}
 		CAN_great_depression_2 = {
@@ -94,9 +94,9 @@ ideas = {
 			picture = usa_great_depression
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = 0.2
-				industrial_capacity_factory = -0.10
-				industrial_capacity_dockyard = -0.10
+				consumer_goods_factor = 0.4
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 			}
 		}
 		CAN_great_depression_3 = {
@@ -105,9 +105,9 @@ ideas = {
 			picture = usa_great_depression
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = 0.1
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
 			}
 		}
 		CAN_resistance_to_conscription = {
@@ -953,7 +953,14 @@ ideas = {
 			modifier = {
 				mobilization_speed = 0.20
 				conscription = 0.01
+				#cannot_call_allies_or_join_wars = yes
 			}
+		}
+		CAN_initial_intervention = {
+			on_add = { log = "[GetLogRoot]: add idea NFA_small_native_revolt" }
+			picture = CAN_soldiers
+			allowed = { always = no }
+			modifier = { cannot_call_allies_or_join_wars = 1 }
 		}
 		CAN_refugee_crisis_1 = {
 			on_add = { log = "[GetLogRoot]: add idea CAN_refugee_crisis_1" }

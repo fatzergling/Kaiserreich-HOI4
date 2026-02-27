@@ -102,5 +102,5 @@ recruit_character = SIK_jiang_deyu
 recruit_character = SIK_chen_yufeng
 
 ### Character Setup ###
-#SIK_fan_yaonan = { china_set_character_alignment_northern_zhili = yes }
-#SIK_sheng_shicai = { china_set_character_alignment_chinese_southern_republican = yes }
+SIK_fan_yaonan = { china_set_character_alignment_beiyang = yes }
+SIK_sheng_shicai = { china_set_character_alignment_chinese_southern_republican = yes }

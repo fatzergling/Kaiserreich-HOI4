@@ -2207,6 +2207,28 @@ country_event = { # Canadian Intervention in New England
 					limit = { owns_state = 686 }
 					country_event = { id = puerto_rico_events.5 days = 30 random_days = 30 }
 				}
+						every_owned_state = {
+							limit = {
+								OR = {
+									state = 932 #Louisiana
+									state = 935 #New Orleans
+									state = 931 #Arkansas
+									state = 934 #Oklahoma
+									state = 933 #Northern Texas
+									state = 357 #Southern Texas
+									state = 796 #Southern Texas
+									state = 930 #Southern Texas
+								}
+							}
+							add_core_of = NEE
+							remove_core_of = USA
+							add_claim_by = USA
+							if = {
+								limit = { is_controlled_by = USA }
+								start_state_integration_resistance = yes
+								add_compliance = 35
+							}
+						}
 				USA_create_virginia_hall_operative = yes
 			}
 		}
@@ -5620,7 +5642,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event american_civil_war_events.520 option american_civil_war_events.520.a"
 		name = american_civil_war_events.520.a #Accept
-		ai_chance = { base = 80 }
+		ai_chance = { base = 180 }
 		set_country_flag = ACW_accepted_truce
 		custom_effect_tooltip = ACW_deal_with_devil_effect
 		FROM = {
@@ -5638,7 +5660,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				tag = USA
+				tag = ACC
 			}
 		}
 		set_country_flag = ACW_refused_truce
@@ -8536,7 +8558,15 @@ country_event = {
 		log = "[GetLogInfo]: event american_civil_war_events.720 option american_civil_war_events.720.a"
 		name = american_civil_war_events.720.a
 		ai_chance = {
-			base = 100
+			base = 50
+			modifier = {
+				factor = 0.5
+				USA = { has_completed_focus = USA_raise_entente_tariffs }
+			}
+			modifier = {
+				factor = 2
+				has_country_flag = USA_compromise_reached
+			}
 			modifier = {
 				factor = 0
 				OR = {
@@ -8554,7 +8584,11 @@ country_event = {
 		log = "[GetLogInfo]: event american_civil_war_events.720 option american_civil_war_events.720.b"
 		name = american_civil_war_events.720.b
 		ai_chance = {
-			base = 0
+			base = 25
+			modifier = {
+				factor = 0.5
+				has_country_flag = USA_compromise_reached
+			}
 			modifier = {
 				add = 100
 				OR = {
@@ -8705,6 +8739,28 @@ country_event = {
 				set_demilitarized_zone = no
 			}
 			country_event = { id = american_civil_war_events.725 days = 3 } #New Jersey
+						every_owned_state = {
+							limit = {
+								OR = {
+									state = 932 #Louisiana
+									state = 935 #New Orleans
+									state = 931 #Arkansas
+									state = 934 #Oklahoma
+									state = 933 #Northern Texas
+									state = 357 #Southern Texas
+									state = 796 #Southern Texas
+									state = 930 #Southern Texas
+								}
+							}
+							add_core_of = NEE
+							remove_core_of = USA
+							add_claim_by = USA
+							if = {
+								limit = { is_controlled_by = USA }
+								start_state_integration_resistance = yes
+								add_compliance = 35
+							}
+						}
 		}
 	}
 
@@ -8732,14 +8788,71 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = american_civil_war_events.7240
+
+	trigger = {
+		owns_state = 930
+	}
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+	}
+
+	option = { #USA
+		log = "[GetLogInfo]: event american_civil_war_events.7190 option 1"
+		ai_chance = {
+			base = 40
+			modifier = {
+				ACW_SPA_strength_factor_reverse = yes
+				factor = strength_factor
+			}
+		}
+		USA = {
+			country_event = american_civil_war_events.719
+		}
+	}
+
+	option = { #WCA
+		log = "[GetLogInfo]: event american_civil_war_events.7190 option 2"
+		ai_chance = {
+			base = 60
+			modifier = {
+				ACW_SPA_strength_factor = yes
+				factor = strength_factor
+			}
+			modifier = {
+				factor = 1.5
+				has_country_flag = USA_long_was_president
+			}
+		}
+		USA = {
+			country_event = american_civil_war_events.719
+		}
+	}
+}
+
+
 # Buffalo Seized by SPA Forces
 country_event = {
 	id = american_civil_war_events.724
 	title = american_civil_war_events.724.t
+	desc = {
+		text = american_civil_war_events.724.d.borah
+		trigger = { 
+			USA = { owns_state = 932 } 
+			USA = { has_country_flag = USA_ACW_austerity_rejected }
+		} #Massachusetts
+	}
 
 	desc = {
 		text = american_civil_war_events.724.d.macarthur
-		trigger = { USA = { owns_state = 932 } } #Massachusetts
+		trigger = { 
+			USA = { owns_state = 932 } 
+			USA = { NOT = { has_country_flag = USA_ACW_austerity_rejected } }
+		} #Massachusetts
 	}
 	desc = {
 		text = american_civil_war_events.724.d.canada
@@ -8779,6 +8892,23 @@ country_event = {
 			USA = {
 				remove_state_core = 930
 				add_state_claim = 930
+			}
+			if = {
+				limit = { USA = { has_country_flag = USA_ACW_austerity_rejected } }
+				796 = {
+					set_demilitarized_zone = no
+					USA_remove_support_modifiers_from_state = yes	
+				}
+			WCA = {
+				remove_state_claim = 796
+				add_state_core = 796
+				transfer_state = 796
+			}
+			USA = {
+				remove_state_core = 796
+				add_state_claim = 796
+			}
+
 			}
 			CAN = { country_event = { id = american_civil_war_events.720 days = 2 } } #New England (CAN)
 			country_event = { id = american_civil_war_events.723 days = 8 } #New England
@@ -9923,7 +10053,7 @@ country_event = {
 		hidden_effect = {
 			WCA = {
 				country_event = american_civil_war_events.765
-				country_event = { id = american_civil_war_events.723 days = 2 }
+				#country_event = { id = american_civil_war_events.723 days = 2 }
 			}
 		}
 	}
@@ -10116,10 +10246,11 @@ country_event = {
 
 	option = { #USA
 		log = "[GetLogInfo]: event american_civil_war_events.7670 option 2"
-		ai_chance = { base = 70 }
+		ai_chance = { base = 170 }
 		USA = {
 			transfer_state = 385
 			transfer_state = 386
+			#transfer_state = 378
 			country_event = american_civil_war_events.767
 		}
 	}

@@ -4,8 +4,7 @@
 # By Zankoas and The Alpha Dog
 ################################
 
-@JAP_fading_sun_timeout = 180
-
+@JAP_fading_sun_timeout = 360
 JAP_fading_sun = {
 	JAP_fading_sun_timer = {
 		icon = revolt
@@ -29,7 +28,7 @@ JAP_fading_sun = {
 					}
 				}
 				OR = {
-					JAP_fading_sun_korea_fully_controlled = yes
+					#JAP_fading_sun_korea_fully_controlled = yes
 					JAP_fading_sun_manchuria_not_capitulated = yes
 					JAP_fading_sun_far_eastern_republic_not_capitulated = yes
 					JAP_fading_sun_controls_major_chinese_city = yes
@@ -44,14 +43,14 @@ JAP_fading_sun = {
 					}
 				}
 				OR = {
-					JAP_fading_sun_korea_fully_controlled = yes
+					#JAP_fading_sun_korea_fully_controlled = yes
 					JAP_fading_sun_manchuria_not_capitulated = yes
 					JAP_fading_sun_far_eastern_republic_not_capitulated = yes
 				}
 			}
 			else = {
 				OR = {
-					JAP_fading_sun_korea_fully_controlled = yes
+					#JAP_fading_sun_korea_fully_controlled = yes
 					JAP_fading_sun_manchuria_not_capitulated = yes
 					JAP_fading_sun_controls_major_chinese_city = yes
 					JAP_fading_sun_any_chinese_ally_not_capitulated = yes
@@ -168,7 +167,7 @@ JAP_fading_sun = {
 					}
 				}
 				OR = {
-					JAP_fading_sun_korea_fully_controlled = yes
+				#	JAP_fading_sun_korea_fully_controlled = yes
 					JAP_fading_sun_manchuria_not_capitulated = yes
 					JAP_fading_sun_far_eastern_republic_not_capitulated = yes
 					JAP_fading_sun_controls_major_chinese_city = yes
@@ -183,14 +182,14 @@ JAP_fading_sun = {
 					}
 				}
 				OR = {
-					JAP_fading_sun_korea_fully_controlled = yes
+					#JAP_fading_sun_korea_fully_controlled = yes
 					JAP_fading_sun_manchuria_not_capitulated = yes
 					JAP_fading_sun_far_eastern_republic_not_capitulated = yes
 				}
 			}
 			else = {
 				OR = {
-					JAP_fading_sun_korea_fully_controlled = yes
+					#JAP_fading_sun_korea_fully_controlled = yes
 					JAP_fading_sun_manchuria_not_capitulated = yes
 					JAP_fading_sun_controls_major_chinese_city = yes
 					JAP_fading_sun_any_chinese_ally_not_capitulated = yes
@@ -259,7 +258,7 @@ JAP_fading_sun = {
 					china_is_potential_government = yes
 					is_faction_leader = yes #United Front
 				}
-				is_valid_peace_target = yes
+				#is_valid_peace_target = yes
 			}
 			is_valid_peace_target = yes
 			has_capitulated = no
@@ -286,7 +285,10 @@ JAP_fading_sun = {
 				random_enemy_country = {
 					limit = {
 						is_tag_in_china_area = yes
+						OR = {
+							tag = CUF
 						is_valid_peace_target = yes
+						}
 					}
 					country_event = japan_foreign_events.230
 				}
@@ -759,13 +761,13 @@ JAP_influence_china = {
 			#Rig it if you have game rules
 			if = {
 				limit = {
+					FNG = { is_ai = yes }
 					OR = {
 						has_game_rule = { rule = FNG_path option = FNG_PATH_GAMBIT_PATAUT }
 						has_game_rule = { rule = FNG_path option = FNG_PATH_CONCORD_PATAUT }
 					}
 				}
 				effect_tooltip = { country_event = fengtian_japan_mechanic_events.004 } #The Huanggutun Incident
-				custom_effect_tooltip = CHN_game_rule_rigged_warning_tt
 			}
 			#Actual code
 			else = {
@@ -777,6 +779,7 @@ JAP_influence_china = {
 			#Rig it if you have game rules
 			if = {
 				limit = {
+					FNG = { is_ai = yes }
 					OR = {
 						has_game_rule = { rule = FNG_path option = FNG_PATH_RECOVERY_AUTDEM }
 						has_game_rule = { rule = FNG_path option = FNG_PATH_COMMUNICATIONS_AUTDEM }
@@ -784,7 +787,6 @@ JAP_influence_china = {
 					}
 				}
 				effect_tooltip = { country_event = fengtian_japan_mechanic_events.003 } #The Fengtian-Japanese Alliance Victorious?
-				custom_effect_tooltip = CHN_game_rule_rigged_warning_tt
 			}
 			#Actual code
 			else = {
@@ -908,7 +910,7 @@ JAP_influence_china = {
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete FNG_JAP_deploy_emergency_economic_aid"
 			effect_tooltip = {
-				FNG_JAP_mech_sub_time_medium_effect = yes
+				#FNG_JAP_mech_sub_time_medium_effect = yes
 				FNG_JAP_investment_medium = yes
 				FNG = {
 					add_timed_idea = {
@@ -932,22 +934,22 @@ JAP_influence_china = {
 		visible = {
 			has_active_mission = JAP_faith_in_zhang_runs_out_mission
 		}
-		available = {
-			has_equipment = { artillery_equipment > 49 }
-			has_equipment = { support_equipment > 49 }
-		}
+		#available = {
+		#	has_equipment = { artillery_equipment > 49 }
+		#	has_equipment = { support_equipment > 49 }
+		#}
 		icon = GFX_decision_artillery
 		priority = 100
 		ai_will_do = {
-			base = 0
+			base = 1000
 			modifier = {
-				add = 100 #Higher Priority than Others
+				add = 1000 #Higher Priority than Others
 				has_war_support > 0.50
 			}
-			modifier = {
-				factor = 0
-				has_country_flag = JAP_is_playing_FNG_JAP_minigame_flag
-			}
+			#modifier = {
+			#	factor = 0
+			#	has_country_flag = JAP_is_playing_FNG_JAP_minigame_flag
+			#}
 		}
 		custom_cost_trigger = {
 			NOT = { has_equipment = { infantry_equipment < 2000 } }
@@ -972,7 +974,7 @@ JAP_influence_china = {
 				}
 			}
 			effect_tooltip = {
-				FNG_JAP_mech_sub_time_medium_effect = yes
+				#FNG_JAP_mech_sub_time_medium_effect = yes
 				FNG_JAP_investment_medium = yes
 				FNG = {
 					add_equipment_to_stockpile = {
@@ -1073,7 +1075,7 @@ JAP_influence_china = {
 				add_command_power = -50
 			}
 			effect_tooltip = {
-				FNG_JAP_mech_sub_time_medium_effect = yes
+				#FNG_JAP_mech_sub_time_medium_effect = yes
 				FNG_JAP_investment_medium = yes
 				JAP_FNG_increase_reinforcements_to_FNG_effect = yes
 			}
@@ -1771,7 +1773,7 @@ JAP_influence_china = {
 
 		cost = 100
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 1000 }
 
 		modifier = {
 			civilian_factory_use = 10
@@ -1787,26 +1789,26 @@ JAP_influence_china = {
 		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision remove develop_fengtian"
 			885 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			886 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			714 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2059,7 +2061,7 @@ JAP_influence_china = {
 		}
 		cost = 50
 		ai_will_do = {
-			base = 0
+			base = 200
 			modifier = {
 				add = 5
 				FNG = { is_in_faction_with = JAP }
@@ -2116,7 +2118,7 @@ JAP_influence_china = {
 			}
 		}
 		cost = 100
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 300 }
 		modifier = {
 			civilian_factory_use = 8
 		}
@@ -2127,10 +2129,10 @@ JAP_influence_china = {
 			log = "[GetLogRoot]: Decision remove changchun_industry_investment"
 			FNG = {
 				886 = {
-					add_extra_state_shared_building_slots = 4
+					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 3
 						instant_build = yes
 					}
 				}
@@ -3083,7 +3085,7 @@ JAP_co_prosperity_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 25
 			modifier = {
 				factor = 0
 				FROM = {
@@ -3177,9 +3179,9 @@ JAP_co_prosperity_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 50
 			modifier = {
-				factor = 2
+				factor = 10
 				FROM = { tag = SIA }
 			}
 			modifier = {
@@ -3243,7 +3245,7 @@ JAP_co_prosperity_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 			modifier = {
 				factor = 2
 				FROM = { tag = SIA }
@@ -3303,7 +3305,7 @@ JAP_co_prosperity_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 25
 			modifier = {
 				factor = 2
 				FROM = { tag = SIA }
@@ -3413,7 +3415,7 @@ JAP_co_prosperity_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 50
 			modifier = {
 				factor = 2
 				FROM = { tag = SIA }
@@ -3493,7 +3495,7 @@ JAP_co_prosperity_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 5
+			factor = 25
 			modifier = {
 				factor = 10
 				any_enemy_country = { num_of_naval_factories > ROOT.num_of_naval_factories }
@@ -4591,7 +4593,23 @@ JAP_co_prosperity_member_decisions = {
 			}
 		}
 
-		ai_will_do = { base = 0 }
+		ai_will_do = { 
+			base = 0 
+
+			modifier = {
+				add = 10
+				has_idea = JAP_member_integration_3 
+			}
+
+			modifier = {
+				add = 100
+				original_tag = SIA
+				OR = {
+				has_idea =  JAP_member_integration_2 
+				has_idea =  JAP_member_integration_3
+				}
+			}
+		}
 		fixed_random_seed = no
 	}
 }
@@ -4799,8 +4817,11 @@ JAP_foreign_policy_decisions = {
 				factor = 0
 				OR = {
 					country_is_in_dangerous_war = yes
+					has_war_with = GEA
+					has_war_with = CUF
 					FROM = { default_attack_AI_trigger = yes }
 					second_weltkrieg_has_begun = no
+					FROM = { dont_start_major_faction_wars = yes }
 				}
 			}
 			modifier = {

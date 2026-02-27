@@ -687,7 +687,7 @@ Sichuan_Opium_Monopoly_decisions = {
 			political_power_cost = 0.1
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_Bureaucratic_Reforms"
@@ -709,7 +709,7 @@ Sichuan_Opium_Monopoly_decisions = {
 		days_remove = 50
 		days_re_enable = 10
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_Buy_Out_Merchants"
@@ -741,7 +741,7 @@ Sichuan_Opium_Monopoly_decisions = {
 			stability_weekly = -0.01
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_Forced_Acquisitions"
@@ -773,7 +773,7 @@ Sichuan_Opium_Monopoly_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 			modifier = {
 				factor = 0
 				has_stability < 0.2
@@ -815,7 +815,7 @@ Sichuan_Opium_Monopoly_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 			modifier = {
 				factor = 0
 				has_stability < 0.2
@@ -858,7 +858,7 @@ Sichuan_Opium_Monopoly_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 			modifier = {
 				factor = 0
 				check_variable = { party_popularity_100@ruling_party < 25 }
@@ -941,7 +941,7 @@ Sichuan_Opium_Monopoly_decisions = {
 			consumer_goods_factor = 0.1
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_Combat_Corruption"
@@ -976,7 +976,7 @@ Sichuan_Opium_Monopoly_decisions = {
 			consumer_goods_factor = 0.1
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 1000 }
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_Combat_Smuggling"
@@ -1104,7 +1104,7 @@ Sichuan_Opium_Removal_decisions = {
 			NOT = { has_country_flag = SZC_purging_administration }
 		}
 
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 250 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_Anti_Corruption_Campaigns"
@@ -1146,7 +1146,7 @@ Sichuan_Opium_Removal_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 25
+			factor = 1000
 			modifier = {
 				factor = 0
 				has_stability < 0.3
@@ -1205,7 +1205,7 @@ Sichuan_Opium_Removal_decisions = {
 			army_org_factor = -0.15
 		}
 
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 250 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SZC_Anti_Smuggling_Measures"
@@ -1308,7 +1308,7 @@ Sichuan_Opium_Removal_decisions = {
 			stability_weekly = 0.01
 		}
 
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 500 }
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SZC_Set_Up_Treatment_Clinics"
@@ -1551,6 +1551,13 @@ chinese_unification = {
 					GXC = { china_is_aligned_with_federalists = yes }
 					HNN = { china_is_aligned_with_federalists = yes }
 				}
+				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_EXILE_UPC } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_game_rule = { rule = SZC_forpol option = DEFAULT } }
+				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_UPC } }
+				NOT = { has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_EXILE_UPC } }
 			}
 		}
 

@@ -92,7 +92,7 @@ country_event = { # Zapata is dead!
 		log = "[GetLogInfo]: event mexico_events.3 option mexico_events.3.b"
 		name = mexico_events.3.b
 		ai_chance = {
-			base = 33
+			base = 0
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = MEX_path option = MEX_PATH_MAXIMATO_TOTALIST }

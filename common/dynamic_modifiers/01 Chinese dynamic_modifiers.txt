@@ -32,3 +32,28 @@ CHN_autonomous_region_modifier = {
 	local_building_slots = -1
 	local_supplies = 0.15
 }
+
+CHN_poor_industry = {
+	icon = GFX_idea_incompetent_heavy_industry
+	remove_trigger = {
+		check_variable = { CHN_industry_weakness > -0.01 }
+	}
+	research_speed_factor = CHN_industry_weakness
+	line_change_production_efficiency_factor = CHN_industry_weakness2
+	production_factory_efficiency_gain_factor = CHN_industry_weakness
+	production_factory_max_efficiency_factor = CHN_industry_weakness
+	production_factory_start_efficiency_factor = CHN_industry_weakness3
+	production_speed_buildings_factor = CHN_industry_weakness
+	industrial_capacity_factory = CHN_industry_weakness
+	equipment_capture = CHN_industry_weakness4
+
+}
+
+		CHN_national_illiteracy1_modifier = {
+			on_add = { log = "[GetLogRoot]: add idea CHN_national_illiteracy1_idea" }
+			icon = GFX_idea_generic_research_reduction
+	remove_trigger = {
+		check_variable = { CHN_research_weakness > -0.01 }
+	}
+				research_speed_factor = CHN_research_weakness
+		}

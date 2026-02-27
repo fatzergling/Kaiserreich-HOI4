@@ -4549,7 +4549,7 @@ country_event = { #hidden event to fire the peace mission
 			is_ai = no
 			NOT = { has_global_flag = JAP_will_surrender }
 		}
-		JAP_fading_sun_korea_fully_controlled = no
+		#JAP_fading_sun_korea_fully_controlled = no
 		JAP_fading_sun_manchuria_not_capitulated = no
 		OR = {
 			var:global.russia = {
@@ -4565,7 +4565,7 @@ country_event = { #hidden event to fire the peace mission
 				#	china_is_potential_government = yes
 				#	is_faction_leader = yes #United Front
 				#}
-				is_valid_peace_target = yes
+				#is_valid_peace_target = yes
 				set_temp_variable = { at_war_with_china = 1 }
 			}
 		}
@@ -4607,8 +4607,75 @@ country_event = { #hidden event to fire the peace mission
 country_event = { #Japan Offers Peace
 	id = japan_foreign_events.230
 	title = japan_foreign_events.230.t
+	desc = {
+
+		text = japan_foreign_events.230.d.taiwan_kept_no_korea
+		trigger = {
+			JAP = {
+				owns_state = 524
+				NOT = {
+					enemies_naval_strength_ratio > 4
+					AND = {
+						surrender_progress > 0.15
+						any_home_area_neighbor_country = { is_ally_with = ROOT }
+					}
+				}
+				controls_state = 525
+			}
+			NOT = {
+				var:524.controller = {
+					is_tag_in_china_area = yes
+					has_war_with = event_target:japan
+				}
+			}
+		}
+	}
+	desc = {
+		text = japan_foreign_events.230.d.taiwan_handed_over_no_korea
+		trigger = {
+			JAP = {
+				owns_state = 524
+				OR = {
+					enemies_naval_strength_ratio > 4
+					AND = {
+						surrender_progress > 0.15
+						any_home_area_neighbor_country = { is_ally_with = ROOT }
+					}
+				}
+				controls_state = 525
+			}
+			NOT = {
+				var:524.controller = {
+					is_tag_in_china_area = yes
+					has_war_with = event_target:japan
+				}
+			}
+		}
+	}
+	desc = {
+		text = japan_foreign_events.230.d.taiwan_occupied_no_korea
+		trigger = {
+			JAP = {
+				owns_state = 524
+				var:524.controller = {
+					is_tag_in_china_area = yes
+					has_war_with = event_target:japan
+				}
+				controls_state = 525
+			}
+		}
+	}
+	desc = {
+		text = japan_foreign_events.230.d.no_taiwan_no_korea
+		trigger = {
+			NOT = { JAP = { owns_state = 524 } } #Taiwan
+				controls_state = 525
+		}
+	}
 
 	desc = {
+
+		
 		text = japan_foreign_events.230.d.taiwan_kept
 		trigger = {
 			JAP = {
@@ -4896,6 +4963,64 @@ country_event = { #Peace Goes Into Effect
 			NOT = { has_event_target = JAP_peace_with_china }
 		}
 	}
+	desc = {
+		text = japan_foreign_events.231.d.peace_taiwan_kept_korea_kept
+		trigger = {
+			has_event_target = JAP_peace_with_china
+			owns_state = 524 #Taiwan
+			controls_state = 524 #Taiwan
+			controls_state = 525
+			NOT = {
+				enemies_naval_strength_ratio > 4
+				AND = {
+					surrender_progress > 0.15
+					any_home_area_neighbor_country = { is_ally_with = ROOT }
+				}
+			}
+		}
+	}
+	desc = {
+		text = japan_foreign_events.231.d.peace_taiwan_handed_over_korea_kept
+		trigger = {
+			has_event_target = JAP_peace_with_china
+			owns_state = 524 #Taiwan
+			controls_state = 524 #Taiwan
+			controls_state = 525
+			OR = {
+				enemies_naval_strength_ratio > 4
+				AND = {
+					surrender_progress > 0.15
+					any_home_area_neighbor_country = { is_ally_with = ROOT }
+				}
+			}
+		}
+	}
+	desc = {
+		text = japan_foreign_events.231.d.peace_taiwan_occupied_korea_kept
+		trigger = {
+			has_event_target = JAP_peace_with_china
+			owns_state = 524 #Taiwan
+			controls_state = 525
+			var:524.controller = {
+				has_war_with = ROOT
+				has_country_flag = JAP_accepted_peace
+			}
+		}
+	}
+	desc = {
+		text = japan_foreign_events.231.d.peace_no_taiwan_korea_kept
+		trigger = {
+			has_event_target = JAP_peace_with_china
+			controls_state = 525
+			OR = {
+				NOT = { owns_state = 524 } #Taiwan
+				var:524.controller = {
+					has_war_with = ROOT
+					NOT = { has_country_flag = JAP_accepted_peace }
+				}
+			}
+		}
+	}
 
 	desc = {
 		text = japan_foreign_events.231.d.peace_taiwan_kept
@@ -5154,12 +5279,21 @@ country_event = { #Peace Goes Into Effect
 								has_country_flag = JAP_accepted_peace
 							}
 						}
-						PREV = { transfer_state_to = PREV.owner }
+						#PREV = { transfer_state_to = PREV.owner }
 					}
 				}
-				else = {
-					transfer_state_to = CHN
-				}
+				#else = {
+				#	transfer_state_to = CHN
+				#}
+				add_resistance = 60
+				add_compliance = -60
+							add_resistance_target = {
+				amount = 40
+				occupier = ROOT
+				days = 3650
+				tooltip = JAP_KOR_resistance
+			}
+
 			}
 		}
 
@@ -7953,6 +8087,15 @@ country_event = { #JAP: The Legations Fold
 								tag = FNG
 								FNG_JAP_hostile = no
 							}
+						}
+					}
+					if = {
+						limit = { 
+							has_idea = unequal_treaties
+						}
+						swap_ideas = {
+							remove_idea = unequal_treaties
+							add_idea = unequal_treaties_lesser
 						}
 					}
 					country_event = { id = japan_legations_crisis_events.004 hours = 1 } #Japan Moves into the Legations

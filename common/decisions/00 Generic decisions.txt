@@ -113,9 +113,9 @@ political_actions = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 1
-				has_stability > 0.74
-				has_equipment = { train_equipment < 15 }
+				add = 25
+				has_stability > 0.24
+				has_equipment = { train_equipment < 20 }
 			}
 		}
 
@@ -128,7 +128,66 @@ political_actions = {
 			}
 		}
 	}
+	seize_some_trains_woo = { #repeating train seize
+	icon = GFX_decision_hol_draw_up_staff_plans
 
+		visible = {
+			num_of_factories < 60
+		}
+
+		available = {
+			has_equipment = { train_equipment < 201 }
+			has_tech = basic_train
+		}
+
+		days_remove = 180
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability > 0.34
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 15
+			}
+			add_stability = -0.05
+		}
+	}
+	seize_some_trucks_woo = { #repeating truck seize
+	icon = GFX_decision_hol_draw_up_staff_plans
+
+		visible = {
+			num_of_factories < 60
+		}
+
+		available = {
+			has_equipment = { motorized_equipment < 4001 }
+			has_tech = tech_trucks
+		}
+
+		days_remove = 180
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability > 0.34
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_0
+				amount = 250
+			}
+			add_stability = -0.05
+		}
+	}
 	restructure_supply_system = { #one time boost to get a few cheap supply hubs
 		icon = GFX_decision_generic_construction
 
@@ -255,7 +314,7 @@ crisis = {
 		icon = generic_ignite_civil_war
 
 		activation = {
-			surrender_progress > 0.2
+			surrender_progress > 0.4
 			num_divisions > 20 #don't bother with tiny tags
 			is_ai = yes
 			OR = {
@@ -278,10 +337,11 @@ crisis = {
 					FRA = { has_capitulated = yes }
 				}
 			}
+			NOT = { tag = USA }
 		}
 
 		available = {
-			surrender_progress < 0.2
+			surrender_progress < 0.4
 		}
 
 		cancel_trigger = {
@@ -335,6 +395,11 @@ propaganda_efforts = {
 				has_war_support < 0.4
 				has_war = yes
 			}
+			modifier = {
+				add = 10
+				has_war_support < 0
+				has_war = yes
+			}
 		}
 	}
 
@@ -366,24 +431,24 @@ propaganda_efforts = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 10
+				add = 2
 				has_war = yes
 				has_war_support < 0.7
 			}
 			modifier = {
-				add = 20
+				add = 4
 				has_war = yes
 				has_war_support < 0.5
 			}
 			modifier = {
-				add = 30
+				add = 80
 				has_war = yes
 				has_war_support < 0.3
 			}
 			modifier = {
 				add = 201 #ie; consider prio idea
 				has_war = yes
-				has_casualties_war_support < -0.25
+				has_casualties_war_support < -0.45
 			}
 			modifier = {
 				factor = 0
@@ -425,24 +490,24 @@ propaganda_efforts = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 10
+				add = 2
 				has_war = yes
 				has_war_support < 0.7
 			}
 			modifier = {
-				add = 20
+				add = 4
 				has_war = yes
 				has_war_support < 0.5
 			}
 			modifier = {
-				add = 30
+				add = 80
 				has_war = yes
 				has_war_support < 0.3
 			}
 			modifier = {
 				add = 201 #ie; consider prio idea
 				has_war = yes
-				has_convoys_war_support < -0.29
+				has_convoys_war_support < -0.39
 			}
 			modifier = {
 				factor = 0
@@ -484,24 +549,24 @@ propaganda_efforts = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 10
+				add = 2
 				has_war = yes
 				has_war_support < 0.65
 			}
 			modifier = {
-				add = 20
+				add = 4
 				has_war = yes
 				has_war_support < 0.50
 			}
 			modifier = {
-				add = 30
+				add = 80
 				has_war = yes
 				has_war_support < 0.35
 			}
 			modifier = {
 				add = 201 #ie; consider prio idea
 				has_war = yes
-				has_bombing_war_support < -0.20
+				has_bombing_war_support < -0.30
 			}
 			modifier = {
 				factor = 0
@@ -534,7 +599,7 @@ propaganda_efforts = {
 			base = 1
 			modifier = {
 				add = 200
-				has_war_support < 0.6
+				has_war_support < 0.3
 			}
 		}
 	}
@@ -562,7 +627,7 @@ propaganda_efforts = {
 			base = 1
 			modifier = {
 				add = 200
-				has_war_support < 0.6
+				has_war_support < 0.3
 			}
 		}
 	}

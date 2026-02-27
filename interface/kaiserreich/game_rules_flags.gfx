@@ -26,6 +26,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
+		name = "GFX_KR_game_rule_flag_WCA_socialist_republic"
+		texturefile = "gfx/flags/small/WCA_socialist_republic.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
 		name = "GFX_KR_game_rule_flag_WCA_united_socialist_states"
 		texturefile = "gfx/flags/small/WCA_united_socialist_states.tga"
 		legacy_lazy_load = no

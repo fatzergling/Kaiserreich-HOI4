@@ -568,6 +568,12 @@ WCA_flag = {
 		desc = RULE_OPTION_WCA_FLAG_IWW_DESC
 		allow_achievements = yes
 	}
+	option = {
+		name = WCA_FLAG_MODERATE
+		text = RULE_OPTION_WCA_FLAG_MODERATE
+		desc = RULE_OPTION_WCA_FLAG_MODERATE_DESC
+		allow_achievements = yes
+	}
 }
 
 WCA_forpol = {

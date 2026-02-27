@@ -9,7 +9,8 @@ ideas = {
 			allowed = { always = no }
 			available = { italy_balance_has_broken = no }
 			modifier = {
-				cannot_call_allies_or_join_wars_except_subjects = 1
+				#cannot_call_allies_or_join_wars_except_subjects = 1
+				surrender_limit = 1
 			}
 			rule = {
 				can_join_factions = no
@@ -560,7 +561,7 @@ ideas = {
 
 		SRI_standardised_electrical_networks = {
 			on_add = { log = "[GetLogRoot]: add idea SRI_standardised_electrical_networks" }
-			picture = POL_succesful_four_year_plan
+			picture = POL_successful_four_year_plan
 			allowed = { always = no }
 			modifier = {
 				production_speed_buildings_factor = 0.05

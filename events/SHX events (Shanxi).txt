@@ -8751,15 +8751,19 @@ country_event = {
 				modifier = KR_returned_land
 			}
 			hidden_effect = {
-				SHX_yan_xishan = {
+				if = {
+					limit = { NOT = { has_global_flag = QIE_manchu_restoration }}
+					SHX_yan_xishan = {
 					china_set_character_alignment_beiyang = yes
 					swap_country_leader_traits = {
 						remove = CHN_non_aligned
 						add = CHN_beiyang_aligned
 						ideology = paternal_autocrat_subtype
 					}
+					}
+					}
+
 				}
-			}
 		}
 		else_if = {
 			limit = {

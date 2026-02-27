@@ -52,7 +52,13 @@ scripted_diplomatic_actions = {
 					OR = {
 						has_country_flag = imminent_war
 						any_claim = yes #is justifying/being justified against
-						NOT = { has_country_flag = sent_volunteers_@PREV } #AI was told to recall their volunteers
+						NOT = { 
+							OR = {
+							has_country_flag = sent_volunteers_@PREV 
+							has_country_flag = sent_volunteers_@event_target:volunteer_target
+							}
+							
+							} #AI was told to recall their volunteers
 					}
 				}
 			}

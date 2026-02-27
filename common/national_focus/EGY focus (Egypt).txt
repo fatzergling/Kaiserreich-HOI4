@@ -1661,7 +1661,7 @@ focus_tree = {
 			focus = EGY_Third_Arab_Congress
 		}
 
-		ai_will_do = { factor = 200 }
+		ai_will_do = { factor = 2000 }
 
 		available_if_capitulated = yes
 
@@ -1706,7 +1706,7 @@ focus_tree = {
 			focus = EGY_Radio_Free_Cairo
 		}
 
-		ai_will_do = { factor = 200 }
+		ai_will_do = { factor = 2000 }
 
 		available_if_capitulated = yes
 
@@ -1758,7 +1758,7 @@ focus_tree = {
 			focus = EGY_Coordinate_Al_Fatat
 		}
 
-		ai_will_do = { factor = 200 }
+		ai_will_do = { factor = 2000 }
 
 		bypass = {
 			NOT = { IRQ = { any_core_state = { is_owned_and_controlled_by = OTT } } }
@@ -1791,14 +1791,19 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_war_with = OTT
+			OR = {
 			controls_state = 454
+			SYR = {
+				controls_state = 454
+			}
+			}
 		}
 
 		prerequisite = {
 			focus = EGY_Radio_Free_Cairo
 		}
 
-		ai_will_do = { factor = 200 }
+		ai_will_do = { factor = 2000 }
 
 		available_if_capitulated = yes
 
@@ -1870,7 +1875,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 20
+			base = 200
 			modifier = { factor = 10	OTT = { has_war_with = YEM } }
 		}
 
@@ -2007,7 +2012,7 @@ focus_tree = {
 			focus = EGY_Third_Arab_Congress
 		}
 
-		ai_will_do = { factor = 500 }
+		ai_will_do = { factor = 5000 }
 
 		available_if_capitulated = yes
 
@@ -2059,7 +2064,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 20
+			base = 200
 			modifier = { factor = 10	OTT = { has_war_with = var:915.owner } }
 		}
 
@@ -2118,7 +2123,7 @@ focus_tree = {
 			focus = EGY_Expand_Alexandria
 		}
 
-		ai_will_do = { factor = 500 }
+		ai_will_do = { factor = 4000 }
 
 		available_if_capitulated = yes
 
@@ -2166,7 +2171,7 @@ focus_tree = {
 			focus = EGY_Bureau_Military_Engineering
 		}
 
-		ai_will_do = { factor = 500 }
+		ai_will_do = { factor = 4000 }
 
 		available_if_capitulated = yes
 

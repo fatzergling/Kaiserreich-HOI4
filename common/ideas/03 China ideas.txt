@@ -184,6 +184,69 @@ ideas = {
 				}
 			}
 		}
+
+		unequal_treaties_japan_lesser = {
+			on_add = { log = "[GetLogRoot]: add idea unequal_treaties_japan" }
+			name = unequal_treaties
+			picture = unequal_treaties
+			level = 3
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			allowed = { always = no }
+			cancel = {
+				NOT = {
+					has_idea = FNG_mantetsu_influence_idea
+					is_subject_of = JAP
+				}
+			}
+
+			modifier = {
+				min_export = 0.6
+				civilian_intel_to_others = 40.0
+			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.3
+			}
+
+			allowed_to_remove = {
+				NOT = {
+					has_idea = FNG_mantetsu_influence_idea
+					is_subject_of = JAP
+				}
+			}
+			on_remove = {
+				#Have post-LEC China start with export focus
+				if = {
+					limit = {
+						has_idea = closed_economy
+					}
+					swap_ideas = {
+						remove_idea = closed_economy
+						add_idea = 	export_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = limited_exports
+					}
+					swap_ideas = {
+						remove_idea = limited_exports
+						add_idea = export_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = free_trade
+					}
+					swap_ideas = {
+						remove_idea = free_trade
+						add_idea = export_focus
+					}
+				}
+			}
+		}
 	}
 
 	country = {
@@ -198,8 +261,7 @@ ideas = {
 				army_defence_factor = -0.15
 				mobilization_speed = -0.3
 				supply_combat_penalties_on_core_factor = -0.35
-
-				conscription_factor = -0.35
+				conscription_factor = -0.55
 				command_power_gain_mult = -0.3
 				experience_loss_factor = 0.1
 			}
@@ -229,7 +291,7 @@ ideas = {
 				mobilization_speed = -0.2
 				supply_combat_penalties_on_core_factor = -0.25
 
-				conscription_factor = -0.35
+				conscription_factor = -0.55
 				command_power_gain_mult = -0.3
 				experience_loss_factor = 0.1
 			}
@@ -259,7 +321,7 @@ ideas = {
 				mobilization_speed = -0.05
 				supply_combat_penalties_on_core_factor = -0.15
 
-				conscription_factor = -0.35
+				conscription_factor = -0.55
 				command_power_gain_mult = -0.3
 				experience_loss_factor = 0.1
 			}
@@ -283,7 +345,7 @@ ideas = {
 			allowed = { is_chinese_or_potential_chinese_tag = yes }
 			allowed_civil_war = { always = yes }
 			modifier = {
-				conscription_factor = -0.35
+				conscription_factor = -0.55
 				command_power_gain_mult = -0.3
 				experience_loss_factor = 0.1
 			}
@@ -349,7 +411,7 @@ ideas = {
 		}
 		CHN_devastated_national_econ3_idea = {
 			on_add = { log = "[GetLogRoot]: add idea CHN_devastated_national_econ3_idea" }
-			picture = POL_succesful_four_year_plan
+			picture = POL_successful_four_year_plan
 			allowed = { always = no }
 			modifier = {
 				production_speed_buildings_factor = -0.10
@@ -884,8 +946,8 @@ ideas = {
 			picture = chi_chinese_support
 			allowed = { always = no }
 			modifier = {
-				army_defence_factor = -0.8
-				army_org_factor = -0.8
+				army_defence_factor = -0.95
+				army_org_factor = -0.3
 				army_org_regain = -0.8
 			}
 		}
@@ -945,6 +1007,10 @@ ideas = {
 				tag = SHD
 				attack_bonus_against = 2.0
 			}
+			targeted_modifier = {
+				tag = GEA
+				attack_bonus_against = 2.0
+			}
 
 			modifier = {
 				ai_focus_aggressive_factor = 0.5
@@ -988,6 +1054,10 @@ ideas = {
 				tag = ANQ
 				attack_bonus_against = 2.0
 			}
+			targeted_modifier = {
+				tag = GEA
+				attack_bonus_against = 2.0
+			}
 
 			modifier = {
 				pocket_penalty = 0.5
@@ -1028,6 +1098,10 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = SHD
+				attack_bonus_against = 2.0
+			}
+			targeted_modifier = {
+				tag = GEA
 				attack_bonus_against = 2.0
 			}
 
@@ -1099,7 +1173,7 @@ ideas = {
 			}
 
 			modifier = {
-				surrender_limit = 0.50
+				surrender_limit = 1.50
 			}
 		}
 		defend_nanjing_CHI = {
@@ -1113,7 +1187,7 @@ ideas = {
 			}
 
 			modifier = {
-				surrender_limit = 0.50
+				surrender_limit = 1.50
 			}
 		}
 		defend_nanjing_LEP = {
@@ -1127,7 +1201,7 @@ ideas = {
 			}
 
 			modifier = {
-				surrender_limit = 0.50
+				surrender_limit = 1.50
 			}
 		}
 		defend_nanjing_SHD = {
@@ -1141,7 +1215,7 @@ ideas = {
 			}
 
 			modifier = {
-				surrender_limit = 0.50
+				surrender_limit = 1.50
 			}
 		}
 
@@ -1172,6 +1246,142 @@ ideas = {
 				tag = global.CHN_revolt_target
 				attack_bonus_against = 0.2
 				defense_bonus_against = 0.2
+			}
+		}
+
+		south_china_war_HNN = {
+			on_add = {
+				log = "[GetLogRoot]: add idea south_china_war_HNN"
+			}
+			on_remove = {
+				log = "[GetLogRoot]: remove idea south_china_war_HNN"
+			}
+			cancel = {
+				NOT = {
+					OR = {
+						NOT = { has_global_flag = CHN_south_china_war_started }
+						has_war_with = YUN
+						has_war_with = GXC
+					}
+				}
+			}
+			name = south_china_war
+			picture = MEX_revolutionary_army
+
+			targeted_modifier = {
+				tag = GXC
+				attack_bonus_against = 2.0
+			}
+			targeted_modifier = {
+				tag = YUN
+				attack_bonus_against = 2.0
+			}
+
+			modifier = {
+				#unit_limit_bonus = 30
+				ai_focus_aggressive_factor = 0.5
+				pocket_penalty = 0.5
+				supply_node_range = 0.5
+				supply_combat_penalties_on_core_factor = -0.25
+				max_dig_in_factor = -0.75
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.20
+					instant = yes
+				}
+			}
+		}
+		south_china_war_YUN = {
+			on_add = {
+				log = "[GetLogRoot]: add idea south_china_war_HNN"
+			}
+			cancel = {
+				NOT = {
+					OR = {
+						NOT = { has_global_flag = CHN_south_china_war_started }
+						has_war_with = YUN
+						has_war_with = GXC
+					}
+				}
+			}
+			on_remove = {
+				log = "[GetLogRoot]: remove idea south_china_war_HNN"
+			}
+			name = south_china_war
+			picture = MEX_revolutionary_army
+
+			targeted_modifier = {
+				tag = HNN
+				attack_bonus_against = 2.0
+			}
+			targeted_modifier = {
+				tag = GXC
+				attack_bonus_against = 2.0
+			}
+
+			modifier = {
+				#unit_limit_bonus = 30
+				ai_focus_aggressive_factor = 0.5
+				pocket_penalty = 0.5
+				supply_node_range = 0.5
+				supply_combat_penalties_on_core_factor = -0.25
+				max_dig_in_factor = -0.75
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.20
+					instant = yes
+				}
+			}
+		}
+		south_china_war_GXC = {
+			on_add = {
+				log = "[GetLogRoot]: add idea south_china_war_HNN"
+			}
+			on_remove = {
+				log = "[GetLogRoot]: remove idea south_china_war_HNN"
+			}
+			cancel = {
+				NOT = {
+					OR = {
+						NOT = { has_global_flag = CHN_south_china_war_started }
+						has_war_with = YUN
+						has_war_with = GXC
+					}
+				}
+			}
+			name = league_collapse_idea_1
+			picture = MEX_revolutionary_army
+
+			targeted_modifier = {
+				tag = YUN
+				attack_bonus_against = 2.0
+			}
+			targeted_modifier = {
+				tag = HNN
+				attack_bonus_against = 2.0
+			}
+
+			modifier = {
+				#unit_limit_bonus = 30
+				ai_focus_aggressive_factor = 0.5
+				pocket_penalty = 0.5
+				supply_node_range = 0.5
+				supply_combat_penalties_on_core_factor = -0.25
+				max_dig_in_factor = -0.75
+				custom_modifier_tooltip = cannot_train_units_tt
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.20
+					instant = yes
+				}
 			}
 		}
 
@@ -1226,7 +1436,7 @@ ideas = {
 		}
 		GXC_economic_instability5 = {
 			on_add = { log = "[GetLogRoot]: add idea GXC_economic_instability5" }
-			picture = POL_succesful_four_year_plan
+			picture = POL_successful_four_year_plan
 			allowed = { always = no }
 
 			modifier = {
@@ -1543,4 +1753,46 @@ ideas = {
 			}
 		}
 	}
+
+
+	### Industrial Concern ###
+	industrial_concern = {
+		academia_sinica = {
+			on_add = { log = "[GetLogRoot]: add idea academia_sinica_FNG" }
+			allowed = { is_chinese_tag = yes }
+			visible = {
+				OR = {
+					AND = {
+						tag = YUN
+						has_completed_focus = YUN_academia_sinica
+					}
+					AND = {
+						tag = ANQ
+						has_completed_focus = ANQ_academia_sinica
+					}
+					AND = {
+						tag = GXC
+						has_completed_focus = GXC_establish_the_academia_sinica
+					}
+					AND = {
+						tag = CHI
+						has_completed_focus = CHI_academia_sinica
+					}
+					AND = {
+						tag = YUN
+						has_completed_focus = KMT_academia_sinica
+					}
+				}
+			}
+			traits = { electronics_manufacturer }
+			modifier = {
+				production_speed_radar_station_factor = 0.05
+			}
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.1
+			}
+		}
+	}
+
 }

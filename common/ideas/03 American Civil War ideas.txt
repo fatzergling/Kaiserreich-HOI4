@@ -12,10 +12,12 @@ ideas = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
 			modifier = {
-				war_support_factor = 0.20
+				war_support_factor = 0.40
 				no_supply_grace = 168
 				compliance_growth_on_our_occupied_states = -0.25
 				resistance_target_on_our_occupied_states = 0.2
+				surrender_limit = 0.5
+				unit_limit_bonus = 10
 			}
 		}
 		amcivwar_idea_WCA = {
@@ -28,10 +30,11 @@ ideas = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
 			modifier = {
-				war_support_factor = 0.20
+				war_support_factor = 0.40
 				no_supply_grace = 168
 				compliance_growth_on_our_occupied_states = -0.25
 				resistance_target_on_our_occupied_states = 0.2
+				surrender_limit = 0.5
 			}
 		}
 		amcivwar_idea_APG = { #Fighting for America
@@ -44,10 +47,11 @@ ideas = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
 			modifier = {
-				war_support_factor = 0.20
+				war_support_factor = 0.40
 				no_supply_grace = 168
 				compliance_growth_on_our_occupied_states = -0.25
 				resistance_target_on_our_occupied_states = 0.2
+				surrender_limit = 0.5
 			}
 		}
 		amcivwar_idea_ACC = { #Fighting for America
@@ -60,10 +64,11 @@ ideas = {
 				NOT = { has_global_flag = USA_civil_war_over_flag }
 			}
 			modifier = {
-				war_support_factor = 0.20
+				war_support_factor = 0.40
 				no_supply_grace = 168
 				compliance_growth_on_our_occupied_states = -0.25
 				resistance_target_on_our_occupied_states = 0.2
+				surrender_limit = 0.5
 			}
 		}
 		ACW_fired_up = {
@@ -427,6 +432,38 @@ ideas = {
 				army_org_Factor = -0.04
 				resistance_growth = 0.05
 				compliance_growth = -0.02
+			}
+		}
+		USA_seize_hawaii = {
+			allowed = {is_american_tag = yes}
+
+			removal_cost = -1
+
+			picture = generic_coastal_navy
+
+			equipment_bonus = {
+				screen_ship = {
+					naval_range = 2
+					instant = yes
+				}
+				capital_ship = {
+					naval_range = 2
+					instant = yes
+				}
+
+			}		
+		}
+		MIT_economic_upheaval = {
+			on_add = { log = "[GetLogRoot]: add idea IRE_economic_upheaval" }
+			picture = HOL_black_monday_recovery
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.1
+				party_popularity_stability_factor = 0.05
+				trade_opinion_factor = -0.2
+				industrial_capacity_factory = -0.1
+				consumer_goods_factor = 0.10
 			}
 		}
 	}

@@ -835,7 +835,7 @@ RUS_finish_finland = {
 		FIN = {
 			has_war_with = ROOT
 			has_capitulated = no
-			surrender_progress > 0.25
+			#surrender_progress > 0.25
 		}
 	}
 	abort_when_not_enabled = yes
@@ -856,7 +856,7 @@ RUS_finish_finland = {
 		tag = FIN
 		priority = 100
 		ordertype = front
-		execution_type = balanced
+		execution_type = rush
 		execute_order = yes
 	}
 }
@@ -1065,7 +1065,7 @@ RUS_mop_up_georgia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = GEO
-		value = 25
+		value = 75
 	}
 	ai_strategy = {
 		type = conquer
@@ -1113,7 +1113,7 @@ RUS_mop_up_azerbaijan = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = AZR
-		value = 25
+		value = 75
 	}
 	ai_strategy = {
 		type = conquer
@@ -1518,6 +1518,22 @@ RUS_pp_spending = {
 		value = -100
 	}
 }
+RUS_civilian_buildup = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		date < 1938.1.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 140
+	}
+}
+
 
 RUS_military_buildup = {
 	allowed = {
@@ -1525,6 +1541,7 @@ RUS_military_buildup = {
 	}
 	enable = {
 		date < 1940.1.1
+		date > 1937.6.1
 	}
 	abort_when_not_enabled = yes
 
@@ -1534,6 +1551,25 @@ RUS_military_buildup = {
 		value = 1000
 	}
 }
+
+RUS_build_up_troops = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		AND = {
+			country_exists = GER
+			has_war = no
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_build_armies
+		value = 100
+	}
+}
+
 
 RUS_prepare_for_third_angel = {
 	allowed = {
@@ -1605,7 +1641,8 @@ RUS_naval_power = {
 	ai_strategy = {
 		type = building_target
 		id = dockyard
-		value = 200
+		#value = 200
+		value = 150
 	}
 }
 

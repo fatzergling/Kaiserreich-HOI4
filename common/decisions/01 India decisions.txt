@@ -191,7 +191,7 @@ india_reintegration_category = {
 
 		cost = 50
 
-		days_remove = 75
+		days_remove = 150
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove india_tackle_resistance_decision"

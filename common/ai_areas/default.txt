@@ -187,4 +187,124 @@ areas = {
 			180 #Micronesian Gap
 		}
 	}
+
+	hawaii_sea = {
+		strategic_regions = {
+			105 #Hawaii Ridge
+			176 #Central North Pacific
+			115 #North East Pacific
+			177 #Western North Pacific
+			89 
+			111 #North Central Pacific
+						180 #Micronesian Gap
+			172 #Pacific Line Ridge
+
+
+		}
+	}
+
+	iceland_seas = {
+		strategic_regions = {
+			16
+			45
+			44
+		}
+	}
+	usa_east_seas = {
+		strategic_regions = {
+			54
+			170
+			52
+			53
+			57
+			55
+		}
+	}
+	usa_west_seas = {
+		strategic_regions = {
+			89
+			114
+			171
+		}
+	}
+
+
+	just_philippines = {
+		strategic_regions = {
+			160 #Phillipines
+		}
+	}
+	
+	east_indies = {
+		strategic_regions = {
+			167 #Papua
+			93
+			158
+			159 #Brunei
+			192
+		}
+	}
+	indochina = {
+		strategic_regions = {
+			196
+		}
+	}
+		indochina_2 = {
+		strategic_regions = {
+			75
+		}
+	}
+
+		malaya = {
+		strategic_regions = {
+			194
+		}
+	}
+
+	greater_balkans = {
+		strategic_regions = {
+		143
+		24
+		26
+		25
+		181
+		}
+	}
+	pearl_harbor_pacific_control_zone = {
+		strategic_regions = {
+			105
+			180
+			95
+		}
+	}
+	
+	micronesia_pacific_control_zone = {
+		strategic_regions = {
+			97
+			84
+			83
+		}
+	}
+	
+	mariana_pacific_control_zone = {
+		strategic_regions = {
+			78
+			94
+		}
+	}
+	
+	north_pacific_control_zone = {
+		strategic_regions = {
+			96
+			177
+		}
+	}
+	
+	home_islands_control_zone = {
+		strategic_regions = {
+			76
+			90
+		}
+	}
+
 }

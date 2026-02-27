@@ -181,3 +181,59 @@ italian_unifiers = {
 		limit = { is_italian_unifier_tag = yes }
 	}
 }
+
+
+# New Order in east Asia
+socialist_controlled_states_my_continent = {
+	input = game:all_states
+	name = COLLECTION_AMOUNT_OF_COMMUNIST_CONTROLLED_STATES_SAME_CONTINENT
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			controller = {
+					has_socialist_government = yes	
+			}
+		}
+	}
+}
+
+countries_my_continent = {
+	input = game:all_countries
+	name = COLLECTION_ALL_SAME_CONTINENT_COUNTRIES
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+		}
+	}
+}
+
+communist_or_capitulated_countries_my_continent = {
+	input = game:all_countries
+	name = COLLECTION_ALL_COMMUNIST_OR_DEFEATED_SAME_CONTINENT_COUNTRIES
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			OR = {
+					has_socialist_government = yes	
+				has_capitulated = yes
+			}
+		}
+	}
+}
+
+
+
+anti_communist_controlled_states_my_continent = {
+	input = game:all_states
+	name = COLLECTION_STATES_MY_CONTINENT_CONTROLLED_DEMOCRATIC_FASCIST
+	operators = {
+		limit = {
+			is_on_same_continent_as = ROOT
+			controller = {
+				NOT = {
+					has_socialist_government = yes	
+				}
+			}
+		}
+	}
+}

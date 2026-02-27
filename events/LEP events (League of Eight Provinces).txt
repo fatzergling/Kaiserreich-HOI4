@@ -3445,7 +3445,7 @@ country_event = { #Expansion of the Southern Zhili?
 		log = "[GetLogInfo]: event league_events.212 option league_events.212.a"
 		name = league_events.212.a
 		ai_chance = {
-			base = 60
+			base = 20
 			modifier = {
 				add = -40
 				LEP = { is_ai = no }
@@ -3512,7 +3512,7 @@ country_event = { #Betrayal by the Northern Zhili
 		log = "[GetLogInfo]: event league_events.214 option league_events.214.a"
 		name = league_events.214.a
 		ai_chance = {
-			base = 75
+			base = 750
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = LEP_forpol option = LEP_FORPOL_QIE }

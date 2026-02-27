@@ -7,13 +7,133 @@
 ### Armour MIOs ###
 ###################
 
+
+
+norinco = {
+	name = norinco
+	icon = GFX_idea_norinco #Prboably one of the few legit aircraft manufacturers in China
+	include = generic_assault_guns_organization
+		allowed = { original_tag = CHI }
+			available = {
+			FROM = {
+
+				OR = {
+					has_completed_focus = CHI_repossesed_national_arsenals
+				}
+				OR = {
+					has_completed_focus = CHI_examine_foreign_designs
+					has_completed_focus = CHI_domestic_armour_production
+				}
+			}
+			}
+}
+
+
+sinotruk = {
+	name = sinotruk
+	icon = GFX_idea_sinotruk #Prboably one of the few legit aircraft manufacturers in China
+	include = generic_infantry_tank_organization
+		allowed = { original_tag = CHI }
+			available = {
+						FROM = {
+
+				OR = {
+					has_completed_focus = CHI_examine_foreign_designs
+					has_completed_focus = CHI_domestic_armour_production
+				}
+						}
+			}
+}
 ##################
 ### Naval MIOs ###
 ##################
+china_state_shipbuilding_corporation = {
+	name = china_state_shipbuilding_corporation
+	icon = GFX_idea_china_state_shipbuilding_corporation #Prboably one of the few legit aircraft manufacturers in China
+	include = generic_battle_line_ship_organization
+
+	allowed = { original_tag = CHI }
+
+    available = {
+		FROM = {
+				OR = {
+					has_completed_focus = CHI_six_year_programme
+					has_completed_focus = CHI_invite_foreign_naval_advisors
+				}
+			}
+	}
+	
+}
+
+csic = {
+	name = csic
+	icon = GFX_idea_csic 
+	#include = generic_escort_ship_organization
+    include = generic_task_force_ship_organization
+
+	allowed = { original_tag = CHI }
+
+    available = {
+			FROM = {
+					has_completed_focus = CHI_six_year_programme
+			}
+	}
+}
+
 
 #####################
 ### Airplane MIOs ###
 #####################
+china_aviation_corporation_CHI = {
+	name = china_aviation_corporation_CHI
+	icon = GFX_idea_china_aviation_corporation #Prboably one of the few legit aircraft manufacturers in China
+	include = generic_light_aircraft_organization
+
+	allowed = { original_tag = CHI }
+
+		available = {
+					FROM = {
+
+			has_completed_focus = CHI_xp_zero_project
+					}
+		}
+
+}
+
+central_aircraft_manufacturing_company = {
+	name = central_aircraft_manufacturing_company
+	icon = GFX_idea_central_aircraft_manufacturing_company #Prboably one of the few legit aircraft manufacturers in China
+	include = generic_medium_aircraft_organization
+
+	allowed = { original_tag = CHI }
+
+		available = {
+					FROM = {
+
+				OR = {
+					has_completed_focus = CHI_study_european_air
+					has_completed_focus = CHI_central_aviation_school
+				}
+					}
+		}
+
+}
+
+central_air_transport = {
+	name = central_air_transport
+	icon = GFX_idea_central_air_transport #Prboably one of the few legit aircraft manufacturers in China
+	include = generic_naval_aircraft_organization
+
+	allowed = { original_tag = CHI }
+
+		available = {
+					FROM = {
+
+				has_completed_focus = CHI_patrol_the_coasts
+					}
+		}
+
+}
 
 #####################
 ### Materiel MIOs ###

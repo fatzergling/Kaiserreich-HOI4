@@ -22,6 +22,13 @@ KMT_NRC_initial_reconstruction_effect = {
 				has_tech = concentrated_industry
 				has_tech = dispersed_industry
 			}
+			NOT = {
+				OR = {
+					has_tech = concentrated_industry2
+					has_tech = dispersed_industry2
+				}
+
+			}
 		}
 		set_country_flag = KMT_industry_level_1
 	}
@@ -31,6 +38,13 @@ KMT_NRC_initial_reconstruction_effect = {
 				has_tech = concentrated_industry2
 				has_tech = dispersed_industry2
 			}
+			NOT = {
+				OR = {
+					has_tech = concentrated_industry3
+					has_tech = dispersed_industry3
+				}
+
+			}
 		}
 		set_country_flag = KMT_industry_level_2
 	}
@@ -39,6 +53,13 @@ KMT_NRC_initial_reconstruction_effect = {
 			OR = {
 				has_tech = concentrated_industry3
 				has_tech = dispersed_industry3
+			}
+			NOT = {
+				OR = {
+					has_tech = concentrated_industry4
+					has_tech = dispersed_industry4
+				}
+
 			}
 		}
 		set_country_flag = KMT_industry_level_3
@@ -58,7 +79,15 @@ KMT_NRC_initial_reconstruction_effect = {
 			limit = { 886 = { dam < 1 } }
 			activate_targeted_decision = { decision = KMT_finish_fengman_hydroelectric_dam target = 886 } #Nanjing
 		}
+		if = {
+			limit = { is_ai = yes }
+			add_days_mission_timeout = {
+				mission = KMT_national_reconstruction_mission
+				days = 5400
+			}
+		}
 	}
+	
 }
 
 KMT_NRC_heavy_industry_effect = {

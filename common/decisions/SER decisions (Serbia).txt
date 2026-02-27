@@ -1525,10 +1525,18 @@ political_actions = {
 
 		available = {
 			BUL = { focus_progress = { focus = BUL_macedonia_intervention progress < 0 } }
-			OR = {
+			AND = {
 				controls_state = 106
 				NOT = { has_war_with = SER }
+				AND = {
 				106 = { resistance > 99 }
+				OR = {
+										SER = { is_ai = no }
+					BUL = { is_ai = no }
+
+				}
+
+				}
 			}
 		}
 
@@ -1566,6 +1574,7 @@ political_actions = {
 			else_if = {
 				limit = {
 					106 = { resistance > 99 } #Macedonia
+					is_ai = no
 				}
 				log = "KR_Event_Logging;IMRO REBELLION - Macedonia reached 100% resistance"
 			}
@@ -3342,21 +3351,6 @@ SER_The_Road_To_Unification_decisions = {
 					NOT = { has_country_flag = SER_ready_to_attack }
 				}
 			}
-			# anti-exploit measure - don't attack player Austria if they're not deploying trained troops
-			modifier = {
-				factor = 0
-				FROM = {
-					is_ai = no
-					is_major = yes
-					set_temp_variable = { manpower_threshold = deployed_army_manpower_k }
-					multiply_temp_variable = { manpower_threshold = 1000 }
-					amount_manpower_in_deployment_queue > manpower_threshold
-					has_civil_war = no
-					has_war_with_major = no
-					enemies_strength_ratio < 1
-				}
-				second_weltkrieg_has_begun = no
-			}
 			# don't attack Austria unless it's vulnerable or other countries are waiting to help
 			modifier = {
 				factor = 0
@@ -3428,7 +3422,10 @@ SER_The_Road_To_Unification_decisions = {
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete SER_Attack_Austria"
 			#setup_decision_attack_AI = yes -- handled by serbia_events.32
-			hidden_effect = { country_event = serbia_events.32 }
+			if = {
+				limit = { is_ai = yes }
+				country_event = serbia_events.32
+			}
 			every_other_country = {
 				limit = { has_country_flag = SER_will_attack_austria }
 				country_event = serbia_events.32

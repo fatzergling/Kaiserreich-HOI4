@@ -1088,6 +1088,7 @@ foreign_support = {
 		priority = 10
 		cost = 0
 		fire_only_once = yes
+		days_remove = 30
 
 		target_root_trigger = { is_faction_leader = yes }
 		targets = { GER }
@@ -1098,7 +1099,7 @@ foreign_support = {
 			}
 		}
 
-		complete_effect = {
+		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete CAN_meet_with_germany"
 			set_global_flag = CAN_met_with_germany
 			FROM = { country_event = entente_events.300 }
@@ -1441,8 +1442,8 @@ CAN_returning_home_decisions = {
 		custom_cost_trigger = {
 			NOT = { has_equipment = { infantry_equipment < 2000 } }
 		}
-
-		complete_effect = {
+		days_remove = 30
+		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete CAN_contact_northern_irish_loyalists"
 			clr_country_flag = CAN_contacting_northern_loyalists
 			effect_tooltip = {
@@ -1462,7 +1463,13 @@ CAN_returning_home_decisions = {
 			}
 		}
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = { 
+			factor = 10 
+		modifier = {
+			factor = 0
+			IRE = {NOT = { is_ai = yes }}
+		}
+		}
 		fixed_random_seed = no
 	}
 
@@ -1734,14 +1741,12 @@ CAN_returning_home_decisions = {
 			is_subject = no
 			can_declare_war_on = FROM
 			FROM = { owns_state = 101 } #Coastal Greenland
-			FROM = { is_in_faction = no }
 		}
 
 		targets = { DEN }
 		target_trigger = {
 			can_declare_war_on = FROM
 			FROM = { owns_state = 101 } #Coastal Greenland
-			FROM = { is_in_faction = no }
 		}
 
 		complete_effect = {
@@ -3800,15 +3805,6 @@ CAN_american_civil_war_decisions = {
 		}
 
 		target_trigger = {
-			NOT = { has_global_flag = USA_civil_war_over_flag }
-			NOT = { has_country_flag = CAN_white_peaced_ACW }
-			FROM = {
-				is_subject = no
-				has_capitulated = no
-				has_socialist_government = no
-				NOT = { has_war_with = ROOT }
-				NOT = { has_war_with = WCA }
-			}
 		}
 
 		ai_will_do = {

@@ -129,7 +129,7 @@ focus_tree = {
 		ai_will_do = {
 			base = 1
 			modifier = {
-				factor = 10
+				factor = 1000
 				OR = {
 					has_war_with = LEP
 					has_war_with = CHI
@@ -197,7 +197,7 @@ focus_tree = {
 		ai_will_do = {
 			base = 1
 			modifier = {
-				factor = 10
+				factor = 1000
 				OR = {
 					has_war_with = LEP
 					has_war_with = CHI
@@ -407,7 +407,10 @@ focus_tree = {
 			has_country_flag = ANQ_peace
 			has_country_flag = ANQ_reclamation_decided
 			has_country_flag = ANQ_friendly_japan
+			custom_override_tooltip = {
+				tooltip = ANQ_abandons_reclamation_NOT
 			NOT = { has_country_flag = ANQ_abandons_reclamation }
+			}
 		}
 
 		completion_reward = {
@@ -696,7 +699,12 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		available = { NOT = { has_country_flag = ANQ_chen_alone } }
+		available = {
+			custom_override_tooltip = {
+				tooltip = ANQ_chen_alone_NOT
+				NOT = { has_country_flag = ANQ_chen_alone }
+			}
+		}
 
 		prerequisite = { focus = ANQ_panasian_legitimacy }
 
@@ -1095,7 +1103,7 @@ focus_tree = {
 		prerequisite = { focus = ANQ_stand_with_beijing }
 
 		ai_will_do = {
-			base = 1
+			base = 1000
 			modifier = {
 				factor = 10
 				OR = {
@@ -1172,7 +1180,7 @@ focus_tree = {
 		bypass = { has_country_flag = ANQ_peace }
 
 		ai_will_do = {
-			base = 1
+			base = 1000
 			modifier = {
 				factor = 10
 				OR = {
@@ -1224,7 +1232,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 1000 }
 
 		prerequisite = { focus = ANQ_increase_rail_capacity }
 		prerequisite = { focus = ANQ_imperial_keystone }
@@ -1559,7 +1567,10 @@ focus_tree = {
 
 		available = {
 			country_exists = QIE
+			custom_override_tooltip = {
+				tooltip = ANQ_chen_alone_NOT
 			NOT = { has_country_flag = ANQ_chen_alone }
+			}
 		}
 
 		bypass_if_unavailable = yes
@@ -1706,7 +1717,12 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -1996,7 +2012,7 @@ focus_tree = {
 		x = 1
 		y = 2
 
-		ai_will_do = { factor = 70 }
+		ai_will_do = { factor = 700 }
 
 		prerequisite = { focus = ANQ_nanjing_purges }
 
@@ -2024,7 +2040,7 @@ focus_tree = {
 		x = 0
 		y = 3
 
-		ai_will_do = { factor = 60 }
+		ai_will_do = { factor = 600 }
 
 		prerequisite = { focus = ANQ_new_provincial_governments }
 		prerequisite = { focus = ANQ_fight_high_level_corruption }
@@ -2041,7 +2057,12 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -2116,7 +2137,12 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -2344,7 +2370,7 @@ focus_tree = {
 		prerequisite = { focus = ANQ_administrative_centralization }
 		prerequisite = { focus = ANQ_provisional_currency }
 
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 1000 }
 
 		available = {
 			NOT = {
@@ -2589,7 +2615,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		ai_will_do = { factor = 70 }
+		ai_will_do = { factor = 709 }
 
 		prerequisite = { focus = ANQ_consortium_negotiations }
 
@@ -2612,7 +2638,7 @@ focus_tree = {
 		x = 1
 		y = 2
 
-		ai_will_do = { factor = 70 }
+		ai_will_do = { factor = 700 }
 
 		prerequisite = { focus = ANQ_zhejiang_industrial_bank }
 

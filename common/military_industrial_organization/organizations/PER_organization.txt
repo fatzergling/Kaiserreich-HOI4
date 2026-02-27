@@ -11,6 +11,19 @@ PER_skoda_organisation = {
 	available = {
 		CZE_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		CZE = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		CZE = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		CZE = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		CZE = { add_cic = 500 }
+	}
+
 }
 
 ##################
@@ -26,6 +39,19 @@ PER_blohm_voss_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
+
 }
 
 #####################
@@ -49,6 +75,19 @@ PER_svenska_aeroplan_organisation = {
 	available = {
 		SWE_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		SWE = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		SWE = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		SWE = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		SWE = { add_cic = 500 }
+	}
+
 }
 
 #####################
@@ -78,6 +117,19 @@ PER_steyr_organisation = {
 	available = {
 		CZE_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		CZE = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		CZE = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		CZE = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		CZE = { add_cic = 500 }
+	}
+
 }
 PER_volvo_organisation = {
 	include = generic_motorized_mechanized_organization
@@ -89,6 +141,19 @@ PER_volvo_organisation = {
 	available = {
 		SWE_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		SWE = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		SWE = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		SWE = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		SWE = { add_cic = 500 }
+	}
+
 }
 PER_scania_vabis_organisation = {
 	include = generic_armored_car_organization
@@ -101,4 +166,17 @@ PER_scania_vabis_organisation = {
 	available = {
 		SWE_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		SWE = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		SWE = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		SWE = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		SWE = { add_cic = 500 }
+	}
+
 }

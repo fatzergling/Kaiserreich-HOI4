@@ -18,6 +18,34 @@ ideas = {
 				guarantee_tension = 1
 				lend_lease_tension = 0.75
 			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = RUS
+				cic_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = BEL
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = CAN
+				cic_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = AUS
+				cic_to_target_factor = 0.1
+			}
 		}
 		LEC_neutrality_no_conscription = {
 			on_add = { log = "[GetLogRoot]: add idea LEC_neutrality_no_conscription" }
@@ -33,6 +61,35 @@ ideas = {
 				guarantee_tension = 1
 				lend_lease_tension = 0.75
 			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = RUS
+				cic_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = BEL
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = CAN
+				cic_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = AUS
+				cic_to_target_factor = 0.1
+			}
+			
 		}
 		LEC_currency_1 = {
 			on_add = {

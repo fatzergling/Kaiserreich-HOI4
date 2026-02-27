@@ -160,3 +160,17 @@ faction_manifest_liberation_of_europe = {
 		}
 	}
 }
+
+faction_manifest_defeat_sri = {
+	name = faction_manifest_defeat_sri_name
+	description = faction_manifest_defeat_sri_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:all_italian_states
+		completed_amount_collection = collection:all_controlled_italian_states
+		scale = {
+			war_support_factor = 0.1
+			political_power_factor = 0.1
+		}
+	}
+}

@@ -5,7 +5,7 @@ state = { #Jindong/Eastern Shanxi
 	state_category = two
 
 	resources = {
-		tungsten = 3 #Not particularly known for Tungsten mining, but giving north China some from the south for balance.
+		#tungsten = 3 #Not particularly known for Tungsten mining, but giving north China some from the south for balance.
 		coal = 2 #The 1913 atlas suggests slightly less than half the coal reserves were here so gonna put 2/5 of Shanxi's calculated coal here.
 	}
 

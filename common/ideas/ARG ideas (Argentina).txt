@@ -1059,6 +1059,48 @@ ideas = {
 				land_doctrine_cost_factor = 0.1
 			}
 		}
+		ARG_Foreign_owned_factories_1 = {
+			on_add = { log = "[GetLogRoot]: add idea ARG_Unskilled_Officers" }
+			picture = LIB_ger_bailout
+			name = ARG_Foreign_owned_factories
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = CAN
+				cic_to_target_factor = 0.15
+			}
+		}
+		ARG_Foreign_owned_factories_2 = {
+			on_add = { log = "[GetLogRoot]: add idea ARG_Unskilled_Officers" }
+			picture = LIB_ger_bailout
+			name = ARG_Foreign_owned_factories
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = CAN
+				cic_to_target_factor = 0.1
+			}
+		}
+		ARG_Foreign_owned_factories_3 = {
+			on_add = { log = "[GetLogRoot]: add idea ARG_Unskilled_Officers" }
+			picture = LIB_ger_bailout
+			name = ARG_Foreign_owned_factories
+			allowed = { always = no }
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = CAN
+				cic_to_target_factor = 0.05
+			}
+		}
 	}
 	##############
 	# Companies

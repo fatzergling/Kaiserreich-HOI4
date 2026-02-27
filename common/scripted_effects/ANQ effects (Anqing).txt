@@ -58,6 +58,26 @@ ANQ_spawn_anqing_clique = {
 					prioritize_location = 7104
 					owner = PREV
 				}
+				create_unit = {
+					division = "name = \"Anhui Bubing Di 5 Xie\" division_template = \"Bubing Xie\" start_experience_factor = 0.1"
+					prioritize_location = 7104
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Anhui Bubing Di 6 Xie\" division_template = \"Bubing Xie\" start_experience_factor = 0.1"
+					prioritize_location = 7104
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Anhui Bubing Di 7 Xie\" division_template = \"Bubing Xie\" start_experience_factor = 0.1"
+					prioritize_location = 7104
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"Anhui Bubing Di 8 Xie\" division_template = \"Bubing Xie\" start_experience_factor = 0.1"
+					prioritize_location = 7104
+					owner = PREV
+				}
 			}
 			1050 = { #Huasi
 				add_core_of = PREV
@@ -65,12 +85,12 @@ ANQ_spawn_anqing_clique = {
 				add_claim_by = ROOT
 				transfer_state_to = PREV
 				create_unit = {
-					division = "name = \"Anhui Bubing Di 1 Zhen\" division_template = \"Bubing Zhen\" start_experience_factor = 0.2"
+					division = "name = \"Anhui Bubing Di 3 Zhen\" division_template = \"Bubing Zhen\" start_experience_factor = 0.2"
 					prioritize_location = 9937
 					owner = PREV
 				}
 				create_unit = {
-					division = "name = \"Anhui Bubing Di 2 Zhen\" division_template = \"Bubing Zhen\" start_experience_factor = 0.2"
+					division = "name = \"Anhui Bubing Di 4 Zhen\" division_template = \"Bubing Zhen\" start_experience_factor = 0.2"
 					prioritize_location = 9937
 					owner = PREV
 				}

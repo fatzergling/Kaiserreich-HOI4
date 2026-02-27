@@ -3,7 +3,7 @@
 #################################
 
 Thank you for downloading Kaiserreich for Hearts of Iron 4!
-This version is designed for Hearts of Iron IV version 1.17.4.
+This version is designed for Hearts of Iron IV version 1.17.3.
 It should be compatible with all hotfixes, but it isn't guaranteed.
 
 Manual Installation Instructions

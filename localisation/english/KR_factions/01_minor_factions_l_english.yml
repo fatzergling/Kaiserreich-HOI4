@@ -6,6 +6,10 @@
  faction_manifest_defeat_argentina_name: "Defeat Argentina"
  faction_manifest_defeat_argentina_desc: "Control all Argentine states."
 
+ faction_southern_italian_alliance: "Southern Italian Alliance" #created by history\countries\CHL - Chile.txt history file and paraguay_events.80 event
+ faction_manifest_defeat_sri_name: "Reunite Italy"
+ faction_manifest_defeat_sri_desc: "Control all core Italian states."
+
  faction_democratic_alliance_of_the_caribbean: "Democratic Alliance of the Caribbean" #created by CENdem_form_faction and COS_form_faction decisions and COS_Ferrer_takes_Control focus
 
  faction_manifest_bastion_of_american_democracy_name: "Bastion of American Democracy"

@@ -12,6 +12,7 @@ faction_manifest_chinas_last_stand = {
 			army_claim_defence_factor = 0.1
 			army_core_defence_factor = 0.1
 			resistance_target_on_our_occupied_states = 0.10
+			surrender_limit = 1
 		}
 	}
 }

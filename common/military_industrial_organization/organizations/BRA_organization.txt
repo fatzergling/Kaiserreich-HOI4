@@ -35,6 +35,19 @@ BRA_us_ordnance_corps_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 
 ###################
@@ -58,6 +71,19 @@ BRA_somua_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+		on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 BRA_krupp_organisation = {
 	name = krupp
@@ -68,6 +94,18 @@ BRA_krupp_organisation = {
 	}
 	available = {
 		GER_export_mio_trigger = yes
+	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
 	}
 }
 ##################
@@ -91,6 +129,19 @@ BRA_electric_boat_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 BRA_kaiser_shipyards_organisation = {
 	name = USA_kaiser_shipyards
@@ -102,6 +153,19 @@ BRA_kaiser_shipyards_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 
 #####################
@@ -126,6 +190,18 @@ BRA_focke_wulf_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
 }
 BRA_morane_saulnier_organisation = {
 	name = morane_saulnier
@@ -137,6 +213,19 @@ BRA_morane_saulnier_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 BRA_curtiss_wright_organisation = {
 	name = USA_curtiss_wright
@@ -148,4 +237,17 @@ BRA_curtiss_wright_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }

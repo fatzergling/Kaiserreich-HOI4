@@ -182,10 +182,14 @@ XSM_qinghai_struggle = {
 		fire_only_once = no
 		cost = 30
 		ai_will_do = {
-			factor = 1000
+			factor = 50
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = XSM_path option = XSM_PATH_NATPOP }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { XSM_bufang_qinghai_control < 51 }
 			}
 		}
 

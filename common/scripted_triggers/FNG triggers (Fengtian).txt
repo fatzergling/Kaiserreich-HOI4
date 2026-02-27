@@ -134,6 +134,8 @@ FNG_JAP_mission_complete_trigger = {
 			}
 		}
 	}
+	if = {
+		limit = { is_ai = yes }
 	OR = {
 		592 = { #Guangzhou
 			controller = {
@@ -169,5 +171,44 @@ FNG_JAP_mission_complete_trigger = {
 		}
 		FNG = { num_of_controlled_states > 34 } #Fengtian Starts with 10 - just prevent FNG from snaking around or something lame like that. If they have ANQ/SHD/GXC kinda redundant since it will fire. Then again I guess you could just ignore Beijing but that would be super annoying to code around so well congrats you broke KR (one of a million ways)
 		#Okay 19 was too low, gonna up it now to 34 just to be safe.
+	}
+	}
+	else = {
+	#OR = {
+		592 = { #Guangzhou
+			controller = {
+				OR = {
+					tag = FNG
+					is_subject_of = FNG
+				}
+			}
+		}
+		613 = { #Nanjing
+			controller = {
+				OR = {
+					tag = FNG
+					is_subject_of = FNG
+				}
+			}
+		}
+		650 = { #Chongqing
+			controller = {
+				OR = {
+					tag = FNG
+					is_subject_of = FNG
+				}
+			}
+		}
+		1048 = { #Wuhan
+			controller = {
+				OR = {
+					tag = FNG
+					is_subject_of = FNG
+				}
+			}
+		}
+		FNG = { num_of_controlled_states > 34 } #Fengtian Starts with 10 - just prevent FNG from snaking around or something lame like that. If they have ANQ/SHD/GXC kinda redundant since it will fire. Then again I guess you could just ignore Beijing but that would be super annoying to code around so well congrats you broke KR (one of a million ways)
+		#Okay 19 was too low, gonna up it now to 34 just to be safe.
+	#}
 	}
 }

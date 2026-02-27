@@ -921,6 +921,7 @@ ideas = {
 				stability_factor = 0.05
 				army_org_factor = 0.05
 				conscription = 0.005
+				surrender_limit = 0.5
 			}
 		}
 
@@ -1549,10 +1550,14 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea anshan_iron_and_steel" }
 			picture = anshan_iron_and_steel
 			allowed = {
-				OR = {
+				is_chinese_tag = yes
+			}
+			visible = {
+								OR = {
 					original_tag = FNG
 					original_tag = MAN
 				}
+
 			}
 			available = {
 				if = {
@@ -1567,6 +1572,9 @@ ideas = {
 				else_if = {
 					limit = { tag = MAN }
 					has_completed_focus = MAN_Anshan_Mines
+				}
+				else = {
+					owns_state = 716
 				}
 			}
 			traits = { mining_company }

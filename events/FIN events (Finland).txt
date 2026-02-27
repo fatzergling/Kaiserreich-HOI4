@@ -428,7 +428,8 @@ country_event = { #Socialists clash with Lapua Movement
 		log = "[GetLogInfo]: event finland_events.15 option finland_events.15.a"
 		name = finland_events.15.a
 		ai_chance = {
-			base = 25
+			#base = 25
+			base = 1
 			modifier = {
 				factor = 0
 				NOT = { has_game_rule = { rule = FIN_path option = DEFAULT } }
@@ -620,7 +621,8 @@ country_event = { #Lapua Movement taken out and White Guard clash with socialist
 		log = "[GetLogInfo]: event finland_events.18 option finland_events.18.a"
 		name = finland_events.18.a
 		ai_chance = {
-			base = 40
+			#base = 40
+			base = 1
 			modifier = {
 				factor = 0
 				NOT = { has_game_rule = { rule = FIN_path option = DEFAULT } }

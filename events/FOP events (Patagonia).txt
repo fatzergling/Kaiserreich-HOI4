@@ -3460,7 +3460,7 @@ country_event = { # Select how much can we spare
 	option = { # Food only
 		log = "[GetLogInfo]: event patagonia_events.400 option patagonia_events.400.a"
 		name = patagonia_events.400.a
-		ai_chance = { base = 15 }
+		ai_chance = { base = 5 }
 		if = {
 			limit = { ENG = { has_socialist_government = yes } }
 			ENG = {
@@ -3535,7 +3535,7 @@ country_event = { # Select how much can we spare
 		log = "[GetLogInfo]: event patagonia_events.400 option patagonia_events.400.e"
 		name = patagonia_events.400.e
 		ai_chance = {
-			base = 1
+			base = 10
 			modifier = {
 				factor = 0
 				has_government = radical_socialist

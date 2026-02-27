@@ -159,6 +159,14 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.4
 			}
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = CAN
+				cic_to_target_factor = 0.15
+			}
 		}
 		FOP_expropriate_foreign_owned_factories = {
 			on_add = { log = "[GetLogRoot]: add idea FOP_expropriate_foreign_owned_factories" }

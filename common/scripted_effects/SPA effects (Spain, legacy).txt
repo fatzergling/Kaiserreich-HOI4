@@ -601,8 +601,8 @@ SPA_start_civil_war = {
 	}
 	hidden_effect = {
 		every_core_state = {
-			add_core_of = SPR
-			add_core_of = SWF
+			add_claim_by = SPR
+			add_claim_by = SWF
 		}
 		every_owned_state = {
 			limit = { is_claimed_by = ROOT }
@@ -632,6 +632,8 @@ SPA_start_civil_war = {
 				}
 			}
 			transfer_state_to = SWF
+			remove_core_of = SPA
+			add_core_of = SWF
 		}
 
 		every_owned_state = {
@@ -648,6 +650,8 @@ SPA_start_civil_war = {
 				}
 			}
 			transfer_state_to = SPR
+			remove_core_of = SPA
+			add_core_of = SPR
 		}
 
 		if = {
@@ -1350,6 +1354,93 @@ SPA_post_civil_war = {
 		SWF = {
 			clr_country_flag = madrid_fallen_once
 			clr_country_flag = burgos_fallen_once
+		}
+		if = {
+			limit = { tag = SWF }
+			SWF = {
+						every_owned_state = {
+			if = {
+				limit = { 
+					is_spain = yes 
+					NOT = { is_core_of = ROOT }
+					}
+				add_claim_of_ROOT = yes
+				enable_state_integration_50_compliance = yes
+				add_compliance = 1
+			}
+		}
+
+			}
+					SPK = {
+						every_state = {
+							remove_core_of = PREV
+							remove_claim_by = PREV
+						}
+					}
+					SPR = {
+						every_state = {
+							remove_core_of = PREV
+							remove_claim_by = PREV
+						}
+					}
+		}
+		if = {
+			limit = { tag = SPK }
+			SPK = {
+						every_owned_state = {
+			if = {
+				limit = { 
+					is_spain = yes 
+					NOT = { is_core_of = ROOT }
+					}
+				add_claim_of_ROOT = yes
+				enable_state_integration_50_compliance = yes
+				add_compliance = 1
+			}
+						}
+			}
+					SWF = {
+						every_state = {
+							remove_core_of = PREV
+							remove_claim_by = PREV
+						}
+					}
+					SPR = {
+						every_state = {
+							remove_core_of = PREV
+							remove_claim_by = PREV
+						}
+					}
+
+		}
+		if = {
+			limit = { tag = SPR }
+			SPR = {
+						every_owned_state = {
+			if = {
+				limit = { 
+					is_spain = yes 
+					NOT = { is_core_of = ROOT }
+					}
+				add_claim_of_ROOT = yes
+				enable_state_integration_50_compliance = yes
+				add_compliance = 1
+			}
+		}
+
+			}
+					SWF = {
+						every_state = {
+							remove_core_of = PREV
+							remove_claim_by = PREV
+						}
+					}
+					SPK = {
+						every_state = {
+							remove_core_of = PREV
+							remove_claim_by = PREV
+						}
+					}
 		}
 
 		#Power Projection event for RUS

@@ -1,13 +1,34 @@
 AFG_dont_justify_on_claims = {
 	reversed = yes
+	allowed = { original_tag = AFG }
 
 	enable = { always = yes }
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = ignore_claim id = AFG value = 1 }
 }
+
+AFG_prepare_against_RAJ = {
+	allowed = { original_tag = AFG }
+	enable = { date < 1936.3.1 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = RAJ
+		value = 500
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = RAJ
+		value = 500
+	}
+
+}
+
 AFG_no_volunteers_against_RAJ = {
 	reversed = yes
+	allowed = { original_tag = AFG }
 
 	enable = {
 		AFG = {

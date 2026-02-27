@@ -59,22 +59,22 @@ send_volunteers_to_TARGET = {
 		add_ai_strategy = {
 			type = send_volunteers_desire
 			id = event_target:volunteer_target
-			value = 400
+			value = 4000
 		}
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = event_target:volunteer_target
-			value = 400
+			value = 1000
 		}
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = event_target:volunteer_target
-			value = 200
+			value = 1000
 		}
 		add_ai_strategy = {
 			type = support
 			id = event_target:volunteer_target
-			value = 200
+			value = 2000
 		}
 	}
 }
@@ -91,22 +91,22 @@ clear_volunteers_to_TARGET = {
 		add_ai_strategy = {
 			type = send_volunteers_desire
 			id = event_target:volunteer_target
-			value = -400
+			value = -4000
 		}
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = event_target:volunteer_target
-			value = -400
+			value = -1000
 		}
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = event_target:volunteer_target
-			value = -200
+			value = -1000
 		}
 		add_ai_strategy = {
 			type = support
 			id = event_target:volunteer_target
-			value = -200
+			value = -2000
 		}
 	}
 }
@@ -129,18 +129,18 @@ send_volunteers_to_PREV = {
 		add_ai_strategy = {
 			type = send_volunteers_desire
 			id = PREV
-			value = 400
+			value = 4000
 		}
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = PREV
-			value = 400
+			value = 1000
 		}
-		add_ai_strategy = {
-			type = send_lend_lease_desire
-			id = PREV
-			value = 200
-		}
+		#add_ai_strategy = {
+		#	type = send_lend_lease_desire
+		#	id = PREV
+		#	value = 200
+		#}
 		add_ai_strategy = {
 			type = support
 			id = PREV
@@ -160,17 +160,12 @@ clear_volunteers_to_PREV = {
 		add_ai_strategy = {
 			type = send_volunteers_desire
 			id = PREV
-			value = -400
+			value = -4000
 		}
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = PREV
-			value = -400
-		}
-		add_ai_strategy = {
-			type = send_lend_lease_desire
-			id = PREV
-			value = -200
+			value = -1000
 		}
 		add_ai_strategy = {
 			type = support

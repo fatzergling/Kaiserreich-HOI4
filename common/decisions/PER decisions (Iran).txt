@@ -82,7 +82,7 @@ PER_war_for_the_gulf = {
 		icon = GFX_decision_generic_prepare_civil_war
 
 		available = {
-			date > 1938.11.01
+			date > 1938.12.1
 			has_war_support > 0.15
 			OTT = { controls_state = 819 }
 		}

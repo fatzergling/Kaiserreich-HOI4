@@ -92,3 +92,35 @@ SER_vojnotehnicki_beograd_organisation = {
 	}
 }
 # +inherits motorized MIO from CRO
+
+SER_amo_organisation = {
+	include = generic_motorized_mechanized_organization
+	name = amo_ser
+	icon = GFX_idea_amo
+	allowed = {
+		original_tag = SER
+	}
+	available = {
+		RUS_export_mio_trigger = yes
+	}
+	visible = {
+		NOT = {
+		FROM = { owns_state = 109 } #Central Croatia
+		}
+	}
+
+	on_design_team_assigned_to_tech = {
+		RUS = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		RUS = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		RUS = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		RUS = { add_cic = 500 }
+	}
+
+}
+

@@ -788,6 +788,21 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					OR = {
+						tag = PAR
+						tag = BOL
+					}
+					FROM = {
+						OR = {
+							tag = PAR
+							tag = BOL
+						}
+					}
+				}
+				PAR = { country_event = southern_cone_events.50 } #Peace with Paraguay?
+			}
+			if = {
+				limit = {
 					has_civil_war = yes
 					OR = {
 						is_brazilian_tag = yes

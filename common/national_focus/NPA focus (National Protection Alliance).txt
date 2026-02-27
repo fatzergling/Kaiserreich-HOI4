@@ -10,10 +10,13 @@ shared_focus = {
 	allow_branch = {
 		china_generic_unification_tree_allow_branch = yes
 		NOT = {
+			OR = {
 			china_alignment_right_kuomintang = yes
 			china_alignment_left_kuomintang = yes
 			has_country_flag = SZC_zhili_exiles_in_power
 			has_country_flag = SZC_federalists_in_power
+
+			}
 		}
 	}
 	offset = {
@@ -22,8 +25,8 @@ shared_focus = {
 		trigger = { original_tag = SZC }
 	}
 	offset = {
-		x = 9
-		y = 0
+		x = 10
+		y = 12
 		trigger = { original_tag = LEP }
 	}
 	offset = {

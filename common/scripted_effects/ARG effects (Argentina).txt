@@ -507,3 +507,24 @@ ARG_puppet_setup = {
 		PAR_apply_puppet_modifier = yes
 	}
 }
+ARG_reduce_foreign_reliance = {
+	if = {
+			limit = { has_idea = ARG_foreign_owned_factories_1 }
+			swap_ideas = {
+				remove_idea = ARG_foreign_owned_factories_1
+				add_idea = ARG_foreign_owned_factories_2
+			}
+		}
+	if = {
+			limit = { has_idea = ARG_foreign_owned_factories_2 }
+			swap_ideas = {
+				remove_idea = ARG_foreign_owned_factories_2
+				add_idea = ARG_foreign_owned_factories_3
+			}
+		}
+	if = {
+			limit = { has_idea = ARG_foreign_owned_factories_3 }
+				remove_idea = ARG_foreign_owned_factories_3
+		}
+
+}

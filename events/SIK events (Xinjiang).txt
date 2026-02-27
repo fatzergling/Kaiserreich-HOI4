@@ -417,7 +417,7 @@ country_event = { #Removing Aksu Fan Yaonan
 							country_leader = {
 								desc = SIK_sheng_shicai_leader_desc
 								ideology = radical_socialist_subtype
-								traits = { CHN_non_aligned }
+								traits = { CHN_southern_republican_aligned }
 							}
 							promote_leader = yes
 						}
@@ -506,7 +506,7 @@ country_event = { #Sheng Shicai, "seduces" Jin and becomes Tao-Yin of Aksu
 						country_leader = {
 							desc = SIK_sheng_shicai_leader_desc
 							ideology = social_democrat_subtype
-							traits = { CHN_non_aligned }
+							traits = { CHN_southern_republican_aligned }
 						}
 						promote_leader = yes
 					}
@@ -975,6 +975,13 @@ country_event = { #Uprisings expand to Kashgar
 					}
 					country_event = { id = xinjiang_events.46 days = 3 }
 					country_event = { id = xinjiang_events.35 days = 9 }
+					remove_state_core = 619
+					remove_state_core = 287
+					619 = { add_claim_by = SIK }
+					287 = { add_claim_by = SIK }
+					619 = { enable_state_integration_80_compliance = yes }
+					287 = { enable_state_integration_80_compliance = yes }
+
 				}
 			}
 			KUM = {
@@ -1393,7 +1400,7 @@ country_event = { #Sheng makes his move
 						country_leader = {
 							desc = SIK_sheng_shicai_leader_desc
 							ideology = paternal_autocrat_subtype
-							traits = { CHN_non_aligned }
+							traits = { CHN_southern_republican_aligned }
 						}
 						promote_leader = yes
 					}
@@ -1601,13 +1608,14 @@ country_event = { #KUMUL GANG GANG GANG
 		hidden_effect = {
 			add_stability = -0.1
 			KUM = {
-				add_state_core = 287 #Hotan
-				add_state_core = 617 #Dihua
-				add_state_core = 618 #Dzungaria
-				add_state_core = 619 #Kashgar
-				add_state_core = 897 #Aksai Chin
-				add_state_core = 1083 #Kumul
-				add_state_core = 1085 #Taklamakan
+				287 = { enable_country_integration_50_compliance = yes }
+				617 = { enable_country_integration_50_compliance = yes }
+				618 = { enable_country_integration_50_compliance = yes }
+				619 = { enable_country_integration_50_compliance = yes }
+				897 = { enable_country_integration_50_compliance = yes }
+				1083 = { enable_country_integration_50_compliance = yes }
+				1085 = { enable_country_integration_50_compliance = yes }
+
 				declare_war_on = {
 					target = SIK
 					type = annex_everything

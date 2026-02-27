@@ -163,6 +163,10 @@ activate_targeted_decision = { target = TUS decision = SRD_attack_italy }
 activate_targeted_decision = { target = LOM decision = SRD_attack_italy }
 
 NFA = { give_guarantee = SRD }
+create_faction_from_template = { template = faction_template_generic name = faction_southern_italian_alliance icon = GFX_faction_logo_generic_17 }
+set_faction_manifest = faction_manifest_defeat_sri
+set_as_temporary_faction = yes
+add_to_faction = SIC
 
 ### Country Leaders ###
 recruit_character = SRD_amedeo_aosta

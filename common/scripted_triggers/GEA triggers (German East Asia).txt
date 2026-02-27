@@ -3,6 +3,8 @@ GEA_chinese_state_controller_is_friendly_power = {
 		is_ally_with = GEA
 		has_country_leader = { character = LEP_sun_chuanfang }
 		has_country_leader = { character = LEP_qi_xieyuan }
+		has_country_leader = { character = GXC_shen_hongying }
+		has_country_leader = { character = GXC_zhu_jiahua }
 		has_dynamic_modifier = { modifier = QIE_german_influence_dynamic_modifier }
 		AND = {
 			is_subject = yes
@@ -10,6 +12,9 @@ GEA_chinese_state_controller_is_friendly_power = {
 				OR = {
 					has_country_leader = { character = LEP_sun_chuanfang }
 					has_country_leader = { character = LEP_qi_xieyuan }
+					has_country_leader = { character = GXC_shen_hongying }
+					has_country_leader = { character = GXC_li_yaohan }
+					has_country_leader = { character = GXC_zhu_jiahua }
 					has_dynamic_modifier = { modifier = QIE_german_influence_dynamic_modifier }
 				}
 			}

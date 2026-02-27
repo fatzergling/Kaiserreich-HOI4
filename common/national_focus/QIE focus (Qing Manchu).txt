@@ -195,6 +195,22 @@ focus_tree = {
 					popularity = -0.05
 				}
 			}
+			if = {
+				limit = { controls_state = 597 }
+				597 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -230,6 +246,22 @@ focus_tree = {
 					QIE_guo_zeyun = { set_nationality = QIE }
 				}
 			}
+			if = {
+				limit = { controls_state = 597}
+				597 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -251,6 +283,22 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed QIE_gather_dynasties"
+			if = {
+				limit = { controls_state = 1065 }
+				1065 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 			QIE_reduce_fractured_empire = yes
 			country_event = { id = qing_focus_events.23 days = 14 }
 		}
@@ -272,6 +320,7 @@ focus_tree = {
 			add_stability = 0.075
 			QIE_reduce_fractured_empire = yes
 			country_event = qing_focus_events.21
+			CHN_improve_economic_devastation_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -324,7 +373,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed QIE_modernize_monarchy"
+			if = {
+				limit = { controls_state = 597 }
+				597 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 			QIE_reduce_fractured_empire = yes
+			CHN_improve_economic_devastation_effect = yes
 			country_event = qing_focus_events.13
 		}
 	}
@@ -497,7 +563,24 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed QIE_imperial_academy"
+			if = {
+				limit = { controls_state = 1064 }
+				1064 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 			china_add_research_slots = yes
+			CHN_remove_illiteracy_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -522,6 +605,8 @@ focus_tree = {
 				category = industry
 			}
 			china_add_research_slots = yes
+			CHN_remove_illiteracy_effect = yes
+			CHN_improve_economic_devastation_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -689,9 +774,196 @@ focus_tree = {
 				add_war_support = 0.15
 			}
 			#decisions and stuff
+			activate_targeted_decision = { target = ROOT decision = CHN_evacuate_military_industry }
+			activate_targeted_decision = { target = ROOT decision = CHN_evacuate_civilian_industry }
+			set_variable = { CHN_evacuation_cost = 30 }
+			if = {
+				limit = { controls_state = 597 }
+				597 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
+
+	focus = {
+		id = QIE_chinas_gravest_hour
+		icon = GFX_focus_chi_one_china_policy
+		
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = { base = 100 }
+		relative_position_id = QIE_prepare_for_storm
+
+		available = {
+			has_war_with = JAP
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed QIE_chinas_gravest_hour"
+			add_timed_idea = {
+				idea = CHI_march_of_the_volunteers_idea
+				days = 365
+			}
+			add_war_support = 0.10
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = QIE_the_chinese_hindenburg_line
+		icon = GFX_goal_nested_fortifications
+		cost = 6
+		x = -1
+		y = 1
+		ai_will_do = { base = 100 }
+		relative_position_id = QIE_chinas_gravest_hour
+		prerequisite = { focus = QIE_chinas_gravest_hour }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed QIE_the_chinese_hindenburg_line"
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_in_home_area = yes
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_timed_idea = {
+				idea = GXC_constructing_our_own_hindenburg
+				days = 365
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = QIE_wartime_industry_relocation
+		icon = GFX_goal_generic_industry_reallocation
+		cost = 6
+		x = 1
+		y = 1
+		ai_will_do = { base = 100 }
+		relative_position_id = QIE_chinas_gravest_hour
+		prerequisite = { focus = QIE_chinas_gravest_hour }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GXC_wartime_industry_relocation"
+			subtract_from_variable = { CHN_evacuation_cost = 15 }
+			custom_effect_tooltip = CHN_war_time_relocation_tt
+			custom_effect_tooltip = tooltip_white_line
+			add_war_support = 0.10
+			custom_effect_tooltip = tooltip_white_line
+			increase_economic_mobilisation = yes
+			hidden_effect = {
+				country_event = { id = GXC.lategame.001 days = 1 }
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = QIE_heroic_revolutionary_fighters
+		icon = GFX_goal_CHI_tigress_battalions
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = { base = 100 }
+		relative_position_id = QIE_chinas_gravest_hour
+		prerequisite = { focus = QIE_chinas_gravest_hour }
+		prerequisite = { focus = QIE_the_chinese_hindenburg_line }
+		prerequisite = { focus = QIE_wartime_industry_relocation }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GXC_heroic_revolutionary_fighters"
+			every_army_leader = {
+				add_temporary_buff_to_units = {
+					combat_offense = 0.1
+					combat_breakthrough = 0.05
+					days = 150
+				}
+				add_timed_unit_leader_trait = {
+					trait = trait_determined
+					days = 60
+				}
+			}
+			
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	focus = {
+		id = QIE_one_thousands_sons_one_thousand_soldiers
+		icon = GFX_focus_generic_workers
+		cost = 6
+		x = -1
+		y = 1
+		ai_will_do = { base = 100 }
+		relative_position_id = QIE_heroic_revolutionary_fighters
+		prerequisite = { focus = QIE_heroic_revolutionary_fighters }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed QIE_one_thousands_sons_one_thousand_soldiers"
+			add_timed_idea = {
+				idea = GXC_one_thousands_sons_one_thousand_soldiers_idea
+				days = 365
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	focus = {
+		id = QIE_prepare_guerrila_cells
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		cost = 6
+		x = 1
+		y = 1
+		ai_will_do = { base = 100 }
+		relative_position_id = QIE_heroic_revolutionary_fighters
+		prerequisite = { focus = QIE_heroic_revolutionary_fighters }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed QIE_prepare_guerrila_cells"
+			add_timed_idea = {
+				idea = GXC_prepare_guerrila_cells_idea
+				days = 400
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	focus = {
+		id = QIE_blockade_runners
+		icon = GFX_goal_generic_buy_ships
+		cost = 6
+		x = 0
+		y = 2
+		ai_will_do = { base = 100 }
+		relative_position_id = QIE_prepare_guerrila_cells
+		prerequisite = { focus = QIE_prepare_guerrila_cells focus = QIE_modernise_coastal_defenses }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed QIE_blockade_runners"
+			add_timed_idea = {
+				idea = GXC_blockade_runners_idea
+				days = 400
+			}
+			add_tech_bonus = {
+				name = QIE_blockade_runners
+				bonus = 0.75
+				uses = 2
+				category = mio_cat_tech_all_destroyer_and_modules
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
 
 	#start of Manchu domesic parties
 	focus = {
@@ -1232,6 +1504,7 @@ focus_tree = {
 					category = dispersed_industry_category
 				}
 			}
+			CHN_improve_economic_devastation_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1363,6 +1636,7 @@ focus_tree = {
 				custom_effect_tooltip = tooltip_white_line
 				custom_effect_tooltip = QIE_delayed_gratification_tt
 			}
+			CHN_improve_economic_devastation_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1685,6 +1959,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			CHN_improve_economic_devastation_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -1949,10 +2224,17 @@ focus_tree = {
 		prerequisite = { focus = QIE_vigor_modernization }
 		prerequisite = { focus = QIE_YCP_modernization }
 		available = {
+			OR = {
 			NOT = {
 				has_completed_focus = QIE_pick_MP
 				has_completed_focus = QIE_pick_CERA
 			}
+			custom_trigger_tooltip = {
+				tooltip = YCP_won_rigged_elections
+				has_country_flag = YCP_won_rigged_elections
+
+			}
+		}
 		}
 
 		completion_reward = {
@@ -2065,6 +2347,7 @@ focus_tree = {
 				remove_ideas = QIE_cult_of_progress_idea
 				add_ideas = QIE_cult_of_progress_idea
 			}
+			CHN_improve_economic_devastation_effect = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -2273,6 +2556,7 @@ focus_tree = {
 				add_ideas = QIE_chinese_century_idea
 			}
 			custom_effect_tooltip = tooltip_white_line
+			china_generic_land_reform_setup = yes
 			china_enable_outskirts_decisions = yes
 			hidden_effect = {
 				if = {
@@ -2322,7 +2606,7 @@ focus_tree = {
 		y = 1
 
 		prerequisite = { focus = QIE_uneasy_coalition }
-		mutually_exclusive = { focus = QIE_look_to_our_past }
+		#mutually_exclusive = { focus = QIE_look_to_our_past }
 
 		ai_will_do = {
 			factor = 1
@@ -2338,6 +2622,30 @@ focus_tree = {
 			activate_targeted_decision = { target = FROM decision = QIE_hire_russian_cw_veterans }
 			activate_targeted_decision = { target = FROM decision = QIE_hire_legation_exiles }
 			add_stability = -0.05
+			custom_effect_tooltip = QIE_rolling_the_dice_on_the_markets_tt
+			custom_effect_tooltip = tooltip_white_line
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = RUS
+			}
+			add_tech_bonus = {
+				name = QIE_rolling_the_dice_on_the_markets
+				bonus = 0.50
+				uses = 2
+				category = support_tech
+			}
+			hidden_effect = {
+				activate_targeted_decision = { target = FROM decision = QIE_buy_small_arms }
+				activate_targeted_decision = { target = FROM decision = QIE_buy_support_equipment }
+				activate_targeted_decision = { target = FROM decision = QIE_buy_arty }
+			}
+
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -2355,7 +2663,7 @@ focus_tree = {
 		y = 1
 
 		prerequisite = { focus = QIE_uneasy_coalition }
-		mutually_exclusive = { focus = QIE_foreigner_against_foreigner }
+		#mutually_exclusive = { focus = QIE_foreigner_against_foreigner }
 
 		ai_will_do = {
 			factor = 1
@@ -2388,6 +2696,9 @@ focus_tree = {
 
 		prerequisite = {
 			focus = QIE_look_to_our_past
+		}
+
+		prerequisite = {
 			focus = QIE_foreigner_against_foreigner
 		}
 

@@ -64,6 +64,7 @@ MAN_puppet_setup = {
 					national_populist = 5
 				}
 				add_ideas = unequal_treaties_japan
+		RGC_set_leader_effect = yes
 				if = {
 					limit = { NOT = { has_completed_focus = MAN_a_new_nation_in_dongbei } }
 					complete_national_focus = MAN_a_new_nation_in_dongbei

@@ -397,6 +397,11 @@ ideas = {
 			modifier = {
 				send_volunteer_size = 3
 				unit_limit_bonus = 25
+				country_resource_coal = 12
+				country_resource_steel = 36
+				country_resource_oil = 6
+				country_resource_tungsten = 6
+				
 			}
 		}
 

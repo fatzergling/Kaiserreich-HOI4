@@ -618,6 +618,24 @@
  american_civil_war_events.335.a: "A welcome development"
  american_civil_war_events.335.b: "That's far too close to Washington"
 
+ american_civil_war_events.336.t: "New England in Desperate Straits"
+ american_civil_war_events.336.d: "Although the Crown had previously refused the request of New England's governors to ensure their neutrality, since the cabinet had deemed further endangerment of the military position of the Federal government unwise, the renewed request last night has brought a different reaction. With the only alternative to British-Canadian intervention in the region being occupation by the forces of [WCA.GetNameDef], even cabinet and Privy Council Americophiles have warmed to the idea of intervening. Should the British-Canadian government act?"
+ american_civil_war_events.336.a: "We must remain neutral."
+ american_civil_war_events.336.b: "The people of New England need us; we must help them!"
+
+ american_civil_war_events.337.t: "Canada Seizes New England"
+ american_civil_war_events.337.d.WCA: "The push on D.C. seems to have given the British Empire to our north the notion that we were a threat. They have accepted the request for protection by the traitorous governors of New England. Our forces were unable to make any headway in the North-East before encountering Canadian troops. New Jersey, however, fell to our militia and Internationale allies in New York City before the Entente forces could reinforce it."
+ american_civil_war_events.337.d.others: "The socialist push on D.C. seems to have given the British Empire to our north the idea that they were a real threat. They have accepted the request for protection by the governors of New England, and they are now eyeing the socialists across the border. WCA forces were unable to make any headway before encountering Canadian troops. The state of New Jersey, however, has fallen to their militia and Internationale allies in New York City before we could reinforce it."
+ american_civil_war_events.337.a: "The British are back in Boston!"
+ american_civil_war_events.337.b: "At least the socialists didn't take Boston."
+
+ american_civil_war_events.338.t: "Socialist Drive into New England"
+ american_civil_war_events.338.d: "Socialist militia and soldiers have quickly occupied New England in the aftermath of their assault on Washington, D.C. Although there was little resistance, it is clear that there are few friends of the new regime in the historic heartland of the Republican Party, and many are still hoping Canada will save them. For now, though, the WCA is in full control of New England."
+ american_civil_war_events.338.a: "Great!"
+ american_civil_war_events.338.b: "We'll be back for them soon!"
+ american_civil_war_events.338.c: "The socialists are growing strong."
+
+
 ### Deal with the Devil ###
  ACW_deal_with_devil_effect: "All occupied states of their territory will be transferred to us, and ours to them. The truce will continue for 90 days, after which each of us will have the option to extend it for another 90 days.\n"
 
@@ -892,6 +910,7 @@
  american_civil_war_events.724.t: "WCA Partisans in Buffalo"
  american_civil_war_events.724.d.macarthur: "Although President MacArthur's troops have compelled the obedience and loyalty of Governor Lehman of New York in Albany, it seems that even more of the state than New York City has slipped from his control. Remnant strikers from recent disturbances in Rochester and Buffalo have been joined by partisans of Reed's government in Chicago, who have united to overthrow the city government and invite WCA soldiers to protect the state. Sensing an opportunity to get closer to New York City, General Butler has ordered an advance up to the Susquehanna's source and Niagara Falls."
  american_civil_war_events.724.d.canada: "Although the British-Canadian government has accepted the New York governor's request to secure his state's neutrality, in the western part of the state British-Canadian troops have arrived too slowly to prevent General Butler's WCA soldiers from advancing into the cities of Buffalo and Rochester, there meeting up with pro-socialist partisans, and moving to a defensible line from the mouth of the Susquehanna to Niagara Falls. The WCA has established their own state government in Buffalo, and it seems the state will remain split until either the WCA or Canada seize the rest in war."
+ american_civil_war_events.724.d.borah: "Although President Borah's troops have compelled the obedience and loyalty of Governor Lehman of New York in Albany, it seems that even more of the state than New York City has slipped from his control. Remnant strikers from recent disturbances in Rochester and Buffalo have been joined by partisans of Reed's government in Chicago, who have united to overthrow the city government and invite WCA soldiers to protect the state. Sensing an opportunity to get closer to New York City, General Butler has ordered an advance up to the Susquehanna's source and Niagara Falls."
  american_civil_war_events.724.a: "Super!"
  american_civil_war_events.724.b: "At least we still surround New York City."
  american_civil_war_events.724.c: "Terrible."

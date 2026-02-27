@@ -3515,6 +3515,7 @@ NFA_fate_of_french_africa_cat = {
 
 		available = {
 			controls_state = 513
+			controls_state = 865
 			political_power_daily > 0.25
 			NOT = { has_country_flag = nfa_africa_civ_mission_in_progress }
 		}
@@ -3524,12 +3525,24 @@ NFA_fate_of_french_africa_cat = {
 				is_owned_by = ROOT
 				NOT = { is_core_of = ROOT }
 			}
+			865 = {
+				is_owned_by = ROOT
+				NOT = { is_core_of = ROOT }
+			}
 		}
 
 		cancel_trigger = {
 			OR = {
+				AND = {
 				NOT = { controls_state = 513 }
-				513 = { is_core_of = ROOT }
+				NOT = { controls_state = 865 }
+
+				}
+				AND = {
+					513 = { is_core_of = ROOT }
+					865 = { is_core_of = ROOT }
+
+				}
 			}
 		}
 
@@ -3549,6 +3562,9 @@ NFA_fate_of_french_africa_cat = {
 			513 = {
 				NFA_remove_african_integration_focus_modifier = yes
 			}
+			865 = {
+				NFA_remove_african_integration_focus_modifier = yes
+			}
 		}
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete NFA_Focus_On_Algeria"
@@ -3556,11 +3572,17 @@ NFA_fate_of_french_africa_cat = {
 			513 = {
 				NFA_add_african_integration_focus_modifier = yes
 			}
+			865 = {
+				NFA_add_african_integration_focus_modifier = yes
+			}
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove NFA_Focus_On_Algeria"
 			clr_country_flag = nfa_africa_civ_mission_in_progress
 			513 = {
+				NFA_remove_african_integration_focus_modifier = yes
+			}
+			865 = {
 				NFA_remove_african_integration_focus_modifier = yes
 			}
 		}
@@ -3579,6 +3601,11 @@ NFA_fate_of_french_africa_cat = {
 				compliance > 50
 				resistance < 10
 			}
+			865 = {
+				is_controlled_by = ROOT
+				compliance > 50
+				resistance < 10
+			}
 		}
 		highlight_states = {
 			highlight_state_targets = { state = 513 }
@@ -3586,6 +3613,13 @@ NFA_fate_of_french_africa_cat = {
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete NFA_Integrate_Algeria"
 			513 = {
+				add_core_of = NFA
+				NFA_remove_resistance_modifiers = yes
+				add_dynamic_modifier = {
+					modifier = NFA_p25_recruitment_down
+				}
+			}
+			865 = {
 				add_core_of = NFA
 				NFA_remove_resistance_modifiers = yes
 				add_dynamic_modifier = {
@@ -4888,7 +4922,7 @@ NFA_colonial_rebellions = {
 			NOT = { has_war_with = CHA }
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 500
 		is_good = no
 		selectable_mission = no
 
@@ -4986,7 +5020,7 @@ NFA_colonial_rebellions = {
 			NOT = { has_war_with = NGR }
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 500
 		is_good = no
 		selectable_mission = no
 
@@ -5084,7 +5118,7 @@ NFA_colonial_rebellions = {
 			NOT = { has_war_with = VOL }
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 500
 		is_good = no
 		selectable_mission = no
 
@@ -5182,7 +5216,7 @@ NFA_colonial_rebellions = {
 			NOT = { has_war_with = MLI }
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 500
 		is_good = no
 		selectable_mission = no
 
@@ -5280,7 +5314,7 @@ NFA_colonial_rebellions = {
 			NOT = { has_war_with = GNA }
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 500
 		is_good = no
 		selectable_mission = no
 
@@ -5378,7 +5412,7 @@ NFA_colonial_rebellions = {
 			NOT = { has_war_with = MRT }
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 500
 		is_good = no
 		selectable_mission = no
 
@@ -5476,7 +5510,7 @@ NFA_colonial_rebellions = {
 			NOT = { has_war_with = IVO }
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 500
 		is_good = no
 		selectable_mission = no
 
@@ -5574,7 +5608,7 @@ NFA_colonial_rebellions = {
 			NOT = { has_war_with = TUN }
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 500
 		is_good = no
 		selectable_mission = no
 

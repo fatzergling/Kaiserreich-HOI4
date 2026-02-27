@@ -27,6 +27,19 @@ CHL_chile_ford_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 
 ###################
@@ -50,6 +63,19 @@ CHL_chile_somua_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 ##################
 ### Naval MIOs ###
@@ -91,4 +117,17 @@ CHL_paraguay_morane_saulnier_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }

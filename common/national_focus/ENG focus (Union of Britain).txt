@@ -512,6 +512,10 @@ focus_tree = {
 				NOT = { country_exists = FRA }
 				NOT = { country_exists = GER }
 			}
+			OR = {
+				NOT = { country_exists = CAN }
+				NOT = { has_war_with = CAN }
+			}
 		}
 		prerequisite = {
 			focus = ENG_devolution
@@ -2878,7 +2882,7 @@ focus_tree = {
 		x = 2
 		y = 7
 
-		ai_will_do = { factor = 20 }
+		ai_will_do = { factor = 1000 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed ENG_international"
 			if = {
@@ -2957,7 +2961,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_international
 		}
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 1000 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed ENG_class_warfare"
 			add_war_support = 0.05
@@ -3256,6 +3260,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_international
 		}
+		ai_will_do = { factor = 1000 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed ENG_support_comrades"
 			add_stability = 0.05
@@ -3293,7 +3298,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_international
 		}
-		ai_will_do = { factor = 15 }
+		ai_will_do = { factor = 1500 }
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed ENG_mission_to_norway"
@@ -3372,7 +3377,10 @@ focus_tree = {
 		available = {
 			MEX = {
 				exists = yes
+				OR = {
+					is_part_of_government_social_democrat = yes
 				has_socialist_government = yes
+				}
 				NOT = { has_war_with = ROOT }
 			}
 		}
@@ -3408,7 +3416,7 @@ focus_tree = {
 				NOT = { has_war_with = ROOT }
 			}
 		}
-		ai_will_do = { factor = 15 }
+		ai_will_do = { factor = 1500 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed ENG_indian_comrades"
 			HND = {
@@ -3452,7 +3460,7 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_international
 		}
-		ai_will_do = { factor = 15 }
+		ai_will_do = { factor = 500 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed ENG_mission_to_australasia"
 			AST = { country_event = australasia_events.14 }

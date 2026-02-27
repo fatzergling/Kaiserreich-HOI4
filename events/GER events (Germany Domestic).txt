@@ -29,7 +29,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event germany_events.6 option 1"
 		ai_chance = {
-			base = 1
+			base = 2
 			modifier = {
 				factor = 0
 				NOT = { has_game_rule = { rule = GER_path option = DEFAULT } }
@@ -41,6 +41,14 @@ country_event = {
 		if = {
 			limit = { is_ai = yes }
 			set_country_flag = GER_schleicher_ai
+			reduce_focus_completion_cost = {
+			focus = { GER_new_ee_partnership GER_eastern_rail_plan GER_central_asia_missions GER_ostwall GER_leopold_legion GER_arm_austrians  GER_treaty_of_metz GER_indian_ocean_coalition GER_gea_regiments GER_dmk_is_back_baby GER_balkans_and_caucasus GER_loan_to_america GER_german_american_self_defence  GER_support_colonies  GER_china_expeditionary_corps  GER_mission_to_constantinople }
+			cost = 14
+			}
+			reduce_focus_completion_cost = {
+				focus = { GER_reinforce_alsace GER_buying_time_with_spies}
+				cost = 28
+			}
 		}
 	}
 
@@ -58,6 +66,14 @@ country_event = {
 		if = {
 			limit = { is_ai = yes }
 			set_country_flag = GER_swr_ai
+			reduce_focus_completion_cost = {
+			focus = { GER_new_ee_partnership GER_eastern_rail_plan GER_central_asia_missions GER_ostwall GER_leopold_legion GER_arm_austrians  GER_treaty_of_metz GER_indian_ocean_coalition GER_gea_regiments GER_dmk_is_back_baby GER_balkans_and_caucasus GER_loan_to_america GER_german_american_self_defence  GER_support_colonies  GER_china_expeditionary_corps  GER_mission_to_constantinople }
+			cost = 14
+			}
+			reduce_focus_completion_cost = {
+				focus = { GER_reinforce_alsace GER_buying_time_with_spies}
+				cost = 28
+			}
 		}
 	}
 
@@ -75,6 +91,14 @@ country_event = {
 		if = {
 			limit = { is_ai = yes }
 			set_country_flag = GER_du_ai
+			reduce_focus_completion_cost = {
+			focus = { GER_new_ee_partnership GER_eastern_rail_plan GER_central_asia_missions GER_ostwall GER_leopold_legion GER_arm_austrians  GER_treaty_of_metz GER_indian_ocean_coalition GER_gea_regiments GER_dmk_is_back_baby GER_balkans_and_caucasus GER_loan_to_america GER_german_american_self_defence  GER_support_colonies  GER_china_expeditionary_corps  GER_mission_to_constantinople }
+			cost = 14
+			}
+			reduce_focus_completion_cost = {
+				focus = { GER_reinforce_alsace GER_buying_time_with_spies}
+				cost = 28
+			}
 		}
 	}
 
@@ -2423,6 +2447,10 @@ country_event = { # End of the Second Weltkrieg
 		name = germany_events.60.a
 		custom_effect_tooltip = GER_pax_germanica_event_tt
 		effect_tooltip = { unlock_national_focus = GER_pax_germanica }
+		add_named_threat = {
+			threat = -25
+			name = end_of_2nd_weltkrieg
+		}
 		hidden_effect = {
 			if = {
 				limit = {
@@ -2725,6 +2753,22 @@ country_event = { # Mass Layoffs
 			remove_building = { type = arms_factory level = 1 }
 		}
 		random_owned_controlled_state = {
+			limit = { arms_factory > 0 }
+			remove_building = { type = arms_factory level = 1 }
+		}
+		random_owned_controlled_state = {
+			limit = { arms_factory > 0 }
+			remove_building = { type = arms_factory level = 1 }
+		}
+		random_owned_controlled_state = {
+			limit = { industrial_complex > 0 }
+			remove_building = { type = industrial_complex level = 1 }
+		}
+		random_owned_controlled_state = {
+			limit = { industrial_complex > 0 }
+			remove_building = { type = industrial_complex level = 1 }
+		}
+		random_owned_controlled_state = {
 			limit = { industrial_complex > 0 }
 			remove_building = { type = industrial_complex level = 1 }
 		}
@@ -2751,6 +2795,20 @@ country_event = { # Agricultural Crisis in East Elbia
 		name = germany_black_monday_events.7.a
 		add_stability = -0.06
 		add_war_support = -0.1
+		random_owned_controlled_state = {
+			limit = {
+				region = 38
+				industrial_complex > 0
+			}
+			remove_building = { type = industrial_complex level = 1 }
+		}
+		random_owned_controlled_state = {
+			limit = {
+				region = 38
+				industrial_complex > 0
+			}
+			remove_building = { type = industrial_complex level = 1 }
+		}
 		random_owned_controlled_state = {
 			limit = {
 				region = 38

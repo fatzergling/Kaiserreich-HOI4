@@ -19,6 +19,11 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.2
 			}
+		targeted_modifier = {
+			tag = PAR
+			cic_to_target_factor = 0.3
+			mic_to_target_factor = 0.5
+		}
 		}
 
 		BOL_War_Rep_Rec = {

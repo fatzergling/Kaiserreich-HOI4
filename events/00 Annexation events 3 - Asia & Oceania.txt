@@ -2293,6 +2293,7 @@ country_event = { #Fate of Tibet
 			modifier = {
 				factor = 0
 				annexations_can_annex = yes
+				NOT = { tag = XSM }
 			}
 		}
 		353 = { retain_state = yes } #Yushu
@@ -2363,6 +2364,7 @@ country_event = { #Fate of Tibet
 		name = annexation_events.integration
 		trigger = {
 			annexations_can_annex = yes
+			NOT = { tag = XSM }
 		}
 		TIB = { add_claim_of_ROOT_on_valid_cores = yes }
 		every_owned_state = {
@@ -2413,6 +2415,8 @@ country_event = { #Fate of Xinjiang
 				limit = {
 					OR = {
 						is_chinese_tag = yes
+						tag = KUM
+						tag= ETS
 						AND = {
 							is_central_asian_tag = yes
 							586 = { is_claim_or_core_of_ROOT = yes } #Kokand
@@ -2461,6 +2465,8 @@ country_event = { #Fate of Xinjiang
 		trigger = {
 			is_subject = no
 			NOT = { has_event_target = japan_forced_return }
+			is_chinese_tag = no
+			NOT = { tag = KUM }
 		}
 		ai_chance = { base = 0 }
 		set_temp_variable = { tag_to_release = ETS }
@@ -2731,6 +2737,7 @@ country_event = { #Fate of Mongolia
 			modifier = {
 				factor = 0
 				annexations_can_annex = yes
+			NOT = { tag = XSM }
 			}
 		}
 		348 = { retain_state = yes } #Alxa
@@ -2823,6 +2830,7 @@ country_event = { #Fate of Mongolia
 		name = annexation_events.integration
 		trigger = {
 			annexations_can_annex = yes
+			NOT = { tag = XSM }
 		}
 		MON = { add_claim_of_ROOT_on_valid_cores = yes }
 		if = {
@@ -3811,7 +3819,7 @@ country_event = { #Fate of Taiwan
 			has_event_target = china
 		}
 		ai_chance = {
-			base = 50
+			base = 500
 			modifier = {
 				factor = 0
 				annexations_can_annex = yes

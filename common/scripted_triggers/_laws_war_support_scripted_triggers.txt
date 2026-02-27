@@ -1,13 +1,23 @@
 low_economic_mobilisation_available = {
-	has_war_support > 0.15
+	has_war_support > 0.25
+	OR = {
+		has_war = yes
+		has_war_support > 0.75
+		NOT = { has_global_flag = second_weltkrieg_has_ended }
+	}
 }
 
 partial_economic_mobilisation_available = {
-	has_war_support > 0.25
+	has_war_support > 0.5
+	OR = {
+		has_war = yes
+		has_war_support > 0.9
+		NOT = { has_global_flag = second_weltkrieg_has_ended }
+	}
 }
 
 war_economy_available = {
-	has_war_support > 0.5
+	has_war_support > 0.75
 	has_war = yes
 	any_enemy_country = {
 		ic_ratio = { tag = PREV ratio > 0.4 }
@@ -44,23 +54,26 @@ can_increase_economy_law_level = {
 }
 
 limited_conscription_available = {
+	has_war_support > 0.15
 	OR = {
-		has_war_support > 0.1
-		surrender_progress > 0
+		has_war = yes
+		has_war_support > 0.5
+		NOT = { has_global_flag = second_weltkrieg_has_ended }
 	}
 }
 
 extensive_conscription_available = {
 	OR = {
-		has_war_support > 0.2
+		has_war_support > 0.5
 		surrender_progress > 0
 	}
 	OR = {
-		has_war_support > 0.5
+		has_war_support > 0.95
 		AND = {
 			has_war = yes
 			enemies_strength_ratio > 0.5
 		}
+		NOT = { has_global_flag = second_weltkrieg_has_ended }
 	}
 }
 
@@ -144,12 +157,12 @@ has_unsupported_economic_law_ai = {
 	if = {
 		limit = { has_idea = low_economic_mobilisation }
 		low_economic_mobilisation_available = no
-		has_unattained_important_goals = no
+		#has_unattained_important_goals = no
 	}
 	else_if = {
 		limit = { has_idea = partial_economic_mobilisation }
 		partial_economic_mobilisation_available = no
-		has_unattained_important_goals = no
+		#has_unattained_important_goals = no
 	}
 	else_if = {
 		limit = { has_idea = war_economy }
@@ -194,12 +207,12 @@ has_unsupported_manpower_law_ai = {
 	if = {
 		limit = { has_idea = limited_conscription }
 		limited_conscription_available = no
-		has_unattained_important_goals = no
+		#has_unattained_important_goals = no
 	}
 	else_if = {
 		limit = { has_idea = extensive_conscription }
 		extensive_conscription_available = no
-		has_unattained_important_goals = no
+		#has_unattained_important_goals = no
 	}
 	else_if = {
 		limit = { has_idea = service_by_requirement }

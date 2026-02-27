@@ -82,11 +82,17 @@ WCA_attack_carefully_before_war_measures = {
 		original_tag = WCA
 	}
 	enable = {
-		OR = {
-			check_variable = { modifier@army_attack_factor < 0 }
-			check_variable = { modifier@army_org_factor < 0 }
-			check_variable = { modifier@max_planning < 0 }
-			check_variable = { modifier@experience_loss_factor < 0 }
+		#OR = {
+			#check_variable = { modifier@army_attack_factor < 0 }
+			#check_variable = { modifier@army_org_factor < 0 }
+			#check_variable = { modifier@max_planning < 0 }
+			#check_variable = { modifier@experience_loss_factor < 0 }
+		#}
+		NOT = {
+			has_idea = ACW_fired_up
+		}
+		NOT = {
+			has_completed_focus = WCA_the_long_haul
 		}
 	}
 	abort_when_not_enabled = yes
@@ -178,14 +184,278 @@ WCA_protect_nyc = {
 
 	enable = {
 		NOT = { has_global_flag = USA_civil_war_over_flag }
-		358 = { is_in_home_area = no } #NYC
+		OR = {
+			358 = { is_in_home_area = no } #NYC
+			country_exists = NEE
+			931 = { is_controlled_by = USA }
+			796 = { is_controlled_by = USA }
+		}
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = put_unit_buffers
 		states = { 358 }
-		ratio = 0.08
+		ratio = 0.12
 		area = north_america
 	}
 }
+
+
+WCA_protect_detriot = {
+	allowed = {
+		original_tag = WCA
+	}
+
+	enable = {
+		NOT = { has_global_flag = USA_civil_war_over_flag }
+		CAN = { has_completed_focus =  CAN_crossing_the_border }
+		NOT = { has_war_with = CAN }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		states = { 393 }
+		ratio = 0.12
+		area = north_america
+	}
+}
+
+WCA_protect_NEE = {
+	allowed = {
+		original_tag = WCA
+	}
+
+	enable = {
+		has_war_with = IMP
+		country_exists = NEE
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = IMP
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = NEE
+		value = 200
+	}
+}
+
+
+
+
+WCA_dont_naval_invade_yet = {
+	allowed = {
+		original_tag = WCA
+	}
+	enable = {
+			OR = {
+				has_war_with = APG
+				has_war_with = USA
+				has_war_with = ACC
+			}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -1000
+	}
+}
+
+WCA_sugar_daddy_for_INT = {
+	allowed = { original_tag = WCA }
+	enable = {
+		OR = {
+		FRA = {
+			has_war_with = GER
+		}
+		CHI = {
+			has_war_with = JAP
+		}
+		}
+		has_global_flag = USA_civil_war_over_flag
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = FRA
+		value = 500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = ENG
+		value = 500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SRI
+		value = 500
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CHI
+		value = 500
+	}
+
+}
+
+WCA_kill_NEE_quick = {
+	allowed = { tag = WCA }
+	enable = {
+		OR = {
+			has_war_with = NEE
+			931 = { is_controlled_by = USA }
+		}
+	}
+	abort_when_not_enabled = yes 
+		ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 186 #Alborz Mountains
+		value = 500
+	}
+
+}
+
+WCA_kill_east_coast_after_NEE = {
+	allowed = { tag = WCA }
+	enable = {
+		OR = {
+			931 = { is_controlled_by = WCA }
+			AND = {
+				country_exists = NEE
+				NOT = { has_war_with = NEE }
+			}
+		}
+			NOT = {
+				362 = { is_controlled_by = WCA }
+				361 = { is_controlled_by = WCA }
+			}
+	}
+	abort_when_not_enabled = yes 
+		ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 226 #Alborz Mountains
+		value = 500
+	}
+
+}
+
+WCA_anti_canada_action = {
+	allowed = { tag = WCA }
+	enable = {
+			has_war_with = CAN
+			NOT = {
+				controls_state = 739
+			}
+	}
+	abort_when_not_enabled = yes 
+		ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 186 #Alborz Mountains
+		value = 500
+	}
+		ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 232 #Alborz Mountains
+		value = 500
+	}
+
+}
+
+WCA_stop_france_from_falling = {
+	allowed = { original_tag = WCA }
+	enable = {
+		has_war = no
+		num_divisions > 45 # we must have some divisions ourselves
+		GER = {
+			has_war_with = FRA
+			has_war_with = ENG
+		}
+		FRA = {
+			surrender_progress > 0.05
+			has_capitulated = no
+		}
+	}
+
+	abort = {
+		OR = {
+			has_war = yes
+			has_war_with = FRA
+			NOT = { GER = { has_war_with = FRA } }
+			FRA = { has_war = no }
+			FRA = { surrender_progress < 0.01 }
+		}
+	}
+
+	ai_strategy = {
+		type = support
+		id = "FRA"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -75
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = -25
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = -25
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -25
+	}
+}
+
+# this one is same as above, but if you have entered the war yourself
+WCA_stop_france_from_falling_2 = {
+	allowed = { original_tag = WCA }
+	enable = {
+		has_war = no
+		num_divisions > 45 # we must have some divisions ourselves
+		GER = {
+			has_war_with = FRA
+			has_war_with = ENG
+		}
+		FRA = {
+			surrender_progress > 0.05
+			has_capitulated = no
+		}
+	}
+
+	abort = {
+		OR = {
+			has_war = yes
+			has_war_with = FRA
+			NOT = { GER = { has_war_with = FRA } }
+			FRA = { has_war = no }
+			FRA = { surrender_progress < 0.01 }
+		}
+	}
+
+	ai_strategy = {
+		type = support
+		id = "FRA"
+		value = 100
+	}
+}
+
+

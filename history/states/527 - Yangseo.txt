@@ -15,7 +15,16 @@ state = {
 		add_claim_by = JAP
 
 		add_to_array = { state_victory_points = 4052 }
+		add_to_array = { state_victory_points = 11835 }
+		add_to_array = { state_victory_points = 1003 }
 		victory_points = { 4052 15 }
+		victory_points = {
+			11835 2 # Shingishū
+		}	
+
+		victory_points = {
+			1003 2 # Kaishū
+		}	
 
 		buildings = {
 			infrastructure = 2

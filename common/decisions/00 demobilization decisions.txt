@@ -15,6 +15,7 @@ demobilization = {
 		is_good = no
 		selectable_mission = yes
 		days_mission_timeout = 120
+		ai_will_do = { base = 100 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete demobilization_economic"
@@ -124,6 +125,7 @@ demobilization = {
 		is_good = no
 		selectable_mission = yes
 		days_mission_timeout = 180
+		ai_will_do = { base = 100 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete demobilization_manpower"

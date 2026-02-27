@@ -43,6 +43,34 @@ country_event = {	#The Fairey Swordfish
 		add_political_power = -20
 		ENG = {
 			add_political_power = 20
+		hidden_effect = {
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = support
+				id = PREV
+				value = 200
+			}
+
+		}
+		}
+		FRA = {
+		hidden_effect = {
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = PREV
+				value = 200
+			}
+			add_ai_strategy = {
+				type = support
+				id = PREV
+				value = 200
+			}
+
+		}
 		}
 		add_equipment_to_stockpile = {
 			type = small_plane_naval_bomber_airframe
@@ -53,6 +81,10 @@ country_event = {	#The Fairey Swordfish
 	}
 	option = {
 		log = "[GetLogInfo]: event operation_abul_awar_events.2 option operation_abul_awar_events.2.b"
+		ai_chance = {
+			base = 0
+		}
+
 		name = operation_abul_awar_events.2.b
 	}
 }

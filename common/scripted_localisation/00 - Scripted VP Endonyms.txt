@@ -4965,21 +4965,21 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetVictoryPointName_3981
+	name = GetVictoryPointName_6928
 	text = {
 		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
-		localization_key = VICTORY_POINTS_3981
+		localization_key = VICTORY_POINTS_6928
 	}
 	text = {
 		trigger = { original_tag = JAP }
-		localization_key = VICTORY_POINTS_3981_JAPANESE
+		localization_key = VICTORY_POINTS_6928_JAPANESE
 	}
 	text = {
 		trigger = { is_chinese_tag = yes }
-		localization_key = VICTORY_POINTS_3981_CHINESE
+		localization_key = VICTORY_POINTS_6928_CHINESE
 	}
 	text = {
-		localization_key = VICTORY_POINTS_3981
+		localization_key = VICTORY_POINTS_6928
 	}
 }
 defined_text = {

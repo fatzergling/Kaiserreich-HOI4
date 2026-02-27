@@ -72,12 +72,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -112,12 +112,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -156,13 +156,13 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
@@ -209,13 +209,13 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
@@ -258,12 +258,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -306,12 +306,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -355,12 +355,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -406,12 +406,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -453,12 +453,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -506,12 +506,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -559,12 +559,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -609,12 +609,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -685,12 +685,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 5 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -903,17 +903,31 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		prerequisite = {
 			focus = SHX_ten_year_plan
+		}
+		available = {
+			OR = {
+				 has_country_flag = SHX_industrial_reform_completed_flag
+				 NOT = { has_completed_focus = SHX_model_city_model_province }
+			}
+			OR = {
+				 has_country_flag = SHX_agricultural_reform_completed_flag
+				 NOT = { has_completed_focus = SHX_battle_for_countryside }
+			}
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SHX_review_education"
@@ -941,6 +955,10 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0.75
 				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		prerequisite = {
@@ -1006,20 +1024,25 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
@@ -1060,6 +1083,10 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0.75
 				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		prerequisite = {
@@ -1136,6 +1163,10 @@ focus_tree = {## Early Game Tree
 				factor = 0.75
 				has_war = yes
 			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
 		}
 
 		prerequisite = {
@@ -1180,20 +1211,24 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
@@ -1225,6 +1260,10 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0.75
 				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		prerequisite = {
@@ -1260,20 +1299,24 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
@@ -1321,20 +1364,24 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
@@ -1370,6 +1417,10 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0.75
 				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		prerequisite = {
@@ -1409,22 +1460,37 @@ focus_tree = {## Early Game Tree
 		ai_will_do = {
 			base = 125 #Slightly More Valuable Than Others
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 0.75
 				has_war = yes
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
 		prerequisite = {
 			focus = SHX_ten_year_plan
+		}
+		available = {
+						OR = {
+				 has_country_flag = SHX_agricultural_reform_completed_flag
+				 NOT = { has_completed_focus = SHX_battle_for_countryside }
+			}
+			OR = {
+				 has_country_flag = SHX_educational_reform_completed_flag
+				 NOT = { has_completed_focus = SHX_review_education }
+			}
+
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SHX_model_city_model_province"
@@ -1458,25 +1524,29 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				has_country_flag = SHX_favored_yan_industry
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				has_country_flag = SHX_favored_feng_industry
 				SHX_yan_is_winning_trigger = yes
@@ -1594,20 +1664,25 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
@@ -1677,20 +1752,24 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
@@ -1731,6 +1810,10 @@ focus_tree = {## Early Game Tree
 				factor = 0.75
 				has_war = yes
 			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
 		}
 		prerequisite = {
 			focus = SHX_shanxi_solutions
@@ -1754,10 +1837,10 @@ focus_tree = {## Early Game Tree
 			hidden_effect = {
 				622 = {
 					build_railway = {
-						path = { 7301 5007 1575 1034 1531 4174 10838 12300 10507 7041 12432 }
+						path = { 7301 12713 6932 1575 7571 4634 1115 1962 4469 10507 7041 12432 }
 						start_state = 799
 						target_state = 615
-						level = 1
+						level = 2
 						fallback = yes
 					}
 				}
@@ -1807,20 +1890,24 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
@@ -1883,8 +1970,12 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
@@ -1924,6 +2015,10 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0.75
 				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		prerequisite = {
@@ -1974,6 +2069,7 @@ focus_tree = {## Early Game Tree
 			hidden_effect = {
 				1072 = {
 					build_railway = {
+						path = { 1962 4469 10507 7041 12432 1590 6904 9843 }
 						level = 2
 						start_state = 1072
 						target_state = 608
@@ -2001,18 +2097,33 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
 		prerequisite = {
 			focus = SHX_ten_year_plan
+		}
+		available = {
+						OR = {
+				 has_country_flag = SHX_industrial_reform_completed_flag
+				 NOT = { has_completed_focus = SHX_model_city_model_province }
+			}
+			OR = {
+				 has_country_flag = SHX_educational_reform_completed_flag
+				 NOT = { has_completed_focus = SHX_review_education }
+			}
+
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SHX_battle_for_countryside"
@@ -2041,20 +2152,24 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
@@ -2098,20 +2213,24 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
@@ -2155,20 +2274,25 @@ focus_tree = {## Early Game Tree
 				has_war = yes
 			}
 			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
+
+			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
@@ -2209,19 +2333,19 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
@@ -2258,6 +2382,10 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0.5
 				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		available = {
@@ -2355,6 +2483,10 @@ focus_tree = {## Early Game Tree
 				factor = 0.5
 				has_war = yes
 			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
 		}
 		prerequisite = {
 			focus = SHX_battle_for_countryside
@@ -2388,6 +2520,10 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0.5
 				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		prerequisite = {
@@ -2451,6 +2587,10 @@ focus_tree = {## Early Game Tree
 				factor = 0.5
 				has_war = yes
 			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
 		}
 		prerequisite = {
 			focus = SHX_weed_out_corruption
@@ -2493,6 +2633,10 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0.5
 				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		prerequisite = {
@@ -2564,6 +2708,10 @@ focus_tree = {## Early Game Tree
 				factor = 0.5
 				has_war = yes
 			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
+			}
 		}
 		prerequisite = {
 			focus = SHX_beijing_taiyuan_railway
@@ -2621,6 +2769,10 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0.5
 				has_war = yes
+			}
+			modifier = {
+				factor = 3
+				GXC_ai_factor_prioritize_economic_focuses_trigger = yes
 			}
 		}
 		prerequisite = {
@@ -2748,19 +2900,19 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
@@ -3151,12 +3303,17 @@ focus_tree = {## Early Game Tree
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SHX_renovate_the_taiyuan_arsenal"
+			if = {
+				limit = {
+					owns_state = 1072 #Taiyuan
+				}
 			1072 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
+					}
 				}
 			}
 			###Backup if you lose Taiyuan somehow ###
@@ -3525,19 +3682,19 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 3 #Lock-in: After Jan-1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_feng_is_winning_trigger = yes
 			}
 			modifier = {
 				factor = 0 #Lock-in: After Mar-1937 SHX will stop choosing focuses related to the opposite side until the power struggle is won.
-				date > 1937.03.01
+				date > 1939.01.01
 				has_active_mission = SHX_looming_gmj_coup
 				SHX_yan_is_winning_trigger = yes
 			}
@@ -3872,12 +4029,12 @@ focus_tree = {## Early Game Tree
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Oct-1936 SHX should try to be more aggressive in choosing a side
-				date > 1936.10.01
+				date > 1937.6.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 			modifier = {
 				factor = 2 #Lock-in: After Jan 1937 SHX should try to be more aggressive in choosing a side
-				date > 1937.01.01
+				date > 1938.06.01
 				has_active_mission = SHX_looming_gmj_coup
 			}
 		}
@@ -4130,6 +4287,21 @@ focus_tree = {## Early Game Tree
 				factor = 2
 				date > 1939.01.01
 			}
+					modifier = {	# Beeline forpol if set to in game rules
+				factor = 10
+				SHX_forpol_game_rule_set = yes
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					AND = {
+					has_country_flag = SHX_educational_reform_completed_flag
+					has_country_flag = SHX_agricultural_reform_completed_flag
+				 	has_country_flag = SHX_industrial_reform_completed_flag
+				}
+
+				}
+			}
 		}
 		available = {
 			has_war_support > 0.5
@@ -4153,18 +4325,18 @@ focus_tree = {## Early Game Tree
 
 		select_effect = {
 			log = "[GetLogRoot]: Select Focus SHX_out_of_beijing"
-			if = {
-				limit = {
-					has_idea = SHX_strict_neutrality
-				}
-				remove_ideas = SHX_strict_neutrality
-			}
-			else_if = {
-				limit = {
-					has_idea = SHX_strict_neutrality1
-				}
-				remove_ideas = SHX_strict_neutrality1
-			}
+			#if = {
+			#	limit = {
+			#		has_idea = SHX_strict_neutrality
+			#	}
+			#	remove_ideas = SHX_strict_neutrality
+			#}
+			#else_if = {
+			#	limit = {
+			#		has_idea = SHX_strict_neutrality1
+			#	}
+			#	remove_ideas = SHX_strict_neutrality1
+			#}
 			if = {
 				limit = {
 					has_country_flag = SHX_yan_victory_over_gmj
@@ -4419,7 +4591,7 @@ focus_tree = {## Early Game Tree
 					CHI = {
 						exists = yes
 						is_subject = no
-						china_is_aligned_with_republicans = yes
+						china_is_aligned_with_southern_republicans = yes
 					}
 				}
 				activate_targeted_decision = { target = CHI decision = SHX_joint_strike_decision }
@@ -4429,7 +4601,7 @@ focus_tree = {## Early Game Tree
 					YUN = {
 						exists = yes
 						is_subject = no
-						china_is_aligned_with_republicans = yes
+						china_is_aligned_with_southern_republicans = yes
 					}
 				}
 				activate_targeted_decision = { target = YUN decision = SHX_joint_strike_decision }
@@ -4439,7 +4611,7 @@ focus_tree = {## Early Game Tree
 					GXC = {
 						exists = yes
 						is_subject = no
-						china_is_aligned_with_republicans = yes
+						china_is_aligned_with_southern_republicans = yes
 					}
 				}
 				activate_targeted_decision = { target = GXC decision = SHX_joint_strike_decision }
@@ -4480,7 +4652,13 @@ focus_tree = {## Early Game Tree
 				}
 			}
 		}
-		ai_will_do = { base = 75 }
+		ai_will_do = {
+			base = 75
+			modifier = {	# Beeline forpol if set to in game rules
+				factor = 10
+				SHX_forpol_game_rule_set = yes
+			}
+		}
 		prerequisite = {
 			focus = SHX_destiny
 		}
@@ -4555,6 +4733,11 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0
 				has_war = yes
+				SHX_forpol_game_rule_set = no
+			}
+			modifier = {	# Beeline forpol if set to in game rules
+				factor = 10
+				SHX_forpol_game_rule_set = yes
 			}
 		}
 		prerequisite = {
@@ -4592,7 +4775,13 @@ focus_tree = {## Early Game Tree
 		x = 2
 		y = 1
 
-		ai_will_do = { base = 75 }
+		ai_will_do = {
+			base = 75
+			modifier = {	# Beeline forpol if set to in game rules
+				factor = 10
+				SHX_forpol_game_rule_set = yes
+			}
+		}
 		prerequisite = {
 			focus = SHX_destiny
 		}
@@ -4639,6 +4828,10 @@ focus_tree = {## Early Game Tree
 					1048 #Wuhan
 				}
 			}
+			modifier = {	# Beeline forpol if set to in game rules
+				factor = 10
+				SHX_forpol_game_rule_set = yes
+			}
 		}
 		prerequisite = {
 			focus = SHX_war_plan
@@ -4681,6 +4874,7 @@ focus_tree = {## Early Game Tree
 			modifier = {
 				factor = 0
 				has_war = yes
+				SHX_forpol_game_rule_set = no
 			}
 			modifier = {
 				factor = 10
@@ -4689,6 +4883,10 @@ focus_tree = {## Early Game Tree
 					613 #Nanjing
 					1048 #Wuhan
 				}
+			}
+			modifier = {	# Beeline forpol if set to in game rules
+				factor = 10
+				SHX_forpol_game_rule_set = yes
 			}
 		}
 		available = {
@@ -4715,6 +4913,45 @@ focus_tree = {## Early Game Tree
 			add_war_support = 0.15
 			country_event = shanxi_zhifeng_events.26
 			custom_effect_tooltip = SHX_beyond_borders_tt
+			if = {
+				limit = { NPA = { exists = yes } }
+				unlock_decision_tooltip = CHN_join_NPA_decision
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = SHX_yan_xishan }
+					NZH = {
+						exists = yes
+						NOT = { original_tag = QIE }
+					}
+				}
+				unlock_decision_tooltip = CHN_join_NZH_decision
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = SHX_yan_xishan }
+					AGJ = { exists = yes }
+				}
+				unlock_decision_tooltip = CHN_join_AGJ_decision
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = SHX_feng_yuxiang }
+					UPC = { exists = yes }
+				}
+				unlock_decision_tooltip = CHN_join_UPC_decision
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = SHX_feng_yuxiang }
+					LKT = { exists = yes }
+				}
+				unlock_decision_tooltip = CHN_join_LKT_decision
+			}
+			if = {
+				limit = { RKT = { exists = yes } }
+				unlock_decision_tooltip = CHN_join_RKT_decision
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -5062,10 +5299,15 @@ focus_tree = {## Early Game Tree
 				limit = {
 					SHX_ma_clique_victorious_outcome_check = no
 				}
-				MON = {
-					NOT = { is_guaranteed_by = RUS }
-					NOT = { is_subject_of = RUS }
-					NOT = { is_in_faction_with = RUS }
+				OR = {
+					MON = {
+						NOT = { is_guaranteed_by = RUS }
+						NOT = { is_subject_of = RUS }
+						NOT = { is_in_faction_with = RUS }
+					}
+					RUS = {
+						has_war_with_major = yes
+					}
 				}
 			}
 		}
@@ -5339,7 +5581,7 @@ focus_tree = {## Early Game Tree
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SHX_mass_education_reforms"
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 			add_research_slot_until_three = yes #In case you went Feng's tree early on, bringing you up to three
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }

@@ -219,7 +219,7 @@ china_dont_declare_multiple_wars = {
 
 	ai_strategy = {
 		type = avoid_starting_wars
-		value = -200
+		value = -1000
 	}
 }
 
@@ -513,17 +513,114 @@ china_united_front_leader_wants_to_invite_warlords_KUM = {
 	enable = {
 		is_faction_leader = yes
 		KUM = { has_country_flag = KUM_is_chinese_tag }
-		KUM = {
-			OR = {
-				has_offensive_war = no
-				all_enemy_country = { has_war_with = CUF }
-			}
-		}
+		#KUM = {
+		#	OR = {
+		#		has_offensive_war = no
+		#		all_enemy_country = { has_war_with = CUF }
+		#	}
+		#}
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = befriend id = KUM value = 1000 }
 	ai_strategy = { type = alliance id = KUM value = 1000 }
+}
+
+china_nonaligned_warlords_kinda_sus = {
+	allowed = {
+		is_chinese_or_potential_chinese_tag = yes
+	}
+	enable = {
+		if = {
+			limit = {
+				original_tag = KUM
+			}
+			has_country_flag = KUM_is_chinese_tag
+		}
+		is_subject = yes
+		overlord = {
+			has_war = yes
+			china_compatible_alignment_to_PREV = no
+		}
+		
+	}
+	abort_when_not_enabled = yes
+
+
+	ai_strategy = { type = diplo_action_desire id = QIE target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = QIE target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = QIE target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = QIE target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = SHX target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = SHX target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = SHX target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = SHX target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = FNG target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = FNG target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = FNG target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = FNG target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = LEP target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = LEP target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = LEP target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = LEP target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = ANQ target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = ANQ target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = ANQ target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = ANQ target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = CHI target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = CHI target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = CHI target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = CHI target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = SHD target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = SHD target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = SHD target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = SHD target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = GXC target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = GXC target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = GXC target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = GXC target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = HNN target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = HNN target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = HNN target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = HNN target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = YUN target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = YUN target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = YUN target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = YUN target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = SZC target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = SZC target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = SZC target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = SZC target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = GXC target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = GXC target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = GXC target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = GXC target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = XSM target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = XSM target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = XSM target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = XSM target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = SIK target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = SIK target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = SIK target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = SIK target = join_allies value = -500 }
+
+	ai_strategy = { type = diplo_action_desire id = KUM target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_desire id = KUM target = join_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = KUM target = call_allies value = -500 }
+	ai_strategy = { type = diplo_action_acceptance id = KUM target = join_allies value = -500 }
 }
 
 china_warlords_support_united_front = {
@@ -942,7 +1039,8 @@ china_ignore_garrisons = {
 			}
 			has_country_flag = KUM_is_chinese_tag
 		}
-		NOT = { has_war_with = JAP }
+	#	NOT = { has_war_with = JAP }
+		NOT = { has_global_flag = china_united }
 	}
 	abort_when_not_enabled = yes
 
@@ -1005,6 +1103,31 @@ china_no_non_aggression_pacts = {
 	ai_strategy = { type = diplo_action_acceptance target = non_aggression_pact id = KUM value = -1000 }
 }
 
+CHN_buy_guns_like_crazy = {
+	allowed = {
+		is_chinese_or_potential_chinese_tag = yes
+	}
+	enable = {
+		AND = {
+			NOT = { has_global_flag = china_united }
+			num_of_civilian_factories_available_for_projects < 15 
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_spend_factories
+		value = 800  # 80 % less factories
+	}
+	ai_strategy = {  # Don't even try buying infantry equipment too early
+		type = equipment_market_buying_threshold
+		id = infantry_equipment
+		value = 3000  # Absolute number of units
+	}
+}
+
+
+
 SIK_crush_east_turkestan = {
 	allowed = {
 		original_tag = SIK
@@ -1016,6 +1139,7 @@ SIK_crush_east_turkestan = {
 
 	ai_strategy = {
 		type = front_control
+		priority = 100
 		tag = ETS
 		ordertype = front
 		execution_type = rush_weak
@@ -1034,6 +1158,7 @@ SIK_crush_kumul = {
 
 	ai_strategy = {
 		type = front_control
+		priority = 100
 		tag = KUM
 		ordertype = front
 		execution_type = rush_weak
@@ -1052,6 +1177,7 @@ ETS_crush_xinjiang = {
 
 	ai_strategy = {
 		type = front_control
+		priority = 100
 		tag = SIK
 		ordertype = front
 		execution_type = rush_weak
@@ -1070,6 +1196,7 @@ ETS_crush_kumul = {
 
 	ai_strategy = {
 		type = front_control
+		priority = 100
 		tag = KUM
 		ordertype = front
 		execution_type = rush_weak
@@ -1088,12 +1215,35 @@ KUM_crush_xinjiang = {
 
 	ai_strategy = {
 		type = front_control
+		priority = 100
 		tag = SIK
 		ordertype = front
 		execution_type = rush_weak
 		execute_order = yes
 	}
 }
+
+KUM_protect_capital = {
+	allowed = {
+		original_tag = KUM
+	}
+	enable = {
+		has_war_with = SIK
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = { 1083 } #Pinsk, Mozyr, Novogrudok, Braslav
+		area = asia
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}
+
+
+
 
 KUM_crush_east_turkestan = {
 	allowed = {
@@ -1106,6 +1256,7 @@ KUM_crush_east_turkestan = {
 
 	ai_strategy = {
 		type = front_control
+		priority = 100
 		tag = ETS
 		ordertype = front
 		execution_type = rush_weak
@@ -1130,7 +1281,7 @@ XSM_focus_mongolia = {
 		type = front_control
 		tag = MON
 		ordertype = front
-		execution_type = rush_weak
+		execution_type = careful
 		execute_order = yes
 	}
 	ai_strategy = {
@@ -1157,6 +1308,13 @@ XSM_focus_tibet = {
 		id = TIB
 		value = 120
 	}
+	ai_strategy = {
+		type = front_control
+		tag = TIB
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
 }
 
 XSM_crush_tibet = {
@@ -1177,7 +1335,7 @@ XSM_crush_tibet = {
 		type = front_control
 		tag = TIB
 		ordertype = front
-		execution_type = rush_weak
+		execution_type = rush
 		execute_order = yes
 	}
 	ai_strategy = {
@@ -1253,3 +1411,23 @@ XSM_crush_mongolia = {
 		value = 10000
 	}
 }
+
+CUF_kill_MON = {
+	allowed = {
+		is_chinese_or_potential_chinese_tag = yes
+	}
+	enable = {
+		has_war_with = JAP
+		has_war_with = MON
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = MON
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+

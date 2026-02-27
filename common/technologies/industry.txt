@@ -18,6 +18,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		# Non-existing tech reference added in 1.17.2 - uncomment when PDX adds 'coal_refining' tech
+		# path = {
+		# 	leads_to_tech = coal_refining
+		# 	research_cost_coeff = 1
+		# }
+
 		research_cost = 1.5
 		start_year = 1936
 		folder = {
@@ -200,16 +206,12 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 10
-				has_resources_in_country = {
-					resource = coal
-					amount > 0
-					only_imported = yes
-				}
+				factor = 2
+				check_variable = { resource_produced@coal > 0 }
 			}
 			modifier = {
-				factor = 5
-				energy_ratio < 0.9
+				factor = 2
+				check_variable = { resource_produced@coal > 8 }
 			}
 		}
 
@@ -236,16 +238,12 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 5
-				has_resources_in_country = {
-					resource = coal
-					amount > 0
-					only_imported = yes
-				}
+				factor = 2
+				check_variable = { resource_produced@coal > 0 }
 			}
 			modifier = {
-				factor = 5
-				energy_ratio < 0.9
+				factor = 2
+				check_variable = { resource_produced@coal > 8 }
 			}
 		}
 

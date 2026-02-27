@@ -6270,6 +6270,30 @@ country_event = {
 					remove_from_faction = ROOT
 				}
 			}
+		if = {
+				limit = { country_exists = WCA
+						NOT = { WCA = { is_in_faction_with = INT }} 
+						}
+				WCA = {
+				every_enemy_country = {
+				limit = {
+					is_in_faction_with = ENT
+					NOT = { tag = CAN }
+					has_capitulated = no
+					same_continent_as_ROOT = no
+				
+					}
+				if = {
+					limit = {
+						is_subject = yes
+						overlord = { has_capitulated = yes }
+					}
+					remove_puppet_and_leave_faction = yes
+				}
+				white_peace_with_PREV = yes 
+				}
+				}
+			}
 		}
 		# then end the entente, if it's collapsing
 		else_if = {
@@ -6359,7 +6383,7 @@ country_event = {
 	trigger = {
 		tag = ENT
 		NOT = { tag = event_target:KR_king_base }
-		surrender_progress > 0.8
+		surrender_progress > 0.75
 		is_faction_leader = yes
 		NOT = {
 			AND = {
@@ -7601,7 +7625,12 @@ country_event = {
 				APG = { is_in_faction_with = GER }
 			}
 			modifier = {
-				factor = 0.2
+				factor = 0.25
+				NOT = { GER_is_du_path = yes }
+				NOT = { has_country_flag = GER_conf_demand_colonies }
+			}
+			modifier = {
+				factor = 0.1
 				NOT = { has_war_with = NFA }
 				NFA = { is_in_faction_with = ENT }
 				NOT = { has_country_flag = GER_conf_demand_france_mitt }
@@ -7759,7 +7788,7 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.307 option entente_events.307.a"
 		name = entente_events.307.a #Never!
 		ai_chance = {
-			base = 60
+			base = 20
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = CAN_halifax option = CAN_HALIFAX_GER }
@@ -7774,13 +7803,13 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.307 option entente_events.307.b"
 		name = entente_events.307.b #Agree
 		ai_chance = {
-			base = 40
+			base = 80
 			modifier = {
 				factor = 1.5
 				has_elected_government = yes
 			}
 			modifier = {
-				factor = 0
+				factor = 0.25
 				has_government = national_populist
 				NOT = {
 					has_game_rule = { rule = CAN_halifax option = CAN_HALIFAX_GER }
@@ -7825,9 +7854,9 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.308 option entente_events.308.a"
 		name = entente_events.308.a #That it, then
 		ai_chance = {
-			base = 75
+			base = 90
 			modifier = {
-				factor = 0.75
+				factor = 0.25
 				has_global_flag = USA_civil_war_over_flag
 				OR = {
 					USA = { is_in_faction_with = ENT }
@@ -7835,7 +7864,7 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 1.25
+				factor = 2
 				has_global_flag = USA_civil_war_over_flag
 				APG = { is_in_faction_with = GER }
 			}
@@ -7857,7 +7886,16 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event entente_events.308 option entente_events.308.b"
 		name = entente_events.308.b #We'll put it aside for now
-		ai_chance = { base = 25 }
+		ai_chance = { base = 10 
+		modifier = {
+			factor = 1.5
+			GER_is_swr_path = yes
+		}
+		modifier = {
+			factor = 2
+			GER_is_du_path = yes
+		}
+		}
 		add_political_power = -100
 		country_event = entente_events.305
 	}
@@ -7974,7 +8012,7 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.310 option entente_events.310.a"
 		name = entente_events.310.a #Never!
 		ai_chance = {
-			base = 40
+			base = 50
 			modifier = {
 				factor = 1.5
 				has_authoritarian_government = yes
@@ -7993,7 +8031,7 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.310 option entente_events.310.b"
 		name = entente_events.310.b #Agree
 		ai_chance = {
-			base = 60
+			base = 100
 			modifier = {
 				factor = 1.5
 				has_elected_government = yes
@@ -8041,9 +8079,9 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.311 option entente_events.311.a"
 		name = entente_events.311.a #That it, then
 		ai_chance = {
-			base = 50
+			base = 75
 			modifier = {
-				factor = 0.75
+				factor = 0.25
 				has_global_flag = USA_civil_war_over_flag
 				OR = {
 					USA = { is_in_faction_with = ENT }
@@ -8051,13 +8089,13 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 1.25
+				factor = 2
 				has_global_flag = USA_civil_war_over_flag
 				APG = { is_in_faction_with = GER }
 			}
 			modifier = {
 				factor = 0.75
-				has_elected_government = yes
+				GER_is_du_path = yes
 			}
 			modifier = {
 				factor = 0
@@ -8073,7 +8111,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event entente_events.311 option entente_events.311.b"
 		name = entente_events.311.b #We'll put it aside for now
-		ai_chance = { base = 50 }
+		ai_chance = { base = 25 }
 		add_political_power = -50
 		country_event = entente_events.305
 	}
@@ -8190,9 +8228,9 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.313 option entente_events.313.a"
 		name = entente_events.313.a #Never!
 		ai_chance = {
-			base = 30
+			base = 25
 			modifier = {
-				factor = 0.5
+				factor = 0.25
 				tag = NFA
 			}
 			modifier = {
@@ -8213,7 +8251,7 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.313 option entente_events.313.b"
 		name = entente_events.313.b #Agree
 		ai_chance = {
-			base = 70
+			base = 75
 			modifier = {
 				factor = 1.5
 				has_elected_government = yes
@@ -8275,9 +8313,9 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.314 option entente_events.314.a"
 		name = entente_events.314.a #That it, then
 		ai_chance = {
-			base = 40
+			base = 75
 			modifier = {
-				factor = 0.75
+				factor = 0.25
 				has_global_flag = USA_civil_war_over_flag
 				OR = {
 					USA = { is_in_faction_with = ENT }
@@ -8285,7 +8323,7 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 1.25
+				factor = 2
 				has_global_flag = USA_civil_war_over_flag
 				APG = { is_in_faction_with = GER }
 			}
@@ -8311,7 +8349,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event entente_events.314 option entente_events.314.b"
 		name = entente_events.314.b #We'll put it aside for now
-		ai_chance = { base = 60 }
+		ai_chance = { base = 25 }
 		add_political_power = -50
 		country_event = entente_events.305
 	}
@@ -8496,9 +8534,9 @@ country_event = {
 		log = "[GetLogInfo]: event entente_events.317 option entente_events.317.a"
 		name = entente_events.317.a #That it, then
 		ai_chance = {
-			base = 25
+			base = 75
 			modifier = {
-				factor = 0.5
+				factor = 0.25
 				has_global_flag = USA_civil_war_over_flag
 				OR = {
 					USA = { is_in_faction_with = ENT }
@@ -8506,7 +8544,7 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 1.5
+				factor = 2
 				has_global_flag = USA_civil_war_over_flag
 				APG = { is_in_faction_with = GER }
 			}
@@ -8532,7 +8570,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event entente_events.317 option entente_events.317.b"
 		name = entente_events.317.b #We'll put it aside for now
-		ai_chance = { base = 75 }
+		ai_chance = { base = 25 }
 		add_political_power = -25
 		country_event = entente_events.305
 	}
@@ -9300,17 +9338,32 @@ country_event = {
 		if = {
 			limit = { has_event_target = ENT_returning_france }
 			FROM = {
+			set_variable = { GER_warscore = 0 }
 				every_owned_state = {
 					limit = {
 						is_france = yes
 						is_claim_or_core_of_owner = no
 					}
 					transfer_state_to = ROOT
+					add_to_variable = { PREV.GER_warscore = 1 }
 				}
+			if = {
+				limit = { check_variable = { GER_warscore > 1 }}
+				set_global_flag = FRA_reparations
+			}
+			if = {
+				limit = { check_variable = { GER_warscore > 4 }}
+				set_global_flag = FRA_arms_treaty
+			}
+			if = {
+				limit = { check_variable = { GER_warscore > 7 }}
+				set_global_flag = FRA_arms_treaty_harsh
+			}
 			}
 		}
 		else = {
 			FROM = {
+			set_variable = { GER_warscore = 0 }
 				every_owned_state = {
 					limit = {
 						is_claim_or_core_of_owner = no
@@ -9321,7 +9374,20 @@ country_event = {
 						limit = { is_ally_with = FROM }
 						to_state_array = owned_controlled_states
 					}
+					add_to_variable = { PREV.GER_warscore = 1 }
 				}
+			if = {
+				limit = { check_variable = { GER_warscore > 1 }}
+				set_global_flag = GBR_reparations
+			}
+			if = {
+				limit = { check_variable = { GER_warscore > 4 }}
+				set_global_flag = GBR_arms_treaty
+			}
+			if = {
+				limit = { check_variable = { GER_warscore > 7 }}
+				set_global_flag = GBR_arms_treaty_harsh
+			}
 			}
 		}
 	}

@@ -61,7 +61,7 @@ INC_the_resistance_decisions = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 10
+				add = 100
 				has_war_support > 0.7
 			}
 		}
@@ -95,7 +95,7 @@ INC_the_resistance_decisions = {
 
 		days_re_enable = 50
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 100 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_expand_secret_societies_decision"
 		}
@@ -274,7 +274,7 @@ INC_the_resistance_decisions = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 10
+				add = 100
 				date > 1936.10.1
 			}
 			modifier = {
@@ -379,7 +379,7 @@ INC_the_resistance_decisions = {
 			highlight_state_targets = { state = 670 }
 		}
 		fire_only_once = yes
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 500 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_open_truong_son_path_decision"
 		}
@@ -407,7 +407,7 @@ INC_the_resistance_decisions = {
 			highlight_state_targets = { state = 670 }
 		}
 		fire_only_once = yes
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 500 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_form_pathet_lao_decision"
 			add_equipment_to_stockpile = {
@@ -483,7 +483,7 @@ INC_the_resistance_decisions = {
 			highlight_state_targets = { state = 826 }
 		}
 		fire_only_once = yes
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 500 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_form_khmer_issarak_decision"
 			add_equipment_to_stockpile = {
@@ -559,7 +559,7 @@ INC_the_resistance_decisions = {
 			highlight_state_targets = { state = 286 }
 		}
 		fire_only_once = yes
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 500 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_form_seri_thai_decision"
 			add_equipment_to_stockpile = {
@@ -655,7 +655,7 @@ INC_the_resistance_decisions = {
 
 		fire_only_once = yes
 
-		ai_will_do = { factor = 5 }
+		ai_will_do = { factor = 500 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_create_viet_bac_base_area_decision"
 		}
@@ -691,7 +691,7 @@ INC_the_resistance_decisions = {
 
 		days_re_enable = 90
 
-		ai_will_do = { factor = 3 }
+		ai_will_do = { factor = 30 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_infiltrate_the_north_decision"
 			add_equipment_to_stockpile = {
@@ -847,7 +847,7 @@ INC_the_resistance_decisions = {
 		cost = 0
 		fire_only_once = yes
 
-		ai_will_do = { factor = 1 }
+		ai_will_do = { factor = 100 }
 		days_remove = 30
 		modifier = {
 			command_power_gain = -0.15
@@ -1050,7 +1050,7 @@ INC_smuggling_decisions = {
 
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 100 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_expand_network_in_Siam_decision"
 		}
@@ -1076,7 +1076,7 @@ INC_smuggling_decisions = {
 		fire_only_once = yes
 		days_remove = 20
 
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 250 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_build_junk_fleet_decision"
 		}
@@ -1109,7 +1109,7 @@ INC_smuggling_decisions = {
 			political_power_gain = -0.5
 			command_power_gain = -0.5
 		}
-		ai_will_do = { factor = 20 }
+		ai_will_do = { factor = 200 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_smuggling_in_Siam_decision"
 		}
@@ -1147,7 +1147,7 @@ INC_smuggling_decisions = {
 			political_power_gain = -0.25
 			command_power_gain = -0.25
 		}
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 250 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_smuggling_in_Hongkong_decision"
 		}
@@ -1196,7 +1196,7 @@ INC_smuggling_decisions = {
 			command_power_gain = -0.25
 		}
 
-		ai_will_do = { factor = 15 }
+		ai_will_do = { factor = 150 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_purchase_support_in_Hongkong_decision"
 			add_equipment_to_stockpile = {
@@ -1228,7 +1228,7 @@ INC_smuggling_decisions = {
 		fire_only_once = yes
 		days_remove = 60
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 100 }
 		modifier = {
 			political_power_gain = -0.25
 			command_power_gain = -0.25
@@ -1276,7 +1276,7 @@ INC_smuggling_decisions = {
 		modifier = {
 			command_power_gain = -0.25
 		}
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 100 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_receive_aid_from_Bharatiya"
 		}
@@ -1314,7 +1314,7 @@ INC_smuggling_decisions = {
 		modifier = {
 			political_power_gain = -0.5
 		}
-		ai_will_do = { factor = 10 }
+		ai_will_do = { factor = 100 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete INC_expand_arm_workshop_decision"
 		}

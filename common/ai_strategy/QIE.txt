@@ -139,3 +139,77 @@ QIE_keep_troops_on_beijing_area_during_mission_3 = {
 		value = -75
 	}
 }
+
+
+QIE_keep_troops_on_beijing_area_generally = {
+	allowed = {
+		original_tag = QIE
+	}
+	enable = {
+		country_exists = FNG
+		owns_state = 1068 #Qinhuangdao
+		608 = { is_fully_controlled_by = QIE }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = FNG
+		value = 100
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = FNG
+		value = 100
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.50
+		states = {
+			608 #Beijing
+			611 #Zhangyuan
+			614 #Tangshan
+			1062 #Baoding
+			1068 #Qinhuangdao
+		}
+		subtract_fronts_from_need = yes
+	}
+}
+
+
+QIE_protect_beijing_at_all_costs = {
+	allowed = {
+		original_tag = QIE
+	}
+	enable = {
+		OR = {
+		NOT = { 608 = { is_fully_controlled_by = QIE } } 
+		NOT = { 1068 = { is_fully_controlled_by = QIE } } 
+		NOT = { 614 = { is_fully_controlled_by = QIE } } 
+		NOT = { 611 = { is_fully_controlled_by = QIE } } 
+		}
+		always = no
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = FNG
+		value = 100
+	}
+
+
+	ai_strategy = {
+		type = front_unit_request
+		state = 608
+		state = 1068
+		state = 614
+		state = 611
+		value = 50
+	}
+
+}

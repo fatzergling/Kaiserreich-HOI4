@@ -93,8 +93,10 @@ has_unattained_important_goals = {
 			OTT_cairo_pact_defeated = no
 		}
 		# These countries never fully demobilize
-		original_tag = RUS
-		has_government = national_populist
+		AND = {
+			original_tag = RUS
+			has_government = national_populist
+		}
 	}
 }
 

@@ -9198,6 +9198,14 @@ country_event = { # Accusations of Rigging
 			ideology = social_conservative
 			popularity = -0.03
 		}
+		add_to_variable = {
+			SPA_strength = 1
+			tooltip = USA_change_socialist_strength
+		}
+		add_to_variable = {
+			Long_strength = 1
+			tooltip = USA_change_longist_strength
+		}
 	}
 }
 

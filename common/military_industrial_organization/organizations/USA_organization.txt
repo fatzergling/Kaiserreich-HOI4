@@ -12,7 +12,7 @@ USA_american_car_and_foundry_organisation = { #American Car and Foundry
 
 	allowed = { is_american_tag = yes }
 	available = {
-		360 = { is_owned_and_controlled_by = FROM } #Philadelphia
+		360 = { is_controlled_by = FROM } #Philadelphia
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -323,9 +323,9 @@ USA_american_car_and_foundry_organisation = { #American Car and Foundry
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			393 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			360 = { is_owned_and_controlled_by = FROM }
+			360 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { american_car_and_foundry_upgrade_2_4 }
@@ -373,9 +373,9 @@ USA_american_car_and_foundry_organisation = { #American Car and Foundry
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			386 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			360 = { is_owned_and_controlled_by = FROM }
+			360 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { american_car_and_foundry_upgrade_2_3 }
@@ -449,7 +449,7 @@ USA_chrysler_organisation = { #Detroit Arsenal for WCA
 
 	allowed = { is_american_tag = yes }
 	available = {
-		393 = { is_owned_and_controlled_by = FROM } #Michigan
+		393 = { is_controlled_by = FROM } #Michigan
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -780,9 +780,9 @@ USA_chrysler_organisation = { #Detroit Arsenal for WCA
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			386 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			393 = { is_owned_and_controlled_by = FROM }
+			393 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { chrysler_upgrade_2_4 }
@@ -830,9 +830,9 @@ USA_chrysler_organisation = { #Detroit Arsenal for WCA
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			360 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			393 = { is_owned_and_controlled_by = FROM }
+			393 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { chrysler_upgrade_2_3 }
@@ -906,7 +906,7 @@ USA_fisher_body_organisation = { #Fisher Body
 
 	allowed = { is_american_tag = yes }
 	available = {
-		393 = { is_owned_and_controlled_by = FROM } #Michigan
+		393 = { is_controlled_by = FROM } #Michigan
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -1350,9 +1350,9 @@ USA_fisher_body_organisation = { #Fisher Body
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			386 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			393 = { is_owned_and_controlled_by = FROM }
+			393 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { fisher_body_upgrade_2_4 }
@@ -1400,9 +1400,9 @@ USA_fisher_body_organisation = { #Fisher Body
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			360 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			393 = { is_owned_and_controlled_by = FROM }
+			393 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { fisher_body_upgrade_2_3 }
@@ -1447,7 +1447,7 @@ USA_fisher_body_organisation = { #Fisher Body
 		icon = GFX_KR_generic_mio_trait_icon_medium_tank_division
 
 		available = {
-			393 = { is_owned_and_controlled_by = FROM }
+			393 = { is_controlled_by = FROM }
 			custom_override_tooltip = {
 				tooltip = USA_MIO_upgrade_chosen
 				OR = {
@@ -1537,7 +1537,7 @@ USA_fisher_body_organisation = { #Fisher Body
 				}
 			}
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -1581,7 +1581,7 @@ USA_fisher_body_organisation = { #Fisher Body
 				}
 			}
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 2
 			}
 		}
@@ -1623,7 +1623,7 @@ USA_fisher_body_organisation = { #Fisher Body
 				}
 			}
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 2
 			}
 		}
@@ -1675,7 +1675,7 @@ USA_fisher_body_organisation = { #Fisher Body
 				}
 			}
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 2
 			}
 		}
@@ -1713,7 +1713,7 @@ USA_fisher_body_organisation = { #Fisher Body
 
 		available = {
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -1750,7 +1750,7 @@ USA_fisher_body_organisation = { #Fisher Body
 
 		available = {
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -1789,7 +1789,7 @@ USA_fisher_body_organisation = { #Fisher Body
 
 		available = {
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -1832,7 +1832,7 @@ USA_fisher_body_organisation = { #Fisher Body
 
 		available = {
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 2
 			}
 		}
@@ -1869,7 +1869,7 @@ USA_fisher_body_organisation = { #Fisher Body
 
 		available = {
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 2
 				arms_factory > 2
 			}
@@ -1918,7 +1918,7 @@ USA_fisher_body_organisation = { #Fisher Body
 
 		available = {
 			393 = { #Michigan
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 2
 				arms_factory > 2
 			}
@@ -1996,7 +1996,7 @@ USA_pacific_car_and_foundry_organisation = { #Pacific Car and Foundry
 	allowed = { is_american_tag = yes }
 
 	available = {
-		386 = { is_owned_and_controlled_by = FROM } #Washington
+		386 = { is_controlled_by = FROM } #Washington
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -2266,9 +2266,9 @@ USA_pacific_car_and_foundry_organisation = { #Pacific Car and Foundry
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			393 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			386 = { is_owned_and_controlled_by = FROM }
+			386 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { pacific_car_and_foundry_upgrade_2_4 }
@@ -2316,9 +2316,9 @@ USA_pacific_car_and_foundry_organisation = { #Pacific Car and Foundry
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			360 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			386 = { is_owned_and_controlled_by = FROM }
+			386 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { pacific_car_and_foundry_upgrade_2_3 }
@@ -2393,7 +2393,7 @@ USA_buick_organisation = { #Buick
 	allowed = { is_american_tag = yes }
 
 	available = {
-		393 = { is_owned_and_controlled_by = FROM } #Michigan
+		393 = { is_controlled_by = FROM } #Michigan
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -2744,9 +2744,9 @@ USA_buick_organisation = { #Buick
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			386 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			393 = { is_owned_and_controlled_by = FROM }
+			393 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { buick_upgrade_2_4 }
@@ -2794,9 +2794,9 @@ USA_buick_organisation = { #Buick
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			360 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			393 = { is_owned_and_controlled_by = FROM }
+			393 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { buick_upgrade_2_3 }
@@ -2871,7 +2871,7 @@ USA_baldwin_organisation = { #Baldwin
 	allowed = { is_american_tag = yes }
 
 	available = {
-		975 = { is_owned_and_controlled_by = FROM } #Michigan
+		975 = { is_controlled_by = FROM } #Michigan
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -3129,9 +3129,9 @@ USA_baldwin_organisation = { #Baldwin
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			393 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			975 = { is_owned_and_controlled_by = FROM }
+			975 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { baldwin_upgrade_2_5 }
@@ -3179,9 +3179,9 @@ USA_baldwin_organisation = { #Baldwin
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			386 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			975 = { is_owned_and_controlled_by = FROM }
+			975 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { baldwin_upgrade_2_4 }
@@ -3608,7 +3608,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 
 	allowed = { is_american_tag = yes }
 	available = {
-		362 = { is_owned_and_controlled_by = FROM } #Virginia
+		362 = { is_controlled_by = FROM } #Virginia
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -4014,9 +4014,9 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			797 = {
 				dockyard > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			362 = { is_owned_and_controlled_by = FROM }
+			362 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { newport_news_shipbuilding_upgrade_2_6 }
@@ -4064,9 +4064,9 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			358 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			362 = { is_owned_and_controlled_by = FROM }
+			362 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { newport_news_shipbuilding_upgrade_2_5 }
@@ -4160,7 +4160,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 				}
 			}
 			362 = { #Virginia
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -4204,7 +4204,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 				}
 			}
 			362 = { #Virginia
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				dockyard > 2
 			}
 		}
@@ -4247,7 +4247,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 				}
 			}
 			362 = { #Virginia
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -4292,7 +4292,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 				}
 			}
 			362 = { #Virginia
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -4332,7 +4332,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 		available = {
 			FROM = {
 				362 = { #Virginia
-					is_owned_and_controlled_by = FROM
+					is_controlled_by = FROM
 					industrial_complex > 4
 				}
 			}
@@ -4373,7 +4373,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 		available = {
 			FROM = {
 				362 = { #Virginia
-					is_owned_and_controlled_by = FROM
+					is_controlled_by = FROM
 					industrial_complex > 2
 				}
 			}
@@ -4415,7 +4415,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 		available = {
 			FROM = {
 				362 = { #Virginia
-					is_owned_and_controlled_by = FROM
+					is_controlled_by = FROM
 					dockyard > 2
 				}
 			}
@@ -4456,7 +4456,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 		available = {
 			FROM = {
 				362 = { #Virginia
-					is_owned_and_controlled_by = FROM
+					is_controlled_by = FROM
 					dockyard > 2
 				}
 			}
@@ -4495,7 +4495,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 		available = {
 			FROM = {
 				362 = { #Virginia
-					is_owned_and_controlled_by = FROM
+					is_controlled_by = FROM
 					dockyard > 2
 				}
 			}
@@ -4534,7 +4534,7 @@ USA_newport_news_shipbuilding_organisation = { #Newport News Shipbuilding
 		available = {
 			FROM = {
 				362 = { #Virginia
-					is_owned_and_controlled_by = FROM
+					is_controlled_by = FROM
 					dockyard > 2
 				}
 			}
@@ -4607,7 +4607,7 @@ USA_norfolk_naval_shipyard_organisation = { #Norfolk Naval Shipyard
 
 	allowed = { is_american_tag = yes }
 	available = {
-		362 = { is_owned_and_controlled_by = FROM } #Virginia
+		362 = { is_controlled_by = FROM } #Virginia
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -4911,9 +4911,9 @@ USA_norfolk_naval_shipyard_organisation = { #Norfolk Naval Shipyard
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			797 = {
 				dockyard > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			362 = { is_owned_and_controlled_by = FROM }
+			362 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { norfolk_naval_shipyard_upgrade_2_7 }
@@ -4961,9 +4961,9 @@ USA_norfolk_naval_shipyard_organisation = { #Norfolk Naval Shipyard
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			358 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			362 = { is_owned_and_controlled_by = FROM }
+			362 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { norfolk_naval_shipyard_upgrade_2_6 }
@@ -5042,7 +5042,7 @@ USA_kaiser_shipyards_organisation = { #Kaiser Shipyards
 
 	allowed = { is_american_tag = yes }
 	available = {
-		797 = { is_owned_and_controlled_by = FROM } #San Francisco
+		797 = { is_controlled_by = FROM } #San Francisco
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -5297,9 +5297,9 @@ USA_kaiser_shipyards_organisation = { #Kaiser Shipyards
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			358 = {
 				dockyard > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			797 = { is_owned_and_controlled_by = FROM }
+			797 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { kaiser_shipyards_upgrade_2_5 }
@@ -5347,9 +5347,9 @@ USA_kaiser_shipyards_organisation = { #Kaiser Shipyards
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			371 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			797 = { is_owned_and_controlled_by = FROM }
+			797 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { kaiser_shipyards_upgrade_2_4 }
@@ -5428,7 +5428,7 @@ USA_brooklyn_naval_yards_organisation = { #New York Shipbuilding
 
 	allowed = { is_american_tag = yes }
 	available = {
-		358 = { is_owned_and_controlled_by = FROM } #New York City
+		358 = { is_controlled_by = FROM } #New York City
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -5656,9 +5656,9 @@ USA_brooklyn_naval_yards_organisation = { #New York Shipbuilding
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			797 = {
 				dockyard > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			358 = { is_owned_and_controlled_by = FROM }
+			358 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { brooklyn_naval_yards_upgrade_2_5 }
@@ -5706,9 +5706,9 @@ USA_brooklyn_naval_yards_organisation = { #New York Shipbuilding
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			371 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			358 = { is_owned_and_controlled_by = FROM }
+			358 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { brooklyn_naval_yards_upgrade_2_4 }
@@ -5786,7 +5786,7 @@ USA_electric_boat_organisation = { #Electric Boat
 
 	allowed = { is_american_tag = yes }
 	available = {
-		931 = { is_owned_and_controlled_by = FROM } #Connecticut
+		931 = { is_controlled_by = FROM } #Connecticut
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -6021,9 +6021,9 @@ USA_electric_boat_organisation = { #Electric Boat
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			797 = {
 				dockyard > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			931 = { is_owned_and_controlled_by = FROM }
+			931 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { electric_boat_upgrade_2_5 }
@@ -6071,9 +6071,9 @@ USA_electric_boat_organisation = { #Electric Boat
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			371 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			931 = { is_owned_and_controlled_by = FROM }
+			931 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { electric_boat_upgrade_2_4 }
@@ -6144,7 +6144,7 @@ USA_higgins_organisation = { #Higgins
 
 	allowed = { is_american_tag = yes }
 	available = {
-		371 = { is_owned_and_controlled_by = FROM } #New Orleans
+		371 = { is_controlled_by = FROM } #New Orleans
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -6423,9 +6423,9 @@ USA_higgins_organisation = { #Higgins
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			797 = {
 				dockyard > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			371 = { is_owned_and_controlled_by = FROM }
+			371 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { higgins_upgrade_2_3 }
@@ -6473,9 +6473,9 @@ USA_higgins_organisation = { #Higgins
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			358 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			371 = { is_owned_and_controlled_by = FROM }
+			371 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { higgins_upgrade_2_2 }
@@ -6553,7 +6553,7 @@ USA_mare_island_naval_shipyard_organisation = { #Mare Island Naval Shipyard
 
 	allowed = { is_american_tag = yes }
 	available = {
-		797 = { is_owned_and_controlled_by = FROM } #San Francisco
+		797 = { is_controlled_by = FROM } #San Francisco
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -6817,9 +6817,9 @@ USA_mare_island_naval_shipyard_organisation = { #Mare Island Naval Shipyard
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			358 = {
 				dockyard > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			797 = { is_owned_and_controlled_by = FROM }
+			797 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { mare_island_naval_shipyard_upgrade_2_7 }
@@ -6867,9 +6867,9 @@ USA_mare_island_naval_shipyard_organisation = { #Mare Island Naval Shipyard
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			371 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			797 = { is_owned_and_controlled_by = FROM }
+			797 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { mare_island_naval_shipyard_upgrade_2_6 }
@@ -7371,7 +7371,7 @@ USA_bell_organisation = { #Bell
 
 	allowed = { is_american_tag = yes }
 	available = {
-		930 = { is_owned_and_controlled_by = FROM } #Buffalo
+		930 = { is_controlled_by = FROM } #Buffalo
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -7688,9 +7688,9 @@ USA_bell_organisation = { #Bell
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			798 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			930 = { is_owned_and_controlled_by = FROM }
+			930 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { bell_upgrade_2_6 }
@@ -7738,9 +7738,9 @@ USA_bell_organisation = { #Bell
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			361 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			930 = { is_owned_and_controlled_by = FROM }
+			930 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { bell_upgrade_2_5 }
@@ -7826,7 +7826,7 @@ USA_consolidated_organisation = { #Consolidated
 
 	allowed = { is_american_tag = yes }
 	available = {
-		930 = { is_owned_and_controlled_by = FROM } #Buffalo
+		930 = { is_controlled_by = FROM } #Buffalo
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -8128,9 +8128,9 @@ USA_consolidated_organisation = { #Consolidated
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			798 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			930 = { is_owned_and_controlled_by = FROM }
+			930 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { consolidated_upgrade_2_4 }
@@ -8178,9 +8178,9 @@ USA_consolidated_organisation = { #Consolidated
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			361 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			930 = { is_owned_and_controlled_by = FROM }
+			930 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { consolidated_upgrade_2_3 }
@@ -8266,7 +8266,7 @@ USA_grumman_organisation = { #Grumman
 
 	allowed = { is_american_tag = yes }
 	available = {
-		358 = { is_owned_and_controlled_by = FROM } #Buffalo
+		358 = { is_controlled_by = FROM } #Buffalo
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -8540,9 +8540,9 @@ USA_grumman_organisation = { #Grumman
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			798 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			358 = { is_owned_and_controlled_by = FROM }
+			358 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { grumman_upgrade_2_4 }
@@ -8590,9 +8590,9 @@ USA_grumman_organisation = { #Grumman
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			361 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			358 = { is_owned_and_controlled_by = FROM }
+			358 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { grumman_upgrade_2_3 }
@@ -8678,7 +8678,7 @@ USA_lockheed_organisation = { #Lockheed
 
 	allowed = { is_american_tag = yes }
 	available = {
-		798 = { is_owned_and_controlled_by = FROM } #Los Angeles
+		798 = { is_controlled_by = FROM } #Los Angeles
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -8967,9 +8967,9 @@ USA_lockheed_organisation = { #Lockheed
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			930 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			798 = { is_owned_and_controlled_by = FROM }
+			798 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { lockheed_upgrade_2_7 }
@@ -9017,9 +9017,9 @@ USA_lockheed_organisation = { #Lockheed
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			358 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			798 = { is_owned_and_controlled_by = FROM }
+			798 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { lockheed_upgrade_2_6 }
@@ -9105,7 +9105,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 	allowed = { is_american_tag = yes }
 	available = {
-		361 = { is_owned_and_controlled_by = FROM } #Maryland
+		361 = { is_controlled_by = FROM } #Maryland
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -9569,9 +9569,9 @@ USA_north_american_aviation_organisation = { #North American Aviation
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			798 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			361 = { is_owned_and_controlled_by = FROM }
+			361 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { north_american_aviation_upgrade_2_7 }
@@ -9619,9 +9619,9 @@ USA_north_american_aviation_organisation = { #North American Aviation
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			930 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			361 = { is_owned_and_controlled_by = FROM }
+			361 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { north_american_aviation_upgrade_2_6 }
@@ -9674,7 +9674,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 				}
 			}
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -9803,7 +9803,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 				}
 			}
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -9841,7 +9841,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 		available = {
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -9880,7 +9880,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 		available = {
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -9923,7 +9923,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 		available = {
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -9960,7 +9960,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 		available = {
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -9997,7 +9997,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 		available = {
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -10036,7 +10036,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 		available = {
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -10079,7 +10079,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 		available = {
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -10116,7 +10116,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 		available = {
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -10153,7 +10153,7 @@ USA_north_american_aviation_organisation = { #North American Aviation
 
 		available = {
 			361 = { #Maryland
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -10230,7 +10230,7 @@ USA_curtiss_wright_organisation = { #Curtiss-Wright
 
 	allowed = { is_american_tag = yes }
 	available = {
-		261 = { is_owned_and_controlled_by = FROM } #Ohio
+		261 = { is_controlled_by = FROM } #Ohio
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -10559,9 +10559,9 @@ USA_curtiss_wright_organisation = { #Curtiss-Wright
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			798 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			261 = { is_owned_and_controlled_by = FROM }
+			261 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { curtiss_wright_upgrade_2_4 }
@@ -10609,9 +10609,9 @@ USA_curtiss_wright_organisation = { #Curtiss-Wright
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			361 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			261 = { is_owned_and_controlled_by = FROM }
+			261 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { curtiss_wright_upgrade_2_3 }
@@ -10697,7 +10697,7 @@ USA_vought_organisation = { #Vought
 
 	allowed = { is_american_tag = yes }
 	available = {
-		931 = { is_owned_and_controlled_by = FROM } #Conneticut
+		931 = { is_controlled_by = FROM } #Conneticut
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -10961,9 +10961,9 @@ USA_vought_organisation = { #Vought
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			798 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			931 = { is_owned_and_controlled_by = FROM }
+			931 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { vought_upgrade_2_8 }
@@ -11011,9 +11011,9 @@ USA_vought_organisation = { #Vought
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			261 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			931 = { is_owned_and_controlled_by = FROM }
+			931 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { vought_upgrade_2_7 }
@@ -11099,7 +11099,7 @@ USA_boeing_organisation = { #Boeing
 
 	allowed = { is_american_tag = yes }
 	available = {
-		361 = { is_owned_and_controlled_by = FROM } #Maryland
+		361 = { is_controlled_by = FROM } #Maryland
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -11446,9 +11446,9 @@ USA_boeing_organisation = { #Boeing
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			798 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			361 = { is_owned_and_controlled_by = FROM }
+			361 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { boeing_upgrade_2_7 }
@@ -11496,9 +11496,9 @@ USA_boeing_organisation = { #Boeing
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			261 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			361 = { is_owned_and_controlled_by = FROM }
+			361 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { boeing_upgrade_2_6 }
@@ -11584,7 +11584,7 @@ USA_douglas_organisation = { #Douglas
 
 	allowed = { is_american_tag = yes }
 	available = {
-		798 = { is_owned_and_controlled_by = FROM } #Los Angeles
+		798 = { is_controlled_by = FROM } #Los Angeles
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -11893,9 +11893,9 @@ USA_douglas_organisation = { #Douglas
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			930 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			798 = { is_owned_and_controlled_by = FROM }
+			798 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { douglas_upgrade_2_5 }
@@ -11943,9 +11943,9 @@ USA_douglas_organisation = { #Douglas
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			361 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			798 = { is_owned_and_controlled_by = FROM }
+			798 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { douglas_upgrade_2_4 }
@@ -12654,7 +12654,7 @@ USA_browning_organisation = { #Browning Arms
 
 	allowed = { is_american_tag = yes }
 	available = {
-		380 = { is_owned_and_controlled_by = FROM } #Utah
+		380 = { is_controlled_by = FROM } #Utah
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -12958,9 +12958,9 @@ USA_browning_organisation = { #Browning Arms
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			395 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			380 = { is_owned_and_controlled_by = FROM }
+			380 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { browning_upgrade_2_4 }
@@ -13008,9 +13008,9 @@ USA_browning_organisation = { #Browning Arms
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			931 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			380 = { is_owned_and_controlled_by = FROM }
+			380 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { browning_upgrade_2_3 }
@@ -13100,20 +13100,21 @@ USA_colt_organisation = { #Colt
 
 	allowed = { is_american_tag = yes }
 	available = {
-		931 = { is_owned_and_controlled_by = FROM } #Connecticut
+		931 = { is_controlled_by = FROM } #Connecticut
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
 	equipment_type = {
 		infantry_equipment
+		support_equipment
 	}
 
 	research_categories = {
 		infantry_weapons
+		support_tech
 		night_vision
 		cat_special_forces_generic
 	}
-
 	ai_will_do = { base = 10 }
 
 	initial_trait = {
@@ -13366,9 +13367,9 @@ USA_colt_organisation = { #Colt
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			395 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			931 = { is_owned_and_controlled_by = FROM }
+			931 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { colt_upgrade_2_8 }
@@ -13416,9 +13417,9 @@ USA_colt_organisation = { #Colt
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			362 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			931 = { is_owned_and_controlled_by = FROM }
+			931 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { colt_upgrade_2_7 }
@@ -13508,16 +13509,18 @@ USA_remington_organisation = { #Remington Arms
 
 	allowed = { is_american_tag = yes }
 	available = {
-		796 = { is_owned_and_controlled_by = FROM } #Albany
+		796 = { is_controlled_by = FROM } #Albany
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
 	equipment_type = {
 		infantry_equipment
+		support_equipment
 	}
 
 	research_categories = {
 		infantry_weapons
+		support_tech
 		night_vision
 		cat_special_forces_generic
 	}
@@ -13911,9 +13914,9 @@ USA_remington_organisation = { #Remington Arms
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			395 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			796 = { is_owned_and_controlled_by = FROM }
+			796 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { remington_upgrade_2_5 }
@@ -13961,9 +13964,9 @@ USA_remington_organisation = { #Remington Arms
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			362 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			796 = { is_owned_and_controlled_by = FROM }
+			796 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { remington_upgrade_2_4 }
@@ -14098,7 +14101,7 @@ USA_remington_organisation = { #Remington Arms
 				}
 			}
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -14142,7 +14145,7 @@ USA_remington_organisation = { #Remington Arms
 				}
 			}
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -14184,7 +14187,7 @@ USA_remington_organisation = { #Remington Arms
 				}
 			}
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -14226,7 +14229,7 @@ USA_remington_organisation = { #Remington Arms
 				}
 			}
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -14271,7 +14274,7 @@ USA_remington_organisation = { #Remington Arms
 				}
 			}
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -14310,7 +14313,7 @@ USA_remington_organisation = { #Remington Arms
 
 		available = {
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -14350,7 +14353,7 @@ USA_remington_organisation = { #Remington Arms
 
 		available = {
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -14391,7 +14394,7 @@ USA_remington_organisation = { #Remington Arms
 
 		available = {
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -14428,7 +14431,7 @@ USA_remington_organisation = { #Remington Arms
 
 		available = {
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				arms_factory > 2
 			}
 		}
@@ -14465,7 +14468,7 @@ USA_remington_organisation = { #Remington Arms
 
 		available = {
 			796 = { #Albany
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 				industrial_complex > 4
 			}
 		}
@@ -14546,16 +14549,18 @@ USA_springfield_armory_organisation = { #Springfield Armory
 
 	allowed = { is_american_tag = yes }
 	available = {
-		932 = { is_owned_and_controlled_by = FROM } #Massachusetts
+		932 = { is_controlled_by = FROM } #Massachusetts
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
 	equipment_type = {
 		infantry_equipment
+		support_equipment
 	}
 
 	research_categories = {
 		infantry_weapons
+		support_tech
 		night_vision
 		cat_special_forces_generic
 	}
@@ -14849,9 +14854,9 @@ USA_springfield_armory_organisation = { #Springfield Armory
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			395 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			932 = { is_owned_and_controlled_by = FROM }
+			932 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { springfield_armory_upgrade_2_8 }
@@ -14899,9 +14904,9 @@ USA_springfield_armory_organisation = { #Springfield Armory
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			362 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			932 = { is_owned_and_controlled_by = FROM }
+			932 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { springfield_armory_upgrade_2_7 }
@@ -14991,16 +14996,18 @@ USA_winchester_repeating_arms_organisation = { #Winchester Repeating Arms
 
 	allowed = { is_american_tag = yes }
 	available = {
-		931 = { is_owned_and_controlled_by = FROM } #Connecticut
+		931 = { is_controlled_by = FROM } #Connecticut
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
 	equipment_type = {
 		infantry_equipment
+		support_equipment
 	}
 
 	research_categories = {
 		infantry_weapons
+		support_tech
 		night_vision
 		cat_special_forces_generic
 	}
@@ -15284,9 +15291,9 @@ USA_winchester_repeating_arms_organisation = { #Winchester Repeating Arms
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			395 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			931 = { is_owned_and_controlled_by = FROM }
+			931 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { winchester_repeating_arms_upgrade_2_8 }
@@ -15334,9 +15341,9 @@ USA_winchester_repeating_arms_organisation = { #Winchester Repeating Arms
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			362 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			931 = { is_owned_and_controlled_by = FROM }
+			931 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { winchester_repeating_arms_upgrade_2_7 }
@@ -15426,7 +15433,7 @@ USA_army_ordnance_department_organisation = { #Army Ordnance Department
 
 	allowed = { is_american_tag = yes }
 	available = {
-		362 = { is_owned_and_controlled_by = FROM } #Virginia
+		362 = { is_controlled_by = FROM } #Virginia
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -15793,9 +15800,9 @@ USA_army_ordnance_department_organisation = { #Army Ordnance Department
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			395 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			362 = { is_owned_and_controlled_by = FROM }
+			362 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { army_ordnance_department_upgrade_2_4 }
@@ -15843,9 +15850,9 @@ USA_army_ordnance_department_organisation = { #Army Ordnance Department
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			931 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			362 = { is_owned_and_controlled_by = FROM }
+			362 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { army_ordnance_department_upgrade_2_3 }
@@ -15935,7 +15942,7 @@ USA_rock_island_arsenal_organisation = { #Rock Island Arsenal
 
 	allowed = { is_american_tag = yes }
 	available = {
-		395 = { is_owned_and_controlled_by = FROM } #Illinois
+		395 = { is_controlled_by = FROM } #Illinois
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -16266,9 +16273,9 @@ USA_rock_island_arsenal_organisation = { #Rock Island Arsenal
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			931 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			395 = { is_owned_and_controlled_by = FROM }
+			395 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { rock_island_arsenal_upgrade_2_6 }
@@ -16316,9 +16323,9 @@ USA_rock_island_arsenal_organisation = { #Rock Island Arsenal
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			362 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			395 = { is_owned_and_controlled_by = FROM }
+			395 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { rock_island_arsenal_upgrade_2_5 }
@@ -16408,7 +16415,7 @@ USA_watervliet_arsenal_organisation = { #Watervliet Arsenal
 
 	allowed = { is_american_tag = yes }
 	available = {
-		796 = { is_owned_and_controlled_by = FROM } #Albany
+		796 = { is_controlled_by = FROM } #Albany
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -16722,9 +16729,9 @@ USA_watervliet_arsenal_organisation = { #Watervliet Arsenal
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			395 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			796 = { is_owned_and_controlled_by = FROM }
+			796 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { watervliet_arsenal_upgrade_2_6 }
@@ -16772,9 +16779,9 @@ USA_watervliet_arsenal_organisation = { #Watervliet Arsenal
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			362 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			796 = { is_owned_and_controlled_by = FROM }
+			796 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { watervliet_arsenal_upgrade_2_5 }
@@ -16864,7 +16871,7 @@ USA_studebaker_organisation = { #Studebaker
 
 	allowed = { is_american_tag = yes }
 	available = {
-		396 = { is_owned_and_controlled_by = FROM } #Albany
+		396 = { is_controlled_by = FROM } #Albany
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -17139,9 +17146,9 @@ USA_studebaker_organisation = { #Studebaker
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			932 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			396 = { is_owned_and_controlled_by = FROM }
+			396 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { studebaker_upgrade_2_4 }
@@ -17189,9 +17196,9 @@ USA_studebaker_organisation = { #Studebaker
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			362 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			396 = { is_owned_and_controlled_by = FROM }
+			396 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { studebaker_upgrade_2_3 }
@@ -17281,7 +17288,7 @@ USA_ford_organisation = { #Ford
 
 	allowed = { is_american_tag = yes }
 	available = {
-		393 = { is_owned_and_controlled_by = FROM } #Michigan
+		393 = { is_controlled_by = FROM } #Michigan
 		USA_mio_is_junior_partner_of_merger = no
 	}
 
@@ -17549,9 +17556,9 @@ USA_ford_organisation = { #Ford
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			932 = {
 				arms_factory > 0
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			393 = { is_owned_and_controlled_by = FROM }
+			393 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { ford_upgrade_2_6 }
@@ -17599,9 +17606,9 @@ USA_ford_organisation = { #Ford
 			NOT = { has_global_flag = USA_civil_war_begun_flag }
 			362 = {
 				industrial_complex > 1
-				is_owned_and_controlled_by = FROM
+				is_controlled_by = FROM
 			}
-			393 = { is_owned_and_controlled_by = FROM }
+			393 = { is_controlled_by = FROM }
 		}
 
 		mutually_exclusive = { ford_upgrade_2_5 }

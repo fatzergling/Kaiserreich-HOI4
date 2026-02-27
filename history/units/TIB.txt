@@ -22,22 +22,22 @@ units = {
 	division = {
 		location = 5033
 		division_template = "Cavalry Division"
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.1
 	}
 	division = {
 		location = 12730
 		division_template = "Infantry Division"
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.1
 	}
 	division = {
 		location = 8059
 		division_template = "Infantry Division"
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.1
 	}
 	division = {
 		location = 13892
 		division_template = "Infantry Division"
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.1
 	}
 	#division = {
 	#	location = 13895

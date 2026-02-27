@@ -66,7 +66,7 @@ ENG_build_up_civs_1 = {
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 49
+		value = 149
 	}
 	ai_strategy = {
 		type = air_factory_balance
@@ -137,7 +137,9 @@ ENG_build_up_mils_2 = {
 		original_tag = ENG
 	}
 	enable = {
+		always = no
 		num_of_military_factories > 150
+		has_war = yes
 	}
 	abort_when_not_enabled = yes
 
@@ -277,7 +279,7 @@ ENG_the_wooden_wall = {
 
 	ai_strategy = {
 		type = naval_invasion_focus
-		value = 80
+		value = 20
 	}
 
 	ai_strategy = {
@@ -502,7 +504,7 @@ ENG_scapa_flow_naval_base = {
 		original_tag = ENG
 	}
 	enable = {
-		has_war = yes
+		always = no
 	}
 	abort_when_not_enabled = yes
 
@@ -512,6 +514,22 @@ ENG_scapa_flow_naval_base = {
 		value = 70
 	}
 }
+ENG_scapa_flow_naval_base_2 = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_war_with = GER
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 16 #North Sea
+		value = 150
+	}
+}
+
 
 ENG_keep_out_of_the_baltic = {
 	allowed = {
@@ -549,31 +567,7 @@ ENG_careful_around_the_channel = {
 		original_tag = ENG
 	}
 	enable = {
-		has_war = yes
-		any_enemy_country = {
-			NOT = {
-				ships_in_area = {
-					type = screen_ship
-					area = 18
-					size > 14
-				}
-				ships_in_area = {
-					type = capital_ship
-					area = 18
-					size > 1
-				}
-				ships_in_area = {
-					type = submarine
-					area = 18
-					size > 23
-				}
-				ships_in_area = {
-					type = carrier
-					area = 18
-					size > 1
-				}
-			}
-		}
+		always = no
 	}
 	abort_when_not_enabled = yes
 
@@ -720,6 +714,25 @@ ENG_raid_western_approaches_if_invaded = {
 	}
 }
 
+ENG_convoy_raids_german_italian_convoys = {
+	allowed = {
+		tag = ENG
+	}
+
+	enable = {
+		OR = {
+			has_war_with = GER
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_convoy_raid_region
+		id = 45 # norwegian sea
+		value = 100
+	}
+}
+
 ENG_protect_against_invasions = {
 	allowed = {
 		original_tag = ENG
@@ -784,7 +797,7 @@ ENG_push_back_invasions = {
 
 	ai_strategy = {
 		type = naval_invasion_focus
-		value = -80 #counteracts ENG_the_wooden_wall
+		value = -20 #counteracts ENG_the_wooden_wall
 	}
 
 	ai_strategy = {
@@ -860,7 +873,12 @@ ENG_invade_iceland = {
 	ai_strategy = {
 		type = invade
 		id = ICE
-		value = 200
+		value = 500
+	}
+	ai_strategy = {
+		type = invade
+		id = DEN
+		value = -500
 	}
 	ai_strategy = {
 		type = invasion_unit_request
@@ -870,6 +888,11 @@ ENG_invade_iceland = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = ICE
+		value = 100
+	}
+	ai_strategy = {
+		type = naval_dominance
+		id = iceland_seas
 		value = 100
 	}
 }
@@ -895,7 +918,7 @@ ENG_invade_canada = {
 
 	ai_strategy = {
 		type = invade
-		id = "IMP"
+		id = IMP
 		value = 200
 	}
 	ai_strategy = {
@@ -907,5 +930,85 @@ ENG_invade_canada = {
 		type = front_unit_request
 		tag = IMP
 		value = 100
+	}
+}
+ENG_gang_up_GER_with_RUS = {
+	allowed = { original_tag = ENG }
+	enable = {
+		country_exists = GER
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		value = 200
+		target = europe
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		value = 100
+		target = africa
+	}
+}
+
+
+ENG_home_islands_are_safe_for_now = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		enemies_naval_strength_ratio < 1.5
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = garrison
+		value = -25
+	}
+}
+
+
+ENG_avoid_balkans_until_germany_is_ded = {
+	allowed = { original_tag = ENG }
+	enable = {
+		date > 1939.6.6
+		date < 1943.6.6
+		has_war_with = GER
+		GER = { surrender_progress < 0.7 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = greater_balkans
+		value = -200
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = greater_balkans
+		value = -75
+	}
+}
+
+ENG_allies_avoid_balkans_until_germany_is_ded = {
+	enable = {
+		date < 1943.1.1
+		is_in_faction_with = ENG
+		NOT = { tag = SER }
+		NOT = { tag = GRE }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = greater_balkans
+		value = -200
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = greater_balkans
+		value = -75
 	}
 }

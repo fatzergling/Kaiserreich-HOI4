@@ -217,6 +217,9 @@ foreign_politics = {# Foreign Policy
 					NOT = { has_war_with = USA }
 				}
 				add_to_war = { targeted_alliance = WCA enemy = USA }
+				WCA = {
+					give_military_access = MEX
+				}
 			}
 			if = {# Fight the ACC
 				limit = {
@@ -224,6 +227,9 @@ foreign_politics = {# Foreign Policy
 					NOT = { has_war_with = ACC }
 				}
 				add_to_war = { targeted_alliance = WCA enemy = ACC }
+				WCA = {
+					give_military_access = MEX
+				}
 			}
 			if = {# Fight the APG
 				limit = {
@@ -231,6 +237,9 @@ foreign_politics = {# Foreign Policy
 					NOT = { has_war_with = APG }
 				}
 				add_to_war = { targeted_alliance = WCA enemy = APG }
+				WCA = {
+					give_military_access = MEX
+				}
 			}
 			if = {# Fight NEE
 				limit = {
@@ -238,6 +247,9 @@ foreign_politics = {# Foreign Policy
 					NOT = { has_war_with = NEE }
 				}
 				add_to_war = { targeted_alliance = WCA enemy = NEE }
+				WCA = {
+					give_military_access = MEX
+				}
 			}
 		}
 		fixed_random_seed = no

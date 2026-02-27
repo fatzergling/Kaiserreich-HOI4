@@ -148,11 +148,12 @@ RUS_voskhod_decisions = {
 				OR = {
 					has_country_flag = RUS_republic_ai
 					has_country_flag = RUS_empire_ai
+					has_country_flag = RUS_savinkov_ai
 				}
 			}
 			modifier = {
-				factor = 0
-				has_country_flag = RUS_savinkov_ai
+				add = 1000
+				has_country_flag = RUS_socialist_ai
 			}
 		}
 		complete_effect = {
@@ -2511,6 +2512,10 @@ RUS_siberian_industrialisation = {
 				add = 10000
 				has_active_mission = RUS_promised_jobs
 			}
+			modifier = {
+				add = 10000
+				has_active_mission = RUS_soc_industrialisation_plan
+			}
 		}
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete RUS_northern_route"
@@ -2552,6 +2557,11 @@ RUS_siberian_industrialisation = {
 					slots = { political_advisor }
 				}
 			}
+			modifier = {
+				add = 10000
+				has_active_mission = RUS_soc_industrialisation_plan
+			}
+
 		}
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete RUS_upgrade_the_railroad_chelyabinsk"
@@ -2591,6 +2601,10 @@ RUS_siberian_industrialisation = {
 					amount > 0
 					slots = { political_advisor }
 				}
+			}
+			modifier = {
+				add = 10000
+				has_active_mission = RUS_soc_industrialisation_plan
 			}
 		}
 		complete_effect = {
@@ -2642,6 +2656,10 @@ RUS_siberian_industrialisation = {
 			modifier = {
 				add = 10000
 				has_active_mission = RUS_promised_jobs
+			}
+			modifier = {
+				add = 10000
+				has_active_mission = RUS_soc_industrialisation_plan
 			}
 		}
 		complete_effect = {
@@ -11895,10 +11913,10 @@ RUS_russian_sphere_decisions = {
 
 		target_trigger = {
 			FROM = { owns_state = 78 } #Bessarabia
-			OR = {
+			#OR = {
 				can_declare_war_on = FROM
-				is_ally_with = FROM
-			}
+				#is_ally_with = FROM
+			#}
 		}
 
 		cost = 50
@@ -11920,6 +11938,10 @@ RUS_russian_sphere_decisions = {
 					FROM = { RUS_dont_attack_if_faction_is_stronger = yes }
 					FROM = { RUS_dont_attack_if_overlord_is_stronger = yes }
 				}
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = FROM
 			}
 		}
 
@@ -12301,7 +12323,7 @@ RUS_russian_sphere_decisions = {
 
 		fire_only_once = yes
 
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete RUS_iranian_aid"
@@ -12342,6 +12364,7 @@ RUS_russian_sphere_decisions = {
 				FROM = { is_in_faction = yes }
 				is_faction_leader = no
 				has_war_with_major = yes
+				has_guaranteed = FROM
 			}
 		}
 
@@ -12431,6 +12454,10 @@ RUS_russian_sphere_decisions = {
 				has_war_with = AUS
 			}
 			FROM = { at_peace_or_same_enemies_as_ROOT = yes }
+			#OR = {
+			#	FROM = { is_neighbor_of = ROOT } 
+			#	ROM = { is_neighbor_of = ROOT } 
+			#}
 			if = {
 				limit = {
 					FROM = { owns_state = 109 } #Central Croatia
@@ -12520,6 +12547,7 @@ RUS_russian_sphere_decisions = {
 				has_war_with = AUS
 			}
 			FROM = { at_peace_or_same_enemies_as_ROOT = yes }
+			FROM = { is_neighbor_of = ROOT } 
 			if = {
 				limit = {
 					FROM = { owns_state = 84 } #Brasov
@@ -12582,6 +12610,7 @@ RUS_russian_sphere_decisions = {
 				}
 			}
 			FROM = { at_peace_or_same_enemies_as_ROOT = yes }
+			FROM = { is_neighbor_of = ROOT } 
 		}
 
 		visible = {
@@ -12902,6 +12931,7 @@ RUS_russian_sphere_decisions = {
 				limit = { FROM = { tag = KUM } }
 				NOT = { has_global_flag = RUS_CHN_postwar_agreement }
 			}
+			FROM = { is_neighbor_of = ROOT } 
 		}
 
 		visible = {
@@ -13503,7 +13533,13 @@ RUS_Spreading_the_Revolution_decisions = {
 		cost = 75
 		fire_only_once = yes
 
-		ai_will_do = { factor = 1000 }
+		ai_will_do = { 
+			factor = 0
+			modifier = {
+				add = 10000
+				threat > 0.75
+			} 
+		}
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete RUS_secret_deal_with_belarus"
@@ -15471,14 +15507,17 @@ RUS_socrus_coalition_mechanic_decisions = {
 		icon = GFX_decision_factories
 		allowed = { always = no }
 		available = {
-			num_of_factories > 160
+			num_of_factories > 225
 			has_tech = improved_machine_tools
 			has_tech = construction2
 			has_completed_focus = RUS_urban_housing_projects
+			has_completed_focus = RUS_industrialise_urals
+			has_completed_focus = RUS_industrialise_eastern_europe
+			has_completed_focus = RUS_industrialise_siberia
 		}
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 720
+		days_mission_timeout = 1080
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete RUS_soc_industrialisation_plan"
 			add_stability = 0.1

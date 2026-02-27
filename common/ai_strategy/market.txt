@@ -118,7 +118,9 @@ default_market_stockpile_management = {
 
 default_market_stockpile_management_major = {
 	allowed = {
-		is_major = yes
+		#is_major = yes
+		#always = no
+		is_chinese_tag = yes
 	}
 	enable = {
 		has_war = no
@@ -259,6 +261,74 @@ majors_make_less_purchases_in_the_early_game = {
 	}
 }
 
+minors_make_more_purchases_in_the_early_game = {
+	allowed = {
+		is_major = no
+	}
+	enable = {
+		date < 1941.1.1
+		#has_war = no
+		is_in_faction = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_spend_factories
+		value = 500 #80% less factories
+	}
+	ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = infantry_equipment
+		value = 2000 #absolute number of units
+	}
+		ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = artillery_equipment
+		value = 200 #absolute number of units
+	}
+	ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = support_equipment
+		value = 200 #absolute number of units
+	}
+
+}
+
+minors_make_more_purchases_in_the_early_game_non_faction = {
+	allowed = {
+		is_major = no
+	}
+	enable = {
+		date < 1941.1.1
+		#has_war = no
+		is_in_faction = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_market_spend_factories
+		value = 100 #80% less factories
+	}
+	ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = infantry_equipment
+		value = 2000 #absolute number of units
+	}
+		ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = artillery_equipment
+		value = 200 #absolute number of units
+	}
+	ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = support_equipment
+		value = 200 #absolute number of units
+	}
+
+}
+
+
+
 majors_make_less_purchases = {
 	allowed = {
 		is_major = yes
@@ -276,7 +346,8 @@ majors_make_less_purchases = {
 
 less_rifles_to_market_if_large_army = {
 	enable = {
-		has_army_manpower = { size > 700000 } #GER/RUS/China
+		#has_army_manpower = { size > 700000 } #GER/RUS/China
+		always = no
 	}
 	abort_when_not_enabled = yes
 

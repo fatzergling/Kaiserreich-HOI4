@@ -1,0 +1,281 @@
+######################
+#	INFANTRY ROLE - for irregular-centric tags
+######################
+
+line_irregulars = {
+	available_for = {
+		CHI
+	}
+	#QIE and FNG omitted because they do not start with an irregulars template and their whole thing was built around not using them
+
+	role = infantry
+
+	upgrade_prio = {
+		base = 5
+	}
+
+	irregulars_default = {
+		upgrade_prio = {
+			base = 1
+			modifier = {
+				add = 10
+				num_of_military_factories < 20
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories > 30
+			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
+		target_template = {
+			regiments = {
+				irregular_infantry = 9
+				artillery_brigade = 3
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				engineer = 1
+				#anti_tank = 1
+				#logistics_company = 1
+				#field_hospital = 1
+				recon = 1
+				assault_battalion = 1
+
+			}
+		}
+	}
+
+	irregulars_upgraded = {
+		upgrade_prio = {
+			base = 7
+			modifier = {
+				factor = 0
+				num_of_military_factories < 20
+			}
+			modifier = {
+				add = 1
+				has_global_flag = china_united
+			}
+			modifier = {
+				add = 1
+				has_reached_maximum_divisions = yes
+			}
+			modifier = {
+				add = 3
+				num_of_military_factories > 49
+				#has_reached_ninety_percent_of_maximum_divisions = yes
+			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 9
+				artillery_brigade = 3
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				anti_tank = 1
+				engineer = 1
+				logistics_company = 1
+				field_hospital = 1
+								recon = 1
+								assault_battalion = 1
+
+			}
+		}
+	}
+
+	irregulars_artillery = {
+		upgrade_prio = {
+			base = 10
+			modifier = {
+				factor = 0
+				num_of_military_factories < 45 #90% of previous threshold
+			}
+			modifier = {
+				add = 3
+				has_global_flag = china_united
+			}
+			modifier = {
+				add = 3
+				has_reached_maximum_divisions = yes
+			}
+			modifier = {
+				add = 3
+				num_of_military_factories > 99
+				has_reached_ninety_percent_of_maximum_divisions = yes
+			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
+		target_template = {
+			regiments = {
+				infantry = 9
+				artillery_brigade = 3
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				anti_tank = 1
+				engineer = 1
+				logistics_company = 1
+				field_hospital = 1
+				recon = 1
+				assault_battalion = 1
+			}
+		}
+	}
+
+
+}
+
+motorised = {
+	available_for = {
+		 CHI
+	}
+
+
+	role = mobile
+
+	upgrade_prio = {
+		base = 5
+	}
+	cavalry_default = {
+		upgrade_prio = {
+			base = 1
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
+		target_template = {
+			regiments = {
+				cavalry = 9
+				mot_artillery_brigade = 1
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				engineer = 1
+				anti_tank = 1
+				logistics_company = 1
+				field_hospital = 1
+				assault_battalion = 1
+			}
+		}
+	}
+		irregulars_motorised = {
+		upgrade_prio = {
+			base = 10
+			modifier = {
+				factor = 0
+				num_of_military_factories < 50 #90% of previous threshold
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_tech = motorised_infantry }
+			}
+			modifier = {
+				add = 1
+				has_global_flag = china_united
+			}
+			modifier = {
+				add = 1
+				has_reached_maximum_divisions = yes
+			}
+			modifier = {
+				add = 3
+				num_of_military_factories > 149
+				has_reached_ninety_percent_of_maximum_divisions = yes
+			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
+		target_template = {
+			regiments = {
+				motorized = 9
+				mot_artillery_brigade = 3
+			}
+
+			support = {
+				engineer = 1
+				artillery = 1
+				anti_tank = 1
+				anti_air = 1
+				logistics_company = 1
+				field_hospital = 1
+				assault_battalion = 1
+			}
+		}
+	}
+
+	irregulars_mechanised = {
+		upgrade_prio = {
+			base = 20
+			modifier = {
+				factor = 0
+				NOT = { has_tech = mechanised_infantry }
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 135 #90% of previous threshold
+			}
+			modifier = {
+				add = 1
+				has_global_flag = china_united
+			}
+			modifier = {
+				add = 1
+				has_reached_maximum_divisions = yes
+			}
+			modifier = {
+				add = 4
+				num_of_military_factories > 199
+				has_reached_ninety_percent_of_maximum_divisions = yes
+			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
+		target_template = {
+			regiments = {
+				mechanized = 9
+				mot_artillery_brigade = 2
+				motorized_rocket_brigade = 1
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				anti_tank = 1
+				engineer = 1
+				logistics_company = 1
+				field_hospital = 1
+				assault_battalion = 1
+			}
+		}
+	}
+}

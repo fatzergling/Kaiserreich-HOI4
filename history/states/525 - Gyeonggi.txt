@@ -11,8 +11,10 @@ state = {
 
 		add_to_array = { state_victory_points = 7125 }
 		add_to_array = { state_victory_points = 848 }
+		add_to_array = { state_victory_points = 1148 }
 		victory_points = { 7125 10 }
 		victory_points = { 848 2 }
+		victory_points = { 1148 2 }
 
 		buildings = {
 			infrastructure = 2

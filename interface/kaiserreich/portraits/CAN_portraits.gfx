@@ -228,11 +228,11 @@ spriteTypes = {
 		texturefile = "gfx/leaders/CAN/CAN_charles_foulkes.png"
 	}
 	spriteType = {
-		name = "GFX_portrait_CAN_andrew_mccaughton_civilian_large"
+		name = "GFX_portrait_CAN_andrew_mcnaughton_civilian_large"
 		texturefile = "gfx/leaders/CAN/CAN_andrew_mccaughton_civilian.png"
 	}
 	spriteType = {
-		name = "GFX_portrait_CAN_andrew_mccaughton_army_small"
+		name = "GFX_portrait_CAN_andrew_mcnaughton_army_small"
 		texturefile = "gfx/interface/advisors/CAN/CAN_andrew_mccaughton.png"
 	}
 	spriteType = {

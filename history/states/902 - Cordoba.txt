@@ -2,7 +2,7 @@ state = {
 	id = 902
 	name = "STATE_902"
 	manpower = 2661400
-	state_category = five
+	state_category = seven
 
 	history = {
 		owner = ARG
@@ -16,7 +16,7 @@ state = {
 
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 4
+			industrial_complex = 5
 			5184 = {
 				dam = 1 #Calamuchita Reservoir
 			}

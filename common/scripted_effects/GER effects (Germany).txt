@@ -4892,6 +4892,7 @@ GER_setup_puppet_france = {
 				}
 			}
 			ROOT = { GER_fire_occupation_events_if_not_fired_yet = yes }
+					remove_targeted_decision = { decision = GER_deploy_troops_to_occupation_zones target = FRP }
 		}
 	}
 }
@@ -4983,10 +4984,12 @@ GER_setup_puppet_england = {
 			}
 		}
 		ROOT = { GER_fire_occupation_events_if_not_fired_yet = yes }
+
 	}
 	else = {
 		GBP_set_up_government = yes
 	}
+					remove_targeted_decision = { decision = GER_deploy_troops_to_occupation_zones target = GBP }
 }
 
 GER_modify_occupation = {

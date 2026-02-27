@@ -108,20 +108,21 @@ CHI_INF_03 = {
 		1 = { "%d Bubing Juntuán 'Fujian'" }			# CHI "corps" were division-strength units (2-3 CHI "divisions" = 2-3 HOI4 regiments)
 		2 = { "%d Bubing Juntuán 'Jiangxi'" }
 		3 = { "%d Bubing Juntuán 'Zhejiang'" }
-		4 = { "%d Bubing Juntuán" }
-		5 = { "%d Bubing Juntuán" }
-		6 = { "%d Bubing Juntuán" }
-		7 = { "%d Bubing Juntuán" }
-		8 = { "%d Bubing Juntuán" }
-		9 = { "%d Bubing Juntuán" }
-		10 = { "%d Bubing Juntuán" }
-		11 = { "%d Bubing Juntuán" }
-		12 = { "%d Bubing Juntuán" }
-		13 = { "%d Bubing Juntuán" }
-		14 = { "%d Bubing Juntuán" }
-		15 = { "%d Bubing Juntuán" }
+		4 = { "%d Bubing Juntuán 'Anhui'" }
+		5 = { "%d Bubing Juntuán 'Hubei'" }
+		6 = { "%d Bubing Juntuán 'Suiyuan'" }
+		7 = { "%d Bubing Juntuán 'Shaanxi'" }
+		8 = { "%d Bubing Juntuán 'Shandong'" }
+		9 = { "%d Bubing Juntuán 'Nanjing'" }
+		10 = { "%d Bubing Juntuán 'Suzhou'" }
+		11 = { "%d Bubing Juntuán 'Wuchang'" }
+		12 = { "%d Bubing Juntuán 'Fujian'" }
+		13 = { "%d Bubing Juntuán 'Fuzhou'" }
+		14 = { "%d Bubing Juntuán 'Beijing'" }
+		15 = { "%d Bubing Juntuán 'Hangzhou'" }
 	}
 }
+	
 
 CHI_INF_04 = {
 	name = div_CHI_westernised_inf__division
@@ -272,20 +273,21 @@ CHI_MEC_01 = {
 		1 = { "%d Jixiehua Juntuán 'Fujian'" }
 		2 = { "%d Jixiehua Juntuán 'Jiangxi'" }
 		3 = { "%d Jixiehua Juntuán 'Zhejiang'" }
-		4 = { "%d Jixiehua Juntuán" }
-		5 = { "%d Jixiehua Juntuán" }
-		6 = { "%d Jixiehua Juntuán" }
-		7 = { "%d Jixiehua Juntuán" }
-		8 = { "%d Jixiehua Juntuán" }
-		9 = { "%d Jixiehua Juntuán" }
-		10 = { "%d Jixiehua Juntuán" }
-		11 = { "%d Jixiehua Juntuán" }
-		12 = { "%d Jixiehua Juntuán" }
-		13 = { "%d Jixiehua Juntuán" }
-		14 = { "%d Jixiehua Juntuán" }
-		15 = { "%d Jixiehua Juntuán" }
+		4 = { "%d Jixiehua Juntuán 'Anhui'" }
+		5 = { "%d Jixiehua Juntuán 'Hubei'" }
+		6 = { "%d Jixiehua Juntuán 'Suiyuan'" }
+		7 = { "%d Jixiehua Juntuán 'Shaanxi'" }
+		8 = { "%d Jixiehua Juntuán 'Shandong'" }
+		9 = { "%d Jixiehua Juntuán 'Nanjing'" }
+		10 = { "%d Jixiehua Juntuán 'Suzhou'" }
+		11 = { "%d Jixiehua Juntuán 'Wuchang'" }
+		12 = { "%d Jixiehua Juntuán 'Fuzhou'" }
+		13 = { "%d Jixiehua Juntuán 'Fujian'" }
+		14 = { "%d Jixiehua Juntuán 'Beijing'" }
+		15 = { "%d Jixiehua Juntuán 'Hangzhou'" }
 	}
-}
+}		
+
 
 CHI_ARM_01 = {
 	name = div_armoured_unit
@@ -394,20 +396,21 @@ CHI_MNT_01 = {
 		1 = { "%d Dangshan Juntuán 'Fujian'" }
 		2 = { "%d Dangshan Juntuán 'Jiangxi'" }
 		3 = { "%d Dangshan Juntuán 'Zhejiang'" }
-		4 = { "%d Dangshan Juntuán" }
-		5 = { "%d Dangshan Juntuán" }
-		6 = { "%d Dangshan Juntuán" }
-		7 = { "%d Dangshan Juntuán" }
-		8 = { "%d Dangshan Juntuán" }
-		9 = { "%d Dangshan Juntuán" }
-		10 = { "%d Dangshan Juntuán" }
-		11 = { "%d Dangshan Juntuán" }
-		12 = { "%d Dangshan Juntuán" }
-		13 = { "%d Dangshan Juntuán" }
-		14 = { "%d Dangshan Juntuán" }
-		15 = { "%d Dangshan Juntuán" }
+		4 = { "%d Dangshan Juntuán 'Anhui'" }
+		5 = { "%d Dangshan Juntuán 'Hubei'" }
+		6 = { "%d Dangshan Juntuán 'Suiyuan'" }
+		7 = { "%d Dangshan Juntuán 'Shaanxi'" }
+		8 = { "%d Dangshan Juntuán 'Shandong'" }
+		9 = { "%d Dangshan Juntuán 'Nanjing'" }
+		10 = { "%d Dangshan Juntuán 'Suzhou'" }
+		11 = { "%d Dangshan Juntuán 'Wuchang'" }
+		12 = { "%d Dangshan Juntuán 'Fuzhou'" }
+		13 = { "%d Dangshan Juntuán 'Fujian'" }
+		14 = { "%d Dangshan Juntuán 'Beijing'" }
+		15 = { "%d Dangshan Juntuán 'Hangzhou'" }
 	}
 }
+
 
 CHI_MIL_01 = {
 	name = div_CHI_minbing

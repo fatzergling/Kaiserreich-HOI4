@@ -1305,7 +1305,8 @@ shared_focus = {
 		OR = {
 			AND = {
 				tag = CHI
-				CHI_is_phase_four_trigger = yes
+				#CHI_is_phase_four_trigger = yes
+				has_global_flag = china_united
 			}
 			AND = {
 				tag = GXC
@@ -1336,7 +1337,7 @@ shared_focus = {
 		}
 	}
 	ai_will_do = {
-		base = 100
+		base = 3000
 		modifier = {
 			factor = 2
 			has_war = no
@@ -1493,7 +1494,7 @@ shared_focus = {
 
 	prerequisite = { focus = KMT_lead_the_liberation_of_asia }
 	ai_will_do = {
-		base = 250
+		base = 2500
 		modifier = {
 			factor = 2
 			has_war = no
@@ -1578,7 +1579,7 @@ shared_focus = {
 			factor = 0
 			has_country_leader = { character = CHI_song_qingling }
 			country_exists = HND
-			has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHI }
+			has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN }
 		}
 	}
 	completion_reward = {
@@ -2215,8 +2216,16 @@ shared_focus = {
 			#Outer Sphere - Just needs to be not socialist
 			custom_override_tooltip = {
 				tooltip = RKT_freed_india_tt
+				OR = {
+					AND = {
 				RAJ = { exists = no }
 				PRF = { exists = no }
+					}
+					AND = {
+						RAJ = { exists = no }
+						HND = { exists = no }
+					}
+				}
 				var:320.owner = { CHN_is_rkmt_aligned_or_allied_trigger = yes } #Madras
 				var:321.owner = { CHN_is_rkmt_aligned_or_allied_trigger = yes } #Goa
 				var:323.owner = { CHN_is_rkmt_aligned_or_allied_trigger = yes } #Nepal

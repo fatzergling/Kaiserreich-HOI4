@@ -8,10 +8,14 @@ NDefines.NWiki.BASE_URL = "https://kaiserreich.wiki"
 -- Career Profile
 NDefines.NCareerProfile.MOD_STATISTICS_GROUP = "kaiserreich_career_profile"
 NDefines.NCareerProfile.MOD_STATISTICS_GROUP_NAME = "KAISERREICH_CAREER_PROFILE"
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 2
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 10			-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 12			-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 12 			-- how many divisions a field marshall is limited to. 0 = inf  < 0 = blocked
 
 -- Game
-NDefines.NGame.SAVE_VERSION = 161											-- Vanilla is 30
-NDefines.NGame.MINOR_SAVE_VERSION = 161										-- Vanilla is 1
+NDefines.NGame.SAVE_VERSION = 162											-- Vanilla is 30
+NDefines.NGame.MINOR_SAVE_VERSION = 162										-- Vanilla is 1
 NDefines.NGame.END_DATE = "1959.1.1.1"										-- Vanilla is 1949.1.1.1
 NDefines.NGame.HANDS_OFF_START_TAG = "BHU"									-- Vanilla is URG
 NDefines.NGame.DECISION_ALERT_TIMEOUT_DAYS = 60								-- Vanilla is 30
@@ -21,20 +25,30 @@ NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 1.5						-- Vanilla is 2
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.1								-- Vanilla is 0.05
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 32								-- Vanilla is 24
 NDefines.NMilitary.EQUIPMENT_COMBAT_LOSS_FACTOR = 0.45						-- Vanilla is 0.7
+NDefines.NMilitary.BASE_CAPTURE_EQUIPMENT_RATIO = 0.1						-- Vanilla is 0.7
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 30								-- Vanilla is 10
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 60										-- Vanilla is 25
-
+NDefines.NSupply.DEFAULT_STARTING_TRUCK_RATIO = 5
 -- Resistance
 NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_PER_STABILITY_LOSS = 0.1	-- Vanilla is 0.2
 NDefines.NResistance.MAXIMUM_GARRISON_HARDNESS_WHEN_ATTACKED = 0.70         -- vanilla is 0.90
+NDefines.NBuildings.BASE_FACTORY_REPAIR = 0.1										-- Default repair rate in percentage before factories are taken into account (1.0 equals 1%).
+NDefines.NBuildings.BASE_FACTORY_REPAIR_FACTOR = 4.0								-- Factory speed modifier when repairing.
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_REPAIRING = 1.2
+NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 0.7
 
 -- War Support
-NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = 0								-- Vanilla is -0.2
-NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0								-- Vanilla is -0.2
+NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = 0							-- Vanilla is -0.2
+NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0.2							-- Vanilla is -0.2
 NDefines.NCountry.MAX_BOMBING_WAR_SUPPORT_IMPACT = -0.3						-- Vanilla is -0.3
 NDefines.NCountry.MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.6			-- Vanilla is -0.3
 NDefines.NCountry.MAX_CONVOYS_BEING_RAIDED_WAR_SUPPORT_IMPACT = -1		    -- Vanilla is -0.5
-
+	NDefines.NCountry.MIN_STABILITY = -1.0 -- 0.0
+	NDefines.NCountry.MIN_WAR_SUPPORT = -1.0 -- 0.0
+NDefines.NCountry.SUPPLY_CONVOY_FACTOR = 0.3										-- How many convoys each supply needs
+NDefines.NCountry.CONVOY_RANGE_FACTOR = 1.1                     				    -- how much range affects convoy need
+NDefines.NAI.ARMY_LEADER_ASSIGN_OVERCAPACITY = -5000
+NDefines.NAI.ARMY_LEADER_ASSIGN_FIELD_MARSHAL_TO_ARMY = -10000
 -- Diplomacy
 NDefines.NDiplomacy.MAX_TRUST_VALUE = 200									-- Vanilla is 100
 NDefines.NDiplomacy.MIN_TRUST_VALUE = -200									-- Vanilla is -100
@@ -58,7 +72,7 @@ NDefines.NDiplomacy.TENSION_PUPPET = 0										-- Vanilla is 1.25
 NDefines.NDiplomacy.TENSION_FORCE_GOVERNMENT = 0							-- Vanilla is 0.75
 NDefines.NDiplomacy.TENSION_GUARANTEE = 0									-- Vanilla is -5
 NDefines.NDiplomacy.TENSION_FACTION_JOIN = 0								-- Vanilla is 4
-NDefines.NDiplomacy.TENSION_PEACE_FACTOR = 0								-- Vanilla is 0.8
+NDefines.NDiplomacy.TENSION_PEACE_FACTOR = 0.1								-- Vanilla is 0.8
 NDefines.NDiplomacy.TENSION_PEACE_FACTOR_THREAT_FACTOR = 0					-- Vanilla is 0.6
 NDefines.NDiplomacy.TENSION_JOIN_ATTACKER = 0								-- Vanilla is 2
 NDefines.NDiplomacy.TENSION_LIBERATE = 0									-- Vanilla is -1
@@ -70,7 +84,7 @@ NDefines.NDiplomacy.TENSION_DISMANTLE_INDUSTRY = 0							-- Vanilla is 0.25
 NDefines.NDiplomacy.TENSION_CAPITULATE = 0									-- Vanilla is 0.4
 NDefines.NDiplomacy.TENSION_VOLUNTEER_FORCE_DIVISION = 0					-- Vanilla is 0.5
 NDefines.NDiplomacy.TENSION_SIZE_FACTOR = 0									-- Vanilla is 1.0
-NDefines.NDiplomacy.TENSION_DECAY_DAILY = 0.003								-- Vanilla is 0.005
+NDefines.NDiplomacy.TENSION_DECAY_DAILY = 0.004								-- Vanilla is 0.005
 NDefines.NDiplomacy.OPINION_FOR_DEMO_FROM_WT_GENERATION = 0					-- Vanilla is -2.0
 NDefines.NAI.MAX_THREAT_FOR_FIRST_YEAR_CIVILIAN_MODE = 30					-- Vanilla is 60
 
@@ -104,6 +118,7 @@ NDefines.NGraphics.COUNTRY_FLAG_STRIPE_TEX_MAX_WIDTH = 11					-- Vanilla is 10
 NDefines.NAI.MIN_AI_SCORE_TO_TRADE_LAW_OVERRIDE_HARD_CODED_SCORE = 0.0		-- Vanilla is 1000.0
 NDefines.NAI.XP_RATIO_REQUIRED_TO_RESEARCH_WITH_XP = 1.6					-- Vanilla is 2 - needed to make AI research naval techs with XP
 NDefines.NAI.RESEARCH_WITH_XP_AI_WEIGHT_MULT = 4.0							-- Vanilla is 1.2 - bigger prio for naval techs if can spend XP
+NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.5                      -- The AI tries to keep ca this ratio of equipment surplus for sale on the market. Gets modified by equipment_market_for_sale_factor AI strategy.
 
 NDefines.NAI.ASSIGN_TANKS_TO_NON_WAR_FRONT = 0								-- Vanilla is 0.4
 NDefines.NAI.ASSIGN_TANKS_TO_MOUNTAINS = -10								-- Vanilla is -6
@@ -179,7 +194,7 @@ NDefines.NAI.MAX_FULLY_TRAINED_SHIP_RATIO_FOR_TRAINING = 0.99				-- Vanilla is 0
 -- Production AI
 NDefines.NAI.REFIT_SHIP_PERCENTAGE_OF_FORCES = 0.25							-- Vanilla is 0.1
 NDefines.NAI.DESIRE_USE_XP_TO_UPGRADE_AIR_EQUIPMENT = 1.5					-- Vanilla is 1 - AI more eagerly upgrades its planes, they are much more important than doctrines
-
+NDefines.NAI.AI_OBJECTIVE_DEFAULT_TARGET_RECALC_DAYS = 7
 -- Supply AI
 NDefines.NSupply.AI_FRONT_MINIMUM_UNITS_PER_PROVINCE_FOR_SUPPLY_CALCULATIONS = 0	-- Vanilla is 1
 NDefines.NSupply.AI_FRONT_DIVISIONS_PER_SUPPLY_POINT = 0.7							-- Vanilla is 1.0
@@ -195,5 +210,13 @@ NDefines.NFactions.FACTION_INTELLIGENCE_ALLOWED_ADVISOR_TRAIT  = {
 	"KR_legendary_rogue",
 	"KR_the_commissionaire",
 	"KR_tsingtao_spymaster",
-	"KR_master_diplomat"
+	"KR_master_diplomat",
+	"KR_savinkovs_shadow",
+	"KR_cavalier_spymaster"
+}
+
+NDefines.NDiplomacy.PEACE_COST_FACTOR_COMPLIANCE_STEPS = { 		
+0,   0.3, -- between 0%  and 30% compliance, factor is 1.0 		
+30,  0.2, -- between 30% and 70% 		
+70,  0.1, -- above 70% 	
 }

@@ -3405,7 +3405,7 @@ focus_tree = {
 		y = 0
 
 		ai_will_do = {
-			factor = 5
+			factor = 2000
 			modifier = {
 				factor = 2
 				has_war = yes
@@ -4832,7 +4832,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 5
+				factor = 1000
 				date > 1936.6.1
 			}
 			modifier = {
@@ -4935,7 +4935,7 @@ focus_tree = {
 			has_war = no
 		}
 
-		ai_will_do = { factor = 3 }
+		ai_will_do = { factor = 3000 }
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed GRE_fortify_salonika"

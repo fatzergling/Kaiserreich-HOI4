@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_factory_artillery"
+	    texturefile = "gfx/interface/ideas/idea_factory_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_incompetent_heavy_industry"
+		texturefile = "gfx/interface/ideas/incompetent_heavy_industry.dds"
+	}
+
+}

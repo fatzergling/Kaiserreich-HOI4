@@ -1380,7 +1380,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAN_The_Manchuria_Project
 		}
-		ai_will_do = { factor = 150 }
+		ai_will_do = { factor = 1000 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MAN_new_capital_new_nation"
 			capital_scope = {
@@ -1503,7 +1503,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAN_new_capital_new_nation
 		}
-		ai_will_do = { factor = 150 }
+		ai_will_do = { factor = 1000 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MAN_fund_national_foundation_university"
 			add_research_slot_until_four = yes
@@ -1525,7 +1525,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAN_fund_national_foundation_university
 		}
-		ai_will_do = { factor = 150 }
+		ai_will_do = { factor = 1000 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MAN_secure_international_legitimacy"
 			add_stability = 0.10
@@ -1578,7 +1578,7 @@ focus_tree = {
 		prerequisite = {
 			focus = MAN_secure_international_legitimacy
 		}
-		ai_will_do = { factor = 150 }
+		ai_will_do = { factor = 1000 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MAN_work_with_concordia"
 			add_popularity = { ideology = market_liberal popularity = 0.10 }

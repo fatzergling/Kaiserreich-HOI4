@@ -45,27 +45,6 @@ country_event = { #attack Delhi
 		}
 		hidden_effect = {
 			add_ideas = has_scripted_peace
-			random_owned_controlled_state = {
-				prioritize = { 415 }
-				create_unit = {
-					division = "division_template = \"Tribal Rider Division\" start_experience_factor = 0.5"
-					owner = AFG
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 415 }
-				create_unit = {
-					division = "division_template = \"Tribal Rider Division\" start_experience_factor = 0.5"
-					owner = AFG
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 267 }
-				create_unit = {
-					division = "division_template = \"Tribal Rider Division\" start_experience_factor = 0.5"
-					owner = AFG
-				}
-			}
 			RAJ = {
 				country_event = { id = afghanistan_events.1 days = 1 }
 			}

@@ -167,7 +167,8 @@ UKR_dont_build_in_east = {
 		original_tag = UKR
 	}
 	enable = {
-		date < 1941.1.1
+		#date < 1941.1.1
+		date < 1936.7.1
 	}
 	abort_when_not_enabled = yes
 
@@ -397,41 +398,47 @@ UKR_focus_civs = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = build_building
+		type = building_target
 		id = industrial_complex  # Type of building
-		target = 202 #Kyiv
 		value = 100
 	}
-	ai_strategy = {
-		type = build_building
-		id = industrial_complex  # Type of building
-		target = 226 #Sicheslav
-		value = 100
-	}
-	ai_strategy = {
-		type = build_building
-		id = industrial_complex  # Type of building
-		target = 93 #Brest
-		value = 100
-	}
-	ai_strategy = {
-		type = build_building
-		id = industrial_complex  # Type of building
-		target = 201 #Zhitomir
-		value = 100
-	}
-	ai_strategy = {
-		type = build_building
-		id = industrial_complex  # Type of building
-		target = 792 #Volhynia
-		value = 100
-	}
-	ai_strategy = {
-		type = build_building
-		id = industrial_complex  # Type of building
-		target = 199 #Proskuriv
-		value = 100
-	}
+
+#	ai_strategy = {
+#		type = build_building
+#		id = industrial_complex  # Type of building
+#		target = 202 #Kyiv
+#		value = 100
+#	}
+#	ai_strategy = {
+#		type = build_building
+#		id = industrial_complex  # Type of building
+#		target = 226 #Sicheslav
+#		value = 100
+#	}
+#	ai_strategy = {
+#		type = build_building
+#		id = industrial_complex  # Type of building
+#		target = 93 #Brest
+#		value = 100
+#	}
+#	ai_strategy = {
+#		type = build_building
+#		id = industrial_complex  # Type of building
+#		target = 201 #Zhitomir
+#		value = 100
+#	}
+#	ai_strategy = {
+#		type = build_building
+#		id = industrial_complex  # Type of building
+#		target = 792 #Volhynia
+#		value = 100
+	#}
+	#ai_strategy = {
+	#	type = build_building
+	#	id = industrial_complex  # Type of building
+	#	target = 199 #Proskuriv
+	#	value = 100
+	#}
 }
 
 UKR_focus_mils = {
@@ -443,43 +450,48 @@ UKR_focus_mils = {
 		second_weltkrieg_has_begun = no
 	}
 	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = arms_factory  # Type of building
+		value = 100
+	}
 
-	ai_strategy = {
-		type = build_building
-		id = arms_factory  # Type of building
-		target = 202 #Kyiv
-		value = 100
-	}
-	ai_strategy = {
-		type = build_building
-		id = arms_factory  # Type of building
-		target = 226 #Sicheslav
-		value = 100
-	}
-	ai_strategy = {
-		type = build_building
-		id = arms_factory  # Type of building
-		target = 93 #Brest
-		value = 100
-	}
-	ai_strategy = {
-		type = build_building
-		id = arms_factory  # Type of building
-		target = 201 #Zhitomir
-		value = 100
-	}
-	ai_strategy = {
-		type = build_building
-		id = arms_factory  # Type of building
-		target = 792 #Volhynia
-		value = 100
-	}
-	ai_strategy = {
-		type = build_building
-		id = arms_factory  # Type of building
-		target = 199 #Proskuriv
-		value = 100
-	}
+#	ai_strategy = {
+#		type = build_building
+#		id = arms_factory  # Type of building
+#		target = 202 #Kyiv
+#		value = 100
+#	}
+#	ai_strategy = {
+#		type = build_building
+#		id = arms_factory  # Type of building
+#		target = 226 #Sicheslav
+#		value = 100
+#	}
+#	ai_strategy = {
+#		type = build_building
+#		id = arms_factory  # Type of building
+#		target = 93 #Brest
+#		value = 100
+#	}
+#	ai_strategy = {
+#		type = build_building
+#		id = arms_factory  # Type of building
+#		target = 201 #Zhitomir
+#		value = 100
+#	}
+#	ai_strategy = {
+#		type = build_building
+#		id = arms_factory  # Type of building
+#		target = 792 #Volhynia
+#		value = 100
+#	}
+#	ai_strategy = {
+#		type = build_building
+#		id = arms_factory  # Type of building
+#		target = 199 #Proskuriv
+#		value = 100
+#	}
 }
 
 UKR_fortify_kyiv = {

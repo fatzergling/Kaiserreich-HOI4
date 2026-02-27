@@ -106,7 +106,7 @@ country_event = { #FROM demands ROOT submit
 							china_alignment_right_kuomintang = yes
 						}
 					}
-					has_country_leader = { character = SZC_liu_wenhui }
+					has_country_leader = { character = SZC_xiong_kewu }
 					NOT = { country_exists = UPC }
 				}
 			}
@@ -299,8 +299,6 @@ country_event = { #FROM demands ROOT submit
 					}
 					#outright refuse if independent
 					has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_SZC }
-				}
-				OR = {
 					AND = { #Xiong Kewu/Li Jiayu will not join the KMT if UPC exists
 						OR = {
 							has_country_leader = { character = SZC_xiong_kewu }
@@ -445,7 +443,7 @@ country_event = { #FROM demands ROOT submit
 							china_alignment_right_kuomintang = yes
 						}
 					}
-					has_country_leader = { character = SZC_liu_wenhui }
+					has_country_leader = { character = SZC_xiong_kewu }
 					NOT = { country_exists = UPC }
 				}
 			}
@@ -621,8 +619,8 @@ country_event = { #FROM demands ROOT submit
 			}
 			modifier = {
 				factor = 0.01 #so there will be a chance to pick this if path set
-				FROM = { enemies_strength_ratio < 1 }
-				strength_ratio = { tag = FROM ratio < 0.5 }
+				FROM = { enemies_strength_ratio < 0.75 }
+				strength_ratio = { tag = FROM ratio < 0.25 }
 			}
 			modifier = {
 				factor = 0
@@ -643,7 +641,7 @@ country_event = { #FROM demands ROOT submit
 				LEP = { exists = no }
 			}
 			modifier = {
-				factor = 0
+				factor = 0.5
 				FROM = { china_is_the_unifier_of_china_trigger = yes }
 			}
 			modifier = {
@@ -1137,8 +1135,6 @@ country_event = { #FROM invites ROOT to alliance - THIS IS FROM THE POV OF THE P
 					}
 					#outright refuse if independent
 					has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_SZC }
-				}
-				OR = {
 					AND = { #Xiong Kewu/Li Jiayu will not join the KMT if UPC exists
 						OR = {
 							has_country_leader = { character = SZC_xiong_kewu }
@@ -3963,6 +3959,17 @@ country_event = { #China: FROM demands autonomy
 	option = {
 		log = "[GetLogInfo]: event china_events.102 option china_events.102.a"
 		name = china_events.102.a #Yes
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				china_is_aligned_with_kmt = yes
+			}
+			modifier = {
+				factor = 0
+				has_event_target = can_give_away_lands
+			}
+		}
 		effect_tooltip = {
 			FROM = {
 				every_subject_country = { ROOT = { puppet = PREV } }
@@ -3979,6 +3986,9 @@ country_event = { #China: FROM demands autonomy
 	option = {
 		log = "[GetLogInfo]: event china_events.102 option china_events.102.b"
 		name = china_events.102.b #Demand the return of Han lands in exchange
+		ai_chance = {
+			base = 100
+		}
 		trigger = {
 			has_event_target = can_give_away_lands
 		}
@@ -3989,6 +3999,13 @@ country_event = { #China: FROM demands autonomy
 		log = "[GetLogInfo]: event china_events.102 option china_events.102.c"
 		name = china_events.102.c #No
 		save_event_target_as = refused_autonomy
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0.5
+				china_is_aligned_with_manchu = yes
+			}
+		}
 		if = {
 			limit = { has_event_target = refused_lands }
 			FROM = { #MON/TIB/ETS: repeating event to exhaust option
@@ -4075,6 +4092,25 @@ country_event = { #MON/TIB/ETS: China wants Han lands
 	option = {
 		log = "[GetLogInfo]: event china_events.104 option china_events.104.a"
 		name = china_events.104.a #Yes
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 2
+				china_is_aligned_with_federalists = yes
+			}
+			modifier = {
+				factor = 2
+				china_is_aligned_with_manchu = yes
+			}
+			modifier = {
+				factor = 0.5
+				china_is_aligned_with_kmt = yes
+			}
+			modifier = {
+				factor = 0.5
+				china_is_aligned_with_left_kmt = yes
+			}
+		}
 		effect_tooltip = {
 			every_owned_state = {
 				limit = { is_core_china = yes }
@@ -4096,6 +4132,9 @@ country_event = { #MON/TIB/ETS: China wants Han lands
 	option = {
 		log = "[GetLogInfo]: event china_events.104 option china_events.104.b"
 		name = china_events.104.b #No
+		ai_chance = {
+			base = 100
+		}
 		save_event_target_as = refused_lands
 		FROM = { country_event = { id = china_events.106 days = 1 } } #China: FROM refuses to return lands
 	}
@@ -4149,6 +4188,20 @@ country_event = { #China: FROM refuses to return lands
 	option = {
 		log = "[GetLogInfo]: event china_events.106 option china_events.106.a"
 		name = china_events.106.a #Agree to autonomy
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				china_is_aligned_with_kmt = yes
+			}
+			modifier = {
+				factor = 4
+				OR = {
+					event_target:target_country = { china_russia_can_protect_country = yes }
+					event_target:target_country = { china_india_can_protect_country = yes }
+				}
+			}
+		}
 		effect_tooltip = {
 			FROM = { every_subject_country = { ROOT = { puppet = PREV } } }
 			set_autonomy = {
@@ -4163,6 +4216,13 @@ country_event = { #China: FROM refuses to return lands
 	option = {
 		log = "[GetLogInfo]: event china_events.106 option china_events.106.b"
 		name = china_events.106.b #Refuse
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 2
+				china_is_aligned_with_kmt = yes
+			}
+		}
 		if = {
 			limit = {
 				OR = {
@@ -4201,6 +4261,26 @@ country_event = { #China: FROM offers Han lands in exchange for independence
 	option = {
 		log = "[GetLogInfo]: event china_events.107 option china_events.107.a"
 		name = china_events.107.a #Agree
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				china_is_aligned_with_republicans = yes
+			}
+			modifier = {
+				factor = 0
+				china_is_aligned_with_beiyang = yes
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						event_target:target_country = { china_russia_can_protect_country = yes }
+						event_target:target_country = { china_india_can_protect_country = yes }
+					}
+				}
+			}
+		}
 		effect_tooltip = {
 			FROM = {
 				every_owned_state = {
@@ -4220,6 +4300,9 @@ country_event = { #China: FROM offers Han lands in exchange for independence
 	option = {
 		log = "[GetLogInfo]: event china_events.107 option china_events.107.b"
 		name = china_events.107.b #Refuse
+		ai_chance = {
+			base = 100
+		}
 		if = {
 			limit = {
 				OR = {
@@ -4582,6 +4665,13 @@ country_event = { #RUS/HND/RAJ/PRF: FROM asks for protection against China
 				OR = {
 					has_war_with_major = yes
 					AND = {
+						is_russian_tag = yes
+						FROM = {
+							tag = MON
+						}
+						has_global_flag = RUS_no_interfere_in_mongolia
+					}
+					AND = {
 						OR = {
 							is_russian_tag = yes
 							is_ally_with = RUS
@@ -4629,6 +4719,13 @@ country_event = { #RUS/HND/RAJ/PRF: FROM asks for protection against China
 				OR = {
 					has_war_with_major = yes
 					AND = {
+						is_russian_tag = yes
+						FROM = {
+							tag = MON
+						}
+						has_global_flag = RUS_no_interfere_in_mongolia
+					}
+					AND = {
 						OR = {
 							is_russian_tag = yes
 							is_ally_with = RUS
@@ -4660,6 +4757,13 @@ country_event = { #RUS/HND/RAJ/PRF: FROM asks for protection against China
 				add = 100
 				OR = {
 					has_war_with_major = yes
+					AND = {
+						is_russian_tag = yes
+						FROM = {
+							tag = MON
+						}
+						has_global_flag = RUS_no_interfere_in_mongolia
+					}
 					AND = {
 						OR = {
 							is_russian_tag = yes
@@ -5055,6 +5159,56 @@ country_event = { #Overlord/faction leader of MON/TIB/ETS: China demands annexat
 				is_faction_leader = yes
 			}
 		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = -40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = -10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = -3 }
+				add = intimidate_chance
+			}
+			modifier = {
+				factor = 0
+				country_is_in_dangerous_war = yes
+			}
+			modifier = {
+				factor = 0
+				is_faction_leader = no
+			}
+		}
+
 		FROM = { country_event = { id = china_events.120 days = 1 } } #MON/TIB/ETS: Faction leader protects us
 	}
 
@@ -5065,12 +5219,56 @@ country_event = { #Overlord/faction leader of MON/TIB/ETS: China demands annexat
 			is_in_faction = yes
 			is_faction_leader = no
 		}
+		ai_chance = {
+			base = 1000
+		}
 		faction_leader = { country_event = { id = china_events.124 days = 1 } } #Faction leader of MON/ETS/TIB overlord: FROM asks for support
 	}
 
 	option = {
 		log = "[GetLogInfo]: event china_events.119 option china_events.119.c"
 		name = china_events.119.c #Compromise: lands for independence
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = 10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = 3 }
+				add = intimidate_chance
+			}
+		}
 		trigger = {
 			has_event_target = can_give_away_lands
 		}
@@ -5080,6 +5278,51 @@ country_event = { #Overlord/faction leader of MON/TIB/ETS: China demands annexat
 	option = {
 		log = "[GetLogInfo]: event china_events.119 option china_events.119.d"
 		name = china_events.119.d #Abandon
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = 10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = 3 }
+				add = intimidate_chance
+			}
+			modifier = {
+				factor = 0
+				has_event_target = can_give_away_lands
+			}
+		}
 		FROM = {
 			effect_tooltip = { remove_puppet_and_leave_faction = yes }
 			country_event = china_events.135 #MON/TIB/ETS: Faction leader/overlord abandons country
@@ -5324,12 +5567,98 @@ country_event = { #Faction leader of MON/ETS/TIB overlord: FROM asks for support
 	option = {
 		log = "[GetLogInfo]: event china_events.124 option china_events.124.a"
 		name = china_events.124.a #Yes
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = -40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = -10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = -3 }
+				add = intimidate_chance
+			}
+			modifier = {
+				factor = 0
+				country_is_in_dangerous_war = yes
+			}
+		}
 		FROM = { country_event = { id = china_events.125 days = 1 } } #Overlord of MON/ETS/TIB: FROM supports us
 	}
 
 	option = {
 		log = "[GetLogInfo]: event china_events.124 option china_events.124.b"
 		name = china_events.124.b #No
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = 10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = 3 }
+				add = intimidate_chance
+			}
+		}
 		save_event_target_as = refused_to_protect_ally
 		FROM = { country_event = { id = china_events.126 days = 1 } } #Overlord of MON/ETS/TIB: FROM won't support us
 	}
@@ -5367,6 +5696,51 @@ country_event = { #Overlord of MON/ETS/TIB: FROM won't support us
 	option = {
 		log = "[GetLogInfo]: event china_events.126 option china_events.126.a"
 		name = china_events.126.a #Protect regardless
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = -40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = -10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = -3 }
+				add = intimidate_chance
+			}
+			modifier = {
+				factor = 0
+				country_is_in_dangerous_war = yes
+			}
+		}
 		faction_leader = { country_event = { id = china_events.127 days = 1 } } #Faction leader of MON/ETS/TIB overlord: FROM left faction over refusal to support them
 		leave_faction = yes
 		peace_out_non_neighbours_after_leaving_faction = yes
@@ -5379,12 +5753,98 @@ country_event = { #Overlord of MON/ETS/TIB: FROM won't support us
 		trigger = {
 			has_event_target = can_give_away_lands
 		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = 10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = 3 }
+				add = intimidate_chance
+			}
+		}
 		event_target:target_country = { country_event = { id = china_events.128 days = 1 } } #MON/ETS/TIB: Overlord/faction leader asks to compromise
 	}
 
 	option = {
 		log = "[GetLogInfo]: event china_events.126 option china_events.126.c"
 		name = china_events.126.c #Abandon
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = 10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = 3 }
+				add = intimidate_chance
+			}
+			modifier = {
+				factor = 0
+			has_event_target = can_give_away_lands
+			}
+		}
 		event_target:target_country = {
 			effect_tooltip = { remove_puppet_and_leave_faction = yes }
 			country_event = china_events.135 #MON/TIB/ETS: Faction leader/overlord abandons country
@@ -5520,6 +5980,21 @@ country_event = { #China: Allies of MON/TIB/ETS offer compromise
 	option = {
 		log = "[GetLogInfo]: event china_events.131 option china_events.131.a"
 		name = china_events.131.a #Agree
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				china_is_aligned_with_kmt = yes
+			}
+			modifier = {
+				factor = 0.5
+				china_is_aligned_with_federalists = yes
+			}
+			modifier = {
+				factor = 0.25
+				china_is_aligned_with_beiyang = yes
+			}
+		}
 		event_target:target_country = {
 			country_event = china_events.132 #MON/TIB/ETS and allies: China accepts compromise
 			effect_tooltip = {
@@ -5572,6 +6047,13 @@ country_event = { #China: Allies of MON/TIB/ETS offer compromise
 	option = {
 		log = "[GetLogInfo]: event china_events.131 option china_events.131.b"
 		name = china_events.131.b #Refuse
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 2
+				china_is_aligned_with_kmt = yes
+			}
+		}
 		save_event_target_as = refused_lands
 		event_target:target_country = { country_event = { id = china_events.133 days = 1 } } #MON/TIB/ETS: China refuses compromise
 		effect_tooltip = {
@@ -5729,12 +6211,60 @@ country_event = { #Faction leader/overlord of MON/TIB/ETS: China refuses comprom
 			is_faction_leader = no
 			NOT = { has_event_target = refused_to_protect_ally }
 		}
+		ai_chance = {
+			base = 1000
+		}
 		faction_leader = { country_event = { id = china_events.124 days = 1 } } #Faction leader of MON/ETS/TIB overlord: FROM asks for support
 	}
 
 	option = {
 		log = "[GetLogInfo]: event china_events.134 option china_events.134.b"
 		name = china_events.134.b #Protect regardless
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = -40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = -10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = -3 }
+				add = intimidate_chance
+			}
+			modifier = {
+				factor = 0
+				country_is_in_dangerous_war = yes
+			}
+		}
 		trigger = {
 			is_in_faction = yes
 			is_faction_leader = no
@@ -5755,12 +6285,98 @@ country_event = { #Faction leader/overlord of MON/TIB/ETS: China refuses comprom
 				is_faction_leader = yes
 			}
 		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				add = -40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = -5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = -10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = -3 }
+				add = intimidate_chance
+			}
+			modifier = {
+				factor = 0
+				country_is_in_dangerous_war = yes
+			}
+		}
 		event_target:target_country = { country_event = { id = china_events.120 days = 1 } } #China: Overlord/faction leader protects FROM
 	}
 
 	option = {
 		log = "[GetLogInfo]: event china_events.134 option china_events.134.d"
 		name = china_events.134.d #Abandon
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 40
+				CHN = { same_government_type_as_ROOT = yes }
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.8
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.7
+				}
+			}
+			modifier = {
+				add = 5
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.6
+				}
+			}
+			modifier = {
+				add = 10
+				strength_ratio = {
+					tag = CHN
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				set_temp_variable = { intimidate_chance = CHN.num_of_factories }
+				subtract_from_temp_variable = { intimidate_chance = FROM.num_of_factories }
+				divide_temp_variable = { intimidate_chance = 3 }
+				add = intimidate_chance
+			}
+		}
 		event_target:target_country = { country_event = { id = china_events.135 days = 1 } } #MON/TIB/ETS: Faction leader/overlord abandons country
 	}
 }

@@ -1864,6 +1864,7 @@ country_event = { #New Mongolian regime wants to re-establish relations
 			}
 		}
 		FROM = {
+				hidden_effect = { update_volunteer_ai = yes }
 			event_option_tooltip = mongolia_events.57.a
 			country_event = mongolia_events.57
 		}

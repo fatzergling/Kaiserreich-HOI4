@@ -3,6 +3,8 @@ NZH_set_leader_effect = {
 	#Northern Zhili
 	custom_effect_tooltip = NZH_set_leader_tt
 	save_global_event_target_as = NZH_leader
+	add_to_array = { china_possible_allies_array_northwest = XSM }
+	add_to_array = { china_possible_allies_array_northwest = SIK }
 }
 
 SZH_set_leader_effect = {
@@ -15,6 +17,7 @@ MCU_set_leader_effect = {
 	#Manchu
 	custom_effect_tooltip = MCU_set_leader_tt
 	save_global_event_target_as = MCU_leader
+	add_to_array = { china_possible_allies_array_northwest = KUM }
 }
 
 AGJ_set_leader_effect = {
@@ -187,6 +190,8 @@ RKT_set_leader_effect = {
 	#This is super annoying because set_power_balance doesnt accept variables for the set_value = <decimal>.
 	hidden_effect = {
 		if = {
+			limit = { NOT = { tag = HNN } } #PLACEHOLDER - REMOVE IF HNN RECEIVES A REWORK
+		if = {
 			limit = { check_variable = { global.RKT_revolutionary_zeal_var = 1.0 } }
 			set_variable = { global.RKT_revolutionary_zeal_var = 1.0 }
 			set_power_balance = {
@@ -293,6 +298,7 @@ RKT_set_leader_effect = {
 				set_value = -0.9
 				left_side = RKT_low_zeal_side
 				right_side = RKT_high_zeal_side
+				}
 			}
 		}
 	}
@@ -450,8 +456,30 @@ clear_potential_national_government = {
 
 china_add_poor_army = {
 	add_ideas = china_poor_army_3_officers
+	set_variable = { CHN_industry_weakness = -0.2 }
+	set_variable = { CHN_industry_weakness2 = CHN_industry_weakness }
+	multiply_variable = { CHN_industry_weakness2 = 1.5 }
+	set_variable = { CHN_industry_weakness3 = -0.04 }
+	set_variable = { CHN_industry_weakness4 = 0.2 }
+	add_dynamic_modifier = { modifier = CHN_poor_industry }
 	set_country_flag = china_has_poor_army #enables china_army_reform_ai AI strategy plan
+	set_variable = { CHI_improving_neglected_countryside_mission_time = 180 }
 }
+
+china_improve_poor_industry = {
+	custom_effect_tooltip = china_improve_industry
+	add_to_variable = { CHN_industry_weakness = 0.01 }
+	subtract_from_variable = { CHN_industry_weakness4 = 0.01 }
+	add_to_variable = { CHN_industry_weakness2 = 0.015 }
+	add_to_variable = { CHN_industry_weakness3 = 0.002 }
+	if = {
+		limit = {
+			check_variable = { CHN_industry_weakness > -0.01 }
+			}
+		remove_dynamic_modifier = {modifier = CHN_poor_industry }
+	}
+}
+
 
 transfer_all_unit_leaders_to_FROM = {
 	every_unit_leader = {
@@ -746,11 +774,36 @@ LEP_remove_collapse_dm = {
 	}
 	if = {
 		limit = { has_template = "League War Militia" }
+	if = {
+		limit = { 
+			is_ai = yes
+			 }
+		delete_unit_template_and_units = { division_template = "League War Militia" disband = yes }
+	}
+	else = {
 		delete_unit_template_and_units = { division_template = "League War Militia" }
+
+	}
 	}
 	if = {
 		limit = { has_template = "Chinese Nationalist Militia" }
+	if = {
+		limit = { 
+			is_ai = yes
+			 }
+		delete_unit_template_and_units = { division_template = "Chinese Nationalist Militia" disband = yes }
+	}
+	else = {
 		delete_unit_template_and_units = { division_template = "Chinese Nationalist Militia" }
+
+	}
+	}
+	if = {
+		limit = { 
+			is_ai = yes
+			has_template = "Hongse Niangzi Jun"
+			 }
+		delete_unit_template_and_units = { division_template = "Hongse Niangzi Jun" disband = yes }
 	}
 	delete_unit = { id = 1911 }
 }
@@ -1324,6 +1377,8 @@ CHN_add_to_civil_war_preparation_effect = {
 	if = {
 		limit = { is_chinese_or_potential_chinese_tag = yes }
 		if = {
+			limit = { is_subject = yes }
+		if = {
 			limit = { CHN_has_civil_war_prep_trigger = yes }
 			add_to_variable = {
 				var = CHN_civil_war_preparation_var
@@ -1342,6 +1397,7 @@ CHN_add_to_civil_war_preparation_effect = {
 			}
 		}
 		#The formula should be 1 via generic decision + 1 via overlord's event chain + 2 via satellite content. 5 and up should be due to unplanend stuff.
+		}
 	}
 }
 
@@ -1571,10 +1627,11 @@ china_puppet_ROOT_effect = {
 				ROOT = {
 					tag = GXC
 					china_is_aligned_with_right_kmt = yes
+					is_ai = yes
 				}
 				#Rig it so Chen Mingshu will win the Clash for Canton if you have the game rules up.
 				OR = {
-					has_game_rule = { rule = GXC_KMT_path option = GXC_KMT_PATH_RADSOC }
+					has_game_rule = { rule = GXC_KMT_path option = GXC_KMT_PATH_SYNDIE }
 					has_game_rule = { rule = GXC_KMT_path option = GXC_KMT_PATH_RADSOC }
 					has_game_rule = { rule = GXC_KMT_path option = GXC_KMT_PATH_SOCDEM }
 				}
@@ -2449,7 +2506,7 @@ china_enable_non_main_government_demand_submission_decisions = { #Main governmen
 			limit = {
 				can_declare_war_on = ANQ
 				OR = {
-					ANQ = { china_is_aligned_with_republicans = no }
+					ANQ = { china_is_aligned_with_southern_republicans = no }
 					ANQ = { china_alignment_chinese_southern_republican = yes }
 				}
 				OR = {
@@ -2463,7 +2520,7 @@ china_enable_non_main_government_demand_submission_decisions = { #Main governmen
 			limit = {
 				can_declare_war_on = GXC
 				OR = {
-					GXC = { china_is_aligned_with_republicans = no }
+					GXC = { china_is_aligned_with_southern_republicans = no }
 					GXC = { china_alignment_chinese_southern_republican = yes }
 				}
 				OR = {
@@ -2477,7 +2534,7 @@ china_enable_non_main_government_demand_submission_decisions = { #Main governmen
 			limit = {
 				can_declare_war_on = HNN
 				OR = {
-					HNN = { china_is_aligned_with_republicans = no }
+					HNN = { china_is_aligned_with_southern_republicans = no }
 					HNN = { china_alignment_chinese_southern_republican = yes }
 				}
 				OR = {
@@ -2491,7 +2548,7 @@ china_enable_non_main_government_demand_submission_decisions = { #Main governmen
 			limit = {
 				can_declare_war_on = LEP
 				OR = {
-					LEP = { china_is_aligned_with_republicans = no }
+					LEP = { china_is_aligned_with_southern_republicans = no }
 					LEP = { china_alignment_chinese_southern_republican = yes }
 				}
 				OR = {
@@ -2505,7 +2562,7 @@ china_enable_non_main_government_demand_submission_decisions = { #Main governmen
 			limit = {
 				can_declare_war_on = SHD
 				OR = {
-					SHD = { china_is_aligned_with_republicans = no }
+					SHD = { china_is_aligned_with_southern_republicans = no }
 					SHD = { china_alignment_chinese_southern_republican = yes }
 				}
 				OR = {
@@ -2519,7 +2576,7 @@ china_enable_non_main_government_demand_submission_decisions = { #Main governmen
 			limit = {
 				can_declare_war_on = SHX
 				OR = {
-					SHX = { china_is_aligned_with_republicans = no }
+					SHX = { china_is_aligned_with_southern_republicans = no }
 					SHX = { china_alignment_chinese_southern_republican = yes }
 				}
 				OR = {
@@ -2533,7 +2590,7 @@ china_enable_non_main_government_demand_submission_decisions = { #Main governmen
 			limit = {
 				can_declare_war_on = SZC
 				OR = {
-					SZC = { china_is_aligned_with_republicans = no }
+					SZC = { china_is_aligned_with_southern_republicans = no }
 					SZC = { china_alignment_chinese_southern_republican = yes }
 				}
 				OR = {
@@ -2547,7 +2604,7 @@ china_enable_non_main_government_demand_submission_decisions = { #Main governmen
 			limit = {
 				can_declare_war_on = YUN
 				OR = {
-					YUN = { china_is_aligned_with_republicans = no }
+					YUN = { china_is_aligned_with_southern_republicans = no }
 					YUN = { china_alignment_chinese_southern_republican = yes }
 				}
 				OR = {
@@ -2563,7 +2620,7 @@ china_enable_non_main_government_demand_submission_decisions = { #Main governmen
 			limit = {
 				is_chinese_tag = yes
 				OR = {
-					china_is_aligned_with_republicans = no
+					china_is_aligned_with_southern_republicans = no
 					china_alignment_chinese_southern_republican = yes
 				}
 				NOT = { original_tag = QIE } #Main Government
@@ -2787,6 +2844,23 @@ china_enable_outskirts_decisions = {
 	if = {
 		limit = { country_exists = XSM }
 		add_to_array = { ROOT.china_possible_targets_array = XSM }
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						XSM = { china_is_aligned_with_zhili = yes }
+						ROOT = { china_is_aligned_with_zhili = yes }
+					}
+					AND = {
+						XSM = { china_is_aligned_with_manchu = yes }
+						ROOT = { china_is_aligned_with_manchu = yes }
+					}
+				}
+			}
+			add_to_array = { ROOT.china_possible_targets_array = XSM }
+			add_to_array = { china_possible_allies_array_northwest = XSM }
+			effect_tooltip = { activate_targeted_decision = { target = XSM decision = china_offer_alliance } }
+		}
 		effect_tooltip = { activate_targeted_decision = { target = XSM decision = china_demand_submission } }
 	}
 	if = {
@@ -2800,7 +2874,26 @@ china_enable_outskirts_decisions = {
 	if = {
 		limit = { country_exists = SIK }
 		add_to_array = { ROOT.china_possible_targets_array = SIK }
-		effect_tooltip = { activate_targeted_decision = { target = SIK decision = china_demand_submission } }
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						SIK = { china_is_aligned_with_zhili = yes }
+						ROOT = { china_is_aligned_with_zhili = yes }
+					}
+					AND = {
+						SIK = { china_is_aligned_with_manchu = yes }
+						ROOT = { china_is_aligned_with_manchu = yes }
+					}
+				}
+			}
+			add_to_array = { ROOT.china_possible_targets_array = SIK }
+			add_to_array = { china_possible_allies_array_northwest = SIK }
+			effect_tooltip = { activate_targeted_decision = { target = SIK decision = china_offer_alliance } }
+		}
+		else = {
+					effect_tooltip = { activate_targeted_decision = { target = SIK decision = china_demand_submission } }
+		}
 	}
 	if = {
 		limit = { country_exists = KUM }
@@ -2819,7 +2912,7 @@ china_enable_outskirts_decisions = {
 			}
 			add_to_array = { ROOT.china_possible_targets_array = KUM }
 			add_to_array = { china_possible_allies_array_northwest = KUM }
-			effect_tooltip = { activate_targeted_decision = { target = KUM decision = china_demand_submission } }
+			effect_tooltip = { activate_targeted_decision = { target = KUM decision = china_offer_alliance } }
 		}
 		else_if = {
 			limit = { KUM = { has_country_flag = KUM_is_chinese_tag } }
@@ -3260,10 +3353,28 @@ CHN_setup_national_illiteracy_effect = {
 	if = {
 		limit = { NOT = { has_country_flag = CHN_national_illiteracy_idea_added_flag } }
 		set_country_flag = CHN_national_illiteracy_idea_added_flag
-		add_ideas = CHN_national_illiteracy1_idea
+		#add_ideas = CHN_national_illiteracy1_idea
+		set_variable = { CHN_research_weakness = -0.25 }
+						add_dynamic_modifier = {
+							modifier = CHN_national_illiteracy1_modifier
+						}
 	}
 }
 
+CHN_remove_illiteracy_effect = {
+			set_country_flag = literacy_remove
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = CHI_modify_neglected_countryside_tt
+			add_to_variable = {
+				CHN_research_weakness = 0.05
+				tooltip = research_speed_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = CHI_extend_compulsory_education_tt
+			
+
+}
 CHN_setup_lategame_debuffs_effect = {
 	CHN_setup_economic_devastation_normal_effect = yes
 	CHN_setup_military_disarray_normal_effect = yes
@@ -3542,7 +3653,7 @@ CHN_build_military_industry_effect = {
 		}
 		mio:CHN_artillery_industry_organisation = {
 			set_mio_flag = CHN_mio_unlocked
-			add_mio_size = 3
+			add_mio_size = 1
 		}
 		if = {
 			limit = { mio:CHN_transportation_industry_organisation = { is_mio_available = no } }
@@ -3557,7 +3668,7 @@ CHN_build_military_industry_effect = {
 	}
 	custom_effect_tooltip = tooltip_white_line
 	custom_effect_tooltip = CHI_arsenals_tt
-	every_owned_state = {
+	every_state = {
 		limit = {
 			OR = {
 				state = 592 #Guangzhou
@@ -3581,6 +3692,7 @@ CHN_add_civilian_industry_effect = {
 	if = {
 		limit = { 592 = { is_controlled_by_ROOT_or_subject = yes } } #Canton
 		592 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3591,6 +3703,7 @@ CHN_add_civilian_industry_effect = {
 	if = {
 		limit = { 613 = { is_controlled_by_ROOT_or_subject = yes } } #Nanjing
 		613 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3601,6 +3714,7 @@ CHN_add_civilian_industry_effect = {
 	if = {
 		limit = { 1048 = { is_controlled_by_ROOT_or_subject = yes } } #Wuhan
 		1048 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3611,6 +3725,7 @@ CHN_add_civilian_industry_effect = {
 	if = {
 		limit = { 608 = { is_controlled_by_ROOT_or_subject = yes } } #Beijing
 		608 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3621,6 +3736,7 @@ CHN_add_civilian_industry_effect = {
 	if = {
 		limit = { 602 = { is_controlled_by_ROOT_or_subject = yes } } #Changsha
 		602 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3631,6 +3747,7 @@ CHN_add_civilian_industry_effect = {
 	if = {
 		limit = { 650 = { is_controlled_by_ROOT_or_subject = yes } } #Chongqing
 		650 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3641,6 +3758,7 @@ CHN_add_civilian_industry_effect = {
 	if = {
 		limit = { 594 = { is_controlled_by_ROOT_or_subject = yes } } #Nanning
 		594 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3654,6 +3772,7 @@ CHN_add_civilian_industry_northerner_effect = {
 	if = {
 		limit = { 1062 = { is_controlled_by_ROOT_or_subject = yes } } #Baoding
 		1062 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3664,6 +3783,7 @@ CHN_add_civilian_industry_northerner_effect = {
 	if = {
 		limit = { 613 = { is_controlled_by_ROOT_or_subject = yes } } #Nanjing
 		613 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3674,6 +3794,7 @@ CHN_add_civilian_industry_northerner_effect = {
 	if = {
 		limit = { 1048 = { is_controlled_by_ROOT_or_subject = yes } } #Wuhan
 		1048 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3684,6 +3805,7 @@ CHN_add_civilian_industry_northerner_effect = {
 	if = {
 		limit = { 608 = { is_controlled_by_ROOT_or_subject = yes } } #Beijing
 		608 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3694,6 +3816,7 @@ CHN_add_civilian_industry_northerner_effect = {
 	if = {
 		limit = { 716 = { is_controlled_by_ROOT_or_subject = yes } } #Shenyang
 		716 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3704,6 +3827,7 @@ CHN_add_civilian_industry_northerner_effect = {
 	if = {
 		limit = { 597 = { is_controlled_by_ROOT_or_subject = yes } } #Jinan
 		597 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3714,6 +3838,7 @@ CHN_add_civilian_industry_northerner_effect = {
 	if = {
 		limit = { 1072 = { is_controlled_by_ROOT_or_subject = yes } } #Taiyuan
 		1072 = {
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -3766,6 +3891,8 @@ CHN_setup_major_arsenal_decision_effect = {
 			mio:CHN_artillery_industry_organisation = {
 				add_mio_funds = 250
 			}
+		china_improve_poor_industry = yes
+		china_improve_poor_industry = yes
 		}
 	}
 }
@@ -3780,6 +3907,7 @@ CHN_setup_minor_small_arms_arsenal_decision_effect = {
 			mio:CHN_small_arms_industry_organisation = {
 				add_mio_funds = 250
 			}
+		china_improve_poor_industry = yes
 		}
 	}
 }
@@ -3794,6 +3922,7 @@ CHN_setup_minor_support_equipment_arsenal_decision_effect = {
 			mio:CHN_support_equipment_industry_organisation = {
 				add_mio_funds = 250
 			}
+		china_improve_poor_industry = yes
 		}
 	}
 }
@@ -3808,6 +3937,7 @@ CHN_setup_minor_artillery_arsenal_decision_effect = {
 			mio:CHN_artillery_industry_organisation = {
 				add_mio_funds = 250
 			}
+		china_improve_poor_industry = yes
 		}
 	}
 }
@@ -3822,6 +3952,7 @@ CHN_setup_major_dockyards_decision_effect = {
 			mio:CHN_naval_industry_organisation = {
 				add_mio_funds = 250
 			}
+		china_improve_poor_industry = yes
 		}
 	}
 }

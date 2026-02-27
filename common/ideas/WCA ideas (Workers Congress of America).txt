@@ -159,6 +159,8 @@ ideas = {
 					has_war_with = USA
 					has_war_with = APG
 					has_war_with = ACC
+					has_war_with = CAN
+					has_war_with = NEE
 				}
 			}
 			modifier = {
@@ -168,6 +170,7 @@ ideas = {
 				political_power_factor = 0.1
 				industrial_capacity_factory = 0.05
 				army_defence_against_major_factor = 0.05
+				ai_focus_defense_factor = 0.3
 			}
 		}
 
@@ -440,8 +443,8 @@ ideas = {
 			}
 		}
 
-		WCA_general_defense_comitte_idea = {
-			on_add = { log = "[GetLogRoot]: add idea WCA_general_defense_comitte_idea" }
+		WCA_general_defense_committee_idea = {
+			on_add = { log = "[GetLogRoot]: add idea WCA_general_defense_committee_idea" }
 			picture = NOR_secret_police
 			allowed = { always = no }
 			modifier = {
@@ -492,6 +495,7 @@ ideas = {
 				stability_factor = -0.20
 				war_support_factor = -0.20
 				conscription_factor = -0.20
+				cannot_call_allies_or_join_wars = 1
 			}
 		}
 		WCA_social_revolution2 = { #Civil War Aftermath
@@ -503,6 +507,7 @@ ideas = {
 				stability_factor = -0.10
 				war_support_factor = -0.10
 				conscription_factor = -0.10
+				cannot_call_allies_or_join_wars = 1
 			}
 		}
 		WCA_social_revolution3 = { #Civil War Aftermath
@@ -514,6 +519,7 @@ ideas = {
 				stability_factor = -0.05
 				war_support_factor = -0.05
 				conscription_factor = -0.05
+				cannot_call_allies_or_join_wars = 1
 			}
 		}
 		WCA_social_revolution4 = { #Civil War Aftermath
@@ -720,9 +726,10 @@ ideas = {
 			picture = SIA_military_expenditure_cut
 			allowed = { always = no }
 			modifier = {
-				mobilization_speed = -0.50
+				mobilization_speed = 5
+				conscription = -0.01
 				stability_factor = 0.10
-				industry_repair_factor = 0.10
+				industry_repair_factor = 1
 				production_speed_buildings_factor = 0.05
 			}
 		}

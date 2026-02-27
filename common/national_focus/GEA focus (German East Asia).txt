@@ -124,7 +124,7 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
-			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = GER }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = GER }
 			add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = GER }
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -172,7 +172,7 @@ focus_tree = {
 				uses = 1
 				category = artillery
 			}
-			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = GER }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = GER }
 			add_equipment_to_stockpile = { type = artillery_equipment amount = 250 producer = GER }
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -220,7 +220,7 @@ focus_tree = {
 				uses = 1
 				category = armor
 			}
-			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = GER }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = GER }
 			add_equipment_to_stockpile = { type = support_equipment amount = 500 producer = GER }
 			add_equipment_to_stockpile = { type = light_tank_chassis amount = 200 producer = GER }
 		}

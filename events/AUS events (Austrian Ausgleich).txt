@@ -2294,7 +2294,7 @@ country_event = { #integrating the subjects
 		name = ausgleich_events.701.a
 		add_political_power = 20
 		FROM = {
-			every_core_state = {
+			every_controlled_state = {
 				limit = {
 					OR = {
 						is_owned_by = ROOT
@@ -2305,6 +2305,10 @@ country_event = { #integrating the subjects
 					NOT = { is_core_of = BUL }
 				}
 				add_core_of = ROOT
+				if = {
+					limit = { is_claimed_by = FROM }
+					add_core_of = FROM
+				}
 			}
 			hidden_effect = {
 				if = {

@@ -2966,6 +2966,8 @@ country_event = { #Triumph of the Young Guard
 		CHI_RCA_medium_effect = yes
 		CHI_CRS_medium_effect = yes
 		CHI_lin_biao = { CHN_recruit_character_effect = yes }
+				set_temp_variable = { coalition_partner_var = token:totalist }
+				add_to_coalition = yes
 	}
 	option = { #Too woke for us
 		log = "[GetLogInfo]: event CHI.midgame.203 option CHI.midgame.203.b"
@@ -3274,6 +3276,8 @@ country_event = { #Fired from Eyes in the Dark Focus
 			upgrade_intelligence_agency = upgrade_invisible_ink
 		}
 		else = { add_political_power = 50 }
+				set_temp_variable = { coalition_partner_var = token:totalist }
+				add_to_coalition = yes
 	}
 	option = { #Combine both - form the Ministry of State Security (MSS)
 		log = "[GetLogInfo]: event CHI.midgame.208 option CHI.midgame.208.c"
@@ -5797,10 +5801,20 @@ country_event = { #Liberation of Beijing
 		add_war_support = -0.25
 		add_ideas = CHI_devastated_national_econ_idea
 		add_ideas = CHI_demobilised_NRA_idea
+		CHN_setup_national_illiteracy_effect = yes
 		hidden_effect = { country_event = { id = CHI.lategame.040 days = 180 random_days = 10 } } #Xu Qian Passes Away
 		set_country_flag = CHI_phase_three_begins_flag
 		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = focus_tree_will_change_tt
+					set_temp_variable = { coalition_partner_var = token:social_democrat }
+					remove_from_coalition = yes
+					set_temp_variable = { coalition_partner_var = token:totalist }
+					remove_from_coalition = yes
+					set_temp_variable = { coalition_partner_var = token:syndicalist }
+					remove_from_coalition = yes
+					set_temp_variable = { coalition_partner_var = token:social_liberal }
+					remove_from_coalition = yes
+
 		hidden_effect = {
 			CHI_remove_league_reconstruction_effect = yes
 			if = {

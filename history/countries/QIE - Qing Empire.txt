@@ -22,6 +22,7 @@ set_technology = {
 	### Artillery ###
 	gw_artillery = 1
 	interwar_antiair = 1
+	pre_dreadnoughts = 1
 
 	### Trains ###
 	basic_train = 1

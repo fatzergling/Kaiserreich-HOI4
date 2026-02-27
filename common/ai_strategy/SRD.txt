@@ -53,17 +53,16 @@ SRD_invade_sri = {
 		original_tag = SRD
 	}
 	enable = {
-		focus_progress = {
-			focus = SRD_return_to_the_mainland
-			progress > 0
-		}
+		has_war_with = SRI
 	}
 	abort = {
 		OR = {
 			NOT = { has_war_with = SRI }
 			SRI = {
+				AND = {
 				NOT = { has_war_with = ITA }
 				NOT = { has_war_with = SIC }
+				}
 			}
 		}
 	}
@@ -71,14 +70,53 @@ SRD_invade_sri = {
 	ai_strategy = {
 		type = invade
 		id = SRI
-		value = 200
+		value = 2000
 	}
 	ai_strategy = {
 		type = invasion_unit_request
 		tag = SRI
-		value = 100
+		value = 1000
 	}
 }
+
+SRD_help_sic = {
+	allowed = {
+		original_tag = SRD
+	}
+	enable = {
+		has_war_with = SRI
+		SIC = { has_war_with = SRI }
+	}
+	abort = {
+		OR = {
+			NOT = { has_war_with = SRI }
+			SIC = { has_capitulated = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = SIC
+		value = 200
+	}
+		ai_strategy = {
+		type = force_defend_ally_borders
+		id = PAP
+		value = 200
+	}
+		ai_strategy = {
+		type = front_unit_request
+		tag = SRI
+		value = 2000
+	}
+
+	ai_strategy = {
+		type = garrison
+		value = -2000
+	}
+
+}
+
 
 ENT_support_sardinia = {
 	allowed = {

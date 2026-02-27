@@ -11,7 +11,7 @@ naval_screen = {
 		role_icon_index = 2
 
 		priority = {
-			base = 0
+			base = 25
 		}
 
 		target_variant = {

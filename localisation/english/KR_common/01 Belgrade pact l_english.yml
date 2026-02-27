@@ -10,6 +10,8 @@
  BP_war_exhaustion: "Balkan War Exhaustion"
  belgrade_part_arms_embargo: "International Arms Embargo"
  belgrade_part_arms_embargo_desc: "Under the decision of the Austrian Empire and its allies across Europe, we have now been struck by an international arms embargo. Our borders are sealed from any imports of arms and ammunition and we will have to deal with our meagre domestic production. Hence, we need to finish Bulgaria quickly."
+ BUL_reparation_payments: "War reparations to Belgrade Pact"
+ BUL_reparation_payments_desc: "Because Bulgaria has lost the Fourth Balkan War, it needs to pay war reparations to the Belgrade Pact."
 
 ### Decisions ###
  Belgrade_Pact_Balkan_War: "The Belgrade Pact"

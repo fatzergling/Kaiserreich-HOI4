@@ -1,0 +1,18 @@
+INC_protect_indochina = {
+	allowed = {
+		original_tag = INC
+	}
+	enable = {
+		has_war_with = GEA
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.2
+		states = { 286 } #Pinsk, Mozyr, Novogrudok, Braslav
+		area = asia
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
+	}
+}

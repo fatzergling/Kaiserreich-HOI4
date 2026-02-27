@@ -41,10 +41,10 @@ ACW_foreign_volunteer_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 			modifier = {
 				factor = 0
-				has_equipment = { infantry_equipment < 4000 }
+				has_equipment = { infantry_equipment < 2000 }
 			}
 			modifier = {
 				factor = 0
@@ -108,14 +108,14 @@ ACW_foreign_volunteer_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 			modifier = {
 				factor = 0
-				num_of_military_factories < 5
+				num_of_military_factories < 9
 			}
 			modifier = {
 				factor = 0
-				has_equipment = { infantry_equipment < 4000 }
+				has_equipment = { infantry_equipment < 2000 }
 			}
 			modifier = {
 				factor = 0
@@ -126,6 +126,18 @@ ACW_foreign_volunteer_decisions = {
 				is_in_north_america = no
 				is_in_south_america = no
 				is_actual_major = no
+			}
+		
+			modifier = {
+				factor = 0
+				tag = RUS
+				NOT = {
+					SER = { owns_state = 767 }
+				}
+			}
+			modifier = {
+				factor = 0
+				is_chinese_tag = yes
 			}
 			modifier = {
 				factor = 0.01
@@ -235,8 +247,8 @@ ACW_civil_war_decisions = {
 			}
 			subtract_from_temp_variable = { enemy_advantage = ROOT.num_of_military_factories }
 			subtract_from_temp_variable = { enemy_advantage = ROOT.num_controlled_states }
-			subtract_from_temp_variable = { enemy_advantage = FROM.num_of_military_factories }
-			subtract_from_temp_variable = { enemy_advantage = FROM.num_controlled_states }
+			#subtract_from_temp_variable = { enemy_advantage = FROM.num_of_military_factories }
+			#subtract_from_temp_variable = { enemy_advantage = FROM.num_controlled_states }
 			check_variable = { enemy_advantage > 0 }
 		}
 
@@ -289,7 +301,7 @@ ACW_civil_war_decisions = {
 		visible = {
 			has_global_flag = USA_civil_war_begun_flag
 			has_global_flag = { flag = USA_civil_war_begun_flag days > 90 }
-			NOT = { country_exists = ACC }
+			#NOT = { country_exists = ACC }
 			is_in_faction = no
 			country_exists = WCA
 			country_exists = USA
@@ -314,8 +326,8 @@ ACW_civil_war_decisions = {
 					add_to_temp_variable = { USA_advantage = USA.num_controlled_states }
 					subtract_from_temp_variable = { USA_advantage = ROOT.num_of_military_factories }
 					subtract_from_temp_variable = { USA_advantage = ROOT.num_controlled_states }
-					subtract_from_temp_variable = { USA_advantage = FROM.num_of_military_factories }
-					subtract_from_temp_variable = { USA_advantage = FROM.num_controlled_states }
+					#subtract_from_temp_variable = { USA_advantage = FROM.num_of_military_factories }
+					#subtract_from_temp_variable = { USA_advantage = FROM.num_controlled_states }
 					check_variable = { USA_advantage > 0 }
 				}
 				AND = {
@@ -335,7 +347,7 @@ ACW_civil_war_decisions = {
 			}
 		}
 
-		targets = { USA WCA }
+		targets = { WCA USA }
 		target_trigger = {
 			FROM = {
 				exists = yes
@@ -968,7 +980,7 @@ ACW_civil_war_decisions = {
 							}
 						}
 					}
-					multiply_temp_variable = { units_to_spawn = 2 }
+					multiply_temp_variable = { units_to_spawn = 1.2 }
 				}
 				round_temp_variable = units_to_spawn
 
@@ -1009,6 +1021,36 @@ ACW_civil_war_decisions = {
 		}
 		fixed_random_seed = no
 	}
+
+
+	emergency_factory_conversion_offensive = {
+
+		icon = generic_industry
+
+		available = {
+			num_of_civilian_factories > 3 #Change this if amount of factories change
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 180
+
+		cost = 25
+
+		complete_effect = {
+			replace_civ_with_arms_factories = yes
+			add_war_support = -0.05
+			#add_stability = -0.03
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
 
 	ACC_Operation_Liberty_mission = {
 		icon = generic_ignite_civil_war
@@ -1055,7 +1097,7 @@ ACW_rocky_mountain_ceasefire_decisions = {
 		available = {
 			controls_all_owned_states = yes
 			OR = {
-				has_global_flag = { flag = ACC_rockies_ceasefire days > 180 }
+				has_global_flag = { flag = ACC_rockies_ceasefire days > 240 }
 				FROM = { surrender_progress > 0.2 }
 				is_in_faction = yes
 				FROM = { is_in_faction = yes }

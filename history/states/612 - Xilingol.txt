@@ -8,7 +8,7 @@ state = {
 	history = {
 		owner = MON
 		add_core_of = MON
-		add_core_of = XSM
+		add_claim_by = XSM
 		add_to_array = { state_victory_points = 7648 } #Xilinhot
 		victory_points = { 7648 5 } #POP 2 + STRAT 1 + POL 0 = SIG 3
 

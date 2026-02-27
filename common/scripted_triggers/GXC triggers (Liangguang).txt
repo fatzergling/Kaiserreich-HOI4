@@ -276,7 +276,7 @@ GXC_ai_factor_prioritize_military_focuses_trigger = {
 
 GXC_ai_factor_prioritize_economic_focuses_trigger = {
 	has_war = no
-	date < 1939.01.01 #Try to teach AI to prioritize econ when at peace before 1939 to maximize economic builduip.
+	date < 1939.10.01 #Try to teach AI to prioritize econ when at peace before 1939 to maximize economic builduip.
 }
 
 GXC_ai_factor_prioritize_helping_LKMT_coup_trigger = {

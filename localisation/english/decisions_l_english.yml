@@ -22,6 +22,8 @@
  CLICK_TO_TOGGLE_ALL_CATEGORY_DECISION_TRACKING: "§GClick§! to toggle notification status for all decisions under this category."
  seize_some_trains_woo: "Commandeer Civilian Trains"
  seize_some_trains_woo_desc: "The merchant rail companies hold sway over our infrastructure. With war looming, we are well within our rights to commandeer equipment for state use."
+ seize_some_trucks_woo: "Commandeer Civilian Trucks"
+ seize_some_trucks_woo_desc: "The merchant car companies hold sway over our infrastructure. With war looming, we are well within our rights to commandeer equipment for state use."
  war_propaganda_casualties: "Exhort Heroism"
  war_propaganda_casualties_desc: "Although the death toll rises, our people must be taught that only in battle are heroes forged."
  war_propaganda_convoys: "Encourage Frugality"

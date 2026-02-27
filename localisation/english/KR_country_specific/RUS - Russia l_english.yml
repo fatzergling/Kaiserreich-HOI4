@@ -4804,6 +4804,7 @@ l_english:
 
  ###### Resistance & Integration
  RUS_USNS_resistance_target_tt: "Ukrainian Union of People's Resistance: $VALUE|=-%0$"
+ JAP_KOR_resistance: "Korean Resistance: $VALUE|=-%0$"
 
  ### Ukraine Events
  russia_events.1100.t: "Ukraine in Flames"

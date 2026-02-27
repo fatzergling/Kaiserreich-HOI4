@@ -772,7 +772,7 @@ focus_tree = {
 		x = 24
 		y = 0
 
-		ai_will_do = { factor = 4 }
+		ai_will_do = { factor = 400 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed PAR_defensores_del_chaco"
 			country_event = paraguay_events.24
@@ -794,7 +794,7 @@ focus_tree = {
 			focus = PAR_defensores_del_chaco
 		}
 		ai_will_do = {
-			factor = 3
+			factor = 300
 			modifier = {
 				factor = 0
 				NOT = {
@@ -811,6 +811,21 @@ focus_tree = {
 				bonus = 0.75
 				uses = 2
 				category = infantry_weapons
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2000
+				producer = PAR
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 200
+				producer = PAR
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 200
+				producer = PAR
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -829,7 +844,7 @@ focus_tree = {
 			focus = PAR_defensores_del_chaco
 		}
 		ai_will_do = {
-			factor = 3
+			factor = 300
 			modifier = {
 				factor = 0
 				NOT = {

@@ -30,7 +30,9 @@ mountaineer_generic = {
 
 		target_template = {
 			regiments = {
-				mountaineers = 12
+				mountaineers = 9
+				artillery_brigade = 2
+				anti_tank_brigade = 1
 			}
 
 			support = {
@@ -39,7 +41,13 @@ mountaineer_generic = {
 				field_hospital = 1
 				anti_air = 1
 				logistics_company = 1
+				anti_tank = 1
+				recon = 1
+				helicopter_brigade = 1
+				super_heavy_artillery = 1
 			}
+
+
 		}
 	}
 }

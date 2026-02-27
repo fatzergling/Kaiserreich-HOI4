@@ -3589,6 +3589,7 @@ country_event = { #Siam Offers Unconditional Surrender
 						num_subjects > 0
 						any_subject_country = { has_country_flag = SIA_refuses_peace }
 					}
+					tag = JAP
 				}
 			}
 		}

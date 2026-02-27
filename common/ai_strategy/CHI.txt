@@ -30,3 +30,121 @@ CHI_WCA_joint_attack_on_japan = {
 		value = 500 #strategy >= 500 forces declaration
 	}
 }
+
+CHI_strike_east = {
+	allowed = {
+		original_tag = CHI
+	}
+	enable = {
+		OR = {
+			country_exists = LEP
+			country_exists = ANQ
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = LEP
+		value = 400
+	}
+		ai_strategy = {
+		type = conquer
+		id = ANQ
+		value = 400
+	}
+
+}
+
+CHI_attack_nanjing = {
+	allowed = {
+		original_tag = CHI
+	}
+	enable = {
+		has_war_with = LEP
+		#activate every  5 days, then pause for another 5
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 45 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = LEP
+		priority = 200
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = conquer
+		id = LEP
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -2000
+	}
+}
+
+CHI_attack_nanjing_anqing = {
+	allowed = {
+		original_tag = CHI
+	}
+	enable = {
+		NOT = { 
+			has_war_with = LEP
+		}
+		has_war_with = ANQ
+		#activate every 45 days, then pause for another 5
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 45 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = ANQ
+		priority = 200
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = conquer
+		id = LEP
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -2000
+	}
+}
+
+CHI_kill_shandong = {
+	allowed = {
+		original_tag = CHI
+	}
+	enable = {
+		NOT = { 
+			OR = {
+				country_exists = ANQ
+				country_exists = LEP
+			}
+		}
+		has_war_with = SHD
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = SHD
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+}
+

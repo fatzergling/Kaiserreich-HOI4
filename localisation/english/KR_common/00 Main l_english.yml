@@ -83,7 +83,7 @@
 
  REQUEST_EXP_FORCE_BLOCKED_CROWNLAND_OTHER_TT: "§RAustrian crownlands do not allow you to request their forces until either the Drastic Measures in Dire Times or Cisleithania Together focuses have been taken.§!"
 
- REQUEST_EXP_FORCE_BLOCKED_CHINA_TT: "§RChinese warlords that are Associated Governorates do not allow you to request their forces until they have been integrated at least one level.§!"
+ REQUEST_EXP_FORCE_BLOCKED_CHINA_TT: "§RChinese warlords that are Associated Governorates or Autonomous Governorates do not allow you to request their forces until they have been integrated at least one level.§!"
 
  REQUEST_EXP_FORCE_BLOCKED_SHANXI_TT: "§RShanxi does not allow you to request their forces until the Yan Xishan-Feng Yuxiang power struggle has concluded.§!"
 
@@ -434,7 +434,10 @@
  AL_uneasy_ceasefire: "Uneasy §YFranco-German§! Ceasefire"
  AL_rally_for_war: "§Y[THIS.GetNonIdeologyNameDefCap]§! Rallies for War"
  country_joins_alliance_threat: "§Y[THIS.GetNonIdeologyNameDefCap]§! Joins the §Y[PREV.GetFactionName]§!"
-
+ GER_victors_threat: "German Victory in the Second Weltkrieg"
+ RUS_victors_threat: "Russian Victory in the Second Weltkrieg"
+ american_civil_war_end_threat: "End of the Second American Civil War"
+ china_unified_threat: "Chinese Reunification"
  second_weltkrieg_threat: "Second Weltkrieg"
  second_weltkrieg_has_started: "The Second Weltkrieg has begun"
  second_weltkrieg_has_started_NOT: "The Second Weltkrieg has §Rnot§! begun"

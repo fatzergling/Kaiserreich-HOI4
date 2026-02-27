@@ -393,3 +393,116 @@ select_correct_peace_event_receiver = {
 		set_temp_variable = { target = THIS }
 	}
 }
+
+int_ent_white_peace = {
+			every_country = {
+				limit = {
+					is_ally_with = ENT
+					has_war_with = INT
+					OR = {
+						AND = {
+							has_capitulated = yes
+							any_owned_state = {
+								OR = {
+									controller = { is_ally_with = INT }
+									any_neighbor_state = { controller = { is_ally_with = INT } }
+								}
+								impassable = no
+							}
+						}
+						AND = {
+							has_civil_war = yes
+							any_enemy_country = {
+								civilwar_target = PREV
+								is_ally_with = INT
+							}
+						}
+						AND = {
+							any_home_area_neighbor_country = {
+								is_ally_with = INT
+								has_war_with = PREV
+								same_continent_as_PREV = yes
+								has_capitulated = no
+							}
+						}
+						AND = {
+							any_home_area_neighbor_country = {
+								is_ally_with = INT
+								has_war_with = PREV
+								has_capitulated = no
+							}
+							meta_trigger = {
+								text = {
+									[ORIGINAL_CAPITAL] = { controller = { is_ally_with = INT } }
+								}
+								ORIGINAL_CAPITAL = "[THIS.OriginalCapital.GetId]"
+							}
+						}
+					}
+				}
+				leave_faction = yes
+				peace_out_non_neighbours_after_leaving_faction = yes
+			}
+			every_country = {
+				limit = {
+					is_ally_with = INT
+					has_war_with = ENT
+					OR = {
+						AND = {
+							has_capitulated = yes
+							any_owned_state = {
+								OR = {
+									controller = { is_ally_with = ENT }
+									any_neighbor_state = { controller = { is_ally_with = ENT } }
+								}
+								impassable = no
+							}
+						}
+						AND = {
+							has_civil_war = yes
+							any_enemy_country = {
+								civilwar_target = PREV
+								is_ally_with = ENT
+							}
+						}
+						AND = {
+							any_home_area_neighbor_country = {
+								is_ally_with = ENT
+								has_war_with = PREV
+								same_continent_as_PREV = yes
+								has_capitulated = no
+							}
+						}
+						AND = {
+							any_home_area_neighbor_country = {
+								is_ally_with = INT
+								has_war_with = PREV
+								has_capitulated = no
+							}
+							meta_trigger = {
+								text = {
+									[ORIGINAL_CAPITAL] = { controller = { is_ally_with = ENT } }
+								}
+								ORIGINAL_CAPITAL = "[THIS.OriginalCapital.GetId]"
+							}
+						}
+					}
+				}
+				leave_faction = yes
+				peace_out_non_neighbours_after_leaving_faction = yes
+			}
+			INT = {
+				ENT = { white_peace_with_PREV = yes }
+				for_each_scope_loop = {
+					array = faction_members
+					for_each_scope_loop = {
+						array = ENT.faction_members
+						diplomatic_relation = {
+							country = PREV
+							relation = non_aggression_pact
+						}
+						set_truce = { target = PREV days = 365 }
+					}
+				}
+			}
+}

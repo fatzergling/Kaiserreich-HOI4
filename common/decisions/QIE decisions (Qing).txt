@@ -1968,13 +1968,13 @@ QIE_commission_sicilian_ships = {
 		allowed = { always = no } #activated by QIE_utilising_european_dockyard or QIE_manchu_naval_academy (Manchu)
 
 		available = {
-			117 = { owner = { has_war = no } } #Campania
+			#117 = { owner = { has_war = no } } #Campania
 			naval_base > 0
 		}
 
 		cancel_trigger = {
 			OR = {
-				117 = { owner = { has_war = yes } } #Campania
+				#117 = { owner = { has_war = yes } } #Campania
 				naval_base < 1
 			}
 		}
@@ -2015,13 +2015,13 @@ QIE_commission_sicilian_ships = {
 		allowed = { always = no } #activated by QIE_utilising_european_dockyard or QIE_manchu_naval_academy (Manchu)
 
 		available = {
-			117 = { owner = { has_war = no } } #Campania
+			#117 = { owner = { has_war = no } } #Campania
 			naval_base > 0
 		}
 
 		cancel_trigger = {
 			OR = {
-				117 = { owner = { has_war = yes } } #Campania
+				#117 = { owner = { has_war = yes } } #Campania
 				naval_base < 1
 			}
 		}
@@ -2062,13 +2062,13 @@ QIE_commission_sicilian_ships = {
 		allowed = { always = no } #activated by QIE_utilising_european_dockyard or QIE_manchu_naval_academy (Manchu)
 
 		available = {
-			117 = { owner = { has_war = no } } #Campania
+			#117 = { owner = { has_war = no } } #Campania
 			naval_base > 0
 		}
 
 		cancel_trigger = {
 			OR = {
-				117 = { owner = { has_war = yes } } #Campania
+				#117 = { owner = { has_war = yes } } #Campania
 				naval_base < 1
 			}
 		}
@@ -2107,13 +2107,13 @@ QIE_commission_sicilian_ships = {
 		icon = generic_naval
 		allowed = { always = no }
 		available = { # Activated by focus QIE_utilising_european_dockyard or QIE_manchu_naval_academy (Manchu)
-			117 = { owner = { has_war = no } } #Campania
+			#117 = { owner = { has_war = no } } #Campania
 			naval_base > 0
 		}
 
 		cancel_trigger = {
 			OR = {
-				117 = { owner = { has_war = yes } } #Campania
+				#117 = { owner = { has_war = yes } } #Campania
 				naval_base < 1
 			}
 		}
@@ -3522,6 +3522,7 @@ QIE_zhili_manchu_war_decisions_category = {
 					country_event = { id = qing_foreign_policy_events.49 days = 10 }
 				}
 			}
+			CHN_setup_military_disarray_normal_effect = yes
 		}
 		fixed_random_seed = no
 	}

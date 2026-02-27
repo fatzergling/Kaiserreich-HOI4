@@ -93,6 +93,90 @@ ask_foreign_manpower_as_major = {
 	}
 }
 
+ask_foreign_manpower_as_puppet = {
+	enable = {
+		is_subject = yes
+		garrison_manpower_need > 1000
+	}
+
+	abort = {
+		garrison_manpower_need < 1000
+	}
+
+	ai_strategy = {
+		type = asking_foreign_garrison
+		value = 1000
+		# id = ITA # id is optionnal. If it is filled, the value will just apply for this country. If not, the value will apply for all countries.
+	}
+}
+
+use_intel_agency_as_subject = {
+	allowed = {
+		is_subject = yes
+		has_dlc_lar = yes
+	}
+	enable = {
+		garrison_manpower_need > 10000
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+
+	ai_strategy = {
+		type = agency_ai_base_num_factories_factor
+		value = -50
+	}
+	ai_strategy = {
+		type = agency_ai_per_upgrade_factories_factor
+		value = -25
+	}
+
+	ai_strategy = {
+		type = operative_mission
+		mission = root_out_resistance
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = intelligence_agency_branch_desire_factor
+		id = branch_defense
+		value = 2000 # this + add_intelligence_agency_normal_upgrade_prio = 3000
+	}
+}
+
+
+military_occupation_focus_on_suppression = {
+	allowed = {
+		is_subject = yes
+	}
+	enable = {
+		garrison_manpower_need > 50000
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = research_tech id = tech_military_police value = 100 }
+
+	ai_strategy = { type = research_weight_factor id = tech_military_police2 value = 250 }
+	ai_strategy = { type = research_weight_factor id = tech_military_police3 value = 250 }
+	ai_strategy = { type = research_weight_factor id = tech_military_police4 value = 250 }
+
+	ai_strategy = { type = land_xp_spend_priority id = division_template value = 250 }
+
+	ai_strategy = { type = template_prio id = cavalry value = 250 }
+	ai_strategy = { type = template_prio id = military_police value = 250 }
+
+	ai_strategy = { type = build_army id = armor_role	value = -1000 }
+	ai_strategy = { type = build_army id = infantry		value = -1000 }
+	ai_strategy = { type = build_army id = marine		value = -1000 }
+	ai_strategy = { type = build_army id = mountaineer	value = -1000 }
+	ai_strategy = { type = build_army id = suppression	value = -1000 }
+}
+
+
+
 put_garrisons_on_high_prio = {
 	enable = { always = yes }
 	abort_when_not_enabled = yes
@@ -147,15 +231,15 @@ default_build_a_nl_facility = {
 	enable = {
 		has_tech = atomic_research
 		NOT = { has_facility_specialization = specialization_nuclear }
-		num_of_civilian_factories > 25
-		num_of_military_factories > 25
+		num_of_civilian_factories > 100
+		num_of_military_factories > 100
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = build_building
 		id = nuclear_facility
-		value = 100
+		value = 7000
 	}
 }
 
@@ -169,7 +253,7 @@ default_build_a_nav_facility = {
 	ai_strategy = {
 		type = build_building
 		id = naval_facility
-		value = 100
+		value = 1000
 	}
 }
 
@@ -190,7 +274,7 @@ default_build_a_lw_facility = {
 	ai_strategy = {
 		type = build_building
 		id = land_facility
-		value = 1
+		value = 1000
 	}
 }
 
@@ -221,7 +305,7 @@ default_build_an_air_facility = {
 	ai_strategy = {
 		type = build_building
 		id = air_facility
-		value = 1
+		value = 1000
 	}
 }
 
@@ -503,3 +587,22 @@ default_build_nuclear_missiles = {
 		value = 1
 	}
 }
+
+
+support_american_faction = {
+	enable = {
+		num_of_military_factories > 9
+		has_global_flag = USA_civil_war_begun_flag
+		NOT = { has_global_flag = USA_civil_war_over_flag }
+			NOT = { country_exists = event_target:ACW_supported_tag }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = save_equipment
+		id = infantry_equipment
+		value = 2001
+	}
+}
+

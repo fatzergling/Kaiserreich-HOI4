@@ -3947,6 +3947,12 @@ country_event = {
 			QIE_aisin_gioro_xianyuan = { set_nationality = ROOT }
 			QIE_ma_dengying_flees_effect = yes
 			QIE_sun_liren_flees_effect = yes
+				if = {
+					limit = {
+						has_character = HNN_zhao_hengti
+					}
+				HNN_zhao_flees_effect = yes			
+			}
 			every_army_leader = {
 				limit = { has_trait = hidden_sympathies }
 				remove_trait = { trait = hidden_sympathies }
@@ -4123,11 +4129,13 @@ country_event = {
 			}
 			SHD = { save_event_target_as = target }
 			QIE = {
-				country_event = { id = qing_coup_events.31 days = 10 }
 				china_integrate_TARGET_effect = yes
 				change_tag_from = ROOT
 			}
 		}
+			QIE = {
+				country_event = { id = qing_coup_events.31 days = 10 }
+			}
 	}
 }
 
@@ -4453,6 +4461,7 @@ country_event = {
 		}
 		name = qing_coup_events.32.b #great! we won!
 		add_political_power = -50
+		set_country_flag = YCP_won_rigged_elections
 		hidden_effect = {
 			country_event = { id = qing_coup_events.33 days = 7 }
 		}
@@ -4900,8 +4909,10 @@ country_event = { #Democratic Qing first elections with YCP aligned or no one al
 			activate_advisor = QIE_li_huang_sic
 		}
 		if = {
-			limit = { NOT = { has_completed_focus = QIE_pick_YCP } }
-			unlock_national_focus = QIE_pick_YCP
+			limit = { 	
+				has_completed_focus = QIE_noble_factories
+			}
+			complete_national_focus = QIE_centralize_state
 		}
 	}
 }
@@ -4989,8 +5000,11 @@ country_event = { #you didn't ally with ycp before hand- 1944 elections
 			activate_advisor = QIE_li_huang_sic
 		}
 		if = {
-			limit = { NOT = { has_completed_focus = QIE_pick_YCP } }
-			unlock_national_focus = QIE_pick_YCP
+			limit = { 	
+				has_completed_focus = QIE_noble_factories
+			}
+			complete_national_focus = QIE_centralize_state
+
 		}
 	}
 }

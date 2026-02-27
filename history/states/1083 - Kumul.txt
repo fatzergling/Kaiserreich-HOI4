@@ -11,7 +11,7 @@ state = {
 	history = {
 		owner = KUM
 		add_core_of = KUM
-		add_core_of = ETS
+		add_claim_by = ETS
 		add_to_array = { state_victory_points = 4704 } #Kumul/Hami
 		victory_points = { 4704 5 } #POP 1 + STRAT 1 + POL 1 = SIG 3
 

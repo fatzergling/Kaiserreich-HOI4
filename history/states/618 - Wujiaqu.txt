@@ -14,7 +14,7 @@ state = {
 	history = {
 		owner = SIK
 		add_core_of = SIK
-		add_core_of = ETS
+		add_claim_by = ETS
 		add_to_array = { state_victory_points = 10674 } #Wujiaqu
 		buildings = {
 			infrastructure = 1

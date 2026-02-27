@@ -45,4 +45,9 @@ spriteTypes = {
 		name = "GFX_military_industrial_organization_sam_missile_equipment"
 		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_tank_general_spg.dds"
 	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_support_ship"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_ship_screen_ship.dds"
+	}
+
 }

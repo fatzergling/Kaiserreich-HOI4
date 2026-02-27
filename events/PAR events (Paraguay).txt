@@ -1114,7 +1114,7 @@ country_event = { #paraguay's response to the occupation of the Chaco
 				target = PAR
 				type = annex_everything
 			}
-			PAR_generic_buff_enemy = yes
+			#PAR_generic_buff_enemy = yes
 		}
 	}
 

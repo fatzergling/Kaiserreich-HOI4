@@ -216,8 +216,11 @@ calculate_maximum_divisions = {
 		limit = { has_civil_war = yes }
 		every_enemy_country = {
 			limit = { civilwar_target = PREV }
-			add_to_variable = { PREV.base_states = num_owned_states }
+			#add_to_variable = { PREV.base_states = num_owned_states }
 			every_owned_state = {
+				if = {
+					limit = { is_controlled_by = PREV.PREV }
+					add_to_variable = { PREV.PREV.base_states = num_owned_states }
 				if = {
 					limit = { is_core_of = PREV.PREV }
 					add_to_variable = { PREV.PREV.base_units = state_population_k }
@@ -231,6 +234,7 @@ calculate_maximum_divisions = {
 					add_to_variable = { PREV.PREV.non_core_base = state_manpower }
 
 					calculate_available_factories_based_on_compliance = yes
+				}
 				}
 			}
 		}

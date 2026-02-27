@@ -10,13 +10,13 @@ USA_political_crisis_decisions = {
 		allowed = { always = no } #manually activated
 
 		available = {
-			OR = {
-				has_completed_focus = USA_gmbill_fails
+			#OR = {
+				#has_completed_focus = USA_gmbill_fails
 				AND = {
 					has_completed_focus = USA_demand_payment
 					has_completed_focus = USA_new_shipyards
 				}
-			}
+			#}
 		}
 
 		days_mission_timeout = 320
@@ -1008,6 +1008,7 @@ USA_reconstruction_decisions = {# Reconstruction Stuff
 			modifier = {
 				factor = 0
 				can_declare_war_on = NEE
+				has_democratic_government = no
 				OR = {
 					USA_still_recovering_from_civil_war = yes
 					country_is_in_dangerous_war = yes

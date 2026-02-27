@@ -18,10 +18,10 @@ state = {
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
-			arms_factory = 3 #Jinling Arsenal
+			arms_factory = 2 #Jinling Arsenal
 			air_base = 6
 			11913 = {
-				landmark_nanjing_presidential_palace = 1
+				landmark_nanjing_presidential_palace_gen = 1
 			}
 			10076 = {
 				naval_base = 2

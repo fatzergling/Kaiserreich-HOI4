@@ -1,69 +1,288 @@
 generic_naval_invasion_support = {
-	objective_type = naval_invasion_support
+    objective_type = naval_invasion_support
 
-	min_priority = 10
-	max_priority = 20
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+
+    min_priority = 4
+    max_priority = 14
 }
 
 generic_mine_sweeping = {
-	objective_type = mines_sweeping
+    objective_type = mines_sweeping
 
-	min_priority = 3
-	max_priority = 8
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+
+    min_priority = 2
+    max_priority = 8
 }
 
 generic_invasion_defense = {
-	objective_type = naval_invasion_defense
+    objective_type = naval_invasion_defense
 
-	min_priority = 10
-	max_priority = 18
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+
+    min_priority = 15
+    max_priority = 25
 }
 
 generic_coast_defense = {
-	objective_type = coast_defense
+    objective_type = coast_defense
 
-	min_priority = 1
-	max_priority = 12
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+
+    min_priority = 1
+    max_priority = 16
 }
 
 generic_convoy_protection = {
-	objective_type = convoy_protection
+    objective_type = convoy_protection
 
-	min_priority = 1
-	max_priority = 5
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+    min_priority = 1
+    max_priority = 5
 }
 
 generic_convoy_raiding = {
-	objective_type = convoy_raiding
+    objective_type = convoy_raiding
 
-	min_priority = 3
-	max_priority = 7
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+    min_priority = 3
+    max_priority = 7
 }
 
 generic_naval_dominance = {
-	objective_type = naval_dominance
+    objective_type = naval_dominance
 
-	min_priority = 1
-	max_priority = 13
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+
+    min_priority = 1
+    max_priority = 13
 }
 
 generic_mine_laying = {
-	objective_type = mines_planting
+    objective_type = mines_planting
 
-	min_priority = 2
-	max_priority = 8
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+
+    min_priority = 2
+    max_priority = 8
 }
 
 generic_training = {
-	objective_type = training
+    objective_type = training
 
-	min_priority = 10
-	max_priority = 20
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+
+    min_priority = 10
+    max_priority = 20
 }
 
 generic_naval_blockade = {
-	objective_type = naval_blockade
+    objective_type = naval_blockade
 
-	min_priority = 10
-	max_priority = 20
+	allowed = {
+		NOT = {
+			OR = {
+			original_tag = JAP
+			original_tag = ENG
+			original_tag = RUS
+			original_tag = USA 
+			original_tag = ACC
+			original_tag = PSA
+			original_tag = WCA
+			original_tag = CSA
+			original_tag = APG
+			original_tag = TEX
+			original_tag = WCC
+			original_tag = GER
+			original_tag = FRA
+		}	
+		}	
+	}
+
+
+    min_priority = 10
+    max_priority = 20
+}
+
+generic_strike_force = {
+    objective_type = strike_force_objective
+
+    #blocked_for = {
+        # no one yet
+    #}
+    
+    min_priority = 20
+    max_priority = 30
 }

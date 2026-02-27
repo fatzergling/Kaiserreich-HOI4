@@ -93,6 +93,7 @@ add_ideas = {
 	ARG_interservice_rivalry_navy_dominant
 	ARG_Military_Cliques
 	ARG_Military_Apparatus
+	ARG_Foreign_owned_factories_1
 }
 
 unlock_national_focus = ARG_Woes_of_the_Christmas_Coup

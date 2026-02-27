@@ -61,6 +61,22 @@ SRI_eyes_on_italy = {
 	}
 }
 
+SRI_build_up_troops = {
+	allowed = {
+		original_tag = SRI
+	}
+	enable = {
+		NOT = { has_completed_focus = SRI_risorgimento }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_build_armies
+		value = 100
+	}
+}
+
+
 SRI_focus_airforce_on_northern_italy = {
 	allowed = {
 		original_tag = SRI
@@ -131,8 +147,81 @@ SRI_if_in_two_front_war_focus_on_north_first = {
 		priority = 100
 		ordertype = front
 		execution_type = careful
+		execute_order = no
 	}
 }
+
+SRI_endsieg = { #If losing, focus everything on defence and don't do stupid attacks
+	allowed = {
+		original_tag = SRI
+	}
+	enable = {
+		OR = {
+			var:159.owner = { #Lombardy
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+			var:160.owner = { #Venetia
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+		}
+		OR = {
+			SIC = {
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+			SRD = {
+				has_war_with = ROOT
+				has_capitulated = no
+			}
+		}
+		NOT = { is_in_faction_with = INT }
+		surrender_progress > 0.25
+		stockpile_ratio = { archetype = infantry_equipment ratio < 0.1 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = ITA
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = SIC
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+	ai_strategy = {
+		type = front_control
+		tag = PAP
+		priority = 150
+		ordertype = front
+		execute_order = no
+	}
+
+
+	ai_strategy = {
+		type = invasion_unit_request
+		area = globally
+		value = -500
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = FRA
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SWI
+		value = 100
+	}
+}
+
 
 SRI_dont_naval_invade_yet = {
 	allowed = {
@@ -141,10 +230,10 @@ SRI_dont_naval_invade_yet = {
 	enable = {
 		AND = {
 			OR = {
-				has_war_with = var:159.owner
-				has_war_with = var:160.owner
+			country_exists = ITA
+			country_exists = VEN
 			}
-			has_war_with = SIC
+			country_exists = SIC
 		}
 	}
 	abort_when_not_enabled = yes
@@ -187,5 +276,35 @@ SRI_eyes_on_austria = {
 		type = conquer
 		id = SRI
 		value = 50
+	}
+}
+
+ENG_ALLIES_we_hate_fighting_in_the_balkans = {
+
+	enable = {
+		date < 1943.7.1
+		is_in_faction_with = ENG
+		NOT = { tag = SRI }
+		NOT = { tag = SER }
+		NOT = { tag = GRE }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = SER
+		value = 30
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		area = greater_balkans
+		value = -100
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = greater_balkans
+		value = -100
 	}
 }

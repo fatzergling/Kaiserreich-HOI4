@@ -222,6 +222,17 @@ uses_generic_general_purpose_mio = {
 	}
 }
 
+RUS_export_mio_trigger = {
+	if = {
+		limit = { RUS = { has_socialist_government = yes } }
+		FROM = { has_socialist_government = yes }
+	}
+	else = {
+		FROM = { has_socialist_government = no }
+	}
+	NOT = { FROM = { has_war_with = RUS } }
+}
+
 FRA_export_mio_trigger = {
 	FROM = { has_socialist_government = yes }
 	NOT = { FROM = { has_war_with = FRA } }

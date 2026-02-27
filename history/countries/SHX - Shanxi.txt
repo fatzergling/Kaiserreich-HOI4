@@ -1,7 +1,7 @@
 capital = 1072
 oob = "SHX"
 set_research_slots = 2
-set_war_support = 0
+set_war_support = -0.3
 starting_train_buffer = 1
 
 set_technology = {

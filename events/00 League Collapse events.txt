@@ -707,7 +707,7 @@ country_event = { #Second attempt at Chen
 	option = {	#try again, goes to chen
 		log = "[GetLogInfo]: event league_collapse_events.22 option league_collapse_events.22.a"
 		name = league_collapse_events.22.a
-		ai_chance = { base = 0 }
+		ai_chance = { base = 20 }
 		ANQ = {
 			country_event = { id = league_collapse_events.23 days = 1 }
 		}
@@ -716,7 +716,7 @@ country_event = { #Second attempt at Chen
 	option = {	#sit it out
 		log = "[GetLogInfo]: event league_collapse_events.22 option league_collapse_events.22.b"
 		name = league_collapse_events.22.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 80 }
 		add_war_support = -0.05
 		add_political_power = -50
 	}
@@ -1733,6 +1733,9 @@ country_event = { #Fengtian has pledged support, attack now
 				FNG = {
 					country_event = { id = fengtian_events.211 days = 5 }
 				}
+					#SHD = { give_military_access = ANQ }
+					#ANQ = { give_military_access = SHD }
+
 			}
 			FNG = { country_event = { id = anqing_events.59 hours = 2 } }
 			JAP = { country_event = { id = league_collapse_events.69 hours = 2 } }

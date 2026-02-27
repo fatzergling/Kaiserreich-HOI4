@@ -1292,10 +1292,61 @@ JAP_socialist_government = {
 		promote_character = JAP_katayama_tetsu
 		promote_character = JAP_ishibashi_tanzan
 	}
+if = {
+		limit = { has_socialist_government = yes}
+		if = {
+					limit = { ROOT = { has_government = totalist } }
+			set_popularities = {
+				totalist = 28
+				radical_socialist = 18
+				syndicalist = 17
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+		}
+		else_if = {
+					limit = { ROOT = { has_government = radical_socialist } }
+				set_popularities = {
+				totalist = 18
+				radical_socialist = 23
+				syndicalist = 22
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+ 
+		}
+		else = {
+				set_popularities = {
+				totalist = 18
+				radical_socialist = 22
+				syndicalist = 23
+				social_democrat = 10
+				social_liberal = 5
+				market_liberal = 3
+				social_conservative = 5
+				authoritarian_democrat = 7
+				paternal_autocrat = 2
+				national_populist = 5
+			}
+		
+		}
+		
+	}
 }
 
 ## Kuomintang Puppet Content Set Up
 JAP_KMT_puppet_government = {
+	set_cosmetic_tag = JAP_republic
 	activate_advisor = JAP_reorganised_national_diet_sic
 	complete_national_focus = JAP_white_dawn_eclipses_red_sun
 	custom_effect_tooltip = tooltip_white_line

@@ -10,7 +10,7 @@ second_weltkrieg_can_start = {
 		limit = { second_weltkrieg_has_begun = no }
 		OR = {
 			threat > 0.75
-			date > 1940.8.1
+			date > 1940.9.1
 		}
 	}
 }

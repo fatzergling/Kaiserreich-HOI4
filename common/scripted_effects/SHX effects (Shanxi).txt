@@ -390,14 +390,14 @@ SHX_feng_army_purged = {
 					array = global.china_tags_array
 					exists = yes
 					china_is_potential_government = yes
-					china_is_aligned_with_republicans = yes
+					china_is_aligned_with_southern_republicans = yes
 					is_ai = no
 				}
 			}
 			random_other_country = {
 				limit = {
 					china_is_potential_government = yes
-					china_is_aligned_with_republicans = yes
+					china_is_aligned_with_southern_republicans = yes
 					is_ai = no
 				}
 				SHX = {
@@ -1334,6 +1334,30 @@ SHX_start_suiyuan_crisis = {
 		QIE = {
 			add_ideas = SHX_suiyuan_QIE_neutrality_idea #Keep QIE from participating in Northwest affairs for the duration of the spirit
 			activate_targeted_decision = { target = QIE decision = SHX_QIE_end_northwestern_neutrality_decision }
+			set_country_flag = { flag = SHX_suiyuan_QIE_neutrality_flag days = 365 value = 1 } # Value needs to be there or the effect won't work
+		}
+	}
+	if = {
+		limit = { has_country_flag = SHX_QIE_declared_neutrality_in_suiyuan_campaign_flag }
+		CHI = {
+			add_ideas = SHX_suiyuan_QIE_neutrality_idea #Keep QIE from participating in Northwest affairs for the duration of the spirit
+			activate_targeted_decision = { target = CHI decision = SHX_QIE_end_northwestern_neutrality_decision }
+			set_country_flag = { flag = SHX_suiyuan_QIE_neutrality_flag days = 365 value = 1 } # Value needs to be there or the effect won't work
+		}
+	}
+	if = {
+		limit = { has_country_flag = SHX_QIE_declared_neutrality_in_suiyuan_campaign_flag }
+		GXC = {
+			add_ideas = SHX_suiyuan_QIE_neutrality_idea #Keep QIE from participating in Northwest affairs for the duration of the spirit
+			activate_targeted_decision = { target = GXC decision = SHX_QIE_end_northwestern_neutrality_decision }
+			set_country_flag = { flag = SHX_suiyuan_QIE_neutrality_flag days = 365 value = 1 } # Value needs to be there or the effect won't work
+		}
+	}
+	if = {
+		limit = { has_country_flag = SHX_QIE_declared_neutrality_in_suiyuan_campaign_flag }
+		YUN = {
+			add_ideas = SHX_suiyuan_QIE_neutrality_idea #Keep QIE from participating in Northwest affairs for the duration of the spirit
+			activate_targeted_decision = { target = YUN decision = SHX_QIE_end_northwestern_neutrality_decision }
 			set_country_flag = { flag = SHX_suiyuan_QIE_neutrality_flag days = 365 value = 1 } # Value needs to be there or the effect won't work
 		}
 	}

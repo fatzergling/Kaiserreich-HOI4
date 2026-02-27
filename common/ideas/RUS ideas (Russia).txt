@@ -1089,11 +1089,13 @@ ideas = {
 			modifier = {
 				economy_cost_factor = 1
 				trade_laws_cost_factor = 2
-				mobilization_laws_cost_factor = 1
+				mobilization_laws_cost_factor = 10
+				unit_limit_factor = -0.75
 			}
 			targeted_modifier = {
 				tag = GER
 				mic_to_target_factor = 0.25
+				cic_to_target_factor = 0.25
 				trade_cost_for_target_factor = -0.5
 			}
 			rule = {
@@ -1115,10 +1117,12 @@ ideas = {
 				economy_cost_factor = 20
 				trade_laws_cost_factor = 20
 				mobilization_laws_cost_factor = 20
+				unit_limit_factor = -0.75
 			}
 			targeted_modifier = {
 				tag = GER
 				mic_to_target_factor = 0.4
+				cic_to_target_factor = 0.4
 				trade_cost_for_target_factor = -0.55
 			}
 			rule = {
@@ -2487,6 +2491,8 @@ ideas = {
 				stability_factor = -0.1
 				war_support_factor = -0.1
 				conscription_factor = -0.1
+				national_populist_drift = 0.01
+				paternal_autocrat_drift = 0.01
 			}
 		}
 		RUS_anti_socialist_resistance_3 = {
@@ -2497,6 +2503,10 @@ ideas = {
 				stability_factor = -0.15
 				war_support_factor = -0.15
 				conscription_factor = -0.15
+				national_populist_drift = 0.01
+				paternal_autocrat_drift = 0.01
+				authoritarian_democrat_drift = 0.01
+				social_conservative_drift = 0.01
 			}
 		}
 		RUS_anti_socialist_resistance_4 = {
@@ -2507,6 +2517,11 @@ ideas = {
 				stability_factor = -0.2
 				war_support_factor = -0.2
 				conscription_factor = -0.2
+				national_populist_drift = 0.02
+				paternal_autocrat_drift = 0.02
+				authoritarian_democrat_drift = 0.01
+				social_conservative_drift = 0.01
+
 			}
 		}
 		RUS_anti_socialist_resistance_5 = {
@@ -2517,6 +2532,10 @@ ideas = {
 				stability_factor = -0.25
 				war_support_factor = -0.25
 				conscription_factor = -0.25
+				national_populist_drift = 0.02
+				paternal_autocrat_drift = 0.02
+				authoritarian_democrat_drift = 0.02
+				social_conservative_drift = 0.02
 			}
 		}
 		RUS_anti_socialist_resistance_6 = {
@@ -2527,6 +2546,10 @@ ideas = {
 				stability_factor = -0.3
 				war_support_factor = -0.3
 				conscription_factor = -0.3
+				national_populist_drift = 0.03
+				paternal_autocrat_drift = 0.03
+				authoritarian_democrat_drift = 0.02
+				social_conservative_drift = 0.02
 			}
 		}
 		RUS_white_sabotage_1 = {

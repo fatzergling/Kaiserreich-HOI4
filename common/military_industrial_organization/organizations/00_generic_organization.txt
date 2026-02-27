@@ -1555,6 +1555,7 @@ generic_tank_refurbishment_plant_organization = {
 		support_equipment
 		train_equipment
 		railway_gun_equipment
+		super_heavy_railway_gun_equipment
 	}
 
 	research_categories = {
@@ -1840,6 +1841,7 @@ generic_task_force_ship_organization = {
 		mio_cat_eq_all_carrier
 		mio_cat_eq_all_cruiser
 		mio_cat_eq_all_destroyer
+		support_ship
 	}
 	research_categories = {
 		mio_cat_tech_all_carrier_and_modules
@@ -1964,7 +1966,7 @@ generic_task_force_ship_organization = {
 
 		equipment_bonus = {
 			anti_air_attack = 0.05
-			naval_light_gun_hit_chance_factor = 0.025
+			naval_light_gun_hit_chance_factor = 0.05
 		}
 	}
 
@@ -2255,7 +2257,7 @@ generic_battle_line_ship_organization = {
 
 		equipment_bonus = {
 			anti_air_attack = 0.05
-			naval_light_gun_hit_chance_factor = 0.025
+			naval_light_gun_hit_chance_factor = 0.05
 		}
 	}
 
@@ -2356,6 +2358,7 @@ generic_escort_ship_organization = {
 
 	equipment_type = {
 		screen_ship
+		support_ship
 	}
 	research_categories = {
 		mio_cat_tech_all_screen_ship_and_modules
@@ -3158,6 +3161,7 @@ generic_small_fleet_organization = {
 		capital_ship
 		screen_ship
 		ship_hull_submarine
+		support_ship
 	}
 
 	research_categories = {
@@ -4672,6 +4676,8 @@ generic_heavy_aircraft_organization = {
 		mio_cat_eq_only_strategic_bomber
 		large_plane_maritime_patrol_plane_airframe
 		transport_plane_equipment
+		mothership_equipment
+		strat_bomber_intercontinental_equipment
 	}
 
 	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
@@ -6456,6 +6462,7 @@ generic_artillery_organization = {
 		anti_tank_equipment
 		anti_air_equipment
 		rocket_artillery_equipment
+		super_heavy_artillery_equipment
 	}
 
 	research_categories = {
@@ -6735,6 +6742,7 @@ generic_artillery_organization = {
 			generic_mio_trait_super_charges
 			generic_mio_trait_gun_mass_production
 			generic_mio_trait_sliding_breech_block
+
 		}
 
 		production_bonus = {
@@ -7024,6 +7032,7 @@ generic_infantry_equipment_organization = {
 			defense = 0.04
 			hard_attack = 0.03
 			build_cost_ic = 0.05
+
 		}
 	}
 }

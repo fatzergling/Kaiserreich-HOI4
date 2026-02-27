@@ -188,20 +188,14 @@ china_is_aligned_with_federalists = {
 china_is_aligned_with_left_kmt = {
 	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_left_kmt
-		OR = {
-			china_alignment_chinese_southern_republican = yes
 			china_alignment_left_kuomintang = yes
-		}
 	}
 }
 
 china_is_aligned_with_right_kmt = {
 	custom_override_tooltip = {
 		tooltip = china_is_aligned_with_right_kmt
-		OR = {
-			china_alignment_chinese_southern_republican = yes
 			china_alignment_right_kuomintang = yes
-		}
 	}
 }
 
@@ -214,6 +208,18 @@ china_is_aligned_with_kmt = {
 		}
 	}
 }
+
+china_is_aligned_with_kmt_plus_republicans = {
+	custom_override_tooltip = {
+		tooltip = china_is_aligned_with_kmt
+		OR = {
+			china_is_aligned_with_left_kmt = yes
+			china_is_aligned_with_right_kmt = yes
+			china_alignment_chinese_southern_republican = yes
+		}
+	}
+}
+
 
 china_is_aligned_with_republicans = {
 	custom_override_tooltip = {
@@ -265,8 +271,8 @@ china_compatible_alignment_to_PREV = {
 			PREV = { china_is_aligned_with_federalists = yes }
 		}
 		AND = {
-			china_is_aligned_with_kmt = yes
-			PREV = { china_is_aligned_with_kmt = yes }
+			china_is_aligned_with_kmt_plus_republicans = yes
+			PREV = { china_is_aligned_with_kmt_plus_republicans = yes }
 		}
 	}
 }
@@ -601,6 +607,8 @@ china_is_valid_tag_to_ask_protection = {
 	has_civil_war = no
 	has_capitulated = no
 	at_war_with_or_justifying_wargoal_against_PREV = no
+	is_neighbor_of = PREV
+	has_war_with_major = no
 }
 
 china_russia_can_protect_country = {
@@ -822,6 +830,13 @@ china_proper_not_united = { #Some logic for Chinese tags, they should try to uni
 	}
 }
 
+china_is_northwest_tag = {
+	OR = {
+		original_tag = XSM
+		original_tag = SIK
+		original_tag = KUM
+	}
+}
 china_mid_unification_trigger = {
 	count_triggers = {
 		amount = 2

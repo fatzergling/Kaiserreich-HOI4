@@ -919,6 +919,15 @@ country_event = { #Leaving Mitteleuropa
 			}
 			GER = { country_event = germany_mitteleuropa_events.21 }
 		}
+		if = {
+			limit = {
+				NOT = { has_idea = IRE_economic_upheaval }
+			}
+			add_timed_idea = {
+				idea = MIT_economic_upheaval
+				days = 180
+			}
+		}
 	}
 }
 

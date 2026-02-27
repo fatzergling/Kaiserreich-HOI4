@@ -912,6 +912,16 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetLogRoot]: Focus Completed KUM_consolidating_xinjiang"
 		add_stability = 0.05
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = SIK
+						is_core_of = ETS
+					}
+					has_resistance = yes
+				}
+				add_compliance = 20
+			}
 	}
 	search_filters = { FOCUS_FILTER_STABILITY }
 }

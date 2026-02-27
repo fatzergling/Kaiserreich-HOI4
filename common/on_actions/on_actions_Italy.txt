@@ -190,6 +190,15 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					FROM = { tag = SRI }
+				}
+				SRD = {
+						dismantle_faction = yes
+				}
+			}
+
+			if = {
+				limit = {
 					tag = SRI
 					FROM = { tag = ITA }
 				}
@@ -345,6 +354,9 @@ on_actions = {
 						tag = SRI
 						FROM = { tag = SRI }
 					}
+					NOT = {
+						is_italian_tag = yes
+					}
 				}
 				SRI = { country_event = socialist_italy_events.1271 }
 			}
@@ -466,6 +478,14 @@ on_actions = {
 					FROM = { original_tag = ITA }
 				}
 				transfer_navy = { target = FROM }
+			}
+			if = {
+				limit = {
+					original_tag = SIC
+				}
+				SRD = {
+						dismantle_faction = yes
+				}
 			}
 		}
 	}

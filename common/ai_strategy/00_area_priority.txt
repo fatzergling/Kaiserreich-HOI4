@@ -439,3 +439,309 @@ default_area_priority_oceania = {
 	ai_strategy = { type = area_priority id = north_america		value = 50 }
 	ai_strategy = { type = area_priority id = asia				value = 50 }
 }
+
+#Credit To Sheep Mod
+
+
+going_slow = {
+	
+	enable = {
+		has_equipment = { infantry_equipment < 500 }
+		has_civil_war = no
+		enemies_strength_ratio > 0.30
+		NOT = {
+			tag = RUS
+			has_war_with = TRK
+		}
+		NOT = {
+			tag = MON
+			has_war_with = XSM
+		}
+		NOT = {
+			tag = XSM
+			has_war_with = MON
+		}
+		NOT = {
+			tag = TIB
+			has_war_with = XSM
+		}
+	}
+	abort = {
+	
+		OR = {
+		has_equipment = { infantry_equipment > 500 }
+		has_civil_war = yes
+		}
+	}
+	
+	ai_strategy = {
+		type = front_control
+
+		country_trigger = {
+			has_war_with = FROM
+		}
+
+		ratio > 0.0
+
+		priority = 10
+		ordertype = front
+		execution_type = careful
+	}
+	
+}
+
+
+
+
+
+
+
+
+always_prioritize_our_core = {
+	enable = {
+		surrender_progress > 0.25
+	}
+	abort = {
+		OR = {
+			surrender_progress < 0.15
+			has_country_flag = LSM_eligibility_nation
+			has_capitulated = yes
+		}
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders #bypass value 1 on force defend
+		value = 50
+	}
+}
+
+always_prioritize_our_core_2 = {
+	enable = {
+		surrender_progress > 0.50
+	}
+	abort = {
+		OR = {
+			surrender_progress < 0.40
+			has_country_flag = LSM_eligibility_nation
+			has_capitulated = yes
+		}
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders #bypass value 100 on force defend
+		value = 200
+	}
+}
+always_prioritize_our_core_3 = {
+	enable = {
+		surrender_progress > 0.75
+	}
+	abort = {
+		OR = {
+			surrender_progress < 0.60
+			has_country_flag = LSM_eligibility_nation
+			has_capitulated = yes
+		}
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders #bypass value 1000 on force defend
+		value = 2000
+	}
+}
+always_prioritize_our_core_4 = {
+	enable = {
+		surrender_progress > 0.90
+	}
+	abort = {
+		OR = {
+			surrender_progress < 0.75
+			has_country_flag = LSM_eligibility_nation
+			has_capitulated = yes
+		}
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders #bypass value 9999 on force defend
+		value = 9999
+	}
+}
+
+
+
+#Credit to Frontline AI
+
+will_you_concentrate_troops = {
+	enable = {
+		has_army_size = { size < 10 type = armor }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_concentration_factor
+		value = 5  # base + 5 = 20 %
+	}
+
+}
+
+
+
+will_you_concentrate_troops_TooManyTanks = {
+	enable = {
+		has_army_size = { size > 24 type = armor }
+		
+			NOT = {
+		has_army_size = { size > 52 type = armor }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_concentration_factor
+		value = -5  # base - 5 = 10 %
+	}
+
+}
+
+
+
+
+
+
+
+
+there_is_no_place_for_coward_in_a_civil_war = {
+	enable = {
+		has_civil_war = yes
+		has_equipment = { infantry_equipment > 0 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		country_trigger = {
+			has_war_with = ROOT
+			original_tag = ROOT
+		}
+
+		ratio = 0.3
+
+		priority = 1000
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+}
+
+
+
+forced_check_omega_lul = {
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = {
+			is_controlled_by = FROM
+			NOT = {
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+					}
+					building = supply_node
+					level > 0
+				}
+			}
+		}
+		value = -5
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = { 
+			OR = {
+				is_capital = yes
+				any_neighbor_state = { is_capital = yes }
+			}
+		}
+		value = 15
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state_trigger = { 
+			is_capital = yes
+			owner = { tag = FROM.FROM }
+		}
+		value = 50
+	}
+	
+}
+
+
+
+end_pocket = {
+	enable = {
+		always = yes
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = front_control
+		state_trigger = {
+			OR = {
+				AND = {
+					is_controlled_by = FROM.FROM
+					NOT = {
+						is_fully_controlled_by = FROM.FROM
+					}
+				}
+				controller = {
+					has_war_with = FROM.FROM
+				}
+			}
+			all_neighbor_state = {
+				controller = {
+					NOT = {
+						has_war_with = FROM.FROM
+					}
+				}
+			}
+		}
+		ratio = 0.0
+		priority = 90
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+	
+	ai_strategy = {
+		type = front_unit_request
+	
+		state_trigger = {
+			OR = {
+				AND = {
+					is_controlled_by = FROM.FROM
+					NOT = {
+						is_fully_controlled_by = FROM.FROM
+					}
+				}
+				controller = {
+					has_war_with = FROM.FROM
+				}
+			}
+			all_neighbor_state = {
+				controller = {
+					NOT = {
+						has_war_with = FROM.FROM
+					}
+				}
+			}
+		}		
+		value = 40 
+	}	
+}
+

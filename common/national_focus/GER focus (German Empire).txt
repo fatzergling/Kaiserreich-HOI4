@@ -8393,6 +8393,21 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GER_master_of_the_world"
 			add_ideas = GER_weltpolitik_start
 			activate_targeted_decision = { target = ROOT decision = GER_peace_summit_repeatable }
+			IF = {
+					limit = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_faction_goal_slot = {
+					category  = medium_term 
+					value = 1 
+				}
+				add_faction_goal_slot = {
+					category  = long_term 
+					value = 1 
+				}
+			}
+
 		}
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 	}
@@ -8801,7 +8816,10 @@ focus_tree = {
 			GEA = {
 				is_subject_of = GER
 			}
+			if = {
+				limit = { is_ai = no }
 			has_equipment = { infantry_equipment > 999 }
+			}
 		}
 
 		completion_reward = {

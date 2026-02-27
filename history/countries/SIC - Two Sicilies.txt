@@ -100,6 +100,7 @@ if = {
 set_variable = { country_intro_page_count = 2 }
 country_event = { id = two_sicilies_events.61 days = 720 }
 
+
 add_ideas = {
 	limited_conscription
 

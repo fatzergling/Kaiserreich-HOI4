@@ -53,8 +53,8 @@ annexation_decisions = {
 			log = "[GetLogRoot][GetLogFrom]: Decision cancel annexation_decision"
 			add_to_variable = { ROOT.active_annexation_decisions = -1 }
 		}
-
-		complete_effect = {
+		days_remove = 120
+		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete annexation_decision"
 			if = {
 				limit = {

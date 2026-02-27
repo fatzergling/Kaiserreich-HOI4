@@ -17,6 +17,19 @@ GEO_benz_organisation = {
 		}
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
+
 }
 
 ##################
@@ -78,4 +91,17 @@ GEO_rheinmetall_organisation = {
 		}
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
+
 }

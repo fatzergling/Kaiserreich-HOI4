@@ -122,7 +122,7 @@ FRA_focus_on_germany = {
 		type = force_concentration_target_weight
 		state = 28 #Alsace-Lorraine
 
-		value = -500
+		value = -2000
 	}
 	ai_strategy = {
 		type = force_concentration_front_factor
@@ -136,7 +136,7 @@ FRA_focus_on_germany = {
 		type = force_concentration_front_factor
 		state = 28 #Alsace-Lorraine
 
-		value = -500
+		value = -2000
 	}
 }
 
@@ -170,11 +170,11 @@ FRA_endsieg = { #If losing, focus everything on defence and don't do stupid atta
 	enable = {
 		surrender_progress > 0.25
 		stockpile_ratio = { archetype = infantry_equipment ratio < 0.1 }
-		GER = {
-			has_war_with = ROOT
-			has_capitulated = no
-			surrender_progress < 0.1
-		}
+		#GER = {
+		#	has_war_with = ROOT
+		#	has_capitulated = no
+		#	surrender_progress < 0.1
+		#}
 	}
 	abort_when_not_enabled = yes
 
@@ -216,6 +216,7 @@ FRA_less_troops_on_iberia = {
 		type = front_unit_request
 		strategic_region = 236 #Southern Iberia
 		strategic_region = 237 #Western Iberia
+		strategic_region = 41 #Western Iberia
 		value = -30
 	}
 }
@@ -236,7 +237,7 @@ FRA_industrial_strategy_early = {
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 49
+		value = 149
 	}
 	ai_strategy = {
 		type = air_factory_balance
@@ -277,6 +278,8 @@ FRA_industrial_strategy_war_late = {
 	}
 	enable = {
 		num_of_military_factories > 150
+		has_war = yes
+		always = no
 	}
 	abort_when_not_enabled = yes
 
@@ -373,3 +376,23 @@ FRA_build_radars_provence = {
 		value = 2000
 	}
 }
+
+
+FRA_support_CNT = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		SPA = { has_civil_war = yes }
+		has_country_flag = FRA_support_SWF
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = save_equipment
+		id = infantry_equipment
+		value = 2001
+	}
+}
+

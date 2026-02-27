@@ -777,6 +777,18 @@ is_new_england = {
 	NOT = { state = 358 } #New York City
 }
 
+is_US_industrial_area = {
+	OR = {
+	region = 230 #New England
+	 state = 358  #New York City
+	state = 359 #New England
+	 state = 360  #New York City
+	 state = 975  #New York City
+
+	}
+}
+
+
 is_american_pacific_islands = {
 	OR = {
 		state = 629 #Hawaii

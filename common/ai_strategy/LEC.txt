@@ -1,0 +1,20 @@
+LEC_center_of_commerce = {
+	allowed = {
+		original_tag = LEC
+	}
+	enable = {
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = -759
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 100
+	}
+}

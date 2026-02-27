@@ -16,3 +16,15 @@ defined_text = {
 ########################
 ### Country-Specific ###
 ########################
+
+defined_text = {
+	name = GER_deploy_troops_to_occupation_zones_scripted_loc
+	text = {
+		trigger = { tag = GER }
+		localization_key = GER_deploy_troops_to_occupation_zones_desc
+	}
+	text = {
+		trigger = { NOT = { tag = GER }}
+		localization_key = general_deploy_troops_to_occupation_zones_desc
+	}
+}

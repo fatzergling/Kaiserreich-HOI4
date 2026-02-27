@@ -1360,11 +1360,19 @@ focus_tree = {
 			is_in_faction_with = ENT
 		}
 		ai_will_do = {
-			factor = 20
+			factor = 0
 			modifier = {
 				factor = 0
 				NOT = { has_game_rule = { rule = MOR_forpol option = DEFAULT } }
 				NOT = { has_game_rule = { rule = MOR_forpol option = MOR_FORPOL_ENT } }
+			}
+			modifier = {
+				add = 10
+				country_exists = GBR
+			}
+			modifier = {
+				add = 10
+				EGY = { is_subject_of = OTT }
 			}
 		}
 		completion_reward = {

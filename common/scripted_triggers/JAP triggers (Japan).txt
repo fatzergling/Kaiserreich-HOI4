@@ -257,7 +257,8 @@ JAP_fading_sun_manchuria_not_capitulated = {
 		FNG = { has_capitulated = no }
 	}
 	else = {
-		hidden_trigger = { always = no }
+		#hidden_trigger = { always = no }
+		KOR = { all_core_state = { controller = { is_ally_with = JAP } } }
 	}
 }
 

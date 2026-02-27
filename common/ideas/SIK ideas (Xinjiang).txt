@@ -147,7 +147,7 @@ ideas = {
 				attack_bonus_against = 2.0
 			}
 			modifier = {
-				surrender_limit = 0.1
+				surrender_limit = 1
 				unit_limit_bonus = 3
 				out_of_supply_factor = -0.5
 				supply_node_range = 0.5

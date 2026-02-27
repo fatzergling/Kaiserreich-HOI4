@@ -24,6 +24,18 @@ CEN_mauser_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
 }
 CEN_ford_organisation = {
 	name = ford_caribbean
@@ -49,6 +61,19 @@ CEN_ford_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 CEN_manufacture_saint_etienne_organisation = {
 	include = generic_infantry_equipment_organization
@@ -74,6 +99,19 @@ CEN_manufacture_saint_etienne_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 
 CEN_us_ordnance_corps_organisation = {
@@ -100,6 +138,19 @@ CEN_us_ordnance_corps_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 
 ###################
@@ -129,6 +180,19 @@ CEN_somua_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 CEN_krupp_organisation = {
 	name = krupp_caribbean
@@ -152,6 +216,18 @@ CEN_krupp_organisation = {
 	}
 	available = {
 		GER_export_mio_trigger = yes
+	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
 	}
 }
 CEN_chrysler_organisation = {
@@ -178,6 +254,19 @@ CEN_chrysler_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 ##################
 ### Naval MIOs ###
@@ -207,6 +296,19 @@ CEN_electric_boat_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 CEN_kaiser_shipyards_organisation = {
 	name = kaiser_shipyards_caribbean
@@ -231,6 +333,19 @@ CEN_kaiser_shipyards_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 
 #####################
@@ -259,6 +374,18 @@ CEN_focke_wulf_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
 }
 CEN_morane_saulnier_organisation = {
 	name = morane_saulnier_caribbean
@@ -284,6 +411,19 @@ CEN_morane_saulnier_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 CEN_curtiss_wright_organisation = {
 	name = curtiss_wright_caribbean
@@ -309,4 +449,17 @@ CEN_curtiss_wright_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }

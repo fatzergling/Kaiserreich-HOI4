@@ -954,6 +954,7 @@ country_event = { # GER: peace with INT?
 			modifier = {
 				factor = 0
 				has_global_flag = GER_stay_out_france_uk
+				CAN = { NOT = { has_socialist_government = yes }}
 			}
 		}
 		INT = { country_event = { id = capitulation_events.31 days = 1 } }
@@ -967,6 +968,7 @@ country_event = { # GER: peace with INT?
 			modifier = {
 				add = 100
 				has_global_flag = GER_stay_out_france_uk
+				CAN = { NOT = { has_socialist_government = yes }}
 			}
 		}
 		if = {
@@ -1063,6 +1065,16 @@ country_event = { # INT: Germany offers peace
 					set_country_flag = { flag = IRE_treaty_london days = 15 value = 1 }
 					country_event = { id = ireland_events.3450 days = 2 }
 				}
+			}
+			if = {
+				limit = { 
+					OR = {
+					CAN = { has_capitulated = yes }
+					NOT = { country_exists = CAN }
+					CAN = { has_socialist_government = yes }
+				}
+				}
+				int_ent_white_peace = yes
 			}
 		}
 	}

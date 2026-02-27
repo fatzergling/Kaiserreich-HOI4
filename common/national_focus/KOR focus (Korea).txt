@@ -29,13 +29,21 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed KOR_return_of_the_provisional_government"
 			add_political_power = 100
+			hidden_effect = {
+				add_manpower = 40000
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2000
+				producer = JAP
+			}
+			}
 		}
 	}
 
 	focus = {
 		id = KOR_work_with_the_peoples_committees
 		icon = GFX_goal_conspiracy
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_return_of_the_provisional_government
 		x = -2
@@ -58,7 +66,7 @@ focus_tree = {
 	focus = {
 		id = KOR_provisional_legal_code
 		icon = GFX_goal_constitutional_guarantees
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_return_of_the_provisional_government
 		x = 2
@@ -82,7 +90,7 @@ focus_tree = {
 	focus = {
 		id = KOR_investigate_the_traitors
 		icon = GFX_goal_generic_trial
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_provisional_legal_code
 		x = -1
@@ -107,7 +115,7 @@ focus_tree = {
 	focus = {
 		id = KOR_pardon_the_collaborators
 		icon = GFX_goal_Korea_Colony
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_provisional_legal_code
 		x = 1
@@ -149,7 +157,7 @@ focus_tree = {
 	focus = {
 		id = KOR_begin_reconstruction_efforts
 		icon = GFX_goal_generic_destruction_civil_war
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_work_with_the_peoples_committees
 		x = 0
@@ -169,7 +177,7 @@ focus_tree = {
 	focus = {
 		id = KOR_rapid_industrialisation
 		icon = GFX_goal_munitions_factories
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_begin_reconstruction_efforts
 		x = -1
@@ -202,7 +210,7 @@ focus_tree = {
 	focus = {
 		id = KOR_advanced_grain_procurement_methods
 		icon = GFX_goal_generic_agriculture2
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_begin_reconstruction_efforts
 		x = 1
@@ -222,7 +230,7 @@ focus_tree = {
 	focus = {
 		id = KOR_koreas_industrial_revolution
 		icon = GFX_goal_production
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_rapid_industrialisation
 		x = 0
@@ -252,7 +260,7 @@ focus_tree = {
 	focus = {
 		id = KOR_back_to_the_land
 		icon = GFX_goal_agrarian_soldiers
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_advanced_grain_procurement_methods
 		x = 0
@@ -285,7 +293,7 @@ focus_tree = {
 	focus = {
 		id = KOR_form_the_KNR
 		icon = GFX_goal_generic_railroad
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_rapid_industrialisation
 		x = 1
@@ -312,7 +320,7 @@ focus_tree = {
 	focus = {
 		id = KOR_find_what_we_can_salvage
 		icon = GFX_goal_generic_industry_reallocation
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_investigate_the_traitors
 		x = 1
@@ -335,7 +343,7 @@ focus_tree = {
 	focus = {
 		id = KOR_reestablish_government_legitimacy
 		icon = GFX_goal_COS_Ferrer_Coup
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_find_what_we_can_salvage
 		x = 0
@@ -358,7 +366,7 @@ focus_tree = {
 	focus = {
 		id = KOR_reopen_the_schools
 		icon = GFX_goal_ENG_Highland_Research_Towns
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_reestablish_government_legitimacy
 		x = 1
@@ -381,7 +389,7 @@ focus_tree = {
 	focus = {
 		id = KOR_contact_the_youth_groups
 		icon = GFX_goal_generic_army_cooperation
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_reestablish_government_legitimacy
 		x = -1
@@ -409,7 +417,7 @@ focus_tree = {
 	focus = {
 		id = KOR_korea_reborn
 		icon = GFX_goal_DOM_The_Phoenix
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_contact_the_youth_groups
 		x = -1
@@ -441,7 +449,7 @@ focus_tree = {
 	focus = {
 		id = KOR_begin_the_land_reform
 		icon = GFX_focus_AUS_agriculture
-		cost = 3
+		cost = 8
 
 		x = 15
 		y = 0
@@ -481,7 +489,7 @@ focus_tree = {
 	focus = {
 		id = KOR_encourage_democratic_principles
 		icon = GFX_goal_DOM_End_Judicial_Corruption
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_begin_the_land_reform
 		x = -2
@@ -512,7 +520,7 @@ focus_tree = {
 	focus = {
 		id = KOR_maintain_martial_law
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_begin_the_land_reform
 		x = 2
@@ -558,7 +566,7 @@ focus_tree = {
 	focus = {
 		id = KOR_three_stage_revolution
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_begin_the_land_reform
 		x = 2
@@ -594,7 +602,7 @@ focus_tree = {
 	focus = {
 		id = KOR_legislate_freedoms
 		icon = GFX_goal_KOR_Coat_Of_Arms
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_encourage_democratic_principles
 		x = -1
@@ -622,7 +630,7 @@ focus_tree = {
 	focus = {
 		id = KOR_pursue_equalization_of_society
 		icon = GFX_focus_generic_female_soldiers
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_legislate_freedoms
 		x = 0
@@ -647,7 +655,7 @@ focus_tree = {
 	focus = {
 		id = KOR_decentralized_education
 		icon = GFX_goal_KTG_Educate_natives
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_pursue_equalization_of_society
 		x = 1
@@ -673,7 +681,7 @@ focus_tree = {
 	focus = {
 		id = KOR_five_year_plan
 		icon = GFX_focus_DEN_limited_regulations
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_pursue_equalization_of_society
 		x = -1
@@ -703,7 +711,7 @@ focus_tree = {
 	focus = {
 		id = KOR_foster_intensive_capitalism
 		icon = GFX_goal_capitalist_system
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_five_year_plan
 		x = 0
@@ -728,7 +736,7 @@ focus_tree = {
 	focus = {
 		id = KOR_attend_the_needs_of_all
 		icon = GFX_goal_healthcare
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_decentralized_education
 		x = 0
@@ -755,7 +763,7 @@ focus_tree = {
 	focus = {
 		id = KOR_the_first_election
 		icon = GFX_goal_generic_elections
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_foster_intensive_capitalism
 		x = 1
@@ -820,7 +828,7 @@ focus_tree = {
 	focus = {
 		id = KOR_establish_the_armed_forces
 		icon = GFX_goal_KOR_Army
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_legislate_freedoms
 		x = 3
@@ -853,7 +861,7 @@ focus_tree = {
 	focus = {
 		id = KOR_found_the_airforce
 		icon = GFX_goal_KOR_Airforce
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_establish_the_armed_forces
 		x = 1
@@ -889,7 +897,7 @@ focus_tree = {
 	focus = {
 		id = KOR_establish_the_navy
 		icon = GFX_goal_KOR_Navy
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_establish_the_armed_forces
 		x = -1
@@ -909,7 +917,7 @@ focus_tree = {
 	focus = {
 		id = KOR_expand_the_intelligence_corps
 		icon = GFX_goal_KOR_secret_agency
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_establish_the_navy
 		x = 1
@@ -941,7 +949,7 @@ focus_tree = {
 	focus = {
 		id = KOR_tighten_the_party_state
 		icon = GFX_focus_generic_authoritarian_government
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_maintain_martial_law
 		x = 1
@@ -984,7 +992,7 @@ focus_tree = {
 	focus = {
 		id = KOR_sponser_ilminist_groups
 		icon = GFX_goal_generic_paramilitary
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_tighten_the_party_state
 		x = 2
@@ -1041,7 +1049,7 @@ focus_tree = {
 	focus = {
 		id = KOR_host_national_assembly
 		icon = GFX_focus_chi_legislative_yuan
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_tighten_the_party_state
 		x = 0
@@ -1086,7 +1094,7 @@ focus_tree = {
 	focus = {
 		id = KOR_amend_the_constitution
 		icon = GFX_goal_generic_suspend_constitution
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_tighten_the_party_state
 		x = 0
@@ -1122,7 +1130,7 @@ focus_tree = {
 	focus = {
 		id = KOR_ratify_the_constitution
 		icon = GFX_goal_constitutional_guarantees
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_host_national_assembly
 		x = 0
@@ -1158,7 +1166,7 @@ focus_tree = {
 	focus = {
 		id = KOR_national_reconstruction
 		icon = GFX_goal_generic_improve_industry
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_ratify_the_constitution
 		x = 0
@@ -1177,13 +1185,17 @@ focus_tree = {
 				remove_idea = KOR_developing_industry
 				add_idea = KOR_revitalized_economy
 			}
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
 		}
 	}
 
 	focus = {
 		id = KOR_twin_tigers
 		icon = GFX_goal_QIE_zhili_unite_china
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_national_reconstruction
 		x = 0
@@ -1217,7 +1229,7 @@ focus_tree = {
 	focus = {
 		id = KOR_figurehead_of_the_nation
 		icon = GFX_goal_generic_council
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_amend_the_constitution
 		x = 0
@@ -1251,7 +1263,7 @@ focus_tree = {
 	focus = {
 		id = KOR_install_confucian_principles
 		icon = GFX_goal_QIE_confucianism
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_amend_the_constitution
 		x = 0
@@ -1284,7 +1296,7 @@ focus_tree = {
 	focus = {
 		id = KOR_withold_the_holy_rituals
 		icon = GFX_goal_ANQ_centralization
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_install_confucian_principles
 		x = 0
@@ -1311,7 +1323,7 @@ focus_tree = {
 	focus = {
 		id = KOR_the_korean_restoration
 		icon = GFX_focus_man_claim_the_mandate_of_heaven
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_withold_the_holy_rituals
 		x = 0
@@ -1397,7 +1409,7 @@ focus_tree = {
 	focus = {
 		id = KOR_intensify_modernisation_efforts
 		icon = GFX_goal_workers_for_business
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_figurehead_of_the_nation
 		x = 0
@@ -1422,7 +1434,7 @@ focus_tree = {
 	focus = {
 		id = KOR_true_korean_democracy
 		icon = GFX_focus_usa_voter_registration_act
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_intensify_modernisation_efforts
 		x = 0
@@ -1451,7 +1463,7 @@ focus_tree = {
 	focus = {
 		id = KOR_the_militarization_of_society
 		icon = GFX_goal_mass_concentration_of_army
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_sponser_ilminist_groups
 		x = 2
@@ -1484,7 +1496,7 @@ focus_tree = {
 	focus = {
 		id = KOR_regeneration_of_the_korean_nation
 		icon = GFX_goal_social_reforms
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_sponser_ilminist_groups
 		x = 0
@@ -1513,7 +1525,7 @@ focus_tree = {
 	focus = {
 		id = KOR_encourage_nationalistic_education
 		icon = GFX_goal_ideology_national_populist
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_sponser_ilminist_groups
 		x = 0
@@ -1546,7 +1558,7 @@ focus_tree = {
 	focus = {
 		id = KOR_a_classless_korea
 		icon = GFX_goal_NFA_protective_inequality
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_the_militarization_of_society
 		x = 0
@@ -1570,7 +1582,7 @@ focus_tree = {
 	focus = {
 		id = KOR_the_embodiment_of_the_korean_state
 		icon = GFX_goal_national_populism
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_encourage_nationalistic_education
 		x = 1
@@ -1609,7 +1621,7 @@ focus_tree = {
 	focus = {
 		id = KOR_the_revolution_triumphant
 		icon = GFX_goal_KOR_Socialist_Coat_Of_Arms
-		cost = 3
+		cost = 8
 
 		x = 33
 		y = 0
@@ -1670,7 +1682,7 @@ focus_tree = {
 	focus = {
 		id = KOR_true_korean_socialism
 		icon = GFX_goal_syndicalism
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_the_revolution_triumphant
 		x = -2
@@ -1709,7 +1721,7 @@ focus_tree = {
 	focus = {
 		id = KOR_begin_the_five_year_plan
 		icon = GFX_goal_generic_improve_industry
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_true_korean_socialism
 		x = -1
@@ -1735,7 +1747,7 @@ focus_tree = {
 	focus = {
 		id = KOR_central_planning_committee
 		icon = GFX_goal_generic_syndicalist_council
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_begin_the_five_year_plan
 		x = 1
@@ -1783,7 +1795,7 @@ focus_tree = {
 	focus = {
 		id = KOR_communal_homes_for_all
 		icon = GFX_collective_housing
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_begin_the_five_year_plan
 		x = -1
@@ -1827,7 +1839,7 @@ focus_tree = {
 	focus = {
 		id = KOR_vanguard_of_the_revolution
 		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_begin_the_five_year_plan
 		x = -3
@@ -1863,7 +1875,7 @@ focus_tree = {
 	focus = {
 		id = KOR_purge_counter_revolutionaries
 		icon = GFX_goal_backstab
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_vanguard_of_the_revolution
 		x = 1
@@ -1943,7 +1955,7 @@ focus_tree = {
 	focus = {
 		id = KOR_revolutionary_society
 		icon = GFX_goal_revolution_tools
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_communal_homes_for_all
 		x = 1
@@ -1978,7 +1990,7 @@ focus_tree = {
 	focus = {
 		id = KOR_install_political_tutelage
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_the_revolution_triumphant
 		x = 1
@@ -2017,7 +2029,7 @@ focus_tree = {
 	focus = {
 		id = KOR_strong_and_prosperous_nation
 		icon = GFX_goal_generic_workers_democracy
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_revolutionary_society
 		x = -1
@@ -2052,7 +2064,7 @@ focus_tree = {
 	focus = {
 		id = KOR_deal_with_the_kip
 		icon = GFX_goal_LEP_selective_enforcement
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_install_political_tutelage
 		x = -1
@@ -2124,7 +2136,7 @@ focus_tree = {
 	focus = {
 		id = KOR_revive_korea
 		icon = GFX_goal_brain
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_install_political_tutelage
 		x = 1
@@ -2151,7 +2163,7 @@ focus_tree = {
 	focus = {
 		id = KOR_nationalize_key_industries
 		icon = GFX_goal_state_economy
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_install_political_tutelage
 		x = 0
@@ -2183,7 +2195,7 @@ focus_tree = {
 	focus = {
 		id = KOR_the_second_national_assembly
 		icon = GFX_focus_chi_legislative_yuan
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_install_political_tutelage
 		x = 3
@@ -2213,7 +2225,7 @@ focus_tree = {
 	focus = {
 		id = KOR_pragmatic_principles
 		icon = GFX_goal_Centralised_Government
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_revive_korea
 		x = 1
@@ -2254,7 +2266,7 @@ focus_tree = {
 	focus = {
 		id = KOR_department_of_military_affairs
 		icon = GFX_goal_CHI_military_affairs_cmsn
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_revive_korea
 		x = 0
@@ -2277,7 +2289,7 @@ focus_tree = {
 	focus = {
 		id = KOR_harmonic_co_existence
 		icon = GFX_goal_china_deal
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_department_of_military_affairs
 		x = 1
@@ -2313,7 +2325,7 @@ focus_tree = {
 	focus = {
 		id = KOR_expropriate_the_landlords
 		icon = GFX_goal_OTT_Land_Reform
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_the_revolution_triumphant
 		x = 3
@@ -2350,7 +2362,7 @@ focus_tree = {
 	focus = {
 		id = KOR_land_to_the_tiller
 		icon = GFX_goal_Workers_Paradise
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_the_revolution_triumphant
 		x = 5
@@ -2397,7 +2409,7 @@ focus_tree = {
 	focus = {
 		id = KOR_the_korean_peoples_army
 		icon = GFX_goal_KOR_socialist_Army
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_deal_with_the_kip
 		x = 0
@@ -2425,7 +2437,7 @@ focus_tree = {
 	focus = {
 		id = KOR_the_peoples_air_force
 		icon = GFX_goal_KOR_socialist_Airforce
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_the_korean_peoples_army
 		x = -1
@@ -2461,7 +2473,7 @@ focus_tree = {
 	focus = {
 		id = KOR_the_peoples_navy
 		icon = GFX_goal_KOR_socialist_Navy
-		cost = 3
+		cost = 8
 
 		relative_position_id = KOR_the_korean_peoples_army
 		x = 1

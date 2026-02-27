@@ -37,6 +37,8 @@ CHL_southern_cone_war_strategy = {
 		type = garrison
 		value = -100
 	}
+	ai_strategy = { type = diplo_action_desire id = FOP target = join_allies value = 1000 }
+
 }
 
 FOP_southern_cone_war_strategy = {
@@ -154,6 +156,29 @@ ARG_southern_cone_war_strategy_FOP = {
 	}
 }
 
+
+ARG_southern_cone_war_strategy_less_focus_on_PAR = {
+	allowed = {
+		original_tag = ARG
+	}
+	enable = {
+		country_exists = PAR
+		has_war_with = FOP
+	}
+
+	abort_when_not_enabled = yes
+
+	# Production and buildup
+	### Since ARG has a lot of enemies on the start, its desirable num of divs is too big
+	### This leads to unlock of armor template, which hinders production of infantry
+	### The following strategy deals with it by telling AI not to spend XP on templates
+	### It has good starting infantry template so it doesn't change infantry buildup
+	ai_strategy = {
+		type = front_unit_request
+		tag = PAR
+		value = -50
+	}
+}
 BOL_southern_cone_war_strategy_PAR = {
 	allowed = {
 		original_tag = BOL
@@ -184,6 +209,30 @@ BOL_southern_cone_war_strategy_PAR = {
 		value = 1000
 	}
 }
+
+PAR_southern_cone_war_strategy_PAR = {
+	allowed = {
+		original_tag = PAR
+	}
+	enable = {
+		PAR = {
+			owns_state = 301
+			has_capitulated = no
+			is_subject = no
+			has_war_with = ARG
+		}
+	}
+
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = put_unit_buffers
+		states = { 301 } #Blagoveshchensk, Nikolayevsk
+		ratio = 0.5
+		subtract_fronts_from_need = no
+	}
+
+}
+
 
 PBC_southern_cone_war_strategy_PAR = {
 	allowed = {

@@ -4,7 +4,7 @@
 
 line_irregulars = {
 	available_for = {
-		ANQ CHI GXC HNN LEP MAN SHX SIK SHD SZC XSM YUN KUM
+		ANQ GXC HNN MAN SHX SIK SHD SZC XSM YUN KUM
 	}
 	#QIE and FNG omitted because they do not start with an irregulars template and their whole thing was built around not using them
 
@@ -17,6 +17,14 @@ line_irregulars = {
 	irregulars_default = {
 		upgrade_prio = {
 			base = 1
+			modifier = {
+				add = 10
+				num_of_military_factories < 20
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories > 30
+			}
 		}
 
 		can_upgrade_in_field = {
@@ -26,18 +34,25 @@ line_irregulars = {
 		target_template = {
 			regiments = {
 				irregular_infantry = 9
+				artillery_brigade = 1
 			}
 
 			support = {
 				artillery = 1
+				anti_air = 1
 				engineer = 1
+				#anti_tank = 1
+				#logistics_company = 1
+				#field_hospital = 1
+				recon = 1
+
 			}
 		}
 	}
 
 	irregulars_upgraded = {
 		upgrade_prio = {
-			base = 1
+			base = 7
 			modifier = {
 				factor = 0
 				num_of_military_factories < 20
@@ -51,9 +66,9 @@ line_irregulars = {
 				has_reached_maximum_divisions = yes
 			}
 			modifier = {
-				add = 1
+				add = 3
 				num_of_military_factories > 49
-				has_reached_ninety_percent_of_maximum_divisions = yes
+				#has_reached_ninety_percent_of_maximum_divisions = yes
 			}
 		}
 
@@ -70,30 +85,33 @@ line_irregulars = {
 			support = {
 				artillery = 1
 				anti_air = 1
+				anti_tank = 1
 				engineer = 1
 				logistics_company = 1
 				field_hospital = 1
+								recon = 1
+
 			}
 		}
 	}
 
 	irregulars_artillery = {
 		upgrade_prio = {
-			base = 1
+			base = 10
 			modifier = {
 				factor = 0
 				num_of_military_factories < 45 #90% of previous threshold
 			}
 			modifier = {
-				add = 1
+				add = 3
 				has_global_flag = china_united
 			}
 			modifier = {
-				add = 1
+				add = 3
 				has_reached_maximum_divisions = yes
 			}
 			modifier = {
-				add = 2
+				add = 3
 				num_of_military_factories > 99
 				has_reached_ninety_percent_of_maximum_divisions = yes
 			}
@@ -112,23 +130,64 @@ line_irregulars = {
 			support = {
 				artillery = 1
 				anti_air = 1
+				anti_tank = 1
 				engineer = 1
+				logistics_company = 1
+				field_hospital = 1
+				recon = 1
+			}
+		}
+	}
+
+
+}
+
+motorised = {
+	available_for = {
+		ANQ GXC HNN LEP MAN SHX SIK SHD SZC XSM YUN KUM
+	}
+
+
+	role = mobile
+
+	upgrade_prio = {
+		base = 5
+	}
+	cavalry_default = {
+		upgrade_prio = {
+			base = 1
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
+		target_template = {
+			regiments = {
+				cavalry = 9
+				mot_artillery_brigade = 1
+			}
+
+			support = {
+				artillery = 1
+				anti_air = 1
+				engineer = 1
+				anti_tank = 1
 				logistics_company = 1
 				field_hospital = 1
 			}
 		}
 	}
-
-	irregulars_motorised = {
+		irregulars_motorised = {
 		upgrade_prio = {
-			base = 1
+			base = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = motorised_infantry }
+				num_of_military_factories < 50 #90% of previous threshold
 			}
 			modifier = {
 				factor = 0
-				num_of_military_factories < 90 #90% of previous threshold
+				NOT = { has_tech = motorised_infantry }
 			}
 			modifier = {
 				add = 1
@@ -158,6 +217,7 @@ line_irregulars = {
 			support = {
 				engineer = 1
 				artillery = 1
+				anti_tank = 1
 				anti_air = 1
 				logistics_company = 1
 				field_hospital = 1
@@ -167,7 +227,7 @@ line_irregulars = {
 
 	irregulars_mechanised = {
 		upgrade_prio = {
-			base = 1
+			base = 20
 			modifier = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
@@ -204,6 +264,7 @@ line_irregulars = {
 			support = {
 				artillery = 1
 				anti_air = 1
+				anti_tank = 1
 				engineer = 1
 				logistics_company = 1
 				field_hospital = 1

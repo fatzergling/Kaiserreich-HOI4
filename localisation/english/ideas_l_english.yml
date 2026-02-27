@@ -153,3 +153,99 @@
 
 # missing in vanilla
  tactic_backhand_blow_preferred_weight_factor: "Additional §YBackhand Blow§! Tactic Chance if it is Preferred tactic"
+ CHI_modify_neglected_countryside_tt: "Modify §Y$CHN_national_illiteracy1_modifier$§! by:" 
+ CHI_extend_compulsory_education_tt: "Every §Y[?CHI_improving_neglected_countryside_mission_time]§! days, §Y$CHN_national_illiteracy1_modifier$§! will §GImprove§! until the negative modifiers are gone."
+ CHI_improving_neglected_countryside_mission: "Illiteracy Eradication"
+ CHN_armored_car_industry_organisation: "Chinese Armored Car Organization"
+ CHN_naval_industry_organisation2: "Chinese Blue-Water Navy Organization"
+ CHN_aviation_industry_organisation2: "Chinese Light Aviation Organization"
+ generic_skip_one_line_tt: "\n"
+ china_unified: "China Reunified"
+ end_of_2nd_weltkrieg: "The End of the 2nd Weltkrieg"
+ argentina_manufacture_bayonne: "temp"
+
+ VICTORY_POINTS_11835: "Sinijiu"
+ VICTORY_POINTS_11835_RENAME: "[PREV.Controller.GetVictoryPointName_11835]"
+ VICTORY_POINTS_11835_CHINESE: "Xinxuizhou"
+ VICTORY_POINTS_11835_JAPANESE: "Shingishū"
+
+ VICTORY_POINTS_1003: "Haeju"
+ VICTORY_POINTS_1003_RENAME: "[PREV.Controller.GetVictoryPointName_1003]"
+ VICTORY_POINTS_1003_CHINESE: "Haizhou"
+ VICTORY_POINTS_1003_JAPANESE: "Kaishū"
+
+
+ VICTORY_POINTS_1148: "Chuncheon"
+ VICTORY_POINTS_1148_RENAME: "[PREV.Controller.GetVictoryPointName_1148]"
+ VICTORY_POINTS_1148_CHINESE: "Chunchuan"
+ VICTORY_POINTS_1148_JAPANESE: "Shunsen"
+
+ kr_harland_wolff: "British Shipbuilding"
+ bmz_rom: "BMZ Romania"
+ amo_rom: "AMO Romania"
+ amo_ser: "AMO Serbia"
+ imz_rom: "IMZ Romania"
+
+ YCP_won_rigged_elections: "The Young China Party consolidated power in the 1940 elections"
+
+ QIE_chinas_gravest_hour: "China's Gravest Hour"
+ QIE_chinas_gravest_hour_desc: "Flags are fluttering, sword is drawn, and gun on our shoulders. That which we have come to fear, has finally come at last and now our centuries' old civilisation risks total cultural and racial annihilation at the hands of the Japanese imperialists. It is time to put petty warlord squabbles away from us, for us to bury the hatchet, and for us, the Chinese people to unite once more in the face of this adversity!"
+
+ QIE_the_chinese_hindenburg_line: "The Chinese Hindenburg Line"
+ QIE_the_chinese_hindenburg_line_desc: "China's vast land expanse means that the enemy will most likely attempt a naval invasion of our country rather than a direct land invasion. Given the economic and political importance of the coastal regions, we would do well to prepare in advance of the enemy's invasion by fortifying and preparing the coastline with bunkers, pillboxes, and other defences - creating our very own Hindenburg line."
+
+ QIE_wartime_industry_relocation: "Wartime Industry Relocation"
+ QIE_wartime_industry_relocation_desc: "With much of China's domestic and military industries located along the coastal regions of the country, they will no doubt come under pressure and attack from the enemy. In order to preserve our industrial capabilities, we will seek to move not just industries, but also heavy machinery and civilians into the country's interior so we can fight on and exhaust the enemy's advance."
+
+ QIE_heroic_revolutionary_fighters: "Heroic Revolutionary Fighters"
+ QIE_heroic_revolutionary_fighters_desc: "Our soldiers are like no others. In the face of complete annihilation at the face of the foreign intruders, they continue to display relentless bravery and patriotism. With guns in hand, ferocity in their hearts, and an undying will, may we exalt our brave revolutionary fighters, as they continue to fight both in life and death. Forwards!"
+
+ QIE_one_thousands_sons_one_thousand_soldiers: "One Thousand Sons, One Thousand Soldiers"
+ QIE_one_thousands_sons_one_thousand_soldiers_desc: "It is true that an army feeds on its stomach. As the enemy marches across our beloved great country, his supplies lines grow increasingly thin and he will grow emboldened as we seem to fall back towards the interior. In times of crisis, all must be expected to give up whatever they may have in order to achieve the final victory. We will seek to utilise anything of use we may find in the countryside, before attacking our exhausted enemies through the means of guerrilla warfare."
+
+ QIE_prepare_guerrila_cells: "Prepare Guerrilla Cells"
+ QIE_prepare_guerrila_cells_desc: "Even if we cannot match the enemy in the sea, in the air, or in conventional combat; there are ways that a people can fight. From every town, village, and farm; we will encourage all who are willing to fight for their country's salvation to create resistance groups. They will lay in wait behind enemy lines; in order to wreck havoc and destruction among the enemies' morale, supply, and logistical capabilities."
+
+ QIE_blockade_runners: "Blockade Runners"
+ QIE_blockade_runners_desc: "Incapable of posing anything more than a papercut to the foreign invader's navies, we lament that we cannot extend our protection beyond our immediate coastline. Outside of our harbours, our rivers, and our airfields, the enemy is perfectly capable of cutting off major foreign shipments using their navy. It is imperative that we develop strategies and ships capable of evading enemy patrols and circumventing the blockade."
+
+ NZH_chinas_gravest_hour: "China's Gravest Hour"
+ NZH_chinas_gravest_hour_desc: "Flags are fluttering, sword is drawn, and gun on our shoulders. That which we have come to fear, has finally come at last and now our centuries' old civilisation risks total cultural and racial annihilation at the hands of the Japanese imperialists. It is time to put petty warlord squabbles away from us, for us to bury the hatchet, and for us, the Chinese people to unite once more in the face of this adversity!"
+
+ NZH_the_chinese_hindenburg_line: "The Chinese Hindenburg Line"
+ NZH_the_chinese_hindenburg_line_desc: "China's vast land expanse means that the enemy will most likely attempt a naval invasion of our country rather than a direct land invasion. Given the economic and political importance of the coastal regions, we would do well to prepare in advance of the enemy's invasion by fortifying and preparing the coastline with bunkers, pillboxes, and other defences - creating our very own Hindenburg line."
+
+ NZH_wartime_industry_relocation: "Wartime Industry Relocation"
+ NZH_wartime_industry_relocation_desc: "With much of China's domestic and military industries located along the coastal regions of the country, they will no doubt come under pressure and attack from the enemy. In order to preserve our industrial capabilities, we will seek to move not just industries, but also heavy machinery and civilians into the country's interior so we can fight on and exhaust the enemy's advance."
+
+ NZH_heroic_revolutionary_fighters: "Heroic Revolutionary Fighters"
+ NZH_heroic_revolutionary_fighters_desc: "Our soldiers are like no others. In the face of complete annihilation at the face of the foreign intruders, they continue to display relentless bravery and patriotism. With guns in hand, ferocity in their hearts, and an undying will, may we exalt our brave revolutionary fighters, as they continue to fight both in life and death. Forwards!"
+
+ NZH_one_thousands_sons_one_thousand_soldiers: "One Thousand Sons, One Thousand Soldiers"
+ NZH_one_thousands_sons_one_thousand_soldiers_desc: "It is true that an army feeds on its stomach. As the enemy marches across our beloved great country, his supplies lines grow increasingly thin and he will grow emboldened as we seem to fall back towards the interior. In times of crisis, all must be expected to give up whatever they may have in order to achieve the final victory. We will seek to utilise anything of use we may find in the countryside, before attacking our exhausted enemies through the means of guerrilla warfare."
+
+ NZH_prepare_guerrila_cells: "Prepare Guerrilla Cells"
+ NZH_prepare_guerrila_cells_desc: "Even if we cannot match the enemy in the sea, in the air, or in conventional combat; there are ways that a people can fight. From every town, village, and farm; we will encourage all who are willing to fight for their country's salvation to create resistance groups. They will lay in wait behind enemy lines; in order to wreck havoc and destruction among the enemies' morale, supply, and logistical capabilities."
+
+ NZH_blockade_runners: "Blockade Runners"
+ NZH_blockade_runners_desc: "Incapable of posing anything more than a papercut to the foreign invader's navies, we lament that we cannot extend our protection beyond our immediate coastline. Outside of our harbours, our rivers, and our airfields, the enemy is perfectly capable of cutting off major foreign shipments using their navy. It is imperative that we develop strategies and ships capable of evading enemy patrols and circumventing the blockade."
+
+ PAR_BOL_reparations_PAR: "War Reparations from Bolivia"
+ PAR_BOL_reparations_BOL: "War Reparations to Paraguay"
+
+ FNG_bribe_lobbyists: "Bribe Pro-Japanese Lobbyists"
+ FNG_bribe_lobbyists_desc: "Ostensibly the only thing the so-called Concordia Association cares about is money. Money, Money, Money. However with our extensive connections in business and banking, perhaps we can cash out a little bit, entertain the more malleable pro-Japanese lobbyists with gifts. With this, we can force them to stay silent for a few months, decreasing the influence Japan has on our policymaking."
+
+ FNG_encourage_domestic_production: "Encourage Domestic Production"
+ FNG_encourage_domestic_production_desc: "Ultimately their undoing, our relationship with Japan has led to a rapid development of China's own domestic production capabilities. Rows of factories are erected annually, developing our economy and industry far greater than we could ever hope for. Utilising such strengths, we can grant preferential treatment to native corporations and industry, granting them lucrative contracts in lieu of Japanese competitors. Impacting our overall industrial efficiency, it will cripple the Japanese for a period of time."
+
+ FNG_entice_financial_support: "Entice Japanese Financial Support"
+ FNG_entice_financial_support_desc: "What are the Jaoanese here for if not to provide us with funding, just in exchange for selling our spirit a little? By utilising contacts within the Concordia Association and the Kwantung Army, we can easily attain more funding to help equalise our financial balance. Regretfully, this will enable the Japanese to further dig their claws into our political scene, tying our politicians to Japanese money."
+
+
+ MIT_economic_upheaval: "Economic Upheaval"
+ MIT_economic_upheaval_desc: "Our decision to leave Mitteleuropa has had predictably startling effects on our economy. Our relations with them, and the rest of the world, are now all thrown into question."
+
+
+ general_deploy_troops_to_occupation_zones_desc: "Our occupation governments require additional troops to suppress rebel holdouts and pacify the people. Let us send another reserve division to bolster the occupation effort!"
+ ARG_Foreign_owned_factories: "Foreign-Owned Factories"

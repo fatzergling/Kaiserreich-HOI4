@@ -2646,7 +2646,7 @@ focus_tree = {
 			# Custom Effect about the Great Depression being low enough
 			check_variable = {
 				tooltip = NEE_GD_low_enough_tt
-				NEE_GD_build_speed_var > -0.12
+				NEE_GD_build_speed_var > -0.08
 			}
 			custom_override_tooltip = {
 				tooltip = NEE_no_reluctant_populace_tt
@@ -2656,13 +2656,21 @@ focus_tree = {
 						has_idea = NEE_reluctant_populace2
 						has_idea = NEE_reluctant_populace3
 						has_idea = NEE_reluctant_populace4
+
 					}
 				}
 			}
-		}
+			has_war_support > 0.45
+			796 = {
+				is_core_of = NEE
+			}
+		}	
+		will_lead_to_war_with = WCA
+
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed NEE_Southern_Fire"
 			add_war_support = 0.1
+			NEE_Reduce_Neutrality = yes
 			NEE_Change_Legitimacy = yes
 		}
 	}

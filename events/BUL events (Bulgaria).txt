@@ -1396,13 +1396,14 @@ country_event = { # Abdication of Ferdinand
 				civilian_economy
 				volunteer_only
 			}
-			disband_twenty_percent_units = yes
-			send_equipment_fraction = { target = event_target:system value = 0.2 }
-			event_target:system = {
+			disband_fifty_percent_units = yes
 				send_equipment_fraction = { target = ROM value = 0.5 }
 				send_equipment_fraction = { target = SER value = 1 }
-			}
 		}
+			add_timed_idea = {
+				idea = BUL_reparation_payments
+				days = 1460
+			}
 		if = {
 			limit = {
 				has_idea = BUL_waning_hegemony

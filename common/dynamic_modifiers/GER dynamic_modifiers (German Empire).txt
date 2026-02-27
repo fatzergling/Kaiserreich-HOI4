@@ -7,6 +7,7 @@ GER_Ruhrkampf = {
 	local_manpower = GER.GER_ruhrkampf_manpower_factor
 	state_production_speed_buildings_factor = GER.GER_ruhrkampf_resources_factor
 	state_resources_factor = GER.GER_ruhrkampf_resources_factor
+	local_factories = GER.GER_ruhrkampf_manpower_factor
 	custom_modifier_tooltip = GER_ruhrkampf_tooltip
 }
 
@@ -17,6 +18,7 @@ GER_Ruhrkampf_for_tooltip = {
 	}
 	local_building_slots_factor = -0.20
 	local_manpower = -0.2
+	local_factories = -0.2
 	state_production_speed_buildings_factor = -0.75
 	state_resources_factor = -0.75
 	custom_modifier_tooltip = GER_ruhrkampf_tooltip

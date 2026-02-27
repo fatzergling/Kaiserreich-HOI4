@@ -361,6 +361,8 @@
  RULE_OPTION_WCA_FLAG_RED_DESC: "The Workers' Commonwealth of America chooses a white and red flag.$WCA_FLAG_REQUIREMENTS$"
  RULE_OPTION_WCA_FLAG_IWW: "£KR_game_rule_flag_WCA_iww  Black and Red"
  RULE_OPTION_WCA_FLAG_IWW_DESC: "The Workers' Commonwealth of America chooses a black and red flag.$WCA_FLAG_REQUIREMENTS$"
+ RULE_OPTION_WCA_FLAG_MODERATE: "£KR_game_rule_flag_WCA_socialist_republic  The Stripes Restored"
+ RULE_OPTION_WCA_FLAG_MODERATE_DESC: "The Workers' Commonwealth of America restores the flag of the bourgeois republic, albeit with a few additions.$WCA_FLAG_REQUIREMENTS$"
 
  WCA_FORPOL: "£KR_game_rule_flag_WCA  Red American Foreign Policy"
  WCA_FORPOL_REQUIREMENTS: "\n\n§RRequires:§!\n§CThe Workers' Congress of America wins the Second American Civil War§!"
@@ -1236,10 +1238,10 @@
  RULE_OPTION_GBR_PATH_SOCCON_DESC: "$RULE_OPTION_GBR_PATH_DEM_DESC$ the §cConservative Party§!.$GBR_PATH_REQUIREMENTS$"
  RULE_OPTION_GBR_PATH_MARLIB: "£KR_game_rule_flag_GBR  Liberals"
  RULE_OPTION_GBR_PATH_MARLIB_DESC: "$RULE_OPTION_GBR_PATH_DEM_DESC$ the §mLiberal Party§!.$GBR_PATH_REQUIREMENTS$"
- RULE_OPTION_GBR_PATH_GAITSKELL_SOCDEM: "£KR_game_rule_flag_GBR  Labour - Gaitskell"
- RULE_OPTION_GBR_PATH_GAITSKELL_SOCDEM_DESC: "$RULE_OPTION_GBR_PATH_DEM_DESC$ the §SLabour Party§!, with Hugh Gaitskell becoming Prime Minister.$GBR_PATH_REQUIREMENTS$"
- RULE_OPTION_GBR_PATH_CROSSMAN_SOCDEM: "£KR_game_rule_flag_GBR  Labour - Crossman"
- RULE_OPTION_GBR_PATH_CROSSMAN_SOCDEM_DESC: "$RULE_OPTION_GBR_PATH_DEM_DESC$ the §SLabour Party§!, with Richard Crossman becoming Prime Minister.$GBR_PATH_REQUIREMENTS$"
+ RULE_OPTION_GBR_PATH_GAITSKELL_SOCDEM: "£KR_game_rule_flag_GBR  Social Democratic Party - Gaitskell"
+ RULE_OPTION_GBR_PATH_GAITSKELL_SOCDEM_DESC: "$RULE_OPTION_GBR_PATH_DEM_DESC$ the §SSocial Democratic Party Party§!, with Hugh Gaitskell becoming Prime Minister.$GBR_PATH_REQUIREMENTS$"
+ RULE_OPTION_GBR_PATH_CROSSMAN_SOCDEM: "£KR_game_rule_flag_GBR  Social Democratic Party - Crossman"
+ RULE_OPTION_GBR_PATH_CROSSMAN_SOCDEM_DESC: "$RULE_OPTION_GBR_PATH_DEM_DESC$ the §SSocial Democratic Party Party§!, with Richard Crossman becoming Prime Minister.$GBR_PATH_REQUIREMENTS$"
  RULE_OPTION_GBR_PATH_GUIDED_AUTDEM: "£KR_game_rule_flag_GBR  National Government"
  RULE_OPTION_GBR_PATH_GUIDED_AUTDEM_DESC: "Due to increasing popular rejection of the government, the elections are cancelled and a §aNational Government§! is formed.$GBR_PATH_REQUIREMENTS$"
 

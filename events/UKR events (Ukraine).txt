@@ -19112,11 +19112,11 @@ country_event = { #Margolin-Germany Meeting
 				}
 			}
 			modifier = {
-				add = 10
+				add = 100
 				has_government = authoritarian_democrat
 			}
 			modifier = {
-				add = 50
+				add = 500
 				has_government = paternal_autocrat #hassell says: fuck you WHINEYchenko
 			}
 			modifier = {
@@ -23426,7 +23426,7 @@ country_event = { #Germans ignore the counter-proposal
 			}
 		}
 		ai_chance = {
-			base = 100
+			base = 2
 			modifier = {
 				factor = 3
 				UKR = { has_government = social_democrat }

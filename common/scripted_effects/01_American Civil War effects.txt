@@ -60,6 +60,7 @@ USA_initial_events = {
 					country_event = { id = american_civil_war_events.330 days = 12 } #Iowa
 					country_event = { id = american_civil_war_events.332 days = 15 } #Missouri
 					country_event = { id = american_civil_war_events.333 days = 20 } #Kentucky
+					country_event = { id = american_civil_war_events.724 days = 19 } #Kentucky
 
 					APG = { set_cosmetic_tag = APG_compromise_rebels }
 					if = {
@@ -793,11 +794,11 @@ USA_civil_war_begins = {
 			}
 
 			#hidden looping event for ACW desertions
-			USA = { country_event = { id = american_civil_war_events.803 days = 1185 random_days = 100 } }
-			WCA = { country_event = { id = american_civil_war_events.803 days = 1185 random_days = 100 } }
-			NEE = { country_event = { id = american_civil_war_events.803 days = 1185 random_days = 100 } }
-			ACC = { country_event = { id = american_civil_war_events.803 days = 1185 random_days = 100 } }
-			APG = { country_event = { id = american_civil_war_events.803 days = 1185 random_days = 100 } }
+			USA = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
+			WCA = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
+			NEE = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
+			ACC = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
+			APG = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
 
 			USA = {
 				country_event = { id = hawaii_events.1 days = 1 random_days = 3 } # Hawaii Rebels
@@ -1059,10 +1060,14 @@ USA_civil_war_ends = {
 					arms_factory > 2
 				}
 				set_temp_variable = { state_factories = building_level@arms_factory }
-				subtract_from_temp_variable = { state_factories = 1 }
+				subtract_from_temp_variable = { state_factories = 2 }
 				remove_building = { type = arms_factory level = state_factories }
 				subtract_from_temp_variable = { state_factories = 1 }
 				add_building_construction = { type = industrial_complex level = state_factories instant_build = yes }
+			damage_building = {
+				type = industrial_complex
+				damage = 7
+			}
 			}
 			every_country = {
 				USA = { remove_all_volunteer_relation_modifiers_from_PREV = yes }
@@ -1093,6 +1098,7 @@ USA_civil_war_ends = {
 			#Power Projection event for Russia
 			RUS = { country_event = { id = russia_foreign_policy_events.258 days = 1 } }
 		}
+		update_volunteer_AI = yes
 	}
 }
 
@@ -1254,6 +1260,34 @@ WCA_add_extra_units_based_on_strength = {
 					}
 				}
 			}
+		}
+	}
+	if = {
+		limit = { USA = { has_country_flag  = USA_ACW_austerity_rejected} }
+		
+		create_unit = {
+			division = "division_template = \"Continental Infantry Division\" start_experience_factor = 0.3"
+			owner = PREV
+			count = 2
+		}
+		create_unit = {
+			division = "division_template = \"Continental Guard Infantry Division\" start_experience_factor = 0.2"
+			owner = PREV
+			count = 4
+		}
+		create_unit = {
+			division = "division_template = \"Organised Reserve Infantry Division\" start_experience_factor = 0.1"
+			owner = PREV
+			count = 4
+		}
+		create_unit = {
+			division = "division_template = \"Continental Guard Cavalry Division\" start_experience_factor = 0.2"
+			owner = PREV
+			count = 2
+		}
+		create_unit = {
+			division = "division_template = \"Continental Marine Division\" start_experience_factor = 0.3"
+			owner = PREV
 		}
 	}
 }
@@ -2186,21 +2220,27 @@ USA_spawn_starting_civil_war_divisions = {
 		create_unit = {
 			division = "division_template = \"Infantry Division\" start_experience_factor = 0.3"
 			owner = PREV
-			count = 2
+			count = 5
 		}
 		create_unit = {
 			division = "division_template = \"National Guard Infantry Division\" start_experience_factor = 0.2"
 			owner = PREV
-			count = 4
+			count = 2
 		}
 		create_unit = {
 			division = "division_template = \"Organised Reserve Infantry Division\" start_experience_factor = 0.1"
 			owner = PREV
-			count = 4
+			count = 8
+		}
+		create_unit = {
+			division = "division_template = \"Cavalry Division\" start_experience_factor = 0.3"
+			owner = PREV
+			count = 2
 		}
 		create_unit = {
 			division = "division_template = \"National Guard Cavalry Division\" start_experience_factor = 0.2"
 			owner = PREV
+			count = 2
 		}
 		create_unit = {
 			division = "division_template = \"Marine Division\" start_experience_factor = 0.3"
@@ -2223,17 +2263,17 @@ WCA_spawn_starting_civil_war_divisions = {
 		create_unit = {
 			division = "division_template = \"Continental Guard Infantry Division\" start_experience_factor = 0.2"
 			owner = PREV
-			count = 3
+			count = 4
 		}
 		create_unit = {
 			division = "division_template = \"Organised Reserve Infantry Division\" start_experience_factor = 0.1"
 			owner = PREV
-			count = 8
+			count = 4
 		}
 		create_unit = {
 			division = "division_template = \"Continental Guard Cavalry Division\" start_experience_factor = 0.2"
 			owner = PREV
-			count = 3
+			count = 2
 		}
 		create_unit = {
 			division = "division_template = \"Continental Marine Division\" start_experience_factor = 0.3"
@@ -2250,42 +2290,6 @@ APG_spawn_starting_civil_war_divisions = {
 	create_APG_militia_template = yes
 	create_APG_garrison_template = yes
 	create_APG_mounted_militia_template = yes
-	create_organised_reserve_template = yes
-	capital_scope = {
-		create_unit = {
-			division = "division_template = \"Infantry Division\" start_experience_factor = 0.3"
-			owner = PREV
-			count = 2
-		}
-		create_unit = {
-			division = "division_template = \"National Guard Infantry Division\" start_experience_factor = 0.2"
-			owner = PREV
-			count = 4
-		}
-		create_unit = {
-			division = "division_template = \"Organised Reserve Infantry Division\" start_experience_factor = 0.1"
-			owner = PREV
-			count = 6
-		}
-		create_unit = {
-			division = "division_template = \"Cavalry Division\" start_experience_factor = 0.3"
-			owner = PREV
-		}
-		create_unit = {
-			division = "division_template = \"National Guard Cavalry Division\" start_experience_factor = 0.2"
-			owner = PREV
-		}
-		create_unit = {
-			division = "division_template = \"Marine Division\" start_experience_factor = 0.3"
-			owner = PREV
-		}
-	}
-}
-
-ACC_spawn_starting_civil_war_divisions = {
-	create_ACC_militia_template = yes
-	create_ACC_garrison_template = yes
-	create_ACC_mounted_militia_template = yes
 	create_organised_reserve_template = yes
 	capital_scope = {
 		create_unit = {
@@ -2317,6 +2321,43 @@ ACC_spawn_starting_civil_war_divisions = {
 			division = "division_template = \"Marine Division\" start_experience_factor = 0.3"
 			owner = PREV
 		}
+	}
+}
+
+ACC_spawn_starting_civil_war_divisions = {
+	create_ACC_militia_template = yes
+	create_ACC_garrison_template = yes
+	create_ACC_mounted_militia_template = yes
+	create_organised_reserve_template = yes
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"Infantry Division\" start_experience_factor = 0.3"
+			owner = PREV
+			count = 2
+		}
+		create_unit = {
+			division = "division_template = \"National Guard Infantry Division\" start_experience_factor = 0.2"
+			owner = PREV
+			count = 4
+		}
+		create_unit = {
+			division = "division_template = \"Organised Reserve Infantry Division\" start_experience_factor = 0.1"
+			owner = PREV
+			count = 4
+		}
+		create_unit = {
+			division = "division_template = \"Cavalry Division\" start_experience_factor = 0.3"
+			owner = PREV
+		}
+		create_unit = {
+			division = "division_template = \"National Guard Cavalry Division\" start_experience_factor = 0.2"
+			owner = PREV
+		}
+		create_unit = {
+			division = "division_template = \"Marine Division\" start_experience_factor = 0.3"
+			owner = PREV
+		}
+
 	}
 }
 
@@ -2423,6 +2464,11 @@ create_USA_militia_template = {
 				militia = { x = 0 y = 3 }
 				militia = { x = 1 y = 0 }
 			}
+			support = {
+			#	engineer = { x = 0 y = 0 }
+			#	recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
+			}
 			priority = 0
 		}
 	}
@@ -2443,6 +2489,11 @@ create_USA_garrison_template = {
 				infantry = { x = 1 y = 0 }
 				infantry = { x = 1 y = 1 }
 				infantry = { x = 1 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
 			}
 			template_counter = 6
 			priority = 0
@@ -2466,6 +2517,11 @@ create_USA_mounted_militia_template = {
 				cavalry = { x = 1 y = 1 }
 				cavalry = { x = 1 y = 2 }
 			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
+			}
 		}
 	}
 }
@@ -2487,6 +2543,11 @@ create_WCA_militia_template = {
 				militia = { x = 0 y = 3 }
 				militia = { x = 1 y = 0 }
 			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
+			}
 			priority = 0
 		}
 	}
@@ -2507,6 +2568,11 @@ create_WCA_garrison_template = {
 				infantry = { x = 1 y = 0 }
 				infantry = { x = 1 y = 1 }
 				infantry = { x = 1 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
 			}
 			template_counter = 6
 			priority = 0
@@ -2530,6 +2596,11 @@ create_WCA_mounted_militia_template = {
 				cavalry = { x = 1 y = 1 }
 				cavalry = { x = 1 y = 2 }
 			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
+			}
 		}
 	}
 }
@@ -2551,6 +2622,11 @@ create_ACC_militia_template = {
 				militia = { x = 0 y = 3 }
 				militia = { x = 1 y = 0 }
 			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
+			}
 			priority = 0
 		}
 	}
@@ -2571,6 +2647,11 @@ create_ACC_garrison_template = {
 				infantry = { x = 1 y = 0 }
 				infantry = { x = 1 y = 1 }
 				infantry = { x = 1 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
 			}
 			template_counter = 6
 			priority = 0
@@ -2594,6 +2675,11 @@ create_ACC_mounted_militia_template = {
 				cavalry = { x = 1 y = 1 }
 				cavalry = { x = 1 y = 2 }
 			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
+			}
 		}
 	}
 }
@@ -2615,6 +2701,11 @@ create_APG_militia_template = {
 				militia = { x = 0 y = 3 }
 				militia = { x = 1 y = 0 }
 			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
+			}
 			priority = 0
 		}
 	}
@@ -2635,6 +2726,11 @@ create_APG_garrison_template = {
 				infantry = { x = 1 y = 0 }
 				infantry = { x = 1 y = 1 }
 				infantry = { x = 1 y = 2 }
+			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
 			}
 			template_counter = 6
 			priority = 0
@@ -2658,6 +2754,11 @@ create_APG_mounted_militia_template = {
 				cavalry = { x = 1 y = 1 }
 				cavalry = { x = 1 y = 2 }
 			}
+			support = {
+				engineer = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 }
+				artillery = { x = 0 y = 2}
+			}
 		}
 	}
 }
@@ -2676,7 +2777,7 @@ USA_macarthur_coup = {
 USA_macarthur_coup_effect = {
 	set_politics = {
 		ruling_party = paternal_autocrat
-		elections_allowed = no
+		elections_allowed = yes
 	}
 	USA_united_states_congress = {
 		custom_effect_tooltip = {
@@ -2751,9 +2852,9 @@ USA_reset_southern_VP_values = {
 USA_canada_seizes_new_england = {
 	set_global_flag = CAN_seized_new_england
 	USA_restore_deleted_factories_NEE = yes
-	CAN = {
-		complete_national_focus = CAN_new_england_question
-	}
+	#CAN = {
+	#	complete_national_focus = CAN_new_england_question
+	#}
 	USA = {
 		every_owned_state = {
 			limit = { is_new_england = yes }
@@ -2768,6 +2869,13 @@ USA_canada_seizes_new_england = {
 				add_claim_by = USA
 			}
 			add_compliance = 25
+		}
+	}
+	if ={
+		limit = { CAN = {controls_state = 930 }}
+		random_list = {
+				60 = { WCA = { country_event = { id = american_civil_war_events.724 days = 1 } } }
+				40 = {  }
 		}
 	}
 }
@@ -2819,59 +2927,59 @@ USA_spawn_new_england = {
 			}
 			357 = { #Maine
 				create_unit = {
-					division = "name = \"Maine National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2"
+					division = "name = \"Maine National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2 start_equipment_factor = 0.2"
 					owner = PREV
 					prioritize_location = 12459
 				}
 			}
 			933 = { #Vermont
 				create_unit = {
-					division = "name = \"Vermont National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2"
+					division = "name = \"Vermont National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2 start_equipment_factor = 0.2"
 					owner = PREV
 					prioritize_location = 4445
 				}
 			}
 			934 = { #New Hampshire
 				create_unit = {
-					division = "name = \"New Hampshire National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2"
+					division = "name = \"New Hampshire National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2 start_equipment_factor = 0.2"
 					owner = PREV
 					prioritize_location = 3712
 				}
 			}
 			932 = { #Massachusetts
 				create_unit = {
-					division = "name = \"1st Massachusetts National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2"
+					division = "name = \"1st Massachusetts National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2 start_equipment_factor = 0.2"
 					owner = PREV
 					prioritize_location = 6732
 				}
 				create_unit = {
-					division = "name = \"2nd Massachusetts National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2"
+					division = "name = \"2nd Massachusetts National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2 start_equipment_factor = 0.2"
 					owner = PREV
 					prioritize_location = 6732
 				}
 			}
 			931 = { #Connecticut
 				create_unit = {
-					division = "name = \"Connecticut National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2"
+					division = "name = \"Connecticut National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2 start_equipment_factor = 0.2"
 					owner = PREV
 					prioritize_location = 9850
 				}
 			}
 			935 = { #Rhode Island
 				create_unit = {
-					division = "name = \"Rhode Island National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2"
+					division = "name = \"Rhode Island National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2 start_equipment_factor = 0.2"
 					owner = PREV
 					prioritize_location = 9832
 				}
 			}
 			796 = { #Albany
 				create_unit = {
-					division = "name = \"1st New York National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2"
+					division = "name = \"1st New York National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2 start_equipment_factor = 0.2"
 					owner = PREV
 					prioritize_location = 9693
 				}
 				create_unit = {
-					division = "name = \"2nd New York National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2"
+					division = "name = \"2nd New York National Guard\" division_template = \"National Guard\" start_experience_factor = 0.2 start_equipment_factor = 0.2"
 					owner = PREV
 					prioritize_location = 9693
 				}
@@ -2981,6 +3089,80 @@ USA_spawn_new_england = {
 			set_temp_variable = { USA_mio_transfer_target = NEE }
 			USA_transfer_mio_size_and_funds = yes
 		}
+		if = {
+			limit = { 930 = { is_controlled_by = NEE }}
+		930 = {
+			remove_core_of = NEE
+			add_claim_by = NEE
+			remove_claim_by = WCA
+			add_core_of = WCA
+			set_demilitarized_zone = no
+			USA_remove_support_modifiers_from_state = yes
+			start_state_integration_resistance = yes
+
+		}
+		}
+		796 = {
+			remove_core_of = NEE
+			add_claim_by = NEE
+			remove_claim_by = WCA
+			add_core_of = WCA
+			set_demilitarized_zone = no
+			USA_remove_support_modifiers_from_state = yes
+			start_state_integration_resistance = yes
+		}
+
+		934 = {
+			remove_core_of = NEE
+			add_claim_by = NEE
+			remove_claim_by = USA
+			add_core_of = USA
+			set_demilitarized_zone = no
+			USA_remove_support_modifiers_from_state = yes
+			start_state_integration_resistance = yes
+						add_compliance = 25
+		}
+		933 = {
+			remove_core_of = NEE
+			add_claim_by = NEE
+			remove_claim_by = USA
+			add_core_of = USA
+			set_demilitarized_zone = no
+			USA_remove_support_modifiers_from_state = yes
+			start_state_integration_resistance = yes
+						add_compliance = 25
+		}
+		357 = {
+			remove_core_of = NEE
+			add_claim_by = NEE
+			remove_claim_by = USA
+			add_core_of = USA
+			set_demilitarized_zone = no
+			USA_remove_support_modifiers_from_state = yes
+			start_state_integration_resistance = yes
+						add_compliance = 25
+		}
+		931 = {
+			remove_core_of = NEE
+			add_claim_by = NEE
+			remove_claim_by = USA
+			add_core_of = USA
+			set_demilitarized_zone = no
+			USA_remove_support_modifiers_from_state = yes
+			start_state_integration_resistance = yes
+						add_compliance = 35
+		}
+		935 = {
+			remove_core_of = NEE
+			add_claim_by = NEE
+			remove_claim_by = USA
+			add_core_of = USA
+			set_demilitarized_zone = no
+			USA_remove_support_modifiers_from_state = yes
+			start_state_integration_resistance = yes
+						add_compliance = 35
+		}
+
 	}
 }
 
@@ -3007,7 +3189,7 @@ ACW_spawn_militia_divisions = {
 			is_core_of = USA
 			is_owned_by = USA
 		}
-		multiply_temp_variable = { units_to_spawn = 2 }
+		multiply_temp_variable = { units_to_spawn = 1.2 }
 	}
 	round_temp_variable = units_to_spawn
 
@@ -3082,6 +3264,8 @@ ACW_spawn_militia_divisions = {
 				DIVISION = "\\\"[?counter][GetACWOrdinalSuffix] [THIS.GetName] [GetACWMilitiaName]\\\""
 				TEMPLATE = "\\\"[GetACWMilitiaTemplate]\\\""
 			}
+
+			ROOT = { add_manpower = -6000 }
 			add_to_temp_variable = { counter = 1 }
 		}
 	}
@@ -3107,6 +3291,7 @@ ACW_spawn_militia_divisions = {
 				DIVISION = "\\\"[?counter][GetACWOrdinalSuffix] [THIS.GetName] [GetACWGarrisonName]\\\""
 				TEMPLATE = "\\\"[GetACWGarrisonTemplate]\\\""
 			}
+			ROOT = { add_manpower = -5000 }
 			add_to_temp_variable = { counter = 1 }
 		}
 	}
@@ -3132,6 +3317,7 @@ ACW_spawn_militia_divisions = {
 				DIVISION = "\\\"[?counter][GetACWOrdinalSuffix] [THIS.GetName] [GetACWMountedMilitiaName]\\\""
 				TEMPLATE = "\\\"[GetACWMountedMilitiaTemplate]\\\""
 			}
+			ROOT = { add_manpower = -6000 }
 			add_to_temp_variable = { counter = 1 }
 		}
 	}
@@ -4707,7 +4893,7 @@ USA_support_side_decision_complete_effect = {
 		}
 		IRE_handle_ACW_volunteers = yes
 	}
-	hidden_effect = { update_volunteer_AI = yes }
+	hidden_effect = { FROM = { update_volunteer_AI = yes } }
 }
 
 USA_set_side_as_supported_by_PREV = {
@@ -4749,4 +4935,56 @@ USA_set_side_as_supported_by_PREV = {
 		}
 	}
 	set_variable = { PREV.ACW_supported_tag = THIS }
+}
+
+replace_civ_with_arms_factories = {
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
+	random_owned_controlled_state = {
+		limit = {
+			is_fully_controlled_by = ROOT
+			industrial_complex > 0
+		}
+		remove_building = {
+			type = industrial_complex
+			level = 1
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+
 }

@@ -58,6 +58,10 @@ SWE_geopolitical_actions = {
 				factor = 0
 				threat < 0.2
 			}
+			modifier = {
+				factor = 0
+				has_government = social_democrat
+			}
 		}
 
 		complete_effect = {

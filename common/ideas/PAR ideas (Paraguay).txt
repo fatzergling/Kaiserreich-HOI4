@@ -720,6 +720,65 @@ ideas = {
 				army_org_factor = -0.3
 			}
 		}
+		PAR_BOL_reparations_PAR = {
+			on_add = { log = "[GetLogRoot]: add idea PAR_BOL_reparations_ARG" }
+			picture = ger_mefo_bills
+			allowed = { always = no }
+			available = {
+				BOL = { has_idea = PAR_BOL_reparations_BOL }
+			}
+			modifier = {
+				political_power_gain = 0.10
+				industrial_factory_donations = 1
+			}
+		}
+		PAR_BOL_reparations_BOL = {
+			on_add = { log = "[GetLogRoot]: add idea PAR_BOL_reparations_PAR" }
+			picture = ger_mefo_bills_payment
+			allowed = { always = no }
+			available = {
+				PAR = {
+					exists = yes
+					is_subject = no
+				}
+				NOT = { has_war_with = PAR }
+			}
+			modifier = {
+				political_power_gain = -0.15
+				civilian_factory_use = 1
+			}
+		}
+		PAR_BOL_reparations_harsh_PAR = {
+			on_add = { log = "[GetLogRoot]: add idea PAR_BOL_reparations_harsh_ARG" }
+			name = PAR_BOL_reparations_ARG
+			picture = ger_mefo_bills
+			allowed = { always = no }
+			available = {
+				BOL = { has_idea = PAR_BOL_reparations_harsh_BOL }
+			}
+			modifier = {
+				political_power_gain = 0.15
+				industrial_factory_donations = 2
+			}
+		}
+		PAR_BOL_reparations_harsh_BOL = {
+			on_add = { log = "[GetLogRoot]: add idea PAR_BOL_reparations_harsh_PAR" }
+			name = PAR_BOL_reparations_PAR
+			picture = ger_mefo_bills_payment
+			allowed = { always = no }
+			available = {
+				PAR = {
+					exists = yes
+					is_subject = no
+				}
+				NOT = { has_war_with = PAR }
+			}
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.25
+				civilian_factory_use = 2
+			}
+		}
 	}
 
 ##############

@@ -4191,7 +4191,7 @@ focus_tree = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = NFA_path option = NFA_PATH_SUS_SOCCON }
-					has_game_rule = { rule = NFA_path option = NFA_PATH_SOCCON }
+					has_game_rule = { rule = NFA_path option = NFA_PATH_PSF_SOCCON }
 				}
 			}
 		}
@@ -4964,7 +4964,7 @@ focus_tree = {
 				factor = 0
 				OR = {
 					has_game_rule = { rule = NFA_path option = NFA_PATH_MARLIB }
-					has_game_rule = { rule = NFA_path option = NFA_PATH_SOCCON }
+					has_game_rule = { rule = NFA_path option = NFA_PATH_PSF_SOCCON }
 				}
 			}
 		}
@@ -5129,6 +5129,22 @@ focus_tree = {
 				set_country_flag = CAN_refused_iedc
 				GER_add_to_mitteleuropa = yes
 			}
+			if = {
+				limit = { has_global_flag = GER_stay_out_france_uk }
+				if = {
+					limit = { has_global_flag = FRA_reparations }
+					NFA_Economic_Reparations = yes
+				}
+				if = {
+					limit = { has_global_flag = FRA_arms_treaty
+							NOT = { has_global_flag = FRA_arms_treaty_harsh } }
+					NFA_Military_Accords = yes
+				}
+				if = {
+					limit = { has_global_flag = FRA_arms_treaty_harsh }
+					NFA_Military_Accords_Harsh = yes
+				}
+			}
 
 			hidden_effect = {
 				#Flavour events post reconquest
@@ -5185,6 +5201,18 @@ focus_tree = {
 					long_name = NFA_mainland_radical_socialist_party_long
 					name = NFA_mainland_radical_socialist_party
 				}
+							add_popularity = {
+								ideology = totalist
+								popularity = 0.2
+							}
+							add_popularity = {
+								ideology = radical_socialist
+								popularity = 0.2
+							}
+							add_popularity = {
+								ideology = syndicalist
+								popularity = 0.2
+							}
 
 				#Unlock the loyalists template
 				if = {
@@ -5439,27 +5467,27 @@ focus_tree = {
 			459 = { #Remove Factories from Algeria
 				remove_building = {
 					type = arms_factory
-					level = 1
+					level = 2
 				}
 				remove_building = {
 					type = industrial_complex
-					level = 1
+					level = 2
 				}
 			}
 			460 = { #Remove Factories from Constantine
 				remove_building = {
 					type = arms_factory
-					level = 1
+					level = 2
 				}
 				remove_building = {
 					type = industrial_complex
-					level = 1
+					level = 2
 				}
 			}
 			805 = { #Remove Factories from Oran
 				remove_building = {
 					type = industrial_complex
-					level = 1
+					level = 2
 				}
 			}
 			865 = { #Remove Factories from Aurès
@@ -5478,7 +5506,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5492,7 +5520,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5506,7 +5534,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5520,7 +5548,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5533,8 +5561,8 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					type = arms_factory
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -6504,8 +6532,49 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed NATFRA_Science_Amnesty"
 			add_political_power = -25
-			add_stability = 0.05
 			add_research_slot_until_five = yes
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					has_elected_government = yes
+					is_monarchy = no
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_available_scientist
+						CHARACTER = FRA_irene_joliot_curie
+					}
+					FRA = { FRA_irene_joliot_curie = { set_nationality = ROOT } }
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_available_scientist
+						CHARACTER = FRA_frederic_joliot_curie
+					}
+					FRA = { FRA_frederic_joliot_curie = { set_nationality = ROOT } }
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_available_scientist
+					CHARACTER = FRA_robert_esnault_pelterie
+				}
+				FRA = { FRA_robert_esnault_pelterie = { set_nationality = ROOT } }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_available_scientist
+					CHARACTER = FRA_francois_hussenot
+				}
+				FRA = { FRA_francois_hussenot = { set_nationality = ROOT } }
+			}
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_available_scientist
+					CHARACTER = FRA_pierre_david
+				}
+				FRA = { FRA_pierre_david = { set_nationality = ROOT } }
+			}
 		}
 	}
 

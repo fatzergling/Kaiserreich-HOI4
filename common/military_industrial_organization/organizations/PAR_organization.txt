@@ -35,6 +35,19 @@ PAR_mauser_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
+
 }
 
 ###################
@@ -50,6 +63,19 @@ PAR_paraguay_somua_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 PAR_krupp_organisation = {
 	name = krupp_paraguay
@@ -61,6 +87,19 @@ PAR_krupp_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
+
 }
 PAR_paraguay_chrysler_organisation = {
 	name = paraguay_chrysler
@@ -72,6 +111,19 @@ PAR_paraguay_chrysler_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }
 ##################
 ### Naval MIOs ###
@@ -105,6 +157,19 @@ PAR_paraguay_fokker_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
+
 }
 PAR_paraguay_focke_wulf_organisation = {
 	name = paraguay_focke_wulf
@@ -116,6 +181,19 @@ PAR_paraguay_focke_wulf_organisation = {
 	available = {
 		GER_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		GER = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		GER = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		GER = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		GER = { add_cic = 500 }
+	}
+
 }
 PAR_paraguay_morane_saulnier_organisation = {
 	name = paraguay_morane_saulnier
@@ -127,6 +205,19 @@ PAR_paraguay_morane_saulnier_organisation = {
 	available = {
 		FRA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		FRA = { add_cic = 50 }
+	}
+	on_design_team_assigned_to_variant = {
+		FRA = { add_cic = 25 }
+	}
+	on_industrial_manufacturer_assigned = {
+		FRA = { add_cic = 50 }
+	}
+	on_tech_research_completed = {
+		FRA = { add_cic = 250 }
+	}
+
 }
 PAR_curtiss_wright_organisation = {
 	name = curtiss_wright_paraguay
@@ -138,4 +229,17 @@ PAR_curtiss_wright_organisation = {
 	available = {
 		USA_export_mio_trigger = yes
 	}
+	on_design_team_assigned_to_tech = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		var:361.owner = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		var:361.owner = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		var:361.owner = { add_cic = 500 }
+	}
+
 }

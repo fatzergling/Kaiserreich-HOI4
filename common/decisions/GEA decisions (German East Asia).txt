@@ -331,7 +331,10 @@ political_actions = {
 
 		targets = { 64.OWNER }
 		target_trigger = {
-			FROM = { is_germany_or_splinter_tag = yes }
+			FROM = {
+				is_germany_or_splinter_tag = yes
+				NOT = { tag = GER }
+			}
 		}
 
 		cost = 10
@@ -378,7 +381,7 @@ political_actions = {
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete GEA_align_with_berlins_protector"
 			set_country_flag = GEA_realignment_with_berlin_flag
-			FROM = { country_event = german_east_asia_events.1000 }
+			FROM.overlord = { country_event = german_east_asia_events.1000 }
 		}
 		fixed_random_seed = no
 	}
@@ -402,10 +405,10 @@ GEA_colonial_decisions = {
 			is_subject_of = FROM
 		}
 
-		cost = 100
+		cost = 10
 		days_re_enable = 730
 
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete GEA_steal_manpower_from_home"
@@ -429,9 +432,9 @@ GEA_colonial_decisions = {
 				archetype = infantry_equipment
 				ratio < 0.05
 			}
-			FROM = {
-				has_equipment = { infantry_equipment > 2499 }
-			}
+			#FROM = {
+			#	has_equipment = { infantry_equipment > 2499 }
+			#}
 		}
 
 		targets = { GER }
@@ -439,10 +442,10 @@ GEA_colonial_decisions = {
 			is_subject_of = FROM
 		}
 
-		cost = 50
+		cost = 5
 		days_re_enable = 365
 
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 1000 }
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete GEA_steal_guns_from_home"
@@ -961,7 +964,10 @@ GEA_help_lep_decisions = {
 		allowed = { always = no } #activated by effect
 
 		available = {
+			if = {
+				limit = { is_ai = no }
 			has_equipment = { infantry_equipment > 2499 }
+			}
 		}
 
 		visible = {
@@ -972,7 +978,7 @@ GEA_help_lep_decisions = {
 		cost = 5
 		fire_only_once = yes
 
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 5000 }
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete GEA_give_guns_to_lep"
@@ -1006,7 +1012,7 @@ GEA_help_lep_decisions = {
 			civilian_factory_use = 4
 		}
 
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 5000 }
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete GEA_give_factories_to_lep"

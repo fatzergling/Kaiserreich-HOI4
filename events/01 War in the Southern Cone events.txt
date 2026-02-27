@@ -431,3 +431,274 @@ country_event = { # Ro Negro skirmishes - prepare for war
 		}
 	}
 }
+
+
+country_event = { #Peace with Paraguay?
+	id = southern_cone_events.50
+	title = southern_cone_events.50.t
+	desc = southern_cone_events.50.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_war_with = BOL
+		OR = {
+		controls_state = 487 #Asunción
+		controls_state = 848 #Asunción
+		}
+	}
+
+	option = { #sure
+		log = "[GetLogInfo]: event southern_cone_events.10 option southern_cone_events.10.a"
+		name = southern_cone_events.50.a
+		ai_chance = { base = 25 }
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = BOL
+				relation = non_aggression_pact
+			}
+			BOL = {
+				add_opinion_modifier = {
+					target = PREV
+					modifier = KR_approves_of_govt
+				}
+				add_war_support = -0.2
+			}
+		}
+		hidden_effect = { PAR = { country_event = southern_cone_events.11 } }
+	}
+
+	option = { #Yes, with some reparations
+		log = "[GetLogInfo]: event southern_cone_events.10 option southern_cone_events.10.b"
+		name = southern_cone_events.50.b
+		ai_chance = { base = 75 }
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = BOL
+				relation = non_aggression_pact
+			}
+			add_timed_idea = {
+				idea = PAR_BOL_reparations_PAR
+				days = 1080
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = BOL
+			}
+			custom_effect_tooltip = tooltip_white_line
+			BOL = {
+				add_timed_idea = {
+					idea = PAR_BOL_reparations_BOL
+					days = 1080
+				}
+				disband_twenty_percent_units = yes
+				custom_effect_tooltip = tooltip_white_line
+				add_war_support = -0.2
+			}
+		}
+		hidden_effect = { BOL = { country_event = southern_cone_events.12 } }
+	}
+
+	option = { #Yes, with big reparations
+		log = "[GetLogInfo]: event southern_cone_events.10 option southern_cone_events.10.c"
+		name = southern_cone_events.50.c
+		ai_chance = { base = 25 }
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = BOL
+				relation = non_aggression_pact
+			}
+			add_timed_idea = {
+				idea = PAR_BOL_reparations_harsh_PAR
+				days = 1080
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = BOL
+			}
+			custom_effect_tooltip = tooltip_white_line
+			BOL = {
+				add_timed_idea = {
+					idea = PAR_BOL_reparations_harsh_BOL
+					days = 1080
+				}
+				disband_twenty_percent_units = yes
+				custom_effect_tooltip = tooltip_white_line
+				decrease_economic_mobilisation = yes
+				add_war_support = -0.2
+			}
+		}
+		hidden_effect = { PAR = { country_event = southern_cone_events.13 } }
+	}
+
+	option = { #no
+		log = "[GetLogInfo]: event southern_cone_events.10 option southern_cone_events.10.e"
+		name = southern_cone_events.50.e
+		ai_chance = { base = 0 }
+	}
+}
+
+country_event = { #Argentina asks for peace - no demands
+	id = southern_cone_events.51
+	title = southern_cone_events.51.t
+	desc = southern_cone_events.51.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+
+	option = { #sure
+		log = "[GetLogInfo]: event southern_cone_events.51 option southern_cone_events.51.a"
+		name = southern_cone_events.51.a
+		ai_chance = { base = 100 }
+		FROM = { white_peace_with_ROOT = yes }
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+		}
+		add_opinion_modifier = {
+			target = FROM
+			modifier = KR_approves_of_govt
+		}
+		add_war_support = -0.2
+		if = {
+			limit = { 901 = { is_core_of = ROOT } }
+			901 = { remove_core_of = ROOT }
+		}
+		if = {
+			limit = { 901 = { is_claim_or_core_of_ROOT = yes } }
+			901 = { remove_claim_by = ROOT }
+		}
+		if = {
+			limit = { 1074 = { is_claim_or_core_of_ROOT = yes } }
+			1074 = { remove_claim_by = ROOT }
+		}
+	}
+
+	option = { #no
+		log = "[GetLogInfo]: event southern_cone_events.51 option southern_cone_events.51.b"
+		name = southern_cone_events.51.b
+		ai_chance = { base = 0 }
+		add_stability = -0.25
+		FROM = { country_event = { id = southern_cone_events.54 hours = 12 } }
+	}
+}
+
+country_event = { #Argentina asks for peace - reasonable reparations
+	id = southern_cone_events.52
+	title = southern_cone_events.51.t
+	desc = southern_cone_events.52.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+
+	option = { #sure
+		log = "[GetLogInfo]: event southern_cone_events.12 option southern_cone_events.51.a"
+		name = southern_cone_events.52.a
+		ai_chance = { base = 100 }
+		FROM = { white_peace_with_ROOT = yes }
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+		}
+		add_timed_idea = {
+			idea = PAR_BOL_reparations_BOL
+			days = 1080
+		}
+		disband_twenty_percent_units = yes
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -1000
+		}
+		add_war_support = -0.2
+		FROM = {
+			add_timed_idea = {
+				idea = PAR_BOL_reparations_PAR
+				days = 1080
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = BOL
+			}
+		}
+	}
+
+	option = { #no
+		log = "[GetLogInfo]: event southern_cone_events.12 option southern_cone_events.11.b"
+		name = southern_cone_events.11.b
+		ai_chance = { base = 0 }
+		add_stability = -0.2
+		FROM = { country_event = { id = southern_cone_events.54 hours = 12 } }
+	}
+}
+
+country_event = { #Argentina asks for peace - heavy reparations
+	id = southern_cone_events.53
+	title = southern_cone_events.11.t
+	desc = southern_cone_events.53.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+
+	option = { #sure
+		log = "[GetLogInfo]: event southern_cone_events.13 option southern_cone_events.11.a"
+		name = southern_cone_events.53.a
+		ai_chance = { base = 50 }
+		FROM = { white_peace_with_ROOT = yes }
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_timed_idea = {
+			idea = PAR_BOL_reparations_harsh_BOL
+			days = 1080
+		}
+		disband_twenty_percent_units = yes
+		decrease_economic_mobilisation = yes
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -2000
+		}
+		FROM = {
+			add_timed_idea = {
+				idea = PAR_BOL_reparations_harsh_PAR
+				days = 1080
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = PAR
+			}
+		}
+	}
+
+	option = { #no
+		log = "[GetLogInfo]: event southern_cone_events.13 option southern_cone_events.11.b"
+		name = southern_cone_events.53.b
+		ai_chance = { base = 0 }
+		add_stability = -0.1
+		FROM = { country_event = { id = southern_cone_events.14 hours = 54 } }
+	}
+}
+
+country_event = { #Paraguay refuses
+	id = southern_cone_events.54
+	title = southern_cone_events.54.t
+	desc = southern_cone_events.54.d
+	picture = GFX_report_event_ARG_mil20
+
+	is_triggered_only = yes
+
+	option = { #welp
+		log = "[GetLogInfo]: event southern_cone_events.54 option southern_cone_events.54.a"
+		name = southern_cone_events.54.a
+	}
+}

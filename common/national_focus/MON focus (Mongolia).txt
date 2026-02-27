@@ -1790,7 +1790,12 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = MON_the_khanate_unshackled
 	}
-	ai_will_do = { factor = 20 }
+	ai_will_do = { factor = 20
+		modifier = {
+			factor = 2
+			has_war = yes 
+		}
+	 }
 	completion_reward = {
 		log = "[GetLogRoot]: Focus Completed MON_riding_along_the_wide_steppe"
 		RUS = { country_event = mongolia_events.56 }

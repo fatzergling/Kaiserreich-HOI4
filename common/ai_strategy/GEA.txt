@@ -23,20 +23,31 @@ GEA_invade_indochina = {
 	}
 	enable = {
 		has_war_with = INC
-		has_defensive_war = no #== not attacked by Japan
+		#has_defensive_war = no #== not attacked by Japan
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = invade
 		id = INC
-		value = 10 #just enough to overcome the AI's reluctance to invade when directly bordering an enemy
+		value = 100 #just enough to overcome the AI's reluctance to invade when directly bordering an enemy
 	}
 	ai_strategy = {
 		type = invasion_unit_request
 		tag = INC
-		value = 10
+		value = 100
 	}
+	ai_strategy = {
+		type = naval_dominance
+		id = indochina_2
+		value = 80
+	}
+		ai_strategy = {
+		type = strategic_air_importance
+		id = 196 #Indochina
+		value = 300000
+	}
+
 }
 
 GEA_crush_guerilla_holdout = {
@@ -72,7 +83,7 @@ GEA_crush_guerilla_holdout = {
 	ai_strategy = {
 		type = strategic_air_importance
 		id = 196 #Indochina
-		value = 30000
+		value = 300000
 	}
 }
 
@@ -156,15 +167,36 @@ GEA_protect_malaya = {
 			is_subject = no
 			surrender_progress < 0.3
 			naval_strength_comparison = { other = ROOT ratio > 0.6 }
+		NOT = {
+			AND = {
+				has_war_with = INC
+				NOT = { has_war_with = JAP }
+			}
+		}
 		}
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 336 #Singapore
-		value = 20
+		type = front_unit_request
+		strategic_region = 194 #Singapore
+		value = 35
 	}
+
+ai_strategy = {
+	type = put_unit_buffers
+	ratio = 0.2
+
+	order_id = 2
+	states = {
+		336
+	}
+	area = asia
+	# by default if you have orders in target areas, the buffer will request less units.
+	# you can override this to disable the feature
+	subtract_invasions_from_need = yes
+	subtract_fronts_from_need = yes
+}
 }
 
 GEA_ignore_indochina = {

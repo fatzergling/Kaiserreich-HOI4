@@ -1,6 +1,6 @@
 ANQ_strike_east = {
 	allowed = {
-		original_tag = ANQ
+		tag = ANQ
 	}
 	enable = {
 		country_exists = LEP
@@ -12,23 +12,23 @@ ANQ_strike_east = {
 	ai_strategy = {
 		type = conquer
 		id = LEP
-		value = 400
+		value = 4000
 	}
 	ai_strategy = {
 		type = front_unit_request
 		tag = LEP
-		value = 100
+		value = 1000
 	}
 	ai_strategy = {
 		type = front_unit_request
 		tag = QIE
-		value = -100
+		value = -1000
 	}
 }
 
 ANQ_attack_nanjing = {
 	allowed = {
-		original_tag = ANQ
+		tag = ANQ
 	}
 	enable = {
 		has_war_with = LEP
@@ -40,7 +40,12 @@ ANQ_attack_nanjing = {
 		tag = LEP
 		priority = 100
 		ordertype = front
-		execution_type = rush_weak
+		execution_type = rush
 		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = CHI
+		value = -250
 	}
 }

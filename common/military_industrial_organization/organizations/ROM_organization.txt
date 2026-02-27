@@ -133,21 +133,32 @@ ROM_societatea_concordia_organisation = {
 }
 
 ROM_fabrica_de_arme_cugir_organisation = { #TODO: make improved one
-	include = generic_infantry_equipment_organization
+	include = generic_support_equipment_organization
 	name = fabrica_de_arme_cugir
 	icon = GFX_idea_fabrica_de_arme_cugir
 
 	allowed = {
-		OR = {
-			is_danubian_tag = yes
 			original_tag = ROM
-		}
 	}
 
 	available = {
 		FROM = { owns_state = 84 } #Brasov
 	}
 }
+ROM_udr_organisation = { #TODO: add foreign artillery company?
+	include = generic_artillery_organization
+	name = udr
+	icon = GFX_idea_udr
+
+	allowed = {
+			original_tag = ROM
+	}
+
+	available = {
+		FROM = { controls_state = 84 } #Brasov
+	}
+}
+
 ROM_udr_organisation = { #TODO: add foreign artillery company?
 	include = generic_artillery_organization
 	name = udr
@@ -161,18 +172,106 @@ ROM_udr_organisation = { #TODO: add foreign artillery company?
 	}
 
 	available = {
-		FROM = { owns_state = 84 } #Brasov
+		FROM = { controls_state = 84 } #Brasov
 	}
+
+
 }
 
-ROM_dwm_organisation = {
+ROM_bmz_organisation = {
+	include = generic_artillery_organization
+	name = bmz_rom
+	icon = GFX_idea_bmz
+	allowed = {
+		original_tag = ROM
+	}
+	available = {
+		RUS_export_mio_trigger = yes
+	}
+	visible = {
+		NOT = {
+		FROM = { owns_state = 84 } #Brasov
+		}
+	}
+
+	on_design_team_assigned_to_tech = {
+		RUS = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		RUS = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		RUS = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		RUS = { add_cic = 500 }
+	}
+
+}
+
+ROM_amo_organisation = {
+	include = generic_motorized_mechanized_organization
+	name = amo_rom
+	icon = GFX_idea_amo
+	allowed = {
+		original_tag = ROM
+	}
+	available = {
+		RUS_export_mio_trigger = yes
+	}
+	visible = {
+		NOT = {
+		FROM = { has_completed_focus = ROM_support_malaxa } }
+	}
+
+	on_design_team_assigned_to_tech = {
+		RUS = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		RUS = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		RUS = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		RUS = { add_cic = 500 }
+	}
+
+}
+
+
+
+
+ROM_imz_organisation = {
 	include = generic_support_equipment_organization
-	name = dwm
-	icon = GFX_idea_dwm
+	name = imz_rom
+	icon = GFX_idea_imz
 
 	allowed = {
 		original_tag = ROM
 	}
+	available = {
+		RUS_export_mio_trigger = yes
+	}
+	visible = {
+		NOT = {
+		FROM = { owns_state = 84 } #Brasov
+		}
+	}
+
+	on_design_team_assigned_to_tech = {
+		RUS = { add_cic = 100 }
+	}
+	on_design_team_assigned_to_variant = {
+		RUS = { add_cic = 50 }
+	}
+	on_industrial_manufacturer_assigned = {
+		RUS = { add_cic = 100 }
+	}
+	on_tech_research_completed = {
+		RUS = { add_cic = 500 }
+	}
+
 }
 
 ROM_malaxa_mechanized_organisation = {

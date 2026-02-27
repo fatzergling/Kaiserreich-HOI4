@@ -1,0 +1,490 @@
+### Kaiserreich landmark models
+### Designed by the Kaiserreich team
+### Subject to the Kaiserreich Usage Policy
+
+# Shwedagon Pagoda -> landmark_shwedagon_pagoda
+entity = {
+	name = "shwedagon_pagoda_entity"
+	pdxmesh = "shwedagon_pagoda_mesh"
+}
+
+### Darkest Hour landmark models
+### Designed by nich2649, property of Generalisoft Interactive, featured in Darkest Hour
+### Do not distribute or reuse without their permission!
+
+# Palace of Westminster -> landmark_big_ben
+entity = {
+	name = "big_ben_entity"
+	pdxmesh = "palace_of_westminster_mesh"
+}
+
+# Christ the Redeemer -> landmark_cristo_redentor
+entity = {
+	name = "cristo_redentor_entity"
+	pdxmesh = "christ_the_redeemer_mesh"
+}
+
+# Eiffel Tower -> landmark_eiffel_tower 
+entity = {
+	name = "eiffel_tower_entity"
+	pdxmesh = "eiffel_tower_mesh"
+}
+
+# Statue of Liberty -> landmark_statue_of_liberty
+entity = {
+	name = "statue_of_liberty_entity"
+	pdxmesh = "statue_of_liberty_mesh"
+}
+
+# Kremlin -> landmark_kremlin
+entity = {
+	name = "kremlin_entity"
+	pdxmesh = "kremlin_mesh"
+}
+
+# Reichstag -> landmark_berlin_reichstag
+entity = {
+	name = "reichstag_entity"
+	pdxmesh = "reichstag_mesh"
+}
+
+# Taj Mahal -> landmark_taj_mahal
+entity = {
+	name = "taj_mahal_entity"
+	pdxmesh = "taj_mahal_mesh"
+}
+
+# National Diet -> landmark_national_diet
+entity = {
+	name = "national_diet_entity"
+	pdxmesh = "national_diet_mesh"
+}
+
+### Europe
+## Denmark
+# Christiansborg Palace -> landmark_christiansborg_palace
+entity = {
+	name = "christiansborg_palace_entity"
+	pdxmesh = "christiansborg_palace_mesh"
+}
+
+## France
+# Arc de Triomphe -> landmark_arc_de_triomphe
+entity = {
+	name = "arc_de_triomphe_entity"
+	pdxmesh = "arc_de_triomphe_mesh"
+}
+# Notre Dame -> landmark_notre_dame
+entity = {
+	name = "notre_dame_entity"
+	pdxmesh = "notre_dame_mesh"
+}
+
+## Germany
+# Brandenburg Gate -> landmark_brandenburg_gate
+entity = {
+	name = "brandenburg_gate_entity"
+	pdxmesh = "brandenburg_gate_mesh"
+}
+# Cologne Cathedral -> landmark_cologne_cathedral
+entity = {
+	name = "cologne_cathedral_entity"
+	pdxmesh = "cologne_cathedral_mesh"
+}
+
+## Italy
+# Leaning Tower of Pisa -> landmark_leaning_tower_of_pisa
+entity = {
+	name = "leaning_tower_of_pisa_entity"
+	pdxmesh = "leaning_tower_of_pisa_mesh"
+}
+
+## Russia
+# Saint Basil's Cathedral -> landmark_saint_basils_cathedral
+entity = {
+	name = "saint_basils_cathedral_entity"
+	pdxmesh = "saint_basils_cathedral_mesh"
+}
+# Palace of the Soviets -> reused for landmark_vozhd_liberator
+entity = {
+	name = "vozhd_liberator_entity"
+	pdxmesh = "palace_of_the_soviets_mesh"
+}
+
+### Americas
+## United States
+# White House -> landmark_white_house
+entity = {
+	name = "white_house_entity"
+	pdxmesh = "white_house_mesh"
+}
+# Capitol Building -> landmark_capitol
+entity = {
+	name = "capitol_building_entity"
+	pdxmesh = "capitol_building_mesh"
+}
+# Washington Monument -> landmark_washington_monument
+entity = {
+	name = "washington_monument_entity"
+	pdxmesh = "washington_monument_mesh"
+}
+# Pentagon -> landmark_pentagon
+entity = {
+	name = "pentagon_entity"
+	pdxmesh = "pentagon_mesh"
+}
+# Empire State Building -> landmark_empire_state_building
+entity = {
+	name = "empire_state_building_entity"
+	pdxmesh = "empire_state_building_mesh"
+}
+# Boulder Dam -> landmark_boulder_dam
+entity = {
+	name = "boulder_dam_entity"
+	pdxmesh = "boulder_dam_mesh"
+}
+# Golden Gate Bridge -> landmark_golden_gate_bridge
+entity = {
+	name = "golden_gate_bridge_entity"
+	pdxmesh = "golden_gate_mesh"
+}
+# Hollywood Sign -> landmark_hollywood_sign
+entity = {
+	name = "hollywood_sign_entity"
+	pdxmesh = "hollywood_sign_mesh"
+}
+
+## Chile
+# Moai -> landmark_moai
+entity = {
+	name = "moai_entity"
+	pdxmesh = "moai_mesh"
+}
+
+### Asia
+## Siam
+# Wat Arun -> landmark_wat_arun
+entity = {
+	name = "wat_arun_entity"
+	pdxmesh = "wat_arun_mesh"
+}
+
+### Middle East
+## Arabia
+# Kaaba -> landmark_kaaba
+entity = {
+	name = "kaaba_entity"
+	pdxmesh = "kaaba_mesh"
+}
+
+## Egypt
+# Pyramids of Giza -> landmark_pyramids_of_giza
+entity = {
+	name = "pyramids_of_giza_entity"
+	pdxmesh = "pyramids_of_giza_mesh"
+}
+
+### Landmarks Project landmark models
+### Designed by Owl, featured in Landmarks Project
+### Do not distribute or reuse without their permission!
+
+# Colosseum -> landmark_colosseum
+entity = {
+	name = "colosseum_entity"
+	pdxmesh = "colosseum_mesh"
+}
+
+# Hagia Sophia -> landmark_hagia_sophia
+entity = {
+	name = "hagia_sophia_entity"
+	pdxmesh = "hagia_sophia_mesh"
+}
+
+# Chichen Itza -> landmark_chichen_itza
+entity = {
+	name = "chichen_itza_entity"
+	pdxmesh = "chichen_itza_mesh"
+}
+
+### Millennium Dawn landmark models
+### Designed by the Millennium Dawn team, featured in Millennium
+### Do not distribute or reuse without their permission!
+
+# Himeji Castle -> landmark_himeji_castle
+entity = {
+	name = "himeji_castle_entity"
+	pdxmesh = "himeji_castle_mesh"
+}
+
+# Okayama Castle -> landmark_okayama_castle
+entity = {
+	name = "okayama_castle_entity"
+	pdxmesh = "okayama_castle_mesh"
+}
+
+entity = {
+	name = "building_landmark_sadabad_complex"
+	pdxmesh = "landmark_sadabad_complex_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 1.0 looping = no }
+
+	scale = 0.25
+
+}
+
+#DESTROYED
+entity = {
+	name = "building_landmark_sadabad_complex_destroyed"
+	pdxmesh = "landmark_sadabad_complex_destroyed_mesh"
+
+	default_state = "destroy"
+	state = { name = "destroy"			animation = "destroy" 			animation_blend_time = 0.0  animation_speed = 0.9 looping = no
+			event = { time = 0.1 node="explosion_roof" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 0.3 node="explosion_ground" particle = "ship_damaged_smoke_particle" keep_particle = yes }
+			event = { time = 2.2 node="roof_center_explosion" particle = "building_explode_effect" keep_particle = yes }
+			event = { time = 2.6 node="fire_tower" particle = "vehicle_explode_effect" keep_particle = yes }
+			event = { time = 3.5 node="fire_tower" particle = "building_fire_big_particle" keep_particle = yes }
+			event = { time = 7.8 node="explosion_corner2" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 8 node="explosion_corner1" particle = "building_explode_effect" keep_particle = yes }
+			event = { time = 5.0 node="fire1" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 13.8 node="explosion_ground1" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 14 node="statue" particle = "building_explode_effect" keep_particle = yes }
+
+
+			event = { time = 0.2 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 1.8 sound = { soundeffect = "explosion_flashbang_large" }}
+			event = { time = 13 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 15 sound = { soundeffect = "explosion_flashbang_large" }}
+			event = { time = 7 sound = { soundeffect = "building_large_crash_impact" }}
+
+
+				}
+
+
+	scale = 0.25
+
+}
+
+entity = {
+	name = "building_landmark_forbidden_city"
+	pdxmesh = "landmark_forbidden_city_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 1.0 looping = no }
+
+	scale = 0.1
+
+}
+
+#DESTROYED
+entity = {
+	name = "building_landmark_forbidden_city_destroyed"
+	pdxmesh = "landmark_forbidden_city_destroyed_mesh"
+
+	default_state = "destroy"
+	state = { name = "destroy"			animation = "destroy" 			animation_blend_time = 0.0  animation_speed = 0.8 looping = no
+			event = { time = 6 node="roof_explosion1" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 10.2 node="roof_explosion2" particle = "building_explode_effect" keep_particle = yes }
+
+			event = { time = 8 node="fire2" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 8.8 node="fire3" particle = "ship_explosion_particle" keep_particle = yes }
+
+			event = { time = 8 node="fire0" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 10.5 node="fire1" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 9 node="fire2" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 10 node="fire3" particle = "building_fire_particle" keep_particle = yes }
+
+
+			event = { time = 6.2 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 10.4 sound = { soundeffect = "explosion_flashbang_large" }}
+			event = { time = 8.2 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 9 sound = { soundeffect = "explosion_c4" }}
+
+
+				}
+
+
+	scale = 0.1
+
+}
+
+entity = {
+	name = "building_landmark_hofburg_palace"
+	pdxmesh = "landmark_hofburg_palace_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 1.0 looping = no }
+
+	scale = 0.2
+
+}
+
+
+
+
+
+#DESTROYED
+entity = {
+	name = "building_landmark_hofburg_palace_destroyed"
+	pdxmesh = "landmark_hofburg_palace_destroyed_mesh"
+
+	default_state = "destroy"
+	state = { name = "destroy"			animation = "destroy" 			animation_blend_time = 0.0  animation_speed = 1.0 looping = no next_state = "attack" chance = 1 
+			event = { time = 0.2 node="explosion1" particle = "ship_explosion_particle" keep_particle = yes sound = { soundeffect = "explosion_element" }}
+			event = { time = 4.1 node="explosion2" particle = "ship_explosion_particle" keep_particle = yes sound = { soundeffect = "explosion_small" }}
+			event = { time = 15.8 node="explosion3" particle = "ship_explosion_particle" keep_particle = yes sound = { soundeffect = "explosion_big" }}
+			event = { time = 13.5 node="explosion4" particle = "ship_explosion_particle" keep_particle = yes sound = { soundeffect = "explosion_big" }}
+			event = { time = 21.1 node="explosion5" particle = "ship_explosion_particle" keep_particle = yes sound = { soundeffect = "explosion_big" }}
+			event = { time = 1 node="explosion1" particle = "bunker_smoke_effect"  keep_particle = yes trigger_once = yes }
+			event = { time = 1 node="explosion1" particle = "ship_damaged_smoke_particle"  keep_particle = yes trigger_once = yes sound = { soundeffect = "explosion_fuel_small" }}
+			event = { time = 4.8 node="explosion2" particle = "ship_damaged_smoke_particle"  keep_particle = yes trigger_once = yes sound = { soundeffect = "explosion_fuel_small" }}
+			event = { time = 16.8 node="explosion3" particle = "ship_damaged_smoke_particle"  keep_particle = yes trigger_once = yes sound = { soundeffect = "explosion_fuel_small" }}
+			event = { time = 14.1 node="explosion4" particle = "ship_damaged_smoke_particle"  keep_particle = yes trigger_once = yes sound = { soundeffect = "explosion_fuel_small" }}
+			event = { time = 25.1 node="fire_spread" particle = "ship_damaged_smoke_particle"  keep_particle = yes trigger_once = yes sound = { soundeffect = "explosion_fuel_small" }}
+			event = { time = 1 node="explosion5" particle = "bunker_smoke_effect"  keep_particle = yes trigger_once = yes }
+			event = { time = 2 node="impact1" particle = "ship_explosion_particle"  keep_particle = yes sound = { soundeffect = "explosion_large" }}	
+			event = { time = 5 node="impact2" particle = "ship_explosion_particle"  keep_particle = yes sound = { soundeffect = "explosion_flashbang_large" }}	
+			event = { time = 8.8 node="impact3" particle = "ship_explosion_particle"  keep_particle = yes sound = { soundeffect = "explosion_large" }}	
+			event = { time = 0.3 sound = { soundeffect = "sub_hit" }}
+	}
+
+
+	scale = 0.2
+
+}
+
+entity = {
+	name = "building_landmark_nanjing_presidential_palace"
+	pdxmesh = "landmark_nanjing_presidential_palace_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 0.8 looping = yes }
+
+	scale = 0.10
+
+}
+
+#DESTROYED
+entity = {
+	name = "building_landmark_nanjing_presidential_palace_destroyed"
+	pdxmesh = "landmark_nanjing_presidential_palace_destroyed_mesh"
+
+	default_state = "destroy"
+	state = { name = "destroy"			animation = "destroy" 			animation_blend_time = 0.3  animation_speed = 0.8 looping = no
+			event = { time = 4.1 node="explosion1" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 5 node="explosion2" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 6.5 node="explosion3" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 7.5 node="explosion4" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 9 node="explosion5" particle = "building_explode_effect" keep_particle = yes }
+
+			event = { time = 15.5 node="impact" particle = "vehicle_explode_effect" keep_particle = yes }
+
+			event = { time = 5.4 node="explosion2" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 13 node="explosion3" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 10 node="explosion5" particle = "building_fire_particle" keep_particle = yes }
+
+			event = { time = 4.2 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 5.1 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 6.6 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 7.6 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 10.4 sound = { soundeffect = "explosion_flashbang_large" }}
+
+				}
+
+
+	scale = 0.1
+}
+
+#############################################
+# Nanjing Presidential Palace - PRC VERSION #
+#############################################
+
+entity = {
+	name = "building_landmark_nanjing_presidential_palace_prc"
+	pdxmesh = "landmark_nanjing_presidential_palace_prc_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 0.8 looping = yes }
+
+	scale = 0.1
+
+}
+
+#DESTROYED
+entity = {
+	name = "building_landmark_nanjing_presidential_palace_prc_destroyed"
+	pdxmesh = "landmark_nanjing_presidential_palace_prc_destroyed_mesh"
+
+	default_state = "destroy"
+	state = { name = "destroy"			animation = "destroy" 			animation_blend_time = 0.3  animation_speed = 0.8 looping = no
+			event = { time = 4.1 node="explosion1" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 5 node="explosion2" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 6.5 node="explosion3" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 7.5 node="explosion4" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 9 node="explosion5" particle = "building_explode_effect" keep_particle = yes }
+
+			event = { time = 15.5 node="impact" particle = "vehicle_explode_effect" keep_particle = yes }
+
+			event = { time = 5.4 node="explosion2" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 13 node="explosion3" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 10 node="explosion5" particle = "building_fire_particle" keep_particle = yes }
+
+			event = { time = 4.2 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 5.1 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 6.6 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 7.6 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 10.4 sound = { soundeffect = "explosion_flashbang_large" }}
+
+				}
+
+
+	scale = 0.1
+}
+
+#################################################
+# Nanjing Presidential Palace - GENERIC VERSION #
+#################################################
+
+entity = {
+	name = "building_landmark_nanjing_presidential_palace_gen"
+	pdxmesh = "landmark_nanjing_presidential_palace_gen_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle"       		animation_blend_time = 0.3 animation_speed = 0.8 looping = yes }
+
+	scale = 0.1
+
+}
+
+#DESTROYED
+entity = {
+	name = "building_landmark_nanjing_presidential_palace_gen_destroyed"
+	pdxmesh = "landmark_nanjing_presidential_palace_gen_destroyed_mesh"
+
+	default_state = "destroy"
+	state = { name = "destroy"			animation = "destroy" 			animation_blend_time = 0.3  animation_speed = 0.8 looping = no
+			event = { time = 4.1 node="explosion1" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 5 node="explosion2" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 6.5 node="explosion3" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 7.5 node="explosion4" particle = "ship_explosion_particle" keep_particle = yes }
+			event = { time = 9 node="explosion5" particle = "building_explode_effect" keep_particle = yes }
+
+			event = { time = 15.5 node="impact" particle = "vehicle_explode_effect" keep_particle = yes }
+
+			event = { time = 5.4 node="explosion2" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 13 node="explosion3" particle = "building_fire_particle" keep_particle = yes }
+			event = { time = 10 node="explosion5" particle = "building_fire_particle" keep_particle = yes }
+
+			event = { time = 4.2 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 5.1 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 6.6 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 7.6 sound = { soundeffect = "explosion_c4" }}
+			event = { time = 10.4 sound = { soundeffect = "explosion_flashbang_large" }}
+
+				}
+
+
+	scale = 0.1
+}
+

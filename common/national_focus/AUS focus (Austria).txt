@@ -4290,6 +4290,12 @@ focus_tree = {
 					}
 					set_temp_variable = { tag_to_release = SLO }
 					release_targeted_tag = yes
+			every_state = {
+				limit = {
+					is_claimed_by = SLO
+				}
+				add_core_of = SLO
+			}
 					var:tag_to_release = {
 						set_cosmetic_tag = SLO_habsburg
 						if = {
@@ -4330,6 +4336,12 @@ focus_tree = {
 					}
 					set_temp_variable = { tag_to_release = TRS }
 					release_targeted_tag = yes
+			every_state = {
+				limit = {
+					is_claimed_by = TRS
+				}
+				add_core_of = TRS
+			}
 					var:tag_to_release = {
 						set_cosmetic_tag = TRS_habsburg
 						if = {
@@ -4418,6 +4430,12 @@ focus_tree = {
 					}
 					set_temp_variable = { tag_to_release = HUN }
 					release_targeted_tag = yes
+			every_state = {
+				limit = {
+					is_claimed_by = HUN
+				}
+				add_core_of = HUN
+			}
 					var:tag_to_release = {
 						set_cosmetic_tag = HUN_habsburg
 						HUN_gusztav_gratz_sic = yes

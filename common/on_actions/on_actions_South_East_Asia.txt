@@ -4,12 +4,12 @@ on_actions = {
 			GEA = {
 				set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 				add_to_coalition = yes
-				set_rule = { can_send_volunteers = no }
-				add_relation_rule_override = {
-					can_send_volunteers = yes
-					trigger = GEA_can_send_volunteers_to_target
-					usage_desc = GEA_can_send_volunteers_to_target_tt
-				}
+				#set_rule = { can_send_volunteers = no }
+				#add_relation_rule_override = { #System does not work with dynamic tags, so blocks GEA from supporting pro-GEA Siam, readd if fix/workaround is found
+				#	can_send_volunteers = yes
+				#	trigger = GEA_can_send_volunteers_to_target
+				#	usage_desc = GEA_can_send_volunteers_to_target_tt
+				#}
 				if = {
 					limit = { has_dlc_aat = yes }
 					set_rule = { can_access_market = no }
@@ -22,6 +22,20 @@ on_actions = {
 					set_rule = { can_access_market = no }
 				}
 			}
+			SIA = {
+				give_resource_rights = { state = 751 receiver = GEA }
+				give_resource_rights = { state = 724 receiver = GEA }
+			}
+			BRM = {
+				give_resource_rights = { state = 288 receiver = GEA }
+			}
+			LEP = {
+				give_resource_rights = { state = 1044 receiver = GEA }
+				give_resource_rights = { state = 595 receiver = GEA }
+				give_resource_rights = { state = 600 receiver = GEA }
+			}
+			728 = { set_variable = { GEA_territory_capital_state = 744 } }
+			744 = { set_variable = { GEA_territory_capital_state = 744 } }
 
 			### Variables for German East Asia Colonies, Protectorates and Mandates
 			## Leased Territories

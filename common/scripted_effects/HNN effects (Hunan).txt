@@ -483,7 +483,7 @@ HNN_march_south_effect = {
 		activate_targeted_decision = { target = YUN decision = china_joint_strike_GXC_decision }
 	}
 	else = {
-		activate_targeted_decision = { target = GXC decision = china_attack_decision }
+		unlock_decision_tooltip = CHN_war_for_guangzhou
 	}
 }
 
@@ -921,4 +921,33 @@ HNN_recruit_beiyang_generals = {
 			GXC_yang_chisheng = { CHN_recruit_character_effect = yes }
 		}
 	}
+}
+
+HNN_zhao_flees_effect = {
+			if = {
+				limit = { GXC = { china_is_aligned_with_federalists = yes } }
+				GXC = { country_event = hunan_events.116 }
+			}
+			else_if = {
+				limit = {
+					NOT = { has_global_flag = QIE_manchu_restoration }
+					country_exists = QIE
+				}
+				QIE = { country_event = hunan_events.116 }
+			}
+			else_if = {
+				limit = {
+					has_global_flag = QIE_manchu_restoration
+					SZC = {
+						exists = yes
+						china_is_aligned_with_zhili = yes
+					}
+				}
+				SZC = { country_event = hunan_events.116 }
+			}
+			else_if = {
+				limit = { YUN = { china_is_aligned_with_federalists = yes } }
+				YUN = { country_event = hunan_events.116 }
+			}
+
 }

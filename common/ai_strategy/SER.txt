@@ -24,10 +24,38 @@ SER_hates_austria = {
 	}
 }
 
-SER_focus_on_imro = {
+SER_internationale_support = {
 	allowed = {
-		original_tag = SER
+		OR = {
+			tag = FRA
+			tag = ENG
+		}
 	}
+
+		enable = {
+	country_exists = SER
+		SER = {
+			has_war_with = BUL
+			NOT = { has_authoritarian_government = yes }
+			#NOT = { has_soccon_or_marlib_government = yes }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = SER
+		value = 400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SER
+		value = 400
+	}
+}
+
+
+SER_focus_on_imro = {
 
 	enable = {
 		has_idea = SER_IMRO_rebellion
@@ -144,7 +172,7 @@ SER_rush_imro_in_action_phase = {
 		NOT = { owns_state = 106 } #Macedonia
 		has_war_with = MAC
 		NOT = { BUL = { focus_progress = { focus = BUL_macedonia_intervention progress > 0 } } } #Abort strategy if BUL is about to attack
-		MAC = { has_cosmetic_tag = MAC_IMRO } #MAC has not declared open warfare, separate ai strategy for that
+		MAC = { has_cosmetic_tag = MAC_IMRO } #MAC has not declared open warfare, seperate ai strategy for that
 	}
 
 	abort_when_not_enabled = yes
@@ -311,4 +339,68 @@ SER_dont_drag_in_accord = {
 	ai_strategy = { type = ignore_claim id = SLV value = 1 }
 	ai_strategy = { type = ignore_claim id = SRI value = 1 }
 	ai_strategy = { type = ignore_claim id = AUS value = 1 }
+}
+
+SER_crush_BUL = {
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+		has_war_with = BUL
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = BUL
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = BUL
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+		ai_strategy = {
+		type = garrison
+		value = -200
+	}
+
+}
+
+ROM_crush_BUL = {
+	allowed = {
+		original_tag = ROM
+	}
+	enable = {
+		always = no
+		has_war_with = BUL
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = conquer
+		id = BUL
+		value = 100
+	}
+	ai_strategy = {
+		type = front_control
+		tag = BUL
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
 }

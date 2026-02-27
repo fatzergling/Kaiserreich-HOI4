@@ -8687,6 +8687,13 @@ country_event = { #Reorganisation of Central Asia (SocRus)
 			restore_previous_government_type = yes
 			custom_effect_tooltip = tooltip_white_line
 			set_cosmetic_tag = TRK_RUS
+			if = {
+				limit = {  is_ai = yes }
+				every_controlled_state = {
+						limit = { NOT = { is_core_of = BUK } }
+						add_compliance = 35
+				}
+			}
 		}
 	}
 }
@@ -9904,14 +9911,14 @@ country_event = { #Popular Anger 8 - Attempted Uprising
 		log = "[GetLogInfo]: event russia_events.922 option russia_events.922.a"
 		name = russia_events.922.a #uprising succeeds
 		trigger = { NOT = { has_war_with = GER } }
-		ai_chance = { base = 50 }
+		ai_chance = { base = 0 }
 		add_stability = -0.1
 		country_event = russia_events.924
 	}
 	option = {
 		log = "[GetLogInfo]: event russia_events.922 option russia_events.922.b"
 		name = russia_events.922.b #uprising fails
-		ai_chance = { base = 0 }
+		ai_chance = { base = 50 }
 		add_political_power = -50
 		if = {
 			limit = { has_idea = RUS_VRBO_2 }
@@ -23480,13 +23487,7 @@ country_event = { #The Green Partisans
 		log = "[GetLogInfo]: event russia_socialist_events.37 option russia_socialist_events.37.a"
 		name = russia_socialist_events.37.a
 		add_political_power = -25
-		if = {
-			limit = { is_ai = no }
-			add_ideas = RUS_anti_socialist_resistance_3
-		}
-		else = {
-			add_ideas = RUS_anti_socialist_resistance_1
-		}
+		add_ideas = RUS_anti_socialist_resistance_3
 		country_event = { id = russia_socialist_events.38 days = 25 }
 		if = {
 			limit = { RUS_VST = yes }
@@ -23511,13 +23512,7 @@ country_event = { #The Green Partisans
 		name = russia_socialist_events.37.b
 		ai_chance = { base = 0 }
 		add_command_power = -50
-		if = {
-			limit = { is_ai = no }
-			add_ideas = RUS_anti_socialist_resistance_2
-		}
-		else = {
-			add_ideas = RUS_anti_socialist_resistance_1
-		}
+		add_ideas = RUS_anti_socialist_resistance_2
 		country_event = { id = russia_socialist_events.44 days = 25 }
 		if = {
 			limit = { RUS_VST = yes }
@@ -25371,7 +25366,7 @@ country_event = { #Direction of the Revolutionary Struggle
 		log = "[GetLogInfo]: event russia_socialist_events.103 option russia_socialist_events.103.b"
 		name = russia_socialist_events.103.b
 		ai_chance = {
-			base = 333
+			base = 133
 			modifier = {
 				factor = 0
 				OR = {
@@ -30891,6 +30886,7 @@ country_event = { #Bringing Modernity to Russia
 		hidden_effect = {
 			INT = { country_event = russia_socialist_events.385 }
 		}
+		ai_chance = { base = 10 }
 	}
 	option = {
 		log = "[GetLogInfo]: event russia_socialist_events.384 option russia_socialist_events.384.b"
@@ -38391,7 +38387,7 @@ country_event = { #Russia Approachs... And Presents...
 		log = "[GetLogInfo]: event russia_foreign_policy_events.128 option russia_foreign_policy_events.128.b"
 		name = russia_foreign_policy_events.128.b
 		ai_chance = {
-			base = 10
+			base = 50
 			modifier = {
 				factor = 0
 				OR = {
@@ -38408,6 +38404,7 @@ country_event = { #Russia Approachs... And Presents...
 			OR = {
 				MON = { is_ally_with = RUS }
 				330 = { is_owned_by = RUS } #Mongolia
+				MON = { is_guaranteed_by = RUS }
 			}
 		}
 		set_global_flag = RUS_CHN_demand_mongolia
@@ -38415,7 +38412,7 @@ country_event = { #Russia Approachs... And Presents...
 	option = { #Gib East Turkestan
 		log = "[GetLogInfo]: event russia_foreign_policy_events.128 option russia_foreign_policy_events.128.c"
 		name = russia_foreign_policy_events.128.c
-		ai_chance = { base = 50 }
+		ai_chance = { base = 10 }
 		trigger = {
 			OR = {
 				ETS = { is_ally_with = RUS }
@@ -38438,6 +38435,7 @@ country_event = { #Russia Approachs... And Presents...
 			OR = {
 				MON = { is_ally_with = RUS }
 				330 = { is_owned_by = RUS } #Mongolia
+				MON = { is_guaranteed_by = RUS }
 			}
 			OR = {
 				ETS = { is_ally_with = RUS }
@@ -38554,7 +38552,28 @@ country_event = { #Outcome of the Vladivostok Conference
 	option = { #Sure
 		log = "[GetLogInfo]: event russia_foreign_policy_events.129 option russia_foreign_policy_events.129.b"
 		name = russia_foreign_policy_events.129.b
-		ai_chance = { base = 50 }
+		ai_chance = { base = 25
+					modifier = {
+				factor = 2
+				FROM = { has_idea = RUS_chinese_military_mission_idea }
+			}
+			modifier = {
+				factor = 2
+				FROM = { has_idea = RUS_china_trade_deal }
+			}
+			modifier = {
+				factor = 2
+				has_opinion = { target = CHN value > 100 }
+			}
+			modifier = {
+				factor = 1.5
+				has_democratic_government = yes
+			}
+			modifier = {
+				factor = 4
+				FROM = { china_is_aligned_with_right_kmt = yes }
+			}
+ 			}
 		trigger = {
 			OR = {
 				has_global_flag = RUS_CHN_demand_mongolia
@@ -38624,6 +38643,7 @@ country_event = { #Outcome of the Vladivostok Conference
 					transfer_state_to = FROM
 				}
 			}
+
 		}
 		else_if = {
 			limit = {
@@ -38635,6 +38655,20 @@ country_event = { #Outcome of the Vladivostok Conference
 				limit = { is_mongolia = yes }
 				transfer_state_to = FROM
 			}
+		}
+		else_if = {
+			limit = { 
+				has_global_flag = RUS_CHN_demand_mongolia
+				MON = { is_guaranteed_by = RUS}
+			}
+				set_global_flag = RUS_no_interfere_in_mongolia
+				RUS = {
+					diplomatic_relation = {
+					country = MON
+					relation = guarantee
+					active = no
+				}
+				}
 		}
 		clr_global_flag = RUS_CHN_demand_mongolia
 		clr_global_flag = RUS_CHN_demand_xinjiang
@@ -44708,6 +44742,10 @@ country_event = { #Victory in the Second Weltkrieg
 				scoped_play_song = "slavsya"
 			}
 		}
+		add_named_threat = {
+			threat = -25
+			name = end_of_2nd_weltkrieg
+		}
 		add_popularity = {
 			ideology = national_populist
 			popularity = 0.01
@@ -44726,6 +44764,11 @@ country_event = { #Victory in the Second Weltkrieg
 				scoped_play_song = "slavsya"
 			}
 		}
+				add_named_threat = {
+			threat = -25
+			name = end_of_2nd_weltkrieg
+		}
+
 	}
 	option = {
 		log = "[GetLogInfo]: event russia_flavour_events.134 option russia_flavour_events.134.c"
@@ -44763,11 +44806,21 @@ country_event = { #Victory in the Second Weltkrieg
 			}
 			country_event = { id = russia_socialist_events.203 days = 5 }
 		}
+				add_named_threat = {
+			threat = -25
+			name = end_of_2nd_weltkrieg
+		}
+
 	}
 	option = {
 		log = "[GetLogInfo]: event russia_flavour_events.134 option russia_flavour_events.134.e"
 		name = russia_flavour_events.134.e
 		trigger = { RUS_wrangel_path = yes }
+				add_named_threat = {
+			threat = -25
+			name = end_of_2nd_weltkrieg
+		}
+
 		hidden_effect = {
 			if = {
 				limit = { has_global_flag = allow_sound_events_flag }

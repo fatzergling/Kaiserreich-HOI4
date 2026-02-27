@@ -16,7 +16,7 @@ GBR_create_starting_divisions = {
 	every_core_state = {
 		random_select_amount = 10
 		limit = {
-			is_owned_and_controlled_by = PREV
+			#is_owned_and_controlled_by = PREV
 			valid_state_for_spawning_friendly_unit = yes
 		}
 		GBR_spawn_royal_guard_infantry_division = yes
@@ -24,7 +24,7 @@ GBR_create_starting_divisions = {
 	every_core_state = {
 		random_select_amount = 2
 		limit = {
-			is_owned_and_controlled_by = PREV
+			#is_owned_and_controlled_by = PREV
 			valid_state_for_spawning_friendly_unit = yes
 		}
 		GBR_spawn_royal_guard_cavalry_division = yes
@@ -32,7 +32,7 @@ GBR_create_starting_divisions = {
 	every_core_state = {
 		random_select_amount = 8
 		limit = {
-			is_owned_and_controlled_by = PREV
+			#is_owned_and_controlled_by = PREV
 			valid_state_for_spawning_friendly_unit = yes
 		}
 		GBR_spawn_home_guard_division = yes
@@ -1241,11 +1241,10 @@ GBR_spawn_npc_uk = {
 			CAN_transfer_king_base = yes
 			CAN_add_returning_king = yes
 			GBR_initialise_starting_ideas = yes
-			GBR_create_starting_divisions = yes
 			GBR_create_starting_ship_variants = yes
 			if = {
-				limit = { is_in_faction_with = CAN }
-				add_manpower = 200000
+				limit = { is_in_faction_with = ENT }
+				add_manpower = 500000
 				CAN = {
 					add_manpower = -100000
 					send_equipment = {
@@ -1259,6 +1258,30 @@ GBR_spawn_npc_uk = {
 				limit = { is_in_faction_with = ENT }
 				add_to_tech_sharing_group = entente_research
 			}
+		if = {
+			limit = { has_global_flag = GER_stay_out_france_uk }
+				if = {
+					limit = { has_global_flag = GBR_reparations }
+					GBR_war_reparations = yes
+				}
+				if = {
+					limit = { has_global_flag = GBR_arms_treaty
+							NOT = { has_global_flag = GBR_arms_treaty_harsh } }
+					GBR_Military_Accords = yes
+				}
+				if = {
+					limit = { has_global_flag = GBR_arms_treaty_harsh }
+					GBR_Military_Accords_Harsh = yes
+				}
+			GER = {
+			diplomatic_relation = {
+				country = GBR
+				relation = military_access
+				active = yes
+				}
+			}
+		}
+
 
 			### Models/icons check - update GBRs icon and model pools if changed
 			### gfx\interface\equipmentdesigner\graphic_db\00_Commonwealth_tank_icons.txt
@@ -1319,12 +1342,13 @@ GBR_spawn_player_uk_tt = {
 	effect_tooltip = {
 		custom_effect_tooltip = CAN_release_GBR
 		custom_effect_tooltip = tooltip_white_line
-		ENG = {
-			every_core_state = {
-				remove_claim_by = ROOT
-				add_core_of = GBR
-			}
+	ENG = {
+		every_core_state = {
+			remove_claim_by = ROOT
+			add_core_of = IMP
 		}
+	}
+
 		set_capital = { state = 126 remember_old_capital = no }
 		custom_effect_tooltip = tooltip_white_line
 		if = {
@@ -1356,6 +1380,44 @@ GBR_spawn_player_uk_tt = {
 					target = PREV
 					autonomy_state = default_puppet
 					end_wars = no
+				}
+			}
+		}
+	IMP = {
+		every_owned_state = {
+			limit = { 
+				is_core_of = IMP
+			}
+			remove_core_of = IMP
+			add_claim_by = IMP
+			enable_state_integration_80_compliance = yes
+						if = {
+							limit = { is_capital = yes }
+							set_compliance = 70
+						}
+
+		}
+	}
+		if = {
+			limit = { has_global_flag = GER_stay_out_france_uk }
+				if = {
+					limit = { has_global_flag = GBR_reparations }
+					GBR_war_reparations = yes
+				}
+				if = {
+					limit = { has_global_flag = GBR_arms_treaty
+							NOT = { has_global_flag = GBR_arms_treaty_harsh } }
+					GBR_Military_Accords = yes
+				}
+				if = {
+					limit = { has_global_flag = GBR_arms_treaty_harsh }
+					GBR_Military_Accords_Harsh = yes
+				}
+			GER = {
+			diplomatic_relation = {
+				country = GBR
+				relation = military_access
+				active = yes
 				}
 			}
 		}
@@ -1699,9 +1761,10 @@ GBR_spawn_player_uk = {
 	ENG = {
 		every_core_state = {
 			remove_claim_by = ROOT
-			add_core_of = ROOT
+			add_core_of = IMP
 		}
 	}
+
 	set_capital = { state = 126 remember_old_capital = no }
 	GBR = {
 		every_character = {
@@ -1735,6 +1798,45 @@ GBR_spawn_player_uk = {
 		idea = CAN_british_arrivals
 		days = 365
 	}
+	IMP = {
+		every_owned_state = {
+			limit = { 
+				is_core_of = IMP
+			}
+			remove_core_of = IMP
+			add_claim_by = IMP
+			enable_state_integration_80_compliance = yes
+						if = {
+							limit = { is_capital = yes }
+							set_compliance = 70
+						}
+
+		}
+	}
+				if = {
+			limit = { has_global_flag = GER_stay_out_france_uk }
+				if = {
+					limit = { has_global_flag = GBR_reparations }
+					GBR_war_reparations = yes
+				}
+				if = {
+					limit = { has_global_flag = GBR_arms_treaty
+							NOT = { has_global_flag = GBR_arms_treaty_harsh } }
+					GBR_Military_Accords = yes
+				}
+				if = {
+					limit = { has_global_flag = GBR_arms_treaty_harsh }
+					GBR_Military_Accords_Harsh = yes
+				}
+			GER = {
+			diplomatic_relation = {
+				country = GBR
+				relation = military_access
+				active = yes
+				}
+			}
+		}
+
 
 	#########################
 	### remap tag aliases ###
@@ -2243,3 +2345,68 @@ GBR_spawn_home_guard_division = {
 		owner = ROOT
 	}
 }
+
+GBR_war_reparations = {
+		add_timed_idea = {
+			idea = NFA_GER_eco_reparations_idea
+			days = 1800
+		}
+}
+
+GBR_Military_Accords = {
+	# Forced Military Disarmament
+		add_timed_idea = {
+			idea = NFA_Arms_Treaty_idea
+			days = 1800
+		}
+}
+
+GBR_Military_Accords_Harsh = {
+	# Forced Military Disarmament
+		add_timed_idea = {
+			idea = NFA_Arms_Treaty_Harsh_idea
+			days = 1800
+		}
+		add_ideas = volunteer_only
+						set_temp_variable = { BUL_mils_to_add = 0 }
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					random_owned_controlled_state = {
+						limit = { arms_factory > 0 }
+						add_to_temp_variable = { BUL_mils_to_add = 1 }
+						remove_building = { type = arms_factory level = 1 }
+					}
+					GER = {
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+						add_one_random_military_factory = yes
+					}
+
+}
+

@@ -140,6 +140,11 @@ all_argentinian_states = {
 	name = collection_all_argentinian_states
 }
 
+all_italian_states = {
+	input = constant:state_groups.italian_states
+	name = collection_all_italian_states
+}
+
 all_controlled_argentinian_states = {
 	input = collection:all_argentinian_states
 	name = collection_all_controlled_argentinian_states
@@ -147,6 +152,15 @@ all_controlled_argentinian_states = {
 		limit = { controller = { is_ally_with = ROOT } }
 	}
 }
+
+all_controlled_italian_states = {
+	input = collection:italian_states
+	name = collection_all_controlled_italian_states
+	operators = {
+		limit = { controller = { is_ally_with = ROOT } }
+	}
+}
+
 
 all_indian_states = {
 	input = constant:state_groups.indian_states
@@ -186,6 +200,27 @@ all_controlled_chinese_states = {
 		limit = { controller = { is_ally_with = ROOT } }
 	}
 }
+
+china_potential_core_mainland_states = {
+	input = collection:all_chinese_states
+	operators = {
+		limit = {
+			NOT = { state = 524 } # Taiwan does not qualify for is_one_state_island
+			is_one_state_island = no 
+		}
+	}
+}
+
+countries_china = {
+	input = game:all_countries
+	name = COLLECTION_COUNTRIES_CHINA
+	operators = {
+		limit = {
+			is_chinese_tag = yes
+		}
+	}
+}
+
 
 all_middle_east_states = {
 	input = constant:state_groups.middle_eastern_states

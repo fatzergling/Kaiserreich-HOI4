@@ -2,7 +2,7 @@ state = {
 	id = 325
 	name = "STATE_325"
 	manpower = 8378000
-	state_category = four
+	state_category = three
 
 	resources = {
 		aluminium = 30
@@ -20,7 +20,7 @@ state = {
 		victory_points = { 5072 3} #POP 1 + STRAT 1 + POL 0 = SIG 2
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 2
+			industrial_complex = 1
 			arms_factory = 1 #Kunming Arsenal
 		}
 	}
