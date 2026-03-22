@@ -84,6 +84,5 @@ tags={
 }
 picture = "KR.jpg"
 version = "1.6.2"
-supported_version = "1.17.4.*"
-path="C:/Users/mw/Documents/Paradox Interactive/Hearts of Iron IV/mod/Kaiserreich"
+supported_version = "1.17.5.*"
 remote_file_id = "1521695605"
