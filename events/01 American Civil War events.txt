@@ -2329,7 +2329,7 @@ country_event = { # Alaska asks Canada for intervention
 			base = 60
 			modifier = {
 				factor = 0.5
-				ACC = { owns_state = 463 }
+				USA = { owns_state = 463 }
 			}
 			modifier = {
 				factor = 0.5
@@ -2339,10 +2339,10 @@ country_event = { # Alaska asks Canada for intervention
 				factor = 0.5
 				NOT = { country_exists = WCA }
 			}
-			modifier = {
-				factor = 0
-				has_global_flag = CAN_not_seized_new_england
-			}
+			#modifier = {
+			#	factor = 0
+			#	has_global_flag = CAN_not_seized_new_england
+			#}
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = CAN_acw_alaska option = CAN_ACW_ALASKA_NO_INTERVENE }

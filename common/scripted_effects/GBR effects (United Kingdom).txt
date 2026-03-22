@@ -1242,6 +1242,7 @@ GBR_spawn_npc_uk = {
 			CAN_add_returning_king = yes
 			GBR_initialise_starting_ideas = yes
 			GBR_create_starting_ship_variants = yes
+			add_manpower = 400000
 			if = {
 				limit = { is_in_faction_with = ENT }
 				add_manpower = 500000

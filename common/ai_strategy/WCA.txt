@@ -286,22 +286,22 @@ WCA_sugar_daddy_for_INT = {
 	ai_strategy = {
 		type = send_lend_lease_desire
 		id = FRA
-		value = 500
+		value = 5000
 	}
 	ai_strategy = {
 		type = send_lend_lease_desire
 		id = ENG
-		value = 500
+		value = 5000
 	}
 	ai_strategy = {
 		type = send_lend_lease_desire
 		id = SRI
-		value = 500
+		value = 5000
 	}
 	ai_strategy = {
 		type = send_lend_lease_desire
 		id = CHI
-		value = 500
+		value = 5000
 	}
 
 }

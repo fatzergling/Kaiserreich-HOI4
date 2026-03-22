@@ -1044,6 +1044,12 @@ on_actions = {
 			else_if = {
 				limit = { tag = FNG }
 				log = "KR_Event_Logging;FNG FALLS"
+				if = {
+					limit = { FNG = { is_in_faction_with = JAP }}
+					leave_faction = yes
+					peace_out_non_neighbours_after_leaving_faction = yes
+
+				}
 			}
 			else_if = {
 				limit = { tag = YUN }

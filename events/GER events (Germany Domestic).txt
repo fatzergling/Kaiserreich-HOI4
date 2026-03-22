@@ -2797,29 +2797,25 @@ country_event = { # Agricultural Crisis in East Elbia
 		add_war_support = -0.1
 		random_owned_controlled_state = {
 			limit = {
-				region = 38
-				industrial_complex > 0
+				state = 5
 			}
 			remove_building = { type = industrial_complex level = 1 }
 		}
 		random_owned_controlled_state = {
 			limit = {
-				region = 38
-				industrial_complex > 0
+				state = 777
 			}
 			remove_building = { type = industrial_complex level = 1 }
 		}
 		random_owned_controlled_state = {
 			limit = {
-				region = 38
-				industrial_complex > 0
+				state = 86
 			}
 			remove_building = { type = industrial_complex level = 1 }
 		}
 		random_owned_controlled_state = {
 			limit = {
-				region = 38
-				industrial_complex > 0
+				state = 776
 			}
 			remove_building = { type = industrial_complex level = 1 }
 		}

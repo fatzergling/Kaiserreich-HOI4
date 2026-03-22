@@ -45,18 +45,18 @@ units = {
 		location = 7661
 		division_template = "Piyada Diviziyası"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.4
 	}
 	division = {
 		location = 7661
 		division_template = "Piyada Diviziyası"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.4
 	}
 	division = {
 		location = 7661
 		division_template = "Piyada Diviziyası"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.7
+		start_equipment_factor = 0.4
 	}
 }

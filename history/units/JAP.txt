@@ -148,16 +148,19 @@ units = {
 		location = 11771 #Shenyang
 		division_template = "Dokuritsu Shubitai"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.3	
 	}
 	division = {
 		location = 7663 #Jilin
 		division_template = "Dokuritsu Shubitai"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.3	
 	}
 	division = {
 		location = 12412 #Harbin
 		division_template = "Dokuritsu Shubitai"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.3	
 	}
 
 	### Infantry ###

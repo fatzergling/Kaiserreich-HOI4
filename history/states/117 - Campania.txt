@@ -6,8 +6,8 @@ state = {
 	local_supplies = 13.0
 
 	resources = {
-		aluminium = 12
-		steel = 18
+		aluminium = 4
+		steel = 6
 	}
 
 	history = {

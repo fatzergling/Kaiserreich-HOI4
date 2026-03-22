@@ -4707,6 +4707,12 @@ country_event = {
 				}
 			}
 			modifier = {
+				factor = 0.1
+				USA = {
+					has_country_flag = USA_Warplan_SanJacinto
+				}
+			}
+			modifier = {
 				factor = 0
 				NOT = { has_game_rule = { rule = CAN_acw_support option = DEFAULT } }
 				NOT = { has_game_rule = { rule = CAN_acw_support option = CAN_ACW_SUPPORT_ACC } }

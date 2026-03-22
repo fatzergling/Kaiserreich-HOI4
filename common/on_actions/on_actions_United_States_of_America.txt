@@ -136,6 +136,18 @@ on_actions = {
 					value = 20
 				}
 			}
+			if = {
+				limit = {
+					tag = USA
+					LIB = { is_subject_of = USA }
+				}
+				USA = {
+					set_autonomy = {
+					target = LIB
+					autonomy_state = autonomy_free
+					}
+				}
+			}
 		}
 	}
 

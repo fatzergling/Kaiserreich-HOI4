@@ -2,7 +2,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "OTT_Infopanel"
 		orientation = LOWER_LEFT
-		position = { x = 24 y = -566 }
+		position = { x = 24 y = -952 }
 
 		fade_time = 500
 		fade_type = linear

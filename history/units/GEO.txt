@@ -66,35 +66,42 @@ units = {
 		location = 772
 		division_template = "Kveiti divizia"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
 	}
 	division = {
 		location = 1599
 		division_template = "Kveiti divizia"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
 	}
 	division = {
 		location = 6669
 		division_template = "Samto divizia"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
 	}
 	division = {
 		location = 4605
 		division_template = "Kveiti divizia"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
 	}
 	division = {
 		location = 4534
 		division_template = "Samto divizia"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
 	}
 	division = {
 		location = 11617
 		division_template = "Samto divizia"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
 	}
 	division = {
 		location = 1530
 		division_template = "Kveiti divizia"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
 	}
 }

@@ -1060,7 +1060,6 @@ HOL_set_up_dutch_exiles = {
 				target = DEI
 				autonomy_state = autonomy_free
 			}
-
 			transfer_units_fraction = {
 				target = DEI
 				target_organization = 1
@@ -1093,6 +1092,10 @@ HOL_set_up_dutch_exiles = {
 		}
 		DEI = {
 			### replace or remove invalid ideas ###
+			if = { 
+				limit = { HOL = { is_in_faction_with = BEL }}
+				leave_faction = yes
+			}
 			if = {
 				limit = { has_idea = DEI_idea_colonial_nation }
 				swap_ideas = {

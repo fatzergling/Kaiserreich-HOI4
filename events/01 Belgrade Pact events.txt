@@ -3386,7 +3386,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				tag = GRE
-				AUS = { NOT = { is_ally_with = 766.owner } }
+				AUS = { is_ally_with = 766.owner } 
 				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_KEEP } }
 				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_AUS_BEATEN } }
 				NOT = { has_game_rule = { rule = BPL_dissolution option = BPL_DISSOLUTION_GRE_INT_BEATEN } }

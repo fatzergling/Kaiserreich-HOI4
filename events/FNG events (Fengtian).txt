@@ -5893,7 +5893,7 @@ country_event = { #Ma Zhanshan and the Heilongjiang Clique offer to Defect!
 				target = ROOT
 				target_organization = 1
 				source_organization = 1
-				army_ratio = 0.2
+				army_ratio = 0.3
 				stockpile_ratio = 0
 				navy_ratio = 0
 				air_ratio = 0
@@ -10614,7 +10614,7 @@ country_event = { #Restoring Order to Manchuria
 		885 = {
 			add_dynamic_modifier = {
 				modifier = FNG_old_guard_resistance_modifier
-				days = 182
+				days = 282
 			}
 		}
 		716 = { #Fengtian
@@ -10636,8 +10636,11 @@ country_event = { #Restoring Order to Manchuria
 			}
 			add_dynamic_modifier = {
 				modifier = FNG_resistance_modifier
-				days = 182
+				days = 382
 			}
+			remove_core_of = FNG
+			start_state_integration_resistance = yes
+			enable_state_integration_50_compliance = yes
 		}
 	}
 }

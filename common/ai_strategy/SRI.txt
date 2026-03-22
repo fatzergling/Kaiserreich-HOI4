@@ -74,6 +74,10 @@ SRI_build_up_troops = {
 		type = force_build_armies
 		value = 100
 	}
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 50
+	}
 }
 
 

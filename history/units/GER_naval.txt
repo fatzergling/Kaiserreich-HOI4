@@ -154,6 +154,30 @@ units = {
 			ship = { name = "SMS V210" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
 		}
 		task_force = {
+			name = "6. Torpedobootflottille"
+			location = 6389 #Saigon
+			ship = { name = "SMS V178" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V179" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V180" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V181" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V182" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V183" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V184" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V185" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+		}
+		task_force = {
+			name = "7. Torpedobootflottille"
+			location = 241 #Cam Ranh
+			ship = { name = "SMS V189" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V190" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V191" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V192" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V193" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V194" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V195" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+			ship = { name = "SMS V196" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = GER version_name = "V170 Class" } } }
+		}
+		task_force = {
 			name = "I. U-Boots Flottille"
 			location = 241 #Wilhelmshaven
 			ship = { name = "SM U-223" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = GER version_name = "Type II" } } }

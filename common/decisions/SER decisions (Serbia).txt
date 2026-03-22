@@ -3354,19 +3354,29 @@ SER_The_Road_To_Unification_decisions = {
 			# don't attack Austria unless it's vulnerable or other countries are waiting to help
 			modifier = {
 				factor = 0
+					NOT = {
+						OR = {
+							UKR = { has_capitulated = yes }
+							NOT = { country_exists = UKR }
+							UKR = { is_in_faction_with = RUS }
+							ROM = { is_neighbor_of = RUS }
+						}
+					}
 				FROM = {
 					NOT = {
-						any_enemy_country = { is_actual_major = yes }
 						AND = {
 							POL = { has_country_flag = SER_will_attack_austria }
 							SER = { has_country_flag = SER_will_attack_austria }
 						}
 					}
 					OR = {
+						NOT = {
+							any_enemy_country = { is_actual_major = yes }
+						}
 						AND = {
-							strength_ratio = { tag = ROOT ratio > 1 }
-							OR = {
-								enemies_strength_ratio < 1
+							#strength_ratio = { tag = ROOT ratio > 1 }
+							AND = {
+								enemies_strength_ratio < 7.5
 								surrender_progress < 0.1
 							}
 						}
@@ -3374,20 +3384,20 @@ SER_The_Road_To_Unification_decisions = {
 							is_in_faction = yes
 							is_faction_leader = no
 							faction_leader = {
-								strength_ratio = { tag = ROOT ratio > 0.8 }
-								OR = {
-									enemies_strength_ratio < 1
-									surrender_progress < 0.1
+								#strength_ratio = { tag = ROOT ratio > 0.8 }
+								AND = {
+									enemies_strength_ratio < 7.5
+									surrender_progress < 0.2
 								}
 							}
 						}
 						AND = {
 							is_subject = yes
 							overlord = {
-								strength_ratio = { tag = ROOT ratio > 0.8 }
-								OR = {
-									enemies_strength_ratio < 1
-									surrender_progress < 0.1
+								#strength_ratio = { tag = ROOT ratio > 0.8 }
+								AND = {
+									enemies_strength_ratio < 7.5
+									surrender_progress < 0.2
 								}
 							}
 						}

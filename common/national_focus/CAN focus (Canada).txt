@@ -4607,7 +4607,7 @@ focus_tree = {
 				WCA = { num_of_controlled_states < 5 }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.25
 				#has_war = yes
 				WCA = { num_of_controlled_states < 10 }
 			}
@@ -4661,7 +4661,7 @@ focus_tree = {
 					AND = {
 						has_global_flag = CAN_supports_ACC
 						country_exists = ACC
-						ACC = { surrender_progress < 0.20 }
+						ACC = { surrender_progress < 0.05 }
 						#check_variable = { ACC.num_controlled_states > 5 }
 					}
 					AND = {
@@ -4730,11 +4730,11 @@ focus_tree = {
 				WCA = { controls_state = 932 }
 			}
 			modifier = {
-				add = 500
+				add = 1000
 				AND = {
 					NOT = { country_exists = USA }
 					NOT = { country_exists = APG }
-					NOT = {	has_global_flag = USA_civil_war_over_flag	}
+					NOT = {	has_global_flag = USA_civil_war_over_flag }
 				}
 			}
 			modifier = {

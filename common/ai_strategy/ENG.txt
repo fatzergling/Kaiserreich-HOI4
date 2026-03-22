@@ -528,6 +528,13 @@ ENG_scapa_flow_naval_base_2 = {
 		id = 16 #North Sea
 		value = 150
 	}
+	ai_strategy = {
+		type = naval_dominance
+		id = 174
+		value = 100
+	}
+
+	
 }
 
 

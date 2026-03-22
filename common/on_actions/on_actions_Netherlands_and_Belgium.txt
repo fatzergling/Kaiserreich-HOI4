@@ -40,17 +40,6 @@ on_actions = {
 				limit = { tag = INS }
 				DEI = { set_country_flag = DEI_East_Indies_Rebellion_Crushed }
 			}
-		}
-	}
-
-	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
-	on_annex = {
-		effect = {
-			FROM = {
-				if = {
-					limit = { is_belgian_tag = yes }
-					drop_cosmetic_tag = yes
-				}
 				else_if = {
 					limit = {
 						tag = HOL
@@ -63,6 +52,17 @@ on_actions = {
 						}
 					}
 					HOL_set_up_dutch_exiles = yes
+				}
+		}
+	}
+
+	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	on_annex = {
+		effect = {
+			FROM = {
+				if = {
+					limit = { is_belgian_tag = yes }
+					drop_cosmetic_tag = yes
 				}
 			}
 		}

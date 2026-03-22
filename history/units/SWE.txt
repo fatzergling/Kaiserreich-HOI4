@@ -166,6 +166,7 @@ units = {
 		location = 6345
 		division_template = "Arméfördelning"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
 	}
 	division = {
 		division_name = {
@@ -175,6 +176,7 @@ units = {
 		location = 6129
 		division_template = "Arméfördelning"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
 	}
 	division = {
 		division_name = {
@@ -184,6 +186,7 @@ units = {
 		location = 3375
 		division_template = "Arméfördelning"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
 	}
 	division = {
 		division_name = {
@@ -193,6 +196,7 @@ units = {
 		location = 6050
 		division_template = "Arméfördelning"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
 	}
 	division = {
 		division_name = {
@@ -202,6 +206,7 @@ units = {
 		location = 6050
 		division_template = "Arméfördelning"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
 	}
 	division = {
 		division_name = {
@@ -211,18 +216,21 @@ units = {
 		location = 9108
 		division_template = "Arméfördelning"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
 	}
 	division = {
 		name = "Bodens Garnison"
 		location = 9108
 		division_template = "Reservfördelning"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.1
 	}
 	division = {
 		name = "Gotlands Garnison"
 		location = 408
 		division_template = "Reservfördelning"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.1
 	}
 }
 

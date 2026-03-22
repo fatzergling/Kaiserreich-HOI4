@@ -124,6 +124,7 @@ units = {
 		location = 11370
 		division_template = "Pjahotnaja Dyvizija"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
 		force_equipment_variants = { infantry_equipment_0 = { owner = "BLR" } }
 	}
 	division = {
@@ -134,6 +135,7 @@ units = {
 		location = 233
 		division_template = "Pjahotnaja Dyvizija"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
 		force_equipment_variants = { infantry_equipment_0 = { owner = "BLR" } }
 	}
 	division = {
@@ -144,6 +146,7 @@ units = {
 		location = 9289
 		division_template = "Pjahotnaja Dyvizija"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
 		force_equipment_variants = { infantry_equipment_0 = { owner = "BLR" } }
 	}
 	division = {
@@ -154,6 +157,7 @@ units = {
 		location = 331
 		division_template = "Pjahotnaja Dyvizija"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
 		force_equipment_variants = { infantry_equipment_0 = { owner = "BLR" } }
 	}
 }

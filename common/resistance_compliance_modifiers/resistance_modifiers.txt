@@ -122,6 +122,7 @@ resistance_90 = {
 
 	state_modifier = {
 		local_factories = -0.3
+		attrition_for_controller = 1
 	}
 }
 

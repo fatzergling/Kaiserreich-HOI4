@@ -84,6 +84,7 @@ units = {
 		location = 6287
 		division_template = "Infanteridivision"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
 	}
 	division = {
 		#name = "Jydske Division"
@@ -94,6 +95,7 @@ units = {
 		location = 6364
 		division_template = "Infanteridivision"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
 	}
 	division = {
 		#name = "Jydske Dragonregiment"
@@ -104,6 +106,7 @@ units = {
 		location = 6364
 		division_template = "Dragonregiment"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
 	}
 	division = {
 		#name = "Bornholms Værn"
@@ -114,6 +117,7 @@ units = {
 		location = 6361
 		division_template = "Garnisonregiment"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
 	}
 }
 

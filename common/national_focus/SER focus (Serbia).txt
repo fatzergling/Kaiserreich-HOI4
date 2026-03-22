@@ -5223,7 +5223,7 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				NOT = {
-					AND = {
+					OR = {
 						has_completed_focus = SER_resistance_behind_lines
 						has_completed_focus = SER_national_mobilization
 					}
@@ -6597,7 +6597,13 @@ focus_tree = {
 				SER_konspiracija_level_1 = yes
 			}
 		}
-		ai_will_do = { factor = 2500 }
+		ai_will_do = { 
+			base = 25
+			modifier = {
+				factor = 100
+				has_war = yes 
+			}
+		 }
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_ARMY_XP }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_Form_The_Military_Council"
@@ -7090,13 +7096,13 @@ focus_tree = {
 				SER_konspiracija_level_2 = yes
 			}
 		}
-		ai_will_do = {
-			factor = 4000
+		ai_will_do = { 
+			base = 25
 			modifier = {
-				factor = 2
-				has_war = yes
+				factor = 100
+				has_war = yes 
 			}
-		}
+		 }
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_Serbian_Mountain_Corps"
@@ -7207,7 +7213,13 @@ focus_tree = {
 		prerequisite = {
 			focus = SER_Form_The_Military_Council
 		}
-		ai_will_do = { factor = 3 }
+		ai_will_do = { 
+			factor = 3 
+			modifier = {
+				factor = 500
+				has_war = yes
+			}
+		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed SER_Mihailovics_Redoubt"

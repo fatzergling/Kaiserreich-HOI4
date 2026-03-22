@@ -39,7 +39,7 @@ NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 0.7
 
 -- War Support
 NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = 0							-- Vanilla is -0.2
-NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0.2							-- Vanilla is -0.2
+NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0							-- Vanilla is -0.2
 NDefines.NCountry.MAX_BOMBING_WAR_SUPPORT_IMPACT = -0.3						-- Vanilla is -0.3
 NDefines.NCountry.MAX_HEROES_BEING_KILLED_WAR_SUPPORT_IMPACT = -0.6			-- Vanilla is -0.3
 NDefines.NCountry.MAX_CONVOYS_BEING_RAIDED_WAR_SUPPORT_IMPACT = -1		    -- Vanilla is -0.5
@@ -220,3 +220,4 @@ NDefines.NDiplomacy.PEACE_COST_FACTOR_COMPLIANCE_STEPS = {
 30,  0.2, -- between 30% and 70% 		
 70,  0.1, -- above 70% 	
 }
+NDefines.NNavy.CONVOY_BLOCKED_BY_ENEMY_CONTROLLED_REGION = true

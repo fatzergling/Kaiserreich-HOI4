@@ -21,17 +21,17 @@ country_event = {
 
 	option = {
 		log = "[GetLogInfo]: event ausgleich_events.99 option 1"
-		ai_chance = { base = 50 }
+		ai_chance = { base = 65 }
 		set_global_flag = AUS_AI_ausgleich_pluralism
 	}
 	option = {
 		log = "[GetLogInfo]: event ausgleich_events.99 option 2"
-		ai_chance = { base = 20 }
+		ai_chance = { base = 25 }
 		set_global_flag = AUS_AI_ausgleich_status_quo
 	}
 	option = {
 		log = "[GetLogInfo]: event ausgleich_events.99 option 3"
-		ai_chance = { base = 30 }
+		ai_chance = { base = 10 }
 		set_global_flag = AUS_AI_ausgleich_military_occupation
 	}
 }

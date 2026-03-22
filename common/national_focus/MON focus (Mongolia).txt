@@ -1790,10 +1790,15 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = MON_the_khanate_unshackled
 	}
-	ai_will_do = { factor = 20
+	ai_will_do = { factor = 10
 		modifier = {
 			factor = 2
 			has_war = yes 
+		}
+		modifier = {
+			factor = 0.5
+			has_war = yes
+			surrender_progress < 0.1
 		}
 	 }
 	completion_reward = {

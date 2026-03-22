@@ -20,6 +20,11 @@ italy_eyes_on_SRI = {
 	ai_strategy = { type = conquer		id = SRI value = 200 }
 	ai_strategy = { type = declare_war	id = SRI value = 500 }
 	ai_strategy = { type = ignore_claim	id = SRI value = 1 } #use the decision instead
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 50
+	}
+
 }
 
 italy_support_each_other_against_SRI_ITA = {

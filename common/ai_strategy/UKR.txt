@@ -82,6 +82,7 @@ UKR_defensive_play = {
 		original_tag = UKR
 	}
 	enable = {
+		always = no
 		has_war_with = RUS
 		FRA = {
 			OR = {

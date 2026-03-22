@@ -1869,7 +1869,8 @@ country_event = { #XSM (FROM) surrenders to MON/TIB
 						transfer_state_to = MON
 					}
 				}
-
+				if = { 
+					limit = { NOT = { TIB = {  has_country_flag = TIB_defeated_in_northwest_war_flag } } }
 				### give TIB its claims
 				every_owned_state = {
 					limit = {
@@ -1880,6 +1881,8 @@ country_event = { #XSM (FROM) surrenders to MON/TIB
 						}
 					}
 					transfer_state_to = ROOT
+				}
+
 				}
 
 				### Teleport armies home in case they are stuck in each others land
@@ -1906,7 +1909,9 @@ country_event = { #XSM (FROM) surrenders to MON/TIB
 			else = {
 				### free TIB if it was puppeted or annexed
 				if = {
-					limit = { has_subject = TIB }
+					limit = { has_subject = TIB 
+					NOT = { TIB = {  has_country_flag = TIB_defeated_in_northwest_war_flag } } 
+					}
 					set_autonomy = {
 						target = TIB
 						autonomy_state = autonomy_free
@@ -1927,6 +1932,7 @@ country_event = { #XSM (FROM) surrenders to MON/TIB
 					limit = {
 						owns_state = 322
 						NOT = { country_exists = TIB }
+						NOT = { TIB = {  has_country_flag = TIB_defeated_in_northwest_war_flag } }
 					}
 					effect_tooltip = { release = TIB }
 					hidden_effect = {
@@ -1944,7 +1950,8 @@ country_event = { #XSM (FROM) surrenders to MON/TIB
 					}
 				}
 				### give TIB its claims
-				else = {
+				else_if = {
+					limit = { NOT = { TIB = {  has_country_flag = TIB_defeated_in_northwest_war_flag } } }
 					every_owned_state = {
 						limit = {
 							OR = {
@@ -2174,6 +2181,12 @@ country_event = { #MON/TIB (FROM) surrender to XSM
 					original_tag = MON
 				}
 				set_country_flag = MON_defeated_in_northwest_war_flag
+			}
+			if = { #If MON loses set MONs defeated flag
+				limit = {
+					original_tag = TIB
+				}
+				set_country_flag = TIB_defeated_in_northwest_war_flag
 			}
 			every_owned_state = {
 				limit = {

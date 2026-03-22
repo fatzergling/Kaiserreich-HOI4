@@ -53,7 +53,7 @@ focus_tree = {
 
 		available = {
 			threat > 0.4
-			has_army_manpower = { size > 199999 }
+			has_army_manpower = { size > 249999 }
 		}
 		bypass = {
 			is_subject = yes

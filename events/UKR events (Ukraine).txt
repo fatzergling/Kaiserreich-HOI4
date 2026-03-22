@@ -3621,6 +3621,13 @@ country_event = { #Army in chaos
 				}
 				activate_mission = UKR_eastern_reinforcements
 			}
+			damage_units = {
+				region = 130 #Amur
+				org_damage = 0.99
+				str_damage = 0.35
+				army = yes
+				navy = no
+			}
 		}
 	}
 	title = ukraine_revolt_events.2.t

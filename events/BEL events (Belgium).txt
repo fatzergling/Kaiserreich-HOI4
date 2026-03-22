@@ -7716,7 +7716,9 @@ country_event = { #For BEL/HOL attacked by INT: join the RP temporarily?
 	option = {
 		log = "[GetLogInfo]: event belgium_independent_events.50 option belgium_independent_events.50.a"
 		name = belgium_independent_events.50.a
-		ai_chance = { base = 0 }
+		ai_chance = {
+			 base = 50 
+		}
 		set_country_flag = BEL_joined_rp
 		hidden_effect = { activate_targeted_decision = { target = THIS decision = BEL_reform_faction } }
 		every_other_country = {
@@ -7733,6 +7735,7 @@ country_event = { #For BEL/HOL attacked by INT: join the RP temporarily?
 	option = {
 		log = "[GetLogInfo]: event belgium_independent_events.50 option belgium_independent_events.50.b"
 		name = belgium_independent_events.50.b
+		ai_chance = { base = 50 }
 		GER = {
 			country_event = { id = belgium_independent_events.51 days = 1 }
 		}

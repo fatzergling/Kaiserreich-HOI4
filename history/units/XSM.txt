@@ -29,6 +29,9 @@ division_template = {
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 	}
+	support = {
+		artillery = {x = 0 y = 0 }
+	}
 }
 
 division_template = {
@@ -41,6 +44,9 @@ division_template = {
 		cavalry = { x = 1 y = 0 }
 		cavalry = { x = 1 y = 1 }
 		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = {x = 0 y = 0 }
 	}
 }
 
@@ -81,7 +87,14 @@ units = {
 		start_equipment_factor = 0.6
 	}
 	division = {
-		name = "Lanzhou Qibing Xie"
+		name = "Lanzhou Qibing 1 Xie"
+		location = 2028
+		division_template = "Qibing Xie"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+	}
+	division = {
+		name = "Lanzhou Qibing 2 Xie"
 		location = 2028
 		division_template = "Qibing Xie"
 		start_experience_factor = 0.1

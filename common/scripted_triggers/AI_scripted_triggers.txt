@@ -234,11 +234,26 @@ second_weltkrieg_volunteers = {
 		}
 		AND = {
 			PREV = {
-				tag = RUS
+				is_in_faction_with = RUS
+				OR = {
+					is_major = yes
+					ic_ratio = { tag = RUS ratio > 0.6 }
+				}
+				both_socialist_or_both_not_socialist = yes
 			}
 			OR = {
 				tag = MON
 				tag = ETS
+				tag = SER
+				tag = ROM
+				AND = {
+					tag = USA
+					RUS = { check_variable = { var:ACW_supported_tag = USA } } 
+				}
+				AND = {
+					tag = ACC
+					RUS = { check_variable = { var:ACW_supported_tag = ACC } }
+				}				
 			}
 		}
 	}
@@ -695,6 +710,7 @@ northwest_war_volunteers = {
 			original_tag = QIE
 			original_tag = SHX
 			original_tag = SZC
+			original_tag = SIK
 			}
 		}
 	}
@@ -718,14 +734,18 @@ xinjiang_war_volunteers = {
 		AND = {
 			PREV = { original_tag = SIK }
 			OR = {
-				original_tag = HNN
 				original_tag = XSM
 				AND = {
 					PREV = { has_government = social_democrat }
 					OR = {
-						original_tag = CHI
-						original_tag = GXC
+						tag = LKT
+						tag = RKT
+						tag = UPC
 					}
+				}
+				AND = {
+					original_tag = QIE
+					has_country_flag = QIE_coup_failed
 				}
 			}
 		}
@@ -806,6 +826,18 @@ american_german_sinophile = {
 			tag = GER
 			has_global_flag = second_weltkrieg_has_ended
 		}
+		AND = {
+			tag = RUS
+			has_global_flag = second_weltkrieg_has_ended
+		}
+			AND = {
+				is_in_faction_with = INT
+				OR = {
+					is_major = yes
+					ic_ratio = { tag = INT ratio > 0.6 }
+				}
+				has_global_flag = second_weltkrieg_has_ended
+			}
 	}
 	PREV = {
 		tag = CHN
@@ -1081,8 +1113,10 @@ arab_war_of_unification_volunteers = {
 		}
 		AND = {
 			PREV = { original_tag = SAU }
+			OR = {
 			tag = EGY
 			tag = PER
+			}
 		}
 	}
 	log = "willing_to_send_volunteers_to_PREV -- arab_war_of_unification_volunteers --- THIS = [THIS.GetName] PREV = [PREV.GetName]"

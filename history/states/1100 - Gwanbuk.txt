@@ -22,6 +22,7 @@ state = {
 			6928 = {
 				naval_base = 1
 			}
+			industrial_complex = 1
 		}
 
 		start_resistance = yes

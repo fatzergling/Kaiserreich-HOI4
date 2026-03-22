@@ -2259,7 +2259,7 @@ chinese_unification = {
 	china_declare_legitimacy_decision = {
 		icon = generic_speech
 
-		#This decision is a fallback in case CHN does not exist (probably because China got released as a puppet, but also sometimes because of bugs
+		#This decision is a fallback in case CHN does not exist (probably because China got released as a puppet, but also sometimes because of bugs)
 
 		allowed = {
 			NOT = { original_tag = KUM } #manually activated by KUM_set_as_chinese_tag
@@ -2846,12 +2846,6 @@ chinese_unification = {
 					}
 				}
 			}
-		target_root_trigger = {
-			if = {
-				limit = { tag = FNG }
-				has_completed_focus = FNG_Begin_the_War_of_National_Reclamation
-			}
-			NOT = { owns_state = 1048 } #Wuhan
 		}
 		target_root_trigger = {
 			if = {
@@ -4292,6 +4286,11 @@ chinese_unification = {
 						controls_state = 1048 #Wuhan
 					}
 				}
+			}
+			modifier = {
+				factor = 0
+				original_tag = SZC
+				NOT = { has_country_flag = SZC_opium_crisis_solved }
 			}
 			modifier = {
 				factor = 10

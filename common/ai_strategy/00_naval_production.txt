@@ -186,7 +186,7 @@ naval_unit_role_ratios_minors_offensive = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 80
+		value = 160
 	}
 
 	ai_strategy = {
@@ -220,7 +220,7 @@ naval_unit_role_ratios_minors_offensive = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_submarine
-		value = 50
+		value = 100
 	}
 }
 
@@ -250,7 +250,7 @@ naval_unit_role_ratios_minors_global = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 80
+		value = 160
 	}
 
 	ai_strategy = {
@@ -285,7 +285,7 @@ naval_unit_role_ratios_minors_global = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_submarine
-		value = 50
+		value = 100
 	}
 }
 
@@ -302,13 +302,13 @@ naval_unit_role_ratios_GER = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_submarine
-		value = 10
+		value = 100
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 75
+		value = 150
 	}
 
 	ai_strategy = {
@@ -366,13 +366,13 @@ naval_unit_role_ratios_ENG = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_submarine
-		value = 50
+		value = 100
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 100
+		value = 150
 	}
 
 	ai_strategy = {
@@ -406,7 +406,7 @@ naval_unit_role_ratios_FRA = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 50
+		value = 100
 	}
 	ai_strategy = {
 		type = role_ratio
@@ -488,13 +488,13 @@ naval_unit_role_ratios_JAP = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_submarine
-		value = 10
+		value = 30
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 30
+		value = 70
 	}
 
 	ai_strategy = {
@@ -528,13 +528,13 @@ naval_unit_role_ratios_USA = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_submarine
-		value = 50
+		value = 100
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 80
+		value = 160
 	}
 
 	ai_strategy = {

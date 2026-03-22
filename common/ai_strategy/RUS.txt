@@ -585,7 +585,7 @@ RUS_crush_ukraine = {
 		has_manpower > 250000
 		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
 		num_planes_stationed_in_regions = {
-			value > 1000
+			value > 200
 			regions = { 130 } #Ukraine
 		}
 
@@ -1567,6 +1567,10 @@ RUS_build_up_troops = {
 	ai_strategy = {
 		type = force_build_armies
 		value = 100
+	}
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 10
 	}
 }
 

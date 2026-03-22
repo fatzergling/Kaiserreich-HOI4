@@ -32,6 +32,26 @@ FROM_send_volunteers_to_ROOT = {
 				id = ROOT
 				value = 200
 			}
+			if = {
+				limit = { 
+					is_actual_major = yes 
+					NOT = {
+						AND = {
+							OR = {
+								tag = RUS
+								tag = FRA
+								tag = JAP
+							}
+							second_weltkrieg_has_begun = no
+						}
+					}
+					}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = ROOT
+				value = 4000
+			}
+			}
 			add_ai_strategy = {
 				type = support
 				id = ROOT
@@ -69,8 +89,28 @@ send_volunteers_to_TARGET = {
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = event_target:volunteer_target
-			value = 1000
+			value = 300
 		}
+			if = {
+				limit = { 
+					is_actual_major = yes 
+					NOT = {
+						AND = {
+							OR = {
+								tag = RUS
+								tag = FRA
+								tag = JAP
+							}
+							second_weltkrieg_has_begun = no
+						}
+					}
+					}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = ROOT
+				value = 4000
+			}
+			}
 		add_ai_strategy = {
 			type = support
 			id = event_target:volunteer_target
@@ -96,13 +136,33 @@ clear_volunteers_to_TARGET = {
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = event_target:volunteer_target
-			value = -1000
+			value = -300
 		}
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = event_target:volunteer_target
 			value = -1000
 		}
+			if = {
+				limit = { 
+					is_actual_major = yes 
+					NOT = {
+						AND = {
+							OR = {
+								tag = RUS
+								tag = FRA
+								tag = JAP
+							}
+							second_weltkrieg_has_begun = no
+						}
+					}
+					}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = ROOT
+				value = -4000
+			}
+			}
 		add_ai_strategy = {
 			type = support
 			id = event_target:volunteer_target
@@ -134,13 +194,33 @@ send_volunteers_to_PREV = {
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = PREV
-			value = 1000
+			value = 300
 		}
 		#add_ai_strategy = {
 		#	type = send_lend_lease_desire
 		#	id = PREV
 		#	value = 200
 		#}
+			if = {
+				limit = { 
+					is_actual_major = yes 
+					NOT = {
+						AND = {
+							OR = {
+								tag = RUS
+								tag = FRA
+								tag = JAP
+							}
+							second_weltkrieg_has_begun = no
+						}
+					}
+					}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = ROOT
+				value = 4000
+			}
+			}
 		add_ai_strategy = {
 			type = support
 			id = PREV
@@ -165,8 +245,28 @@ clear_volunteers_to_PREV = {
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = PREV
-			value = -1000
+			value = -300
 		}
+			if = {
+				limit = { 
+					is_actual_major = yes 
+					NOT = {
+						AND = {
+							OR = {
+								tag = RUS
+								tag = FRA
+								tag = JAP
+							}
+							second_weltkrieg_has_begun = no
+						}
+					}
+					}
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = ROOT
+				value = -4000
+			}
+			}
 		add_ai_strategy = {
 			type = support
 			id = PREV
@@ -189,16 +289,11 @@ clear_PREV_volunteers_to_PREV = {
 				id = PREV
 				value = -400
 			}
-			add_ai_strategy = {
-				type = send_lend_lease_desire
-				id = PREV
-				value = -400
-			}
-			add_ai_strategy = {
-				type = send_lend_lease_desire
-				id = PREV
-				value = -200
-			}
+		add_ai_strategy = {
+			type = send_lend_lease_desire
+			id = PREV
+			value = -300
+		}
 			add_ai_strategy = {
 				type = support
 				id = PREV

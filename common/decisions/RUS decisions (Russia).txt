@@ -12453,11 +12453,12 @@ RUS_russian_sphere_decisions = {
 				AUS = { is_subject = yes }
 				has_war_with = AUS
 			}
-			FROM = { at_peace_or_same_enemies_as_ROOT = yes }
-			#OR = {
-			#	FROM = { is_neighbor_of = ROOT } 
-			#	ROM = { is_neighbor_of = ROOT } 
-			#}
+			#FROM = { at_peace_or_same_enemies_as_ROOT = yes }
+			OR = {
+				FROM = { is_neighbor_of = ROOT } 
+				ROM = { is_neighbor_of = ROOT } 
+				SER = {surrender_progress > 0.6 }
+			}
 			if = {
 				limit = {
 					FROM = { owns_state = 109 } #Central Croatia

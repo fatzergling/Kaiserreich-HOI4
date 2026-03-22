@@ -1010,11 +1010,12 @@ GER_be_careful_around_england = {
 		has_navy_size = { size > 0 }
 		has_war_with = ENG
 		ENG = { is_subject = no }
-		if = {
-			limit = { country_exists = FRA }
-			ENG = { naval_strength_comparison = { other = ROOT ratio > 0.6 } }
-		}
-		else = {
+		OR = {
+			AND = {
+				has_war_with = FRA
+							ENG = { naval_strength_comparison = { other = ROOT ratio > 0.3 } }
+			 	FRA = { has_capitulated = no }
+			}
 			ENG = { naval_strength_comparison = { other = ROOT ratio > 0.8 } }
 		}
 	}
@@ -1032,12 +1033,12 @@ GER_be_careful_around_england = {
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 18 #English Channel
-		value = 100
+		value = 300
 	}
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 16 #English Channel
-		value = 40
+		value = 80
 	}
 	ai_strategy = {
 		type = naval_avoid_region
@@ -1145,6 +1146,11 @@ GER_dont_defend_indian_ocean = { #GER loves sending huge portions of the navy to
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 60 #West Indian Ocean
+		value = 75
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 30 #West Indian Ocean
 		value = 75
 	}
 }
@@ -2235,12 +2241,55 @@ GER_raid_the_north_sea = {
 		id = 147 #Danish Belts
 		value = 100
 	}
+	#ai_strategy = {
+	#	type = naval_dominance
+	#	id = 147 #Danish Belts
+	#	value = 100
+	#}
+	#	ai_strategy = {
+	#	type = naval_dominance
+	#	id = 138 #Danish Belts
+	#	value = 100
+	#}
+
+}
+
+GER_naval_base = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		controls_state = 56
+		has_war_with = ENG
+		
+	}
+	abort_when_not_enabled = yes
+
 	ai_strategy = {
-		type = naval_dominance
-		id = 147 #Danish Belts
+		type = strike_force_home_base
+		id = 173 #North Sea
 		value = 100
 	}
 }
+
+GER_naval_base_backup = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		NOT = { controls_state = 56 }
+		has_war_with = ENG
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 174 #North Sea
+		value = 100
+	}
+}
+
+
 
 #Yo-ho-ho and a bottle of rum! We set sail for the North Atlantic aaaargh!
 GER_raid_the_atlantic = {

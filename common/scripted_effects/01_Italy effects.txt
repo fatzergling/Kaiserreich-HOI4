@@ -680,7 +680,7 @@ italy_break_balance = {
 			}
 
 	}
-					SIC = {
+					SRD = {
 						dismantle_faction = yes
 				}
 

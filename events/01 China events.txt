@@ -1272,15 +1272,15 @@ country_event = { #FROM invites ROOT to alliance - THIS IS FROM THE POV OF THE P
 						FROM = { china_is_aligned_with_federalists = no }
 					}
 					AND = { #check for FNG
-						has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_FNG }
+						has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_AGJ }
 						FROM = { china_is_aligned_with_fengtian = no }
 					}
 					AND = { #check for RKMT
-						has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_RKMT }
+						has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_UPC }
 						FROM = { china_is_aligned_with_right_kmt = no }
 					}
 					AND = { #check for LKMT
-						has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_LKMT }
+						has_game_rule = { rule = SZC_forpol option = SZC_FORPOL_LKT }
 						FROM = { china_is_aligned_with_left_kmt = no }
 					}
 					AND = { #check for NPA

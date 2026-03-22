@@ -3,6 +3,11 @@ state = {
 	name = "STATE_159"
 	manpower = 5324200
 	state_category = ten
+	resources = {
+		aluminium = 8
+		steel = 12
+	}
+
 
 	history = {
 		owner = ITA

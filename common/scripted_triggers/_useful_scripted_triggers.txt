@@ -5,7 +5,7 @@ is_actual_major = {
 	custom_override_tooltip = {
 		tooltip = is_actual_major
 		is_major = yes
-		num_of_factories > 35 #MAJOR_MIN_FACTORIES
+		num_of_factories > 70 #MAJOR_MIN_FACTORIES
 
 		# rank the majors according to their num_of_factories
 		get_sorted_scored_countries_temp = {

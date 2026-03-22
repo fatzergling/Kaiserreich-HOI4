@@ -28,7 +28,7 @@ KUM_influence_category = {
 			clr_country_flag = KUM_power_struggle_flag
 			hidden_effect = {
 				if = {
-					limit = { is_ai = yes }
+					limit = { KUM = { is_ai = yes } }
 					random_list = {
 						40 = {
 							country_event = kumul_khanate_events.100

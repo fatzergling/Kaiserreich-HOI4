@@ -41,12 +41,12 @@ ideas = {
 			}
 			modifier = {
 				political_power_factor = -0.05
-				consumer_goods_factor = 0.2
 			}
 			targeted_modifier = {
 				tag = GER
 				trade_cost_for_target_factor = -0.5
 				extra_trade_to_target_factor = 0.30
+				cic_to_target_factor = 0.2
 			}
 		}
 		GRE_foreign_industry_GER2 = {
@@ -62,12 +62,12 @@ ideas = {
 			}
 			modifier = {
 				political_power_factor = -0.03
-				consumer_goods_factor = 0.1
 			}
 			targeted_modifier = {
 				tag = GER
 				trade_cost_for_target_factor = -0.25
 				extra_trade_to_target_factor = 0.15
+				cic_to_target_factor = 0.1
 			}
 		}
 		GRE_foreign_industry_GER3 = {
@@ -84,6 +84,7 @@ ideas = {
 				tag = GER
 				trade_cost_for_target_factor = -0.4
 				extra_trade_to_target_factor = 0.30
+				cic_to_target_factor = 0.05
 			}
 		}
 		GRE_foreign_industry_AUS1 = {
@@ -98,12 +99,12 @@ ideas = {
 			}
 			modifier = {
 				political_power_factor = -0.03
-				consumer_goods_factor = 0.1
 			}
 			targeted_modifier = {
 				tag = AUS
 				trade_cost_for_target_factor = -0.4
 				extra_trade_to_target_factor = 0.20
+				cic_to_target_factor = 0.1
 			}
 		}
 		GRE_foreign_industry_AUS2 = {
@@ -118,12 +119,12 @@ ideas = {
 				has_democratic_government = yes
 			}
 			modifier = {
-				consumer_goods_factor = 0.05
 			}
 			targeted_modifier = {
 				tag = AUS
 				trade_cost_for_target_factor = -0.2
 				extra_trade_to_target_factor = 0.10
+				cic_to_target_factor = 0.05
 			}
 		}
 		GRE_foreign_industry_AUS3 = {
@@ -140,6 +141,7 @@ ideas = {
 				tag = AUS
 				trade_cost_for_target_factor = -0.3
 				extra_trade_to_target_factor = 0.20
+				cic_to_target_factor = 0.025
 			}
 		}
 		GRE_memories_of_king = {

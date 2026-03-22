@@ -744,7 +744,7 @@ leader_traits = {
 		command_cap_increase = @tier3_cp_cap_increase
 
 		ai_will_do = {
-			factor = 6
+			factor = 600
 			modifier = {
 				factor = 0
 				AI_trigger_dont_hire_high_command_too_early = yes

@@ -299,6 +299,23 @@ JAP_push_xsm_hard_initially = {
 	}
 }
 
+JAP_protect_fngtian_plz = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		is_in_faction_with = FNG
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = FNG
+		value = 100
+	}
+
+}
+
+
 JAP_protect_fngtian_if_fucked = {
 	allowed = {
 		original_tag = JAP
@@ -306,7 +323,7 @@ JAP_protect_fngtian_if_fucked = {
 	enable = {
 		OR = {
 			AND = {
-			FNG = { surrender_progress > 0.1 } 
+				FNG = { surrender_progress > 0.1 } 
 				is_in_faction_with = FNG
 			}
 			AND = {
@@ -333,7 +350,7 @@ JAP_protect_fngtian_if_fucked = {
 	ai_strategy = {
 		type = force_defend_ally_borders
 		id = FNG
-		value = 1000
+		value = 100
 	}
 	ai_strategy = {
 		type = strategic_air_importance
@@ -367,7 +384,7 @@ JAP_protect_fngtian_if_fucked2 = {
 	ai_strategy = {
 		type = force_defend_ally_borders
 		id = FNG
-		value = 2000
+		value = 200
 	}
 		ai_strategy = { #TRK avoids putting divisions on Xinjiang border
 		type = front_unit_request
@@ -529,47 +546,47 @@ JAP_chinese_war = {
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = CHI
-	    value = 450
+	    value = 45
 	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = QIE
-	    value = 450
+	    value = 45
 	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = SHX
-	    value = 450
+	    value = 45
 	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = SHD
-	    value = 450
+	    value = 45
 	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = HNN
-	    value = 450
+	    value = 45
 	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = ANQ
-	    value = 450
+	    value = 45
 	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = GXC
-	    value = 450
+	    value = 45
 	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = YUN
-	    value = 450
+	    value = 45
 	}
 	ai_strategy = {
 	    type = front_unit_request
 	    tag = SZC
-	    value = 450
+	    value = 45
 	}
 
 }

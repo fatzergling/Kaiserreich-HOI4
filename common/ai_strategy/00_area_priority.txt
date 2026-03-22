@@ -448,7 +448,7 @@ going_slow = {
 	enable = {
 		has_equipment = { infantry_equipment < 500 }
 		has_civil_war = no
-		enemies_strength_ratio > 0.30
+		enemies_strength_ratio > 1
 		NOT = {
 			tag = RUS
 			has_war_with = TRK

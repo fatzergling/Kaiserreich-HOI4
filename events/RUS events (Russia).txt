@@ -8689,9 +8689,14 @@ country_event = { #Reorganisation of Central Asia (SocRus)
 			set_cosmetic_tag = TRK_RUS
 			if = {
 				limit = {  is_ai = yes }
-				every_controlled_state = {
-						limit = { NOT = { is_core_of = BUK } }
-						add_compliance = 35
+				add_manpower = 150000
+				RUS = {
+					add_manpower = -150000
+					send_equipment = {
+						target = BUK
+						type = infantry_equipment
+						amount = 3500
+					}
 				}
 			}
 		}

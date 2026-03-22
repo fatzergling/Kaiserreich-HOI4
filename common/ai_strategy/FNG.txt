@@ -116,7 +116,7 @@ FNG_build_army = {
 		original_tag = FNG
 	}
 	enable = {
-		always = yes
+		always = no
 	}
 	abort_when_not_enabled = yes
 

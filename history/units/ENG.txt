@@ -94,97 +94,116 @@ units = {
 		location = 9458
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 9458
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 3273
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 9392
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 351
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 9397
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 11218
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 11253
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 11221
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 3287
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 6318
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 311
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 6384
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 13070
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 3369
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 6351
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 
 	division = {
 		location = 11297
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 407
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 	division = {
 		location = 407
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
 	}
 
 	division = {
@@ -209,12 +228,14 @@ units = {
 		location = 13013
 		division_template = "Garrison"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.1
 	}
 	division = {
 		name = "St. Helena Garrison"
 		location = 13016
 		division_template = "Garrison"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.1
 	}
 }
 
