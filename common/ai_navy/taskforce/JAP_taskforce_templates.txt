@@ -134,7 +134,7 @@ JAP_ConvoyRaiding_1 = {
 
 	optimal_composition = {
 		submarine = {
-			amount = 12
+			amount = 8
 		}
 	}
 }
@@ -149,13 +149,13 @@ JAP_ConvoyEscort_1 = {
 	mission = { convoy_escort }
 	min_composition = {
 		destroyer = {
-			amount = 4
+			amount = 2
 		}
 	}
 	
 	optimal_composition = {
 		destroyer = {
-			amount = 8
+			amount = 6
 		}
 	}
 }

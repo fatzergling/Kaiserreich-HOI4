@@ -120,6 +120,27 @@ WCA_attack_carefully_before_war_measures = {
 	}
 }
 
+################
+WCA_be_careful_in_yorktown = {
+	allowed = {
+		original_tag = WCA
+	}
+	enable = {
+		USA = { has_country_flag = USA_Warplan_Yorktown}
+		date < 1938.7.1
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = USA
+		ordertype = front
+		execution_type = careful
+		execute_order = no
+	}
+}
+
+
 WCA_civil_war_prepare_for_war = {
 	allowed = {
 		original_tag = WCA
@@ -201,6 +222,31 @@ WCA_protect_nyc = {
 	}
 }
 
+WCA_fortify_NYC = {
+	allowed = {
+		original_tag = WCA
+	}
+	enable = {
+		358 = { bunker < 5 }
+		NOT = { has_global_flag = USA_civil_war_over_flag }
+		OR = {
+			358 = { is_in_home_area = no } #NYC
+			country_exists = NEE
+			931 = { is_controlled_by = USA }
+			796 = { is_controlled_by = USA }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = bunker # Type of building
+		target = 358 #Kyiv (urban tile)
+		value = 9999
+	}
+}
+
+
 
 WCA_protect_detriot = {
 	allowed = {
@@ -230,6 +276,7 @@ WCA_protect_NEE = {
 	enable = {
 		has_war_with = IMP
 		country_exists = NEE
+		NOT = {has_war_with = NEE }
 	}
 	abort_when_not_enabled = yes
 
@@ -241,10 +288,30 @@ WCA_protect_NEE = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = NEE
-		value = 200
+		value = 400
 	}
 }
 
+WCA_NEE_is_dangerous_focus = {
+	allowed = {
+		original_tag = WCA
+	}
+
+	enable = {
+	has_war_with = NEE 
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = NEE
+		value = 200
+	}
+		ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 186 #Alborz Mountains
+		value = 500
+	}
+}
 
 
 
@@ -334,14 +401,16 @@ WCA_kill_east_coast_after_NEE = {
 			}
 		}
 			NOT = {
-				362 = { is_controlled_by = WCA }
 				361 = { is_controlled_by = WCA }
 			}
 	}
 	abort_when_not_enabled = yes 
 		ai_strategy = {
 		type = force_concentration_target_weight
-		strategic_region = 226 #Alborz Mountains
+		state = 360 #Baghdad
+		state = 359 #Mosul
+		state = 361 #Mosul
+		state = 362 #Mosul
 		value = 500
 	}
 

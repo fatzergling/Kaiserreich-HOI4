@@ -36,7 +36,29 @@ america_shared_civil_war_strategies = {
 	ai_strategy = {
 		type = build_building
 		id = industrial_complex # Type of building
-		value = 50
+		value = 75
+	}
+
+}
+
+america_build_factories = {
+	allowed = {
+		is_american_tag = yes
+	}
+
+	enable = {
+		has_global_flag = USA_leadup_to_the_war
+		num_of_military_factories > 75
+	}
+	abort = {
+		has_global_flag = USA_civil_war_over_flag
+	}
+
+
+		ai_strategy = {
+		type = building_target
+		id = arms_factory # Type of building
+		value = 300
 	}
 
 }

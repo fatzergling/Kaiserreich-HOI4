@@ -14,7 +14,7 @@ less_focus_on_non_neighbour_fronts = {
 zero_focus_on_non_neighbour_fronts_if_losing_war = {
 	enable = {
 		is_in_faction = yes
-		surrender_progress > 0.3
+		surrender_progress > 0.2
 	}
 	abort_when_not_enabled = yes
 
@@ -388,7 +388,7 @@ default_area_priority_north_america_major = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = { type = area_priority id = latin_america		value = 100 }
-	ai_strategy = { type = area_priority id = western_europe	value = 50 }
+	ai_strategy = { type = area_priority id = western_europe	value = 100 }
 	ai_strategy = { type = area_priority id = oceania			value = 50 }
 	ai_strategy = { type = area_priority id = asia				value = 25 }
 	ai_strategy = { type = area_priority id = eastern_europe	value = 25 }

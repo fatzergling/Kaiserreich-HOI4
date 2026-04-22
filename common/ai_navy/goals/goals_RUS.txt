@@ -60,8 +60,8 @@ RUS_convoy_raiding = {
         RUS
     }
 
-    min_priority = 3
-    max_priority = 7
+    min_priority = 13
+    max_priority = 17
 }
 
 RUS_naval_dominance = {

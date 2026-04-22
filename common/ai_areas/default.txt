@@ -306,5 +306,18 @@ areas = {
 			90
 		}
 	}
+	western_med_control_zone = {
+		strategic_regions = {
+			68
+			169
+		}
+	}
+	
+	eastern_med_control_zone = {
+		strategic_regions = {
+			29
+			69
+		}
+	}
 
 }

@@ -83,7 +83,7 @@ territorial_integration = {
 		base = 1000
 		modifier = {
 			factor = 0
-			resistance > 45
+			resistance > 55
 		}
 
 

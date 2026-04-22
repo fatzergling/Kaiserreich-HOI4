@@ -170,10 +170,38 @@ ENG_ConvoyRaiding_1 = {
 
 	optimal_composition = {
 		submarine = {
-			amount = 12
+			amount = 8
 		}
 	}
 }
+
+ENG_NavalInvasionSupport_1 = {
+	allowed = {
+		original_tag = ENG
+	}
+	ai_will_do = {
+		factor = 5
+	}	
+	mission = { naval_invasion_support }
+	min_composition = {
+		battleship = {
+			amount = 1
+		}
+		destroyer = {
+			amount = 3
+		}
+	}
+
+	optimal_composition = {
+		battleship = {
+			amount = 3
+		}
+		destroyer = {
+			amount = 6
+		}
+	}
+}
+
 
 ENG_ConvoySurfaceRaiding_1 = {
 	allowed = {
@@ -185,14 +213,14 @@ ENG_ConvoySurfaceRaiding_1 = {
 
 	mission = { convoy_raiding }
 	min_composition = {
-		battle_cruiser = {
+		light_cruiser = {
 			amount = 1
 		}
 	}
 
 	optimal_composition = {
-		battle_cruiser = {
-			amount = 2
+		light_cruiser = {
+			amount = 3
 		}
 	}
 }
@@ -209,7 +237,7 @@ ENG_ConvoyEscort_1 = {
 	mission = { convoy_escort }
 	min_composition = {
 		destroyer = {
-			amount = 5
+			amount = 4
 		}
 	}
 	

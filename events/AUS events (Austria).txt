@@ -938,6 +938,9 @@ country_event = {
 						has_elected_government = yes
 						AUS = { has_dictatorship_government = yes }
 					}
+					GRE = {
+						is_in_faction_with = AUS
+					}
 					AND = {
 						BUL = {
 							has_country_leader = { character = BUL_alexander_stamboliyski }

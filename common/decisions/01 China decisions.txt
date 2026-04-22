@@ -1055,6 +1055,7 @@ chinese_unification = {
 			is_subject = no
 			is_in_faction = no
 			is_working_with_JAP = no
+			has_war = no
 			if = {
 				limit = { original_tag = KUM }
 				OR = {
@@ -2671,6 +2672,18 @@ chinese_unification = {
 				has_war = yes
 			}
 			modifier = {
+				factor = 0
+				tag = CHI
+					AND = {
+						owns_state = 603
+						OR = {
+						NOT = { 1048 = { is_core_of = CHI }}
+						NOT = { 603 = { is_core_of = CHI }}
+
+						}
+					}
+			}
+			modifier = {
 				factor = 0	# South China War game rules - HNN should not declare war if set to be neutral
 				NOT = { has_global_flag = china_united }
 				has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN }
@@ -3173,11 +3186,21 @@ chinese_unification = {
 			modifier = {
 				factor = 0
 				original_tag = CHI
+				OR = {
 				AND = {
 					NOT = { has_completed_focus = CHI_second_northern_expedition }
 					focus_progress = {
 						focus = CHI_second_northern_expedition
 						progress > 0
+					}
+				}
+					AND = {
+						owns_state = 603
+						OR = {
+						NOT = { 1048 = { is_core_of = CHI }}
+						NOT = { 603 = { is_core_of = CHI }}
+
+						}
 					}
 				}
 			}
@@ -4732,9 +4755,12 @@ chinese_unification = {
 				tooltip = china_half_strength_of_overlord_tt
 				var:overlord = { strength_ratio = { tag = ROOT ratio < 2 } }
 			}
+			if = {
+				limit = { NOT = { var:overlord = { is_working_with_JAP = yes }}}
 			custom_override_tooltip = {
 				tooltip = china_has_been_365_days_tt
 				NOT = { has_country_flag = china_submission_mandatory_loyalty_timer_flag }
+			}
 			}
 		}
 

@@ -70,7 +70,74 @@ Ottoman_Cairo_Pact_decisions = {
 		}
 		fixed_random_seed = no
 	}
+	OTT_peace_iran = {
+		icon = generic_prepare_civil_war
 
+		available = {
+		PER = {
+			is_valid_peace_target = yes
+			EGY = { has_idea = EGY_levant_crisis_initiative_lost }
+			#All faction members in the Middle East have capitulated
+			NOT = {
+				any_allied_country = {
+					is_in_middle_east = yes
+					has_capitulated = no
+				}
+			}
+							OR = {
+					AND = {
+									NOT = { controls_state = 413 } #Sinai
+			NOT = { controls_state = 417 } #Sinai
+			NOT = { controls_state = 421 } #Sinai
+			NOT = { controls_state = 419 } #Sinai
+
+					}
+			NOT = { controls_state = 266 } #Sinai
+				}
+			#Eastern bank of the Suez
+		}
+
+		#Ottomans are either under immediate threat, or too war-weary
+		OR = {
+			casualties_k > 250
+			AND = {
+				has_war_support < 0.2
+				has_manpower < 10000
+			}
+			surrender_progress > 0.39
+			AND = {
+				owns_state = 773 #Constantinople
+				NOT = { controls_state = 773 }
+			}
+			AND = {
+				has_war_with = EGY
+				#OTT has been pushed out of Iraq and some
+				NOT = { controls_state = 291 } #Baghdad
+				NOT = { controls_state = 676 } #Mosul
+				OR = {
+					NOT = { controls_state = 350 } #Diyarbekir
+					NOT = { controls_state = 352 } #Van
+					NOT = { controls_state = 354 } #Erzurum
+					NOT = { controls_state = 677 } #Aleppo
+				}
+			}
+			var:global.russia = {
+				at_war_with_or_justifying_wargoal_against_ROOT = yes
+			}
+		}
+	}
+		ai_will_do = { factor = 1000 }
+
+		fire_only_once = yes
+
+		cost = 25
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete OTT_Emergency_Mobilisation"
+			OTT_PER_scripted_peace_effect = yes
+		}
+		fixed_random_seed = no
+	}
 	OTT_Fortify_Aleppo = {
 		icon = generic_operation
 

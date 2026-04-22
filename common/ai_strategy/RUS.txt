@@ -564,8 +564,13 @@ RUS_focus_on_ukraine = {
 	}
 	ai_strategy = {
 		type = strategic_air_importance
-		id = 130 #Ukraine
+		id = 130 #Belarus
 		value = 30000
+	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 130
+		value = 500
 	}
 }
 
@@ -646,6 +651,11 @@ RUS_focus_on_white_ruthenia = {
 		id = 39 #Belarus
 		value = 30000
 	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 39
+		value = 500
+	}
 }
 
 RUS_mop_up_white_ruthenia = {
@@ -718,6 +728,11 @@ RUS_focus_on_lithuania = {
 		id = 37 #Baltic States
 		value = 10000
 	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 37
+		value = 500
+	}
 }
 
 RUS_mop_up_lithuania = {
@@ -783,6 +798,11 @@ RUS_focus_on_baltic_duchy = {
 		type = strategic_air_importance
 		id = 37 #Baltic States
 		value = 10000
+	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 37
+		value = 500
 	}
 }
 
@@ -978,6 +998,11 @@ RUS_focus_on_poland = {
 		id = 38 #Poland
 		value = 30000
 	}
+	ai_strategy = {
+		type = force_concentration_target_weight
+		strategic_region = 38
+		value = 500
+	}
 }
 
 RUS_crush_poland = {
@@ -1039,6 +1064,7 @@ RUS_mop_up_georgia = {
 		GEO = {
 			exists = yes
 		}
+
 		OR = {
 			AND = {
 				has_war_with = GEO
@@ -1065,7 +1091,7 @@ RUS_mop_up_georgia = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = GEO
-		value = 75
+		value = 100
 	}
 	ai_strategy = {
 		type = conquer
@@ -1113,7 +1139,8 @@ RUS_mop_up_azerbaijan = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = AZR
-		value = 75
+				value = 100
+
 	}
 	ai_strategy = {
 		type = conquer
@@ -1127,6 +1154,50 @@ RUS_mop_up_azerbaijan = {
 	}
 }
 
+
+RUS_crush_cacusus = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		OR = {
+			AND = {
+			has_war_with = AZR
+			AZR = { has_capitulated = no }
+
+			}
+			AND = {
+			has_war_with = GEO
+			AZR = { has_capitulated = no }
+			}
+		}
+		surrender_progress < 0.1
+
+		#activate every 25 days, then pause for another 25
+		set_temp_variable = { frequency = global.num_days }
+		modulo_temp_variable = { frequency = 50 }
+		check_variable = { frequency < 25 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		tag = AZR
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_control
+		tag = GEO
+		priority = 100
+		ordertype = front
+		execution_type = rush_weak
+		execute_order = yes
+	}
+
+}
 RUS_focus_on_germany = {
 	allowed = {
 		original_tag = RUS
@@ -1523,7 +1594,8 @@ RUS_civilian_buildup = {
 		original_tag = RUS
 	}
 	enable = {
-		date < 1938.1.1
+		#date < 1938.1.1
+		always = no
 	}
 	abort_when_not_enabled = yes
 
@@ -1541,14 +1613,14 @@ RUS_military_buildup = {
 	}
 	enable = {
 		date < 1940.1.1
-		date > 1937.6.1
+		#date > 1937.6.1
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = building_target
 		id = arms_factory
-		value = 1000
+		value = 170
 	}
 }
 
@@ -1560,6 +1632,7 @@ RUS_build_up_troops = {
 		AND = {
 			country_exists = GER
 			has_war = no
+			date < 1940.9.1
 		}
 	}
 	abort_when_not_enabled = yes
@@ -1572,6 +1645,8 @@ RUS_build_up_troops = {
 		type = ai_wanted_divisions_factor
 		value = 10
 	}
+
+
 }
 
 

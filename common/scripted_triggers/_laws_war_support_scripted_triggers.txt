@@ -82,8 +82,8 @@ service_by_requirement_available = {
 	OR = {
 		has_war_support > 0.6
 		surrender_progress > 0
+		enemies_strength_ratio > 0.6
 	}
-	enemies_strength_ratio > 0.6
 }
 
 all_adults_serve_available = {
@@ -91,8 +91,8 @@ all_adults_serve_available = {
 	OR = {
 		has_war_support > 0.7
 		surrender_progress > 0
-	}
 	enemies_strength_ratio > 0.75
+	}
 }
 
 scraping_the_barrel_available = {
@@ -100,8 +100,8 @@ scraping_the_barrel_available = {
 	OR = {
 		has_war_support > 0.85
 		surrender_progress > 0.25
-	}
 	enemies_strength_ratio > 1
+	}
 }
 
 can_increase_conscription_law_level = {

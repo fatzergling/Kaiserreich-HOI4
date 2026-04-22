@@ -127,6 +127,68 @@ CAN_build_up_troops = {
 	}
 }
 
+CAN_use_your_navy = {
+	allowed = {
+		tag = CAN
+	}
+	enable = {
+		OR = {
+			has_war_with = ENG
+			has_war_with = WCA
+			has_war_with = AST
+			date < 1941.1.1
+		}
+	}
+	abort_when_not_enabled = yes
+		ai_strategy = {
+		type = naval_avoid_region
+		id = 171 #Mozambique Channel
+		value = 500
+	}
+	abort_when_not_enabled = yes
+		ai_strategy = {
+		type = naval_avoid_region
+		id = 88 #Mozambique Channel
+		value = 500
+	}
+	abort_when_not_enabled = yes
+		ai_strategy = {
+		type = naval_avoid_region
+		id = 114 #Mozambique Channel
+		value = 500
+	}
+
+		ai_strategy = {
+		type = strike_force_home_base
+		id = 171 #Mozambique Channel
+		value = -500
+	}
+	ai_strategy = {
+		type = naval_dominance
+		id = 171
+		value =  0
+	}
+
+}
+
+CAN_strike_force_east_coast = {
+	allowed = {
+		tag = CAN
+	}
+	enable = {
+		OR = {
+			has_war_with = WCA
+			date < 1939.1.1
+		}
+	}
+		ai_strategy = {
+		type = strike_force_home_base
+		id = 55 #Mozambique Channel
+		value = 100
+	}
+
+}
+
 CAN_fight_the_quebecois = {
 	allowed = {
 		tag = CAN
@@ -208,11 +270,6 @@ CAN_blockade_wca = {
 		type = naval_dominance
 		id = usa_east_seas
 		value = 100
-	}
-		ai_strategy = {
-		type = naval_dominance
-		id = usa_west_seas
-		value = 0
 	}
 
 }

@@ -4244,6 +4244,7 @@ country_event = {
 				}
 			}
 		}
+		NOT = { has_war_with = WCA }
 		controls_all_owned_states = yes
 	}
 
@@ -4269,6 +4270,7 @@ country_event = {
 						has_completed_focus = CAN_new_munitions_plants
 					}
 				}
+				has_war_with = WCA
 			}
 		}
 		add_war_support = 0.05
@@ -4285,6 +4287,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_authoritarian_government = yes
+				NOT = { has_war_with = WCA }
 			}
 		}
 		add_war_support = -0.01

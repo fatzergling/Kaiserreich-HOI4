@@ -1307,6 +1307,10 @@ JAP_FNG_increase_reinforcements_to_FNG_effect = {
 			FNG = { army_experience = 50 } #Should never happen but just in case
 		}
 		if = {
+			limit = { is_ai = yes}
+			recall_volunteers_from = FNG
+		}
+		if = {
 			limit = {
 				has_relation_modifier = {
 					target = FNG

@@ -93,6 +93,12 @@ EGY_focus_on_ottoman_front = {
 		state = 515
 		value = -100
 	}
+	ai_strategy = {
+		type = front_unit_request
+		strategic_region = 28 #Levant
+		value = 100
+	}
+
 	###Avoid putting too many units on garrison
 	ai_strategy = {
 		type = garrison
@@ -155,6 +161,25 @@ EGY_ignore_libyan_front = {
 		value = 100
 	}
 }
+
+EGY_ignore_iraq_front = {
+	###Let LBA handle their own front
+	allowed = {
+		original_tag = EGY
+	}
+	enable = {
+		has_war_with = OTT
+		OTT = { surrender_progress < 0.3 }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		strategic_region = 239 #Levant
+		value = -50
+	}
+}
+
 
 EGY_destroy_invasion_beachheads_alexandria = {
 	allowed = {

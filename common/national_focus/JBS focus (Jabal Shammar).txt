@@ -1085,6 +1085,7 @@ focus_tree = {
 
 		prerequisite = { focus = JBS_curb_authorities focus = JBS_relinquish_power }
 		mutually_exclusive = { focus = JBS_enforce_rashidi_nazim }
+		ai_will_do = { factor = 0 }
 
 		available_if_capitulated = yes
 

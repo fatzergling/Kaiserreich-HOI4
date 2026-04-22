@@ -8584,7 +8584,7 @@ focus_tree = {
 		ai_will_do = { base = 100 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed YUN_rule_of_the_outstanding"
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { YUN_wen_yiduo = { is_political_advisor = yes } }
@@ -8780,7 +8780,7 @@ focus_tree = {
 		ai_will_do = { base = 100 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed YUN_unity_through_national_essence"
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { YUN_xu_yun = { is_political_advisor = yes } }
@@ -9937,7 +9937,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed YUN_promoting_mass_education"
 			YUN_YCD_medium_effect = yes
 			YUN_CMS_medium_effect = yes
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 			custom_effect_tooltip = tooltip_white_line
 			add_timed_idea = {
 				idea = YUN_the_promotion_of_education_to_the_masses
@@ -13320,7 +13320,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed YUN_returning_to_the_revolutions_root"
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 			add_timed_idea = {
 				idea = YUN_the_intellectual_cornucopia
 				days = 320
@@ -13909,7 +13909,7 @@ focus_tree = {
 			NOT = { has_country_flag = YUN_KMT_satellite_narrative_flag } #Aka the satellite tree
 		}
 
-		ai_will_do = { base = 100 }
+		ai_will_do = { base = 1000 }
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed YUN_rebuilding_local_administrations"
@@ -13959,7 +13959,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			YUN_expand_public_education_effect = yes
 			custom_effect_tooltip = tooltip_white_line
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 			if = {
 				limit = { has_war_with_major = yes }
 				hidden_effect = { country_event = { id = YUN.lategame.477 days = 21 } } #4 Elements and 9 Principles of Education
@@ -20855,8 +20855,7 @@ focus_tree = {
 				custom_effect_tooltip = YUN_cun_shusheng_will_be_helpful_tt
 			}
 			custom_effect_tooltip = tooltip_white_line
-			remove_ideas = CHN_national_illiteracy1_idea
-		}
+			CHN_remove_illiteracy_effect = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 

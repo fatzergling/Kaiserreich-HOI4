@@ -179,6 +179,7 @@ set_variable = { TUR_literacy_research_speed = -0.15 }
 
 add_ideas = {
 	volunteer_only
+	#limited_conscription
 	ott_vilayet_stability_idea
 	ott_institutionalised_islam
 	ott_armed_neutrality

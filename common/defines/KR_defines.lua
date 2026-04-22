@@ -33,7 +33,7 @@ NDefines.NSupply.DEFAULT_STARTING_TRUCK_RATIO = 5
 NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_PER_STABILITY_LOSS = 0.1	-- Vanilla is 0.2
 NDefines.NResistance.MAXIMUM_GARRISON_HARDNESS_WHEN_ATTACKED = 0.70         -- vanilla is 0.90
 NDefines.NBuildings.BASE_FACTORY_REPAIR = 0.1										-- Default repair rate in percentage before factories are taken into account (1.0 equals 1%).
-NDefines.NBuildings.BASE_FACTORY_REPAIR_FACTOR = 4.0								-- Factory speed modifier when repairing.
+NDefines.NBuildings.BASE_FACTORY_REPAIR_FACTOR = 6.0								-- Factory speed modifier when repairing.
 NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_REPAIRING = 1.2
 NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 0.7
 
@@ -221,3 +221,13 @@ NDefines.NDiplomacy.PEACE_COST_FACTOR_COMPLIANCE_STEPS = {
 70,  0.1, -- above 70% 	
 }
 NDefines.NNavy.CONVOY_BLOCKED_BY_ENEMY_CONTROLLED_REGION = true
+NDefines.NDiplomacy.NAVAL_BLOCKADE_THREAT_THRESHOLD = 0				-- Target-generated threat threshold to allow naval blockade
+NDefines.NAI.LAND_COMBAT_AIR_SUPERIORITY_IMPORTANCE = 2		-- Strategic importance of air superiority ( amount of enemy planes in area )
+NDefines.NAI.LAND_COMBAT_FIGHTERS_PER_PLANE = 2		-- Strategic importance of air superiority ( amount of enemy planes in area )
+NDefines.NAI.LAND_COMBAT_INTERCEPT_PER_PLANE = 1		-- Strategic importance of air superiority ( amount of enemy planes in area )
+NDefines.NAI.LAND_DEFENSE_AIR_SUPERIORITY_IMPORTANCE = 4		-- Strategic importance of air superiority ( amount of enemy planes in area )
+NDefines.NAI.STR_BOMB_FIGHTERS_PER_PLANE = 1.5		-- Strategic importance of air superiority ( amount of enemy planes in area )
+NDefines.NAI.NAVAL_STRIKE_PLANES_PER_ARMY = 10		-- Strategic importance of air superiority ( amount of enemy planes in area )
+
+NDefines.NAI.NAVAL_AIR_SUPERIORITY_IMPORTANCE = 1
+NDefines.NAI.NAVAL_TRANSFER_AIR_IMPORTANCE = 1

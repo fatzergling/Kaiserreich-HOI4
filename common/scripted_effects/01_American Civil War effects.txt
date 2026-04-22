@@ -794,11 +794,11 @@ USA_civil_war_begins = {
 			}
 
 			#hidden looping event for ACW desertions
-			USA = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
-			WCA = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
-			NEE = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
-			ACC = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
-			APG = { country_event = { id = american_civil_war_events.803 days = 1985 random_days = 100 } }
+			USA = { country_event = { id = american_civil_war_events.803 days = 2985 random_days = 100 } }
+			WCA = { country_event = { id = american_civil_war_events.803 days = 2985 random_days = 100 } }
+			NEE = { country_event = { id = american_civil_war_events.803 days = 2985 random_days = 100 } }
+			ACC = { country_event = { id = american_civil_war_events.803 days = 2985 random_days = 100 } }
+			APG = { country_event = { id = american_civil_war_events.803 days = 2985 random_days = 100 } }
 
 			USA = {
 				country_event = { id = hawaii_events.1 days = 1 random_days = 3 } # Hawaii Rebels

@@ -194,6 +194,12 @@ ITA_foreign_policy = {# Foreign Policy Stuff
 			}
 			modifier = {
 				factor = 0
+				at_peace_or_same_enemies_as_FROM = no
+				surrender_progress < 0.1
+			}
+
+			modifier = {
+				factor = 0
 				has_country_flag = { flag = ITA_recent_peace days < 30 }
 			}
 		}
@@ -1176,7 +1182,7 @@ ITA_foreign_policy = {# Foreign Policy Stuff
 			}
 			modifier = {
 				factor = 0
-				has_global_flag = { flag = second_weltkrieg_has_started days < 30 }
+				has_global_flag = { flag = second_weltkrieg_has_started days < 60 }
 			}
 			modifier = {
 				factor = 0
@@ -1295,7 +1301,7 @@ ITA_foreign_policy = {# Foreign Policy Stuff
 			}
 			modifier = {
 				factor = 0
-				has_global_flag = { flag = second_weltkrieg_has_started days < 30 }
+				has_global_flag = { flag = second_weltkrieg_has_started days < 60 }
 			}
 			modifier = {
 				factor = 0

@@ -1,8 +1,9 @@
 USA_dominance_fleet_1 = {
 	required_taskforces = {
-		USA_StrikeForce_1 = 3
-		USA_PatrolDominanceForce_1 = 4
-		USA_PatrolReconForce_1 = 8
+		USA_StrikeForce_1 = 2
+		USA_PatrolDominanceForce_1 = 2
+		USA_PatrolReconForce_1 = 6
+		USA_NavalInvasionSupport_1 = 1
 	}	
 	optional_taskforces = {
 		USA_StrikeForce_1 = 1

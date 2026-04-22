@@ -26,7 +26,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.10
 				production_speed_buildings_factor = -0.3
-				consumer_goods_factor = 0.5
+				consumer_goods_factor = 1
 				industrial_capacity_factory = -0.35
 				industrial_capacity_dockyard = -0.35
 				custom_modifier_tooltip = cannot_train_units_tt
@@ -58,7 +58,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.15
 				production_speed_buildings_factor = -0.4
-				consumer_goods_factor = 0.6
+				consumer_goods_factor = 1.2
 				industrial_capacity_factory = -0.5
 				industrial_capacity_dockyard = -0.5
 				custom_modifier_tooltip = cannot_train_units_tt
@@ -88,7 +88,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.2
 				production_speed_buildings_factor = -0.5
-				consumer_goods_factor = 0.8
+				consumer_goods_factor = 1.4
 				industrial_capacity_factory = -0.55
 				industrial_capacity_dockyard = -0.55
 				custom_modifier_tooltip = cannot_train_units_tt
@@ -118,7 +118,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.25
 				production_speed_buildings_factor = -0.6
-				consumer_goods_factor = 1.0
+				consumer_goods_factor = 1.6
 				industrial_capacity_factory = -0.6
 				industrial_capacity_dockyard = -0.6
 				custom_modifier_tooltip = cannot_train_units_tt
@@ -148,7 +148,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.3
 				production_speed_buildings_factor = -0.7
-				consumer_goods_factor = 1.2
+				consumer_goods_factor = 1.8
 				industrial_capacity_factory = -0.7
 				industrial_capacity_dockyard = -0.7
 				custom_modifier_tooltip = cannot_train_units_tt
@@ -178,7 +178,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.35
 				production_speed_buildings_factor = -0.85
-				consumer_goods_factor = 1.4
+				consumer_goods_factor = 2
 				industrial_capacity_factory = -0.8
 				industrial_capacity_dockyard = -0.8
 				custom_modifier_tooltip = cannot_train_units_tt
@@ -308,6 +308,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
 				industrial_capacity_factory = -0.05
 				conscription_factor = -0.05
 			}
@@ -320,6 +321,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_factory_max_efficiency_factor = -0.09
+				production_speed_buildings_factor = -0.09
 				industrial_capacity_factory = -0.09
 				conscription_factor = -0.10
 			}
@@ -333,6 +335,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.13
 				industrial_capacity_factory = -0.13
+				production_speed_buildings_factor = -0.13
 				conscription_factor = -0.15
 			}
 		}
@@ -345,6 +348,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.17
 				industrial_capacity_factory = -0.17
+				production_speed_buildings_factor = -0.17
 				conscription_factor = -0.2
 			}
 		}
@@ -357,6 +361,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.21
 				industrial_capacity_factory = -0.21
+				production_speed_buildings_factor = -0.21
 				conscription_factor = -0.25
 			}
 		}
@@ -369,6 +374,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.25
 				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
 				conscription_factor = -0.3
 			}
 		}
@@ -380,6 +386,7 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = -0.35
 				industrial_capacity_factory = -0.35
+				production_speed_buildings_factor = -0.35
 				conscription_factor = -0.4
 			}
 		}
@@ -392,7 +399,7 @@ ideas = {
 				stability_factor = -0.25
 				war_support_factor = -0.30
 				conscription_factor = -0.60
-				consumer_goods_factor = 1
+				consumer_goods_factor = 1.5
 				unit_limit_factor = -0.75
 				cannot_call_allies_or_join_wars = 1
 			}
@@ -406,7 +413,7 @@ ideas = {
 				stability_factor = -0.20
 				war_support_factor = -0.25
 				conscription_factor = -0.50
-				consumer_goods_factor = 0.8
+				consumer_goods_factor = 1.2
 				unit_limit_factor = -0.6
 				cannot_call_allies_or_join_wars = 1
 			}
@@ -420,7 +427,7 @@ ideas = {
 				stability_factor = -0.15
 				war_support_factor = -0.20
 				conscription_factor = -0.40
-				consumer_goods_factor = 0.6
+				consumer_goods_factor = 0.9
 				unit_limit_factor = -0.45
 				cannot_call_allies_or_join_wars = 1
 
@@ -435,7 +442,7 @@ ideas = {
 				stability_factor = -0.10
 				war_support_factor = -0.15
 				conscription_factor = -0.30
-				consumer_goods_factor = 0.4
+				consumer_goods_factor = 0.6
 				unit_limit_factor = -0.30
 				cannot_call_allies_or_join_wars = 1
 			}
@@ -449,7 +456,7 @@ ideas = {
 				stability_factor = -0.05
 				war_support_factor = -0.10
 				conscription_factor = -0.20
-				consumer_goods_factor = 0.2
+				consumer_goods_factor = 0.3
 				unit_limit_factor = -0.15
 				cannot_call_allies_or_join_wars = 1
 			}

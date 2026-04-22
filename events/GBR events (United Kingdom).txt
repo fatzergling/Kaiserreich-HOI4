@@ -61,7 +61,7 @@ country_event = { # The Royal Restoration
 			enable_state_integration_80_compliance = yes
 						if = {
 							limit = { is_capital = yes }
-							set_compliance = 70
+							set_compliance = 100
 						}
 
 		}

@@ -1,3 +1,29 @@
+TUR_build_up_troops = {
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		date < 1939.1.1
+	}
+	abort_when_not_enabled = yes
+
+	#ai_strategy = {
+	#	type = ai_wanted_divisions_factor
+	#	value = 75
+	#}
+	#ai_strategy = {
+	#	type = force_build_armies
+	#	value = 100
+	#}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 100
+	}
+
+}
+
+
 TUR_put_units_on_the_kurdish_states = {
 	allowed = {
 		original_tag = TUR
@@ -204,9 +230,11 @@ TUR_less_troops_in_hejaz = {
 		#Disable after Arabia joins on either side
 		var:915.owner = { #Ha'il
 			NOT = {
+				OR = {
 				tag = OTT
-				has_war_with = ROOT
-				is_subject_of = ROOT
+				has_war_with = OTT
+				is_subject_of = OTT
+				}
 			}
 		}
 	}
@@ -251,6 +279,29 @@ TUR_attack_carefully_into_arabia = {
 		execution_type = balanced
 		execute_order = no
 		manual_attack = yes
+	}
+}
+
+TUR_total_mobilize_against_egypt = {
+	###Do not overextend into enemy Arabian tag's territory early on; mind the supply
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OTT_ottomans_have_post_defeat_content = no
+		#EGY is on the initiative
+		EGY = {
+			has_war_with = ROOT
+			controls_state = 753 #Suez Canal
+			#NOT = { has_idea = EGY_levant_crisis_initiative_lost }
+		}
+	}
+	abort_when_not_enabled = yes
+
+
+	ai_strategy = {
+		type = garrison
+		value = -100
 	}
 }
 
@@ -308,6 +359,10 @@ TUR_prepare_for_egypt = {
 		}
 		ratio = 0.35
 	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 100
+	}
 }
 
 TUR_crush_egypt = {
@@ -327,6 +382,7 @@ TUR_crush_egypt = {
 			controls_state = 819 #Sulaymaniyah
 			controls_state = 1000 #Kars
 		}
+		controls_state = 230
 
 		#Don't be too aggressive if you have no resources
 		has_manpower > 10000
@@ -371,7 +427,7 @@ TUR_prepare_for_iran = {
 
 		#Disable when Armenia rises up
 		NOT = { country_exists = ARM }
-
+		
 		#Disable if PER is no longer a threat
 		PER = {
 			exists = yes
@@ -400,7 +456,7 @@ TUR_prepare_for_iran = {
 			676 #Mosul
 			812 #Basra
 		}
-		ratio = 0.4
+		ratio = 0.6
 	}
 }
 
@@ -419,7 +475,11 @@ TUR_take_back_iraq = {
 			NOT = { controls_state = 291 } #Baghdad
 			NOT = { controls_state = 676 } #Mosul
 		}
-
+		EGY = {
+			has_war_with = ROOT
+			controls_state = 753 #Suez Canal
+			has_idea = EGY_levant_crisis_initiative_lost 
+		}
 		#Don't be too aggressive if you have no resources
 		has_manpower > 10000
 		stockpile_ratio = { archetype = infantry_equipment ratio > 0.05 }
@@ -498,6 +558,7 @@ TUR_attack_carefully_into_urmia = {
 		EGY = {
 			has_war_with = ROOT
 			controls_state = 753 #Suez Canal
+			has_idea = EGY_levant_crisis_initiative_lost 
 		}
 
 		#Iran is not being pushed into
@@ -515,7 +576,7 @@ TUR_attack_carefully_into_urmia = {
 		priority = 50
 		ordertype = front
 		execution_type = careful
-		execute_order = no
+		execute_order = yes
 		manual_attack = yes
 	}
 	#Station more in the South
@@ -630,7 +691,13 @@ TUR_base_navy_in_beirut_before_levantine_war = {
 		original_tag = TUR
 	}
 	enable = {
-		country_exists = PAL
+		OR = {		EGY = { is_faction_leader = yes }
+			AND = {
+				date > 1938.1.1
+				date < 1938.12.1
+			}
+
+		}
 		EGY = { is_subject = no }
 	}
 	abort_when_not_enabled = yes
@@ -638,6 +705,30 @@ TUR_base_navy_in_beirut_before_levantine_war = {
 	ai_strategy = {
 		type = strike_force_home_base
 		id = 69 #Eastern Mediterranean Sea
-		value = 250
+		value = 100
 	}
+}
+
+
+TUR_dont_defend_persian_gulf { #GER loves sending huge portions of the navy to vacation in Reunion rather than defend Germany
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		OTT_cairo_pact_defeated = no
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 240 #Red Sea
+		value = 100
+	}
+		ai_strategy = {
+		type = naval_avoid_region
+		id = 104 #Red Sea
+		value = 100
+	}
+
 }

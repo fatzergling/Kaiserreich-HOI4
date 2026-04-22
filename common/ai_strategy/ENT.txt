@@ -39,7 +39,7 @@ ENT_prepare_for_intervention_against_WCA = {
 		id = NEE
 		value = 100
 	}
-
+	ai_strategy = { type = area_priority id = north_america		value = 50 }
 	ai_strategy = {
 		type = front_unit_request
 		tag = WCA
@@ -384,7 +384,21 @@ ENT_dont_invade_if_too_minor = { #support fronts instead
 		value = -500
 	}
 }
+ENT_focus_on_europe_please = {
+	allowed = {
+		is_in_faction_with = ENT
+		surrender_progress < 0.1
+	}
+	enable = {
+		surrender_progress < 0.1
+		OR = {
+		has_war_with = ENG
+		has_war_with = FRA
+		}
+	}
+		ai_strategy = { type = area_priority id = western_europe value = 75 }
 
+}
 ENT_dont_invade_britain_before_france = {
 	allowed = {
 		is_in_faction_with = ENT
@@ -471,6 +485,7 @@ ENT_buffer_troops_for_invasion_of_france = {
 			has_war_with_major = yes
 			has_capitulated = no
 			NOT = { any_home_area_neighbor_country = { is_ally_with = ENT } }
+			surrender_progress < 0.2
 		}
 
 		#only if large enough
@@ -536,8 +551,8 @@ ENT_support_invasion_of_france = {
 	enable = {
 		has_war_with = FRA
 		FRA = {
+			has_war_with_major = yes
 			has_capitulated = no
-			any_home_area_neighbor_country = { is_ally_with = ENT }
 		}
 
 		#not if any dangerous neighbours
@@ -560,9 +575,93 @@ ENT_support_invasion_of_france = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = FRA
-		value = 50
+		value = 100
 	}
 }
+
+
+ENT_develop_mediterranean_supremacy = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	
+	enable = {
+		has_war_with = FRA
+		FRA = {
+			has_capitulated = no
+			#any_home_area_neighbor_country = { is_ally_with = ENT }
+		}
+		surrender_progress < 0.05
+		NOT = {
+			any_home_area_neighbor_country = {
+				has_war_with = PREV
+				has_capitulated = no
+				NOT = { tag = FRA }
+			}
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = naval_dominance
+		id = western_med_control_zone
+		value = 80
+	}
+	
+	ai_strategy = {
+		type = naval_dominance
+		id = eastern_med_control_zone
+		value = 30
+	}
+}
+
+ENT_attack_via_portugal = {
+	allowed = {
+		is_in_faction_with = ENT
+	}
+	
+	enable = {
+		POR = { is_in_faction_with = ENT }
+		POR = {
+			has_capitulated = no
+		}
+		#has_war_with = SPA
+		#SPA = {
+		#	has_capitulated = no
+		#}
+		surrender_progress < 0.05
+		#NOT = {
+		#	any_home_area_neighbor_country = {
+		#		has_war_with = PREV
+		#		has_socialist_government = yes
+		#		has_capitulated = no
+		#		NOT = { is_in_europe = yes }
+		#	}
+		#}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = front_unit_request
+		tag = SPA
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = SWF
+		value = 200
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		tag = POR
+		value = 200
+	}
+
+
+}
+
 
 ENT_buffer_troops_for_invasion_of_britain = {
 	allowed = {
@@ -578,6 +677,7 @@ ENT_buffer_troops_for_invasion_of_britain = {
 		ENG = {
 			has_capitulated = no
 			NOT = { any_home_area_neighbor_country = { is_ally_with = ENT } }
+			surrender_progress < 0.2
 		}
 
 		#only if large enough
@@ -664,7 +764,7 @@ ENT_support_invasion_of_britain = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = ENG
-		value = 50
+		value = 100
 	}
 }
 
@@ -731,6 +831,6 @@ ENT_protect_ireland = {
 	ai_strategy = {
 		type = force_defend_ally_borders
 		tag = IRE
-		value = 200
+		value = 100
 	}
 }

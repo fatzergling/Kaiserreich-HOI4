@@ -1,6 +1,48 @@
 # Spain decisions
 
 political_actions = {
+	SPR_united_front_mission  = {
+
+		icon = generic_ignite_civil_war
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		priority = 10
+
+		fire_only_once = yes
+
+		days_mission_timeout = 246
+
+		is_good = no
+
+		cancel_if_not_visible = yes
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			tag = SPR
+			#NOT = { has_completed_focus = SPR_crush_the_revolution }
+		}
+
+		timeout_effect = {
+			effect_tooltip = {
+			declare_war_on = {
+				target = SPA
+				type = annex_everything
+			}
+
+			}
+		}
+	}
+
 	SPR_assassinate_juan = {
 		icon = generic_prepare_civil_war
 

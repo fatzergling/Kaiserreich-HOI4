@@ -93,7 +93,7 @@ country_event = {	#End of an Era
 		OR = {
 			surrender_progress > 0.6
 			count_triggers = {
-				amount = 10
+				amount = 14
 				NOT = { controls_state = 45 } #Ankara
 				NOT = { controls_state = 344 } #Adana
 				NOT = { controls_state = 350 } #Diyarbekir
@@ -106,6 +106,10 @@ country_event = {	#End of an Era
 				NOT = { controls_state = 812 } #Basra
 				NOT = { controls_state = 291 } #Baghdad
 				NOT = { controls_state = 676 } #Mosul
+				NOT = { countrols_state = 677 }
+				NOT = { countrols_state = 354 }
+				NOT = { countrols_state = 345 }
+				NOT = { countrols_state = 355 }
 			}
 		}
 		is_valid_peace_target = yes

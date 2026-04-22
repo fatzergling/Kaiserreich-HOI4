@@ -7907,7 +7907,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GXC_establish_the_academia_sinica"
 			unlock_decision_tooltip = RKT_encourage_intellectuals_decision
 			custom_effect_tooltip = tooltip_white_line
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 			china_add_research_slots = yes
 			custom_effect_tooltip = tooltip_white_line
 			if = {
@@ -9372,7 +9372,7 @@ focus_tree = {
 			add_research_slot_until_five = yes
 			set_temp_variable = { ideology_change_var = 0.1 }
 			change_ruling_party_popularity = yes
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -10837,7 +10837,7 @@ focus_tree = {
 			UPC_CDL_medium_effect = yes
 			UPC_REP_medium_effect = yes
 			UPC_DCP_medium_effect = yes
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { GXC_ding_ying = { is_political_advisor = yes } }
@@ -11038,7 +11038,7 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed GXC_bringing_china_into_the_modern_age"
 			UPC_GRA_large_effect = yes
 			UPC_STA_large_effect = yes
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { GXC_ding_ying = { is_political_advisor = yes } }
@@ -14399,7 +14399,7 @@ focus_tree = {
 				custom_effect_tooltip = GXC_ma_junwu_will_be_helpful_tt
 			}
 			custom_effect_tooltip = tooltip_white_line
-			remove_ideas = CHN_national_illiteracy1_idea
+			CHN_remove_illiteracy_effect = yes
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 	}

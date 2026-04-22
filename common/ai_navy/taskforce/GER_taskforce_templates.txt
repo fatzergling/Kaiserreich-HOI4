@@ -25,9 +25,6 @@ GER_StrikeForce_1 = {
 		battleship = {
 			amount = 4
 		}
-		battle_cruiser = {
-			amount = 4
-		}
 		heavy_cruiser = {
 			amount = 4
 		}
@@ -35,7 +32,7 @@ GER_StrikeForce_1 = {
 			amount = 6
 		}
 		destroyer = {
-			amount = 18
+			amount = 12
 
 		}
 	}
@@ -75,7 +72,7 @@ GER_StrikeForceCarrier_1 = {
 			amount = 4
 		}
 		destroyer = {
-			amount = 28
+			amount = 12
 
 		}
 	}
@@ -126,17 +123,14 @@ GER_PatrolDominanceForce_1 = {
 	}
 
 	optimal_composition = {
-		battle_cruiser = {
+		heavy_cruiser = {
 			amount = 2
 		}
-		heavy_cruiser = {
+		light_cruiser = {
 			amount = 3
 		}
-		light_cruiser = {
-			amount = 4
-		}
 		destroyer = {
-			amount = 12
+			amount = 6
 		}
 	}
 }
@@ -160,7 +154,7 @@ GER_ConvoyRaiding_1 = {
 
 	optimal_composition = {
 		submarine = {
-			amount = 12
+			amount = 6
 		}
 	}
 }

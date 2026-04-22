@@ -512,10 +512,19 @@ on_actions = {
 			if = {
 				limit = { #desertions only occur betwen American tags
 					has_war_with = FROM
-					is_american_tag = yes
-					date > 1938.1.1 #Wait a couple months before desertions start
-					FROM = {
+					OR = {
 						is_american_tag = yes
+						is_chinese_tag = yes
+					}
+					OR = {
+						is_chinese_tag = yes
+						date > 1938.1.1 #Wait a couple months before desertions start
+					}
+					FROM = {
+						OR = {
+						is_american_tag = yes
+						is_chinese_tag = yes
+						}
 						surrender_progress < 0.9
 					}
 					FROM.FROM = {

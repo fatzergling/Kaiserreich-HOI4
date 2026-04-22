@@ -41,6 +41,7 @@ FROM_send_volunteers_to_ROOT = {
 								tag = RUS
 								tag = FRA
 								tag = JAP
+								tag = TUR
 							}
 							second_weltkrieg_has_begun = no
 						}
@@ -100,6 +101,7 @@ send_volunteers_to_TARGET = {
 								tag = RUS
 								tag = FRA
 								tag = JAP
+								tag = TUR
 							}
 							second_weltkrieg_has_begun = no
 						}
@@ -152,6 +154,7 @@ clear_volunteers_to_TARGET = {
 								tag = RUS
 								tag = FRA
 								tag = JAP
+								tag = TUR
 							}
 							second_weltkrieg_has_begun = no
 						}
@@ -210,6 +213,7 @@ send_volunteers_to_PREV = {
 								tag = RUS
 								tag = FRA
 								tag = JAP
+								tag = TUR
 							}
 							second_weltkrieg_has_begun = no
 						}

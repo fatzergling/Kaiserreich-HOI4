@@ -27,6 +27,7 @@ state = {
 
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 			10162 = { # Cam Ranh Naval Base
 				naval_base = 4
 			}

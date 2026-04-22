@@ -920,8 +920,12 @@ focus_tree = {
 			factor = 200
 			modifier = {
 				factor = 0
+				OR = {
 				has_idea = SPA_economic_ruin
 				has_idea = SPA_social_breakdown_2
+				has_idea = SPA_recovering_economy
+				has_idea = SPA_recovering_economy2
+				}
 			}
 		}
 		completion_reward = {

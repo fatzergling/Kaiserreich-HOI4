@@ -917,6 +917,7 @@ RUS_remove_savinkov = {
 		clr_country_flag = RUS_ideocrat_ai
 		clr_country_flag = RUS_solidarist_ai
 		#If Savinkov dies due to popular anger, news event is fired from russia_events.926 or russia_events.927
+		decrease_economic_mobilisation = yes
 	}
 }
 

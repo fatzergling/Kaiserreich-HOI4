@@ -2,6 +2,7 @@ ENG_dominance_fleet_1 = {
 	required_taskforces = {
 		ENG_StrikeForce_1 = 2
 		ENG_PatrolReconForce_1 = 3
+		ENG_NavalInvasionSupport_1 = 1
 	}	
 	optional_taskforces = {
 		ENG_StrikeForce_1 = 1
@@ -14,10 +15,12 @@ ENG_dominance_fleet_1 = {
 ENG_raiding_fleet_2 = {
 	required_taskforces = {
 		ENG_ConvoyRaiding_1 = 4
+		ENG_ConvoySurfaceRaiding_1 = 4
 	}	
 	optional_taskforces = {
 		ENG_ConvoyRaiding_1 = 2
-		ENG_ConvoySurfaceRaiding_1 = 1
+		ENG_ConvoySurfaceRaiding_1 = 2
+
 	}
 }
 

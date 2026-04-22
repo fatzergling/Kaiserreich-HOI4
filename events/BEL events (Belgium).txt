@@ -802,8 +802,10 @@ country_event = { #Who will guide the Republic?
 			popularity = 0
 		}
 		unlock_national_focus = BEL_BWP
+		set_global_flag = BEL_SYNDIE
 		hidden_effect = {
 			LEC = { country_event = { id = legation_cities_events.48 days = 4 } }
+			GER = { country_event = { id = legation_cities_events.48 days = 4 } }
 		}
 	}
 }
@@ -1611,7 +1613,10 @@ country_event = { #Germany returns
 	fire_only_once = yes
 
 	trigger = {
-		threat > 0.65
+		OR = {
+			threat > 0.65
+			BEL = { has_socialist_government = yes }
+		}
 		can_declare_war_on = BEL
 		is_major = yes
 		is_faction_leader = yes
@@ -1695,6 +1700,9 @@ country_event = { #Belgium answers German demands
 	option = { #Belgium gives in to German demands
 		log = "[GetLogInfo]: event belgium_events.74 option belgium_events.74.a"
 		name = belgium_events.74.a
+			trigger = {
+				has_socialist_government = no
+			}
 		ai_chance = {
 			base = 100
 			modifier = {
@@ -1704,6 +1712,7 @@ country_event = { #Belgium answers German demands
 					has_game_rule = { rule = BEL_forpol option = BEL_FORPOL_INT }
 					has_game_rule = { rule = BEL_forpol option = BEL_FORPOL_BEL }
 				}
+				has_socialist_government = yes
 			}
 		}
 		FROM = { add_to_faction = ROOT }
@@ -1722,6 +1731,16 @@ country_event = { #Belgium answers German demands
 					has_game_rule = { rule = BEL_forpol option = BEL_FORPOL_BEL }
 				}
 			}
+				modifier = {
+				add = 1
+				has_socialist_government = yes
+				OR = {
+					has_game_rule = { rule = BEL_forpol option = BEL_FORPOL_ENT }
+					has_game_rule = { rule = BEL_forpol option = BEL_FORPOL_INT }
+					has_game_rule = { rule = BEL_forpol option = BEL_FORPOL_BEL }
+				}
+			}
+
 		}
 		FROM = { country_event = { id = belgium_events.75 days = 1 } }
 	}
@@ -2240,7 +2259,7 @@ country_event = { #Syndicalist Reaction to the Flemish Victory
 		log = "[GetLogInfo]: event belgium_events.18 option belgium_events.18.a"
 		name = belgium_events.18.a
 		ai_chance = {
-			base = 10
+			base = 20
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = BEL_flawal_path option = BEL_FLAWAL_PATH_REBELLION }
@@ -2261,7 +2280,7 @@ country_event = { #Syndicalist Reaction to the Flemish Victory
 		log = "[GetLogInfo]: event belgium_events.18 option belgium_events.18.b"
 		name = belgium_events.18.b
 		ai_chance = {
-			base = 90
+			base = 80
 			modifier = {
 				factor = 0
 				OR = {
@@ -2319,7 +2338,7 @@ country_event = { #France Decides
 	option = {
 		log = "[GetLogInfo]: event belgium_events.31 option belgium_events.31.a"
 		name = belgium_events.31.a
-		ai_chance = { base = 70 }
+		ai_chance = { base = 75 }
 		BEL = {
 			country_event = { id = belgium_events.32 days = 14 }
 		}
@@ -2328,7 +2347,7 @@ country_event = { #France Decides
 		log = "[GetLogInfo]: event belgium_events.31 option belgium_events.31.b"
 		name = belgium_events.31.b
 		ai_chance = {
-			base = 30
+			base = 25
 			modifier = {
 				factor = 0
 				OR = {

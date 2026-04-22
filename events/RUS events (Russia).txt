@@ -3801,7 +3801,7 @@ country_event = { #Empowering the Gosstrazha
 			modifier = {
 				add = 100
 				has_country_flag = RUS_savinkov_ai
-				check_variable = { RUS_military_anger > 1 }
+				check_variable = { RUS_military_anger > 7 }
 			}
 		}
 		name = russia_events.263.a #Klepikov shall only focus on internal enemies
@@ -3814,7 +3814,7 @@ country_event = { #Empowering the Gosstrazha
 			modifier = {
 				add = 100
 				has_country_flag = RUS_savinkov_ai
-				check_variable = { RUS_military_anger < 2 }
+				check_variable = { RUS_military_anger < 7 }
 			}
 		}
 		name = russia_events.263.b #Klepikov will also handle the occupied regions
@@ -34237,6 +34237,8 @@ country_event = { #The Spanish Question
 		}
 		SPR = { country_event = russia_foreign_policy_events.9 }
 		event_option_tooltip = russia_foreign_policy_events.9.a
+		set_country_flag = rus_intervene_spain
+		SPR = { update_volunteer_AI = yes }
 	}
 }
 
@@ -47636,7 +47638,7 @@ country_event = { # Iranian aid
 		RUS = {
 			add_relation_modifier = {
 				target = PER
-				modifier = volunteer_limit_plus_two
+				modifier = volunteer_limit_plus_one
 			}
 		}
 		clr_country_flag = PER_align_with_GER

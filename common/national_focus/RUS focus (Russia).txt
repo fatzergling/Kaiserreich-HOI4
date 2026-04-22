@@ -16408,6 +16408,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 			modifier = {
+				factor = 10
+				date > 1938.1.1
+			}
+			modifier = {
+				factor = 10
+				date > 1938.6.1
+			}
+			modifier = {
 				factor = 6
 				has_active_mission = RUS_siberian_direction
 			}
@@ -16582,8 +16590,20 @@ focus_tree = {
 		ai_will_do = {
 			factor = 8
 			modifier = {
+				factor = 10
+				date > 1938.1.1
+			}
+			modifier = {
+				factor = 10
+				date > 1938.6.1
+			}
+			modifier = {
 				factor = 20
 				has_active_mission = RUS_promised_jobs
+			}
+			modifier = {
+				factor = 40
+				has_active_mission = RUS_soc_industrialisation_plan
 			}
 		}
 		completion_reward = {
@@ -16625,8 +16645,20 @@ focus_tree = {
 		ai_will_do = {
 			factor = 8
 			modifier = {
+				factor = 10
+				date > 1938.1.1
+			}
+			modifier = {
+				factor = 10
+				date > 1938.6.1
+			}
+			modifier = {
 				factor = 20
 				has_active_mission = RUS_promised_jobs
+			}
+			modifier = {
+				factor = 40
+				has_active_mission = RUS_soc_industrialisation_plan
 			}
 		}
 		completion_reward = {
@@ -16674,12 +16706,24 @@ focus_tree = {
 		ai_will_do = {
 			factor = 8
 			modifier = {
+				factor = 10
+				date > 1938.1.1
+			}
+			modifier = {
+				factor = 10
+				date > 1938.6.1
+			}
+			modifier = {
 				factor = 25
 				has_active_mission = RUS_siberian_direction
 			}
 			modifier = {
 				factor = 20
 				has_active_mission = RUS_promised_jobs
+			}
+			modifier = {
+				factor = 40
+				has_active_mission = RUS_soc_industrialisation_plan
 			}
 		}
 		completion_reward = {
@@ -20576,7 +20620,7 @@ focus_tree = {
 				has_war_with = GER
 			}
 		}
-		ai_will_do = { base = 1 }
+		ai_will_do = { base = 1000 }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed RUS_fifth_column"
 			if = {
@@ -22075,9 +22119,9 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 15
+			factor = 1500
 			modifier = {
-				add = 20
+				add = 200
 				date > 1937.1.1
 			}
 			modifier = {
@@ -22364,7 +22408,7 @@ focus_tree = {
 		}
 		will_lead_to_war_with = PER
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 			modifier = {
 				factor = 0
 				can_declare_war_on = 418.owner

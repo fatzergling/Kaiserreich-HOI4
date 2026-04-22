@@ -292,6 +292,10 @@ OTT_cairo_pact_defeated = { #OTT defeated both Iran and Egypt in the Levant Cris
 		NOT = { PER = { has_war_with = OTT } }
 		PER = { is_subject = yes }
 	}
+	OR = {
+		LBA = { is_subject = yes}
+		NOT = { country_exists = LBA }
+	}
 }
 
 OTT_EGY_scripted_peace = { #EGY and OTT negotiated peace in the Levant Crisis

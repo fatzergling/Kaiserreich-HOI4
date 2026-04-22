@@ -209,7 +209,7 @@ JAP_kill_malaya = {
 	ai_strategy = {
 		type = force_defend_ally_borders
 		id = SIA
-		value = 250
+		value = 100
 	}
 
 }
@@ -346,6 +346,11 @@ JAP_protect_fngtian_if_fucked = {
 		value = 150
 	}
 
+	ai_strategy = {
+		type = force_defend_ally_borders
+		target = asia
+		value = 100
+	}
 
 	ai_strategy = {
 		type = force_defend_ally_borders
@@ -384,8 +389,10 @@ JAP_protect_fngtian_if_fucked2 = {
 	ai_strategy = {
 		type = force_defend_ally_borders
 		id = FNG
-		value = 200
+		value = 100
 	}
+
+
 		ai_strategy = { #TRK avoids putting divisions on Xinjiang border
 		type = front_unit_request
 		#state = 525 #Dihua

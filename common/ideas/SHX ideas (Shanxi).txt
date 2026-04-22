@@ -17,7 +17,7 @@ ideas = {
 				justify_war_goal_time = 1
 				war_support_factor = -0.30
 				cannot_call_allies_or_join_wars = 1
-				surrender_limit = 0.20 #Taiyuan makes up 60% of VPs. 0% war support = -30% Surrender limit (from 80%), so losing Taiyuan means being insta-sniped. Add 20% should balance things out so you need to take Yan'an too.
+				surrender_limit = 0.60 #Taiyuan makes up 60% of VPs. 0% war support = -30% Surrender limit (from 80%), so losing Taiyuan means being insta-sniped. Add 20% should balance things out so you need to take Yan'an too.
 			}
 		}
 		SHX_strict_neutrality1 = {
@@ -30,6 +30,7 @@ ideas = {
 				army_intel_to_others = -7.5
 				war_support_factor = -0.10
 				cannot_call_allies_or_join_wars = 1
+				surrender_limit = 0.80 #Taiyuan makes up 60% of VPs. 0% war support = -30% Surrender limit (from 80%), so losing Taiyuan means being insta-sniped. Add 20% should balance things out so you need to take Yan'an too.
 			}
 		}
 

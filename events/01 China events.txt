@@ -11433,6 +11433,11 @@ country_event = { #A War for the South? [HNN Variant]
 				factor = 0
 				has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN }
 			}
+			modifier = {
+				factor = 0
+				china_is_aligned_with_kmt = yes
+				GXC = { china_is_aligned_with_kmt = yes }
+			}
 		}
 		if = {
 			limit = { GXC = { ROOT = { china_same_alignment_as_PREV = yes } } }
@@ -11474,6 +11479,11 @@ country_event = { #A War for the South? [HNN Variant]
 				factor = 0
 				has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN }
 			}
+			modifier = {
+				factor = 0
+				china_is_aligned_with_kmt = yes
+				YUN = { china_is_aligned_with_kmt = yes }
+			}
 		}
 		if = {
 			limit = { YUN = { ROOT = { china_same_alignment_as_PREV = yes } } }
@@ -11510,6 +11520,14 @@ country_event = { #A War for the South? [HNN Variant]
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN }
+			}
+			modifier = {
+				factor = 0
+				china_is_aligned_with_kmt = yes
+				OR = {
+					YUN = { china_is_aligned_with_kmt = yes }
+					GXC = { china_is_aligned_with_kmt = yes }
+				}
 			}
 		}
 		if = {

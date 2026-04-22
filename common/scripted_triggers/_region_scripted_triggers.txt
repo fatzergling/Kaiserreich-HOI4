@@ -785,7 +785,8 @@ is_US_industrial_area = {
 	state = 359 #New England
 	 state = 360  #New York City
 	 state = 975  #New York City
-
+		 state = 391  #New York City
+	 is_new_england = yes
 	}
 }
 

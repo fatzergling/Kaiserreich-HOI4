@@ -2224,7 +2224,10 @@ country_event = { # Canadian Intervention in New England
 							remove_core_of = USA
 							add_claim_by = USA
 							if = {
-								limit = { is_controlled_by = USA }
+								limit = { 
+									is_controlled_by = USA 
+									USA = { has_country_leader = USA_douglas_macarthur }
+									}
 								start_state_integration_resistance = yes
 								add_compliance = 35
 							}
@@ -3226,8 +3229,9 @@ country_event = { # ACW country can peace out with Canada
 				factor = 0
 				original_tag = WCA
 				surrender_progress < 0.25
-				CAN = { has_war_with = ENG }
-				ENG = { has_capitulated = no }
+				#CAN = { has_war_with = ENG }
+				#ENG = { has_capitulated = no }
+				#second_weltkrieg_has_begun = yes
 			}
 		}
 		ENT = { country_event = american_civil_war_events.164 }
@@ -3278,8 +3282,9 @@ country_event = { # ACW country can peace out with Canada
 				factor = 0
 				original_tag = WCA
 				surrender_progress < 0.25
-				CAN = { has_war_with = ENG }
-				ENG = { has_capitulated = no }
+				#CAN = { has_war_with = ENG }
+				#ENG = { has_capitulated = no }
+				#second_weltkrieg_has_begun = yes
 			}
 			modifier = {
 				factor = 2
@@ -7669,7 +7674,7 @@ country_event = {
 			country_event = { id = american_civil_war_events.724 days = 1 } #Buffalo
 			country_event = { id = american_civil_war_events.7140 days = 2 } #Tennessee
 			country_event = { id = american_civil_war_events.7160 days = 4 } #North Carolina
-			country_event = { id = american_civil_war_events.7190 days = 15 } #Philadelphia
+			country_event = { id = american_civil_war_events.7190 days = 12 } #Philadelphia
 		}
 	}
 }
@@ -10409,7 +10414,26 @@ country_event = {
 		add_war_support = 0.01
 		set_temp_variable = { deserting_divisions = FROM.num_divisions }
 		multiply_temp_variable = { deserting_divisions = 30 }
+		set_temp_variable = { deserting_divisions_2 = FROM.num_divisions }
+		multiply_temp_variable = { deserting_divisions_2 = 1 }
+		set_temp_variable = { deserting_divisions_3 = FROM.num_divisions }
+		multiply_temp_variable = { deserting_divisions_3 = 10 }
 		add_manpower = deserting_divisions
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = deserting_divisions_3
+				producer = FROM
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = deserting_divisions_2
+				producer = FROM
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = deserting_divisions_2
+				producer = FROM
+			}
 	}
 }
 

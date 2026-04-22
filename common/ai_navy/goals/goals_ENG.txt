@@ -60,8 +60,8 @@ ENG_convoy_raiding = {
         ENG
     }
 
-    min_priority = 3
-    max_priority = 10
+    min_priority = 13
+    max_priority = 20
 }
 
 ENG_naval_dominance = {

@@ -3354,14 +3354,6 @@ SER_The_Road_To_Unification_decisions = {
 			# don't attack Austria unless it's vulnerable or other countries are waiting to help
 			modifier = {
 				factor = 0
-					NOT = {
-						OR = {
-							UKR = { has_capitulated = yes }
-							NOT = { country_exists = UKR }
-							UKR = { is_in_faction_with = RUS }
-							ROM = { is_neighbor_of = RUS }
-						}
-					}
 				FROM = {
 					NOT = {
 						AND = {
@@ -3376,9 +3368,17 @@ SER_The_Road_To_Unification_decisions = {
 						AND = {
 							#strength_ratio = { tag = ROOT ratio > 1 }
 							AND = {
-								enemies_strength_ratio < 7.5
+								enemies_strength_ratio < 6.5
 								surrender_progress < 0.1
 							}
+					NOT = {
+						OR = {
+							UKR = { has_capitulated = yes }
+							NOT = { country_exists = UKR }
+							UKR = { is_in_faction_with = RUS }
+							ROM = { is_neighbor_of = RUS }
+						}
+					}
 						}
 						AND = {
 							is_in_faction = yes
@@ -3386,10 +3386,18 @@ SER_The_Road_To_Unification_decisions = {
 							faction_leader = {
 								#strength_ratio = { tag = ROOT ratio > 0.8 }
 								AND = {
-									enemies_strength_ratio < 7.5
+									enemies_strength_ratio < 6.5
 									surrender_progress < 0.2
 								}
 							}
+					NOT = {
+						OR = {
+							UKR = { has_capitulated = yes }
+							NOT = { country_exists = UKR }
+							UKR = { is_in_faction_with = RUS }
+							ROM = { is_neighbor_of = RUS }
+						}
+					}
 						}
 						AND = {
 							is_subject = yes
@@ -3400,6 +3408,14 @@ SER_The_Road_To_Unification_decisions = {
 									surrender_progress < 0.2
 								}
 							}
+					NOT = {
+						OR = {
+							UKR = { has_capitulated = yes }
+							NOT = { country_exists = UKR }
+							UKR = { is_in_faction_with = RUS }
+							ROM = { is_neighbor_of = RUS }
+						}
+					}
 						}
 					}
 				}

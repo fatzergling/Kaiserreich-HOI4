@@ -286,21 +286,21 @@ IRE_ulster_revolt = {
 			create_unit = {
 				division = "division_template = \"Ulster Volunteers\" start_experience_factor = 0.1"
 				owner = NIR
-				count = 3
+				count = 2
 			}
 			if = {
 				limit = { IRE = { has_socialist_government = yes } }
 				create_unit = {
 					division = "division_template = \"Infantry Division\" start_experience_factor = 0.2"
 					owner = NIR
-					count = 3
+					count = 2
 				}
 			}
 			else = {
 				create_unit = {
 					division = "division_template = \"Infantry Division\" start_experience_factor = 0.2"
 					owner = NIR
-					count = 2
+					count = 1
 				}
 			}
 			remove_dynamic_modifier = { modifier = IRE_reluctant_countrymen_modifier }

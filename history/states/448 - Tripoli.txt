@@ -10,8 +10,10 @@ state = {
 		add_core_of = TRP
 		add_to_array = { state_victory_points = 1149 }
 		add_to_array = { state_victory_points = 9980 }
+		add_to_array = { state_victory_points = 4047 }
 		victory_points = { 1149 5 }
 		victory_points = { 9980 1 }
+		victory_points = { 1041 1 }
 
 		buildings = {
 			infrastructure = 1
@@ -21,6 +23,9 @@ state = {
 				naval_base = 3
 			}
 			9980 = {
+				naval_base = 1
+			}
+			1041 = {
 				naval_base = 1
 			}
 		}

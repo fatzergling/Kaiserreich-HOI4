@@ -339,6 +339,38 @@ GAL_protect_other_crownlands = {
 	}
 }
 
+AUS_protect_germany_if_invaded = {
+
+	allowed = {
+		OR = {
+			original_tag = AUS
+			has_autonomy_state = crownland
+		}
+	}
+	enable = {
+		surrender_progress < 0.1
+		has_war_with = INT
+		GER = { surrender_progress > 0.1 }
+		NOT = { is_neighbor_of = RUS }
+		NOT = { UKR = { has_capitulated = yes }}
+		NOT = { POL = { has_capitulated = yes }}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		id = INT
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		id = RUS
+		value = -25
+	}
+}
+
+
 AUS_crush_hungary = {
 	allowed = {
 		OR = {

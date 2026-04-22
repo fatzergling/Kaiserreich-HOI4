@@ -8,10 +8,10 @@ RUS_StrikeForce_1 = {
 	mission = { naval_strike }
 	min_composition = {
 		battleship = {
-			amount = 2
+			amount = 1
 		}
 		destroyer = {
-			amount = 8
+			amount = 1
 		}
 	}
 	
@@ -23,10 +23,10 @@ RUS_StrikeForce_1 = {
 			amount = 4
 		}
 		light_cruiser = {
-			amount = 10
+			amount = 5
 		}
 		destroyer = {
-			amount = 25
+			amount = 12
 
 		}
 	}
@@ -128,7 +128,7 @@ RUS_ConvoyRaiding_1 = {
 
 	optimal_composition = {
 		submarine = {
-			amount = 12
+			amount = 8
 		}
 	}
 }
@@ -149,7 +149,7 @@ RUS_ConvoyEscort_1 = {
 	
 	optimal_composition = {
 		destroyer = {
-			amount = 10
+			amount = 5
 		}
 	}
 }

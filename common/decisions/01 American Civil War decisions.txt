@@ -1088,6 +1088,79 @@ ACW_civil_war_decisions = {
 		}
 		fixed_random_seed = no
 	}
+	WCA_fortify_NYC = {
+		icon = generic_operation
+
+		available = {
+			controls_state = 358
+			num_of_civilian_factories_available_for_projects > 4
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 358 }
+		}
+
+		visible = {
+			owns_state = 358
+		}
+
+		ai_will_do = { factor = 100 }
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove OTT_Fortify_Aleppo"
+			358 = {
+				add_building_construction = {
+					type = bunker
+					province = 6882
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3693
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 891
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3897
+					level = 2
+					instant_build = yes
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						province = 3878
+						level = 3
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 3
+						VP = 3878
+					}
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+
 }
 
 ACW_rocky_mountain_ceasefire_decisions = {
