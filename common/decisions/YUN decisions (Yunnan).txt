@@ -1222,7 +1222,10 @@ YUN_GXC_war_decision_category = {
 				OR = {
 					owns_state = 594
 					is_ally_with = var:594.owner
-					overlord = { has_subject = var:594.owner }
+					AND = {
+						is_subject = yes
+						overlord = { has_subject = var:594.owner }
+					}
 				}
 			}
 		}
@@ -1289,7 +1292,10 @@ YUN_GXC_war_decision_category = {
 					OR = {
 						owns_state = 594
 						is_ally_with = var:594.owner
-						overlord = { has_subject = var:594.owner }
+						AND = {
+							is_subject = yes
+							overlord = { has_subject = var:594.owner }
+						}
 					}
 				}
 			}

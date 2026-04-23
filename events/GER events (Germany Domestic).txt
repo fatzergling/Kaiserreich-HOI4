@@ -111,7 +111,7 @@ country_event = {
 	id = germany_events.7
 	title = germany_events.7.t
 	desc = germany_events.7.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_reichstagswahl
 
 	is_triggered_only = yes
 
@@ -130,7 +130,7 @@ country_event = {
 		set_variable = { GER_available_actions = 3 }
 		hidden_effect = {
 			country_event = { id = germany_events.13 days = 60 }
-			country_event = { id = germany_events.61 days = 45 random_days = 45 }
+			country_event = { id = germany_events.61 days = 45 random_days = 30 }
 			activate_targeted_decision = { target = THIS decision = GER_SPD_consolidate_saxon_strongholds }
 			activate_targeted_decision = { target = THIS decision = GER_SPD_draft_popular_front_candidates }
 			activate_targeted_decision = { target = THIS decision = GER_SPD_left_liberal_cooperation }
@@ -153,7 +153,7 @@ country_event = {
 		set_variable = { GER_available_actions = 3 }
 		hidden_effect = {
 			country_event = { id = germany_events.14 days = 60 }
-			country_event = { id = germany_events.17 days = 45 random_days = 45 }
+			country_event = { id = germany_events.17 days = 45 random_days = 30 }
 			activate_targeted_decision = { target = THIS decision = GER_DVLP_control_hesse }
 			activate_targeted_decision = { target = THIS decision = GER_DVLP_east_elbia_no_vote_split }
 			activate_targeted_decision = { target = THIS decision = GER_DVLP_westphalia_right_zentrum }
@@ -692,7 +692,7 @@ country_event = {
 	id = germany_events.17
 	title = germany_events.17.t
 	desc = germany_events.17.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_hugenberg5
 
 	is_triggered_only = yes
 
@@ -814,7 +814,7 @@ country_event = { # Growing worker militancy in anticipation for 1 May
 	id = germany_events.18
 	title = germany_events.18.t
 	desc = germany_events.18.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_may_day
 
 	is_triggered_only = yes
 
@@ -832,7 +832,7 @@ country_event = { # Blutmai
 	id = germany_events.19
 	title = germany_events.19.t
 	desc = germany_events.19.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_may_police
 
 	is_triggered_only = yes
 
@@ -875,7 +875,7 @@ country_event = { # Outbreaks of Anti-Semitic Violence
 	id = germany_events.21
 	title = germany_events.21.t
 	desc = germany_events.21.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_antisemitism
 
 	is_triggered_only = yes
 
@@ -893,7 +893,7 @@ country_event = { # Papen joins with S-W-R (prevented by Zentrum Right or DVLP M
 	id = germany_events.22
 	title = germany_events.22.t
 	desc = germany_events.22.d
-	picture = GFX_report_event_HOL_radio_red #NEEDPIC
+	picture = GFX_report_event_GER_papen
 
 	trigger = {
 		GER_kurt_von_schleicher = { is_second_in_command = yes }
@@ -940,7 +940,6 @@ country_event = { # Placeholder event to remove Prussian HoG
 	id = germany_events.23
 	title = germany_events.23.t
 	desc = germany_events.23.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
 
 	is_triggered_only = yes
 	trigger = {
@@ -1236,7 +1235,7 @@ country_event = { # Rightist Victory
 	id = germany_events.35
 	title = germany_events.35.t
 	desc = germany_events.35.d
-	picture = GFX_report_event_GER_schaffer
+	picture = GFX_report_event_GER_schaffer_2
 
 	is_triggered_only = yes
 
@@ -1264,7 +1263,7 @@ country_event = { # SPD youth
 	id = germany_events.36
 	title = germany_events.36.t
 	desc = germany_events.36.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_spd_youth
 
 	is_triggered_only = yes
 
@@ -1365,7 +1364,7 @@ country_event = { # Democratic resistance - minor strike
 	id = germany_events.39
 	title = germany_events.39.t
 	desc = germany_events.39.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_strike
 
 	is_triggered_only = yes
 
@@ -1429,7 +1428,7 @@ country_event = { # Democratic resistance - Reichstag speeches
 	id = germany_events.40
 	title = germany_events.40.t
 	desc = germany_events.40.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_reichstag
 
 	is_triggered_only = yes
 
@@ -1476,7 +1475,7 @@ country_event = { # Democratic resistance - Workers clash with far right activis
 	id = germany_events.41
 	title = germany_events.41.t
 	desc = germany_events.41.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_riot
 
 	is_triggered_only = yes
 
@@ -1514,7 +1513,7 @@ country_event = { # Democratic resistance - Activism for peace
 	id = germany_events.42
 	title = germany_events.42.t
 	desc = germany_events.42.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_anti_war
 
 	is_triggered_only = yes
 
@@ -1595,7 +1594,7 @@ country_event = { # Democratic resistance - Zentrum in the Reichstag
 	id = germany_events.44
 	title = germany_events.44.t
 	desc = germany_events.44.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_reichstag2
 
 	is_triggered_only = yes
 
@@ -1691,7 +1690,7 @@ country_event = { # Anti-Socialist Act
 	id = germany_events.47
 	title = germany_events.47.t
 	desc = germany_events.47.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_strike_2
 
 	is_triggered_only = yes
 
@@ -1707,7 +1706,7 @@ country_event = { # Anti-Socialist Act
 	id = germany_events.48
 	title = germany_events.48.t
 	desc = germany_events.48.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_reichstag
 
 	is_triggered_only = yes
 
@@ -1747,7 +1746,7 @@ country_event = { # THE WAR BEGINS
 	id = germany_events.49
 	title = germany_events.49.t
 	desc = germany_events.49.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_soldiers_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1764,6 +1763,7 @@ country_event = { # THE WAR BEGINS
 				has_active_mission = GER_SPD_demand_action
 			}
 			remove_mission = GER_SPD_demand_action
+			clear_variable = GER_SPD_reforms_completed
 		}
 		if = {
 			limit = {
@@ -1969,7 +1969,7 @@ country_event = { # Reduction of the unpreparedness
 	id = germany_events.50
 	title = germany_events.50.t
 	desc = germany_events.50.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_soldiers_2
 
 	trigger = {
 		has_dynamic_modifier = { modifier = GER_Lacking_Preparedness }
@@ -2253,7 +2253,7 @@ country_event = { # Democratic resistance
 	id = germany_events.52
 	title = germany_events.52.t
 	desc = germany_events.52.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_anti_war
 
 	is_triggered_only = yes
 
@@ -2283,7 +2283,7 @@ country_event = { # Reichkriegsflagge
 	id = germany_events.54
 	title = germany_events.54.t
 	desc = germany_events.54.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_reichkriegsflagge
 
 	is_triggered_only = yes
 
@@ -2305,7 +2305,7 @@ country_event = { # Gastarbeiterprogramm
 	id = germany_events.55
 	title = germany_events.55.t
 	desc = germany_events.55.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_krupp_factory_workers
 
 	is_triggered_only = yes
 
@@ -2320,7 +2320,7 @@ country_event = { # Gastarbeiterprogramm end (GER)
 	id = germany_events.56
 	title = germany_events.56.t
 	desc = germany_events.56.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_krupp_factory_workers
 
 	is_triggered_only = yes
 	trigger = {
@@ -2341,7 +2341,7 @@ country_event = { # Gastarbeiterprogramm end
 	id = germany_events.57
 	title = germany_events.57.t
 	desc = germany_events.57.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_krupp_factory_workers
 
 	is_triggered_only = yes
 
@@ -2388,7 +2388,7 @@ country_event = { # Ruhrkampf - defeat, turns to socialist insurgency
 	id = germany_events.59
 	title = germany_events.59.t
 	desc = germany_events.59.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_armed_workers
 
 	is_triggered_only = yes
 	trigger = {
@@ -2410,7 +2410,7 @@ country_event = { # End of the Second Weltkrieg
 	id = germany_events.60
 	title = germany_events.60.t
 	desc = germany_events.60.d
-	picture = GFX_report_event_GER_cons #NEEDPIC
+	picture = GFX_report_event_GER_victory
 
 	trigger = {
 		original_tag = GER
@@ -3460,11 +3460,12 @@ country_event = { # Fall of Roedern's government
 	id = germany_schleicher_events.9
 	title = germany_schleicher_events.9.t
 	desc = germany_schleicher_events.9.d
-	picture = GFX_report_event_GER_roedern #NEEDPIC
+	picture = GFX_report_event_GER_roedern
 
 	is_triggered_only = yes
 
 	trigger = {
+		GER_kurt_von_schleicher = { is_second_in_command = yes }
 		NOT = {
 			OR = {
 				has_completed_focus = GER_spd_prussia
@@ -3497,11 +3498,12 @@ country_event = { # Fall of Batocki's government
 	id = germany_schleicher_events.10
 	title = germany_schleicher_events.10.t
 	desc = germany_schleicher_events.10.d
-	picture = GFX_report_event_GER_batocki #NEEDPIC
+	picture = GFX_report_event_GER_batocki
 
 	is_triggered_only = yes
 
 	trigger = {
+		GER_kurt_von_schleicher = { is_second_in_command = yes }
 		NOT = {
 			OR = {
 				has_completed_focus = GER_spd_prussia
@@ -3527,8 +3529,13 @@ country_event = { # M-P Kleist
 
 	is_triggered_only = yes
 	trigger = {
+		GER_kurt_von_schleicher = { is_second_in_command = yes }
 		NOT = { has_completed_focus = GER_spd_prussia }
 		GER_is_swr_path = no
+	}
+
+	immediate = {
+		set_country_flag = GER_ewald_von_kleist_schmenzin_prus
 	}
 
 	option = {
@@ -3537,7 +3544,6 @@ country_event = { # M-P Kleist
 		hidden_effect = {
 			deactivate_advisor = GER_adolf_von_batocki_advisor
 		}
-		set_country_flag = GER_ewald_von_kleist_schmenzin_prus
 		if = {
 			limit = {
 				GER_ewald_von_kleist_schmenzin = {
@@ -3570,6 +3576,15 @@ country_event = { # Chancellor Mueller
 		}
 	}
 
+	immediate = {
+		hidden_effect = {
+			set_politics = {
+				ruling_party = social_democrat
+				elections_allowed = yes
+			}
+		}
+	}
+
 	option = {
 		log = "[GetLogInfo]: event germany_schleicher_events.12 option germany_schleicher_events.12.a"
 		name = germany_schleicher_events.12.a
@@ -3592,9 +3607,11 @@ country_event = { # Chancellor Mueller
 			remove_mission = GER_swr_alignment_turn
 		}
 		activate_advisor = GER_hermann_muller_sic
-		set_politics = {
-			ruling_party = social_democrat
-			elections_allowed = yes
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = social_democrat
+				elections_allowed = yes
+			}
 		}
 		mark_focus_tree_layout_dirty = yes
 		country_event = germany_spd_events.1
@@ -3614,6 +3631,10 @@ country_event = { # Chancellor Kleist
 
 	immediate = {
 		hidden_effect = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = yes
+			}
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = GER_kleist_party_long
@@ -3643,9 +3664,11 @@ country_event = { # Chancellor Kleist
 			remove_mission = GER_swr_alignment_turn
 		}
 		activate_advisor = GER_ewald_von_kleist_schmenzin_sic
-		set_politics = {
-			ruling_party = paternal_autocrat
-			elections_allowed = yes
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = yes
+			}
 		}
 		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 		add_to_coalition = yes
@@ -4433,6 +4456,15 @@ country_event = { # Chancellor Mueller - comes to power via Ruhrkampf
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			set_politics = {
+				ruling_party = social_democrat
+				elections_allowed = yes
+			}
+		}
+	}
+
 	option = {
 		log = "[GetLogInfo]: event germany_schleicher_events.37 option germany_schleicher_events.37.a"
 		name = germany_schleicher_events.37.a
@@ -4461,9 +4493,11 @@ country_event = { # Chancellor Mueller - comes to power via Ruhrkampf
 			remove_mission = GER_swr_alignment_turn
 		}
 		activate_advisor = GER_hermann_muller_sic
-		set_politics = {
-			ruling_party = social_democrat
-			elections_allowed = yes
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = social_democrat
+				elections_allowed = yes
+			}
 		}
 		mark_focus_tree_layout_dirty = yes
 		country_event = germany_spd_events.1
@@ -4487,6 +4521,10 @@ country_event = { # Chancellor Kleist
 
 	immediate = {
 		hidden_effect = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = yes
+			}
 			set_party_name = {
 				ideology = paternal_autocrat
 				long_name = GER_kleist_party_long
@@ -4514,9 +4552,11 @@ country_event = { # Chancellor Kleist
 			remove_mission = GER_swr_alignment_turn
 		}
 		activate_advisor = GER_ewald_von_kleist_schmenzin_sic
-		set_politics = {
-			ruling_party = paternal_autocrat
-			elections_allowed = yes
+		effect_tooltip = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = yes
+			}
 		}
 		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 		add_to_coalition = yes
@@ -4556,6 +4596,11 @@ country_event = { # Red Brunswick
 	trigger = {
 		has_government = authoritarian_democrat
 		has_country_flag = GER_ruhrkampf_begun
+	}
+
+	immediate = {
+		# DO NOT CHANGE THIS! THIS ENSURES THAT YOU CANNOT HAVE BOTH NO CONFIDENCE VOTE AND RED BRUNSWICK AT THE SAME EXACT TIME
+		set_country_flag = GER_brunswick_rebelled
 	}
 
 	option = {
@@ -4599,7 +4644,6 @@ country_event = { # Red Brunswick
 			}
 			set_resistance = 50
 		}
-		set_country_flag = GER_brunswick_rebelled # to prevent no confidence votes
 		hidden_effect = {
 			country_event = { id = germany_schleicher_events.41 days = 3 }
 		}
@@ -4616,6 +4660,7 @@ country_event = { # Red Brunswick
 				has_game_rule = { rule = GER_path option = GER_PATH_SOCCON }
 			}
 		}
+		clr_country_flag = GER_brunswick_rebelled
 		hidden_effect = { country_event = germany_schleicher_events.12 }
 	}
 
@@ -4631,6 +4676,7 @@ country_event = { # Red Brunswick
 				has_country_flag = GER_dkp_ai
 			}
 		}
+		clr_country_flag = GER_brunswick_rebelled
 		hidden_effect = { country_event = germany_schleicher_events.13 }
 	}
 }
@@ -4832,7 +4878,7 @@ country_event = { # National Unity Front Founding Conference
 	id = germany_schleicher_events.47
 	title = germany_schleicher_events.47.t
 	desc = germany_schleicher_events.47.d
-	picture = GFX_report_event_GER_two_years_later #NEEDPIC
+	picture = GFX_report_event_GER_schleicher9
 
 	is_triggered_only = yes
 
@@ -5326,7 +5372,7 @@ country_event = { # Agrarian Crisis
 	id = germany_schleicher_events.63
 	title = germany_schleicher_events.63.t
 	desc = germany_schleicher_events.63.d
-	picture = GFX_report_event_GER_gerecke # NEEDPIC
+	picture = GFX_report_event_GER_gerecke
 
 	is_triggered_only = yes
 
@@ -10353,7 +10399,7 @@ country_event = { # Zentrum - Schaffer endorsement
 	id = germany_swr_events.4
 	title = germany_swr_events.4.t
 	desc = germany_swr_events.4.d
-	picture = GFX_report_event_GER_cons # NEEDPIC
+	picture = GFX_report_event_GER_schaffer_2
 
 	is_triggered_only = yes
 
@@ -10377,7 +10423,7 @@ country_event = { # Zentrum - Ulitzka opposition
 	id = germany_swr_events.5
 	title = germany_swr_events.5.t
 	desc = germany_swr_events.5.d
-	picture = GFX_report_event_GER_ulitzka
+	picture = GFX_report_event_GER_ulitzka_2
 
 	is_triggered_only = yes
 
@@ -11530,7 +11576,7 @@ country_event = { # Coalition Collapses
 	id = germany_swr_events.46
 	title = germany_swr_events.46.t
 	desc = germany_swr_events.46.d
-	picture = GFX_report_event_GER_cons # NEEDPIC
+	picture = GFX_report_event_GER_lejeunejung
 
 	is_triggered_only = yes
 
@@ -12000,7 +12046,7 @@ news_event = {
 
 	desc = germany_swr_events.60.d
 
-	picture = GFX_news_event_generic_sign_treaty1
+	picture = GFX_news_event_GER_ambassador_crisis
 
 	major = yes
 	is_triggered_only = yes
@@ -13052,7 +13098,7 @@ country_event = { # Consolidated Democracy
 	id = germany_swr_events.84
 	title = germany_swr_events.84.t
 	desc = germany_swr_events.84.d
-	picture = GFX_report_event_GER_cons # NEEDPIC
+	picture = GFX_report_event_GER_reichstag
 
 	is_triggered_only = yes
 
@@ -13069,7 +13115,7 @@ country_event = { # National Revival
 	id = germany_swr_events.85
 	title = germany_swr_events.85.t
 	desc = germany_swr_events.85.d
-	picture = GFX_report_event_GER_cons # NEEDPIC
+	picture = GFX_report_event_GER_march
 
 	is_triggered_only = yes
 
@@ -13086,7 +13132,7 @@ country_event = { # National Liberalism Returns
 	id = germany_swr_events.86
 	title = germany_swr_events.86.t
 	desc = germany_swr_events.86.d
-	picture = GFX_report_event_GER_cons # NEEDPIC
+	picture = GFX_report_event_GER_reichstag2
 
 	is_triggered_only = yes
 
@@ -13112,7 +13158,7 @@ country_event = { # Weltvolk
 	id = germany_swr_events.87
 	title = germany_swr_events.87.t
 	desc = germany_swr_events.87.d
-	picture = GFX_report_event_GER_cons # NEEDPIC
+	picture = GFX_report_event_GER_march
 
 	is_triggered_only = yes
 
@@ -13627,7 +13673,7 @@ country_event = { # Setup
 	id = germany_spd_events.1
 	title = germany_spd_events.1.t
 	desc = germany_spd_events.1.d
-	picture = GFX_report_event_GER_cons # NEEDPIC
+	picture = GFX_report_event_GER_reichstag
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -15698,6 +15744,12 @@ country_event = { # Fall of the Government
 				long_name = GER_schwander_party_long
 				name = GER_schwander_party
 			}
+			remove_mission = GER_coalition_relations
+			if = {
+				limit = { has_active_mission = GER_SPD_demand_action }
+				remove_mission = GER_SPD_demand_action
+				clear_variable = GER_SPD_reforms_completed
+			}
 		}
 	}
 	title = germany_spd_events.52.t
@@ -15735,7 +15787,10 @@ country_event = { # Fall of the Government
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:social_democrat }
 		add_to_coalition = yes
-		remove_mission = GER_coalition_relations
+		effect_tooltip = {
+			remove_mission = GER_coalition_relations
+			remove_mission = GER_SPD_demand_action
+		}
 		if = {
 			limit = {
 				has_dynamic_modifier = { modifier = GER_Government_Paralysis }
@@ -15783,6 +15838,17 @@ country_event = { # Fall of the Government (Government Paralysis)
 	}
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			remove_mission = GER_coalition_relations
+			if = {
+				limit = { has_active_mission = GER_SPD_demand_action }
+				remove_mission = GER_SPD_demand_action
+				clear_variable = GER_SPD_reforms_completed
+			}
+		}
+	}
+
 	option = {
 		log = "KR_Event_Logging;GER Political Path - Schwander Cabinet"
 		log = "[GetLogInfo]: event germany_spd_events.53 option germany_spd_events.53.a"
@@ -15807,7 +15873,10 @@ country_event = { # Fall of the Government (Government Paralysis)
 		add_to_coalition = yes
 		set_temp_variable = { coalition_partner_var = token:social_democrat }
 		add_to_coalition = yes
-		remove_mission = GER_coalition_relations
+		effect_tooltip = {
+			remove_mission = GER_coalition_relations
+			remove_mission = GER_SPD_demand_action
+		}
 		if = {
 			limit = {
 				has_dynamic_modifier = { modifier = GER_Government_Paralysis }
@@ -16490,7 +16559,7 @@ country_event = { # Wissell Plan
 	id = germany_spd_events.70
 	title = germany_spd_events.70.t
 	desc = germany_spd_events.70.d
-	picture = GFX_report_event_GER_cons # NEEDPIC
+	picture = GFX_report_event_GER_wissell
 
 	is_triggered_only = yes
 
@@ -16750,7 +16819,7 @@ country_event = { # Agrarian Dilemma
 	id = germany_spd_events.75
 	title = germany_spd_events.75.t
 	desc = germany_spd_events.75.d
-	picture = GFX_report_event_GER_cons # NEEDPIC
+	picture = GFX_report_event_GER_agriculture
 
 	is_triggered_only = yes
 	trigger = {
@@ -20471,25 +20540,23 @@ news_event = {
 	immediate = { log = "[GetLogInfo]: event germany_flavour_events.84" }
 	title = {
 		trigger = {
-			GER = { has_war_with = JAP }
-			JAP = { is_subject = no }
+			has_global_flag = GER_peaces_out_JAP_global_flag #Old checks didn't account for the fact the peace out happens before this event fires.
 		}
 		text = germany_flavour_events.84.t1
 	}
 	title = {
-		trigger = { GER = { has_war_with = CHI } }
+		trigger = { has_global_flag = GER_peaces_out_CHI_global_flag }
 		text = germany_flavour_events.84.t2
 	}
 	desc = { #Japan Signs Peace with Germany
 		text = germany_flavour_events.84.d1
 		trigger = {
-			GER = { has_war_with = JAP }
-			JAP = { is_subject = no }
+			has_global_flag = GER_peaces_out_JAP_global_flag
 		}
 	}
 	desc = { #CHI Signs Peace with Germany
 		text = germany_flavour_events.84.d2
-		trigger = { GER = { has_war_with = CHI } }
+		trigger = { has_global_flag = GER_peaces_out_CHI_global_flag }
 	}
 	picture = GFX_news_event_JAP_germany_peace
 	major = yes
@@ -22166,7 +22233,7 @@ country_event = { # egg
 	id = germany_easter_egg_events.2
 	title = germany_easter_egg_events.2.t
 	desc = germany_easter_egg_events.2.d
-	picture = GFX_report_event_GER_march
+	picture = GFX_report_event_GER_reichkriegsflagge
 
 	is_triggered_only = yes
 
@@ -22263,7 +22330,7 @@ country_event = { # egg
 	id = germany_easter_egg_events.4
 	title = germany_easter_egg_events.4.t
 	desc = germany_easter_egg_events.4.d
-	picture = GFX_report_event_GER_march
+	picture = GFX_report_event_GER_revolution
 
 	is_triggered_only = yes
 
@@ -22326,7 +22393,7 @@ country_event = { # egg
 	id = germany_easter_egg_events.5
 	title = germany_easter_egg_events.5.t
 	desc = germany_easter_egg_events.5.d
-	picture = GFX_report_event_GER_march
+	picture = GFX_report_event_GER_reichkriegsflagge
 
 	is_triggered_only = yes
 	fire_only_once = yes

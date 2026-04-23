@@ -1580,12 +1580,8 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = GER_schleicher_mechanics_flag
-		}
-		cancel = {
 			hidden_trigger = {
-				GER_ewald_von_kleist_schmenzin = {
-					is_political_advisor = yes
-				}
+				NOT = { has_country_flag = GER_ewald_von_kleist_schmenzin_prus }
 			}
 		}
 
@@ -2424,6 +2420,7 @@ focus_tree = {
 			if = {
 				limit = {
 					check_variable = { GER_rye_iron_event > 1 }
+					GER_kurt_von_schleicher = { is_second_in_command = yes }
 				}
 				country_event = germany_schleicher_events.66
 			}
@@ -2472,6 +2469,7 @@ focus_tree = {
 			if = {
 				limit = {
 					check_variable = { GER_red_general_support_event > 1 }
+					GER_kurt_von_schleicher = { is_second_in_command = yes }
 				}
 				country_event = germany_schleicher_events.68
 			}
@@ -2853,7 +2851,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_diminish_reichstag
-		icon = GFX_goal_NFA_end_parliamentarism
+		icon = GFX_GER_break_down_the_rules_of_legislation
 		cost = 6
 
 		relative_position_id = GER_red_general
@@ -8127,7 +8125,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_proportional_representation
-		icon = GFX_goal_SAF_reform_voting_law
+		icon = GFX_goal_generic_elections_agreement
 		cost = 4
 
 		relative_position_id = GER_constitutional_committee
@@ -8563,9 +8561,8 @@ focus_tree = {
 						is_subject = no
 					}
 				}
-				every_other_country = {
+				every_allied_country = {
 					limit = {
-						is_in_faction_with = ROOT
 						is_in_americas = yes
 						is_subject = no
 					}
@@ -8774,7 +8771,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_dmk_is_back_baby
-		icon = GFX_goal_generic_mediterranean
+		icon = GFX_GER_mediterranean_overtures
 		cost = 3
 
 		relative_position_id = GER_master_of_the_world
@@ -9298,18 +9295,15 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed GER_ostwall"
-			every_other_country = {
+			every_allied_country = {
 				limit = {
 					OR = {
 						tag = BAT
 						tag = BLR
 						tag = UKR
 					}
-					is_in_faction_with = GER
 					if = {
-						limit = {
-							tag = BAT
-						}
+						limit = { tag = BAT }
 						owns_state = 13
 					}
 				}
@@ -9361,7 +9355,6 @@ focus_tree = {
 			GER_improve_weltpolitik = yes
 			every_other_country = {
 				limit = {
-					exists = yes
 					OR = {
 						tag = TRK
 						tag = KHI
@@ -9373,7 +9366,6 @@ focus_tree = {
 			effect_tooltip = {
 				every_other_country = {
 					limit = {
-						exists = yes
 						OR = {
 							tag = TRK
 							tag = KHI
@@ -9689,9 +9681,8 @@ focus_tree = {
 					}
 				}
 			}
-			every_other_country = {
+			every_allied_country = {
 				limit = {
-					is_in_faction_with = ROOT
 					OR = {
 						original_tag = BAT
 						original_tag = LIT
@@ -9754,9 +9745,8 @@ focus_tree = {
 					amount = -250
 				}
 			}
-			every_other_country = {
+			every_allied_country = {
 				limit = {
-					is_in_faction_with = ROOT
 					OR = {
 						original_tag = BAT
 						original_tag = LAT
@@ -10110,7 +10100,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_qualified_majority_voting
-		icon = GFX_goal_SAF_reform_voting_law
+		icon = GFX_goal_generic_elections_agreement
 		cost = 2
 
 		x = 45
@@ -12887,7 +12877,14 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_panzer_divisions
-		icon = GFX_focus_ger_heavy_tanks
+		icon = {
+			trigger = { has_cosmetic_tag = GER_rep }
+			value = GFX_goal_generic_army_tanks3
+		}
+		icon = {
+			value = GFX_focus_ger_heavy_tanks
+		}
+		dynamic = yes
 		cost = 6
 
 		relative_position_id = GER_army_reform_stuff
@@ -14825,7 +14822,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_dive_bombers
-		icon = GFX_focus_generic_cas_aircraft
+		icon = GFX_goal_generic_air_CAS_german_new
 		cost = 6
 
 		relative_position_id = GER_w_system
@@ -18627,7 +18624,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_dismantle_prussia
-		icon = GFX_goal_GER_Reichsland_Losung
+		icon = GFX_GER_prussian_local_goverment_reform
 		cost = 6
 
 		relative_position_id = GER_victory_arches
@@ -20613,7 +20610,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_restore_sudwestafrika
-		icon = GFX_focus_GER_schutztruppe
+		icon = GFX_goal_GER_into_sudwestafrika
 		cost = 3
 
 		relative_position_id = GER_deutsches_weltreich
@@ -20767,7 +20764,14 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_colonial_rear_guards
-		icon = GFX_focus_generic_africa_defense
+		icon = {
+			trigger = { has_cosmetic_tag = GER_rep }
+			value = GFX_focus_generic_africa_defense
+		}
+		icon = {
+			value = GFX_goal_GER_german_africa
+		}
+		dynamic = yes
 		cost = 3
 
 		relative_position_id = GER_deutsches_weltreich
@@ -21182,9 +21186,8 @@ focus_tree = {
 					}
 					add_claim_by = GER
 				}
-				every_other_country = {
+				every_allied_country = {
 					limit = {
-						is_ally_with = ROOT
 						is_in_europe = yes
 						has_capitulated = yes
 						any_owned_state = {
