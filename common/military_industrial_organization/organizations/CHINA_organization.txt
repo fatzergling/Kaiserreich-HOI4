@@ -4,7 +4,7 @@
 CHN_armour_industry_organisation = {
 	name = CHN_armour_industry_organisation
 	icon = GFX_idea_chongqing_tank_plant #Generic, post-war state owned industry
-	include = generic_tank_organization
+	include = generic_infantry_tank_organization
 
 	allowed = { is_chinese_or_potential_chinese_tag = yes }
 
@@ -730,5 +730,4 @@ CHN_automobile_industry_organisation = {
 			china_basic_mio_available_trigger = yes
 		}
 	}
-
 }

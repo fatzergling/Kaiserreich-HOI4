@@ -19,6 +19,9 @@ line_infantry = {
 
 		#uses custom logic
 		FRA
+
+		#uses infantry_china instead
+		QIE
 	}
 
 	role = infantry
@@ -129,6 +132,11 @@ line_infantry = {
 				artillery_brigade = 3
 			}
 
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+			}
+
 			support = {
 				artillery = 1
 				anti_air = 1
@@ -142,6 +150,53 @@ line_infantry = {
 infantry_mechanised = {
 		upgrade_prio = {
 			base = 8
+			modifier = {
+				factor = 0
+				NOT = { has_tech = motorised_infantry }
+			}
+			modifier = {
+				factor = 0
+				num_of_military_factories < 90 #90% of previous threshold
+			}
+			modifier = {
+				add = 1
+				has_reached_maximum_divisions = yes
+			}
+			modifier = {
+				add = 2
+				num_of_military_factories > 149
+				has_reached_ninety_percent_of_maximum_divisions = yes
+			}
+		}
+
+		can_upgrade_in_field = {
+			AI_trigger_can_upgrade_in_field = yes
+		}
+
+		target_template = {
+			regiments = {
+				motorized = 9
+				mot_artillery_brigade = 3
+			}
+
+			regimental_support = {
+				field_guns = 1
+				mot_fire_support = 1
+			}
+
+			support = {
+				engineer = 1
+				artillery = 1
+				anti_air = 1
+				logistics_company = 1
+				field_hospital = 1
+			}
+		}
+	}
+
+	infantry_mechanised = {
+		upgrade_prio = {
+			base = 1
 			modifier = {
 				factor = 0
 				NOT = { has_tech = mechanised_infantry }
@@ -170,6 +225,11 @@ infantry_mechanised = {
 				mechanized = 9
 				mot_artillery_brigade = 2
 				motorized_rocket_brigade = 1
+			}
+
+			regimental_support = {
+				field_guns = 1
+				mot_fire_support = 1
 			}
 
 			support = {

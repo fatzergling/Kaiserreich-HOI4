@@ -260,9 +260,8 @@ SER_imro_decisions = {
 					}
 					MAC = {
 						every_army_leader = {
-							add_temporary_buff_to_units = {
-								org_damage_multiplier = -0.5
-								str_damage_multiplier = -0.5
+							add_timed_unit_leader_trait = {
+								trait = SER_IMRO_grace_period
 								days = 30
 							}
 						}
@@ -327,9 +326,13 @@ SER_imro_decisions = {
 						limit = {
 							MAC = { num_divisions < 2 }
 						}
-						set_temp_variable = { IMRO_lacking_units = 4 }
-						subtract_from_temp_variable = { IMRO_lacking_units = MAC.num_divisions }
-						clamp_temp_variable = { var = IMRO_lacking_units min = 0 }
+						set_temp_variable = {
+							IMRO_lacking_units = {
+								value = 4
+								subtract = MAC.num_divisions
+								clamp = { min = 0 max = 4 }
+							}
+						}
 						106 = {
 							create_unit = {
 								division = "division_template = \"VMRO Diviziya\" start_experience_factor = 0.3"
@@ -2702,7 +2705,14 @@ foreign_politics = {
 				FROM = { any_home_area_neighbor_country = { is_ally_with = ROOT } }
 			}
 			if = {
-				limit = { FROM = { dont_start_major_faction_wars = yes } }
+				limit = {
+					FROM = {
+						OR = {
+							dont_start_major_faction_wars = yes
+							is_italian_tag = yes
+						}
+					}
+				}
 				second_weltkrieg_has_begun = yes
 			}
 		}
@@ -2973,9 +2983,11 @@ SER_Balkan_Research_Initiative_decisions = {
 						original_tag = SER
 						original_tag = ROM
 						original_tag = GRE
-						original_tag = ALB
 						AND = {
-							original_tag = BUL
+							OR = {
+								original_tag = ALB
+								original_tag = BUL
+							}
 							is_ally_with = ROOT
 						}
 					}
@@ -3070,6 +3082,8 @@ SER_Balkan_Research_Initiative_decisions = {
 				tag = SER
 				tag = ROM
 				tag = GRE
+				tag = ALB
+				tag = BUL
 			}
 		}
 
@@ -3534,6 +3548,12 @@ SER_The_Road_To_Unification_decisions = {
 			104 = { is_owned_by_ROOT_or_subject = yes } #Bosnia
 			105 = { is_owned_by_ROOT_or_subject = yes } #Montenegro
 			109 = { is_owned_by_ROOT_or_subject = yes } #Central Croatia
+			1109 = { is_owned_by_ROOT_or_subject = yes } #Herzegovina
+			1125 = { is_owned_by_ROOT_or_subject = yes } #Slavonia
+			if = {
+				limit = { has_country_leader = { character = SER_milan_nedic } }
+				NOT = { has_country_leader = { character = SER_milan_nedic } }
+			}
 			if = {
 				limit = {
 					OR = {
@@ -3583,46 +3603,24 @@ SER_The_Road_To_Unification_decisions = {
 						is_advisor = yes
 					}
 					set_character_flag = former_CRO # added in case Croatia returns into existance, so those advisors could return to that tag if an on_action or similar is added
-					set_nationality = {
-						target_country = SER
-						character = THIS
-					}
-					if = {
-						limit = { is_field_marshal = yes }
-						demote_to_general = yes
-					}
+					set_nationality = SER
+					demote_to_general = yes
 				}
 			}
 			if = {
 				limit = {
+					has_dictatorship_government = yes
 					OR = {
-						has_country_leader = { character = SER_petar_ii }
-						has_country_leader = { character = SER_petar_zivkovic }
+						is_monarchy = yes
 						has_country_leader = { character = SER_milan_stojadinovic }
 					}
-					has_dictatorship_government = yes
 				}
 				if = {
-					limit = {
-						has_country_leader = { character = SER_milan_stojadinovic }
-					}
+					limit = { is_monarchy = no }
 					set_cosmetic_tag = YUG_rep
 				}
 				else = {
 					set_cosmetic_tag = YUG_mon
-				}
-				custom_effect_tooltip = tooltip_white_line
-				set_country_flag = YUG_integral_yugoslavia_formed
-				complete_national_focus = SER_YUG_integral_yugoslavia
-				set_party_name = {
-					ideology = paternal_autocrat
-					long_name = SER_YUG_royal_paternal_autocrat_party_long
-					name = SER_YUG_royal_paternal_autocrat_party
-				}
-				if = {
-					limit = {
-						has_country_leader = { character = SER_petar_ii }
-					}
 					set_party_name = {
 						ideology = authoritarian_democrat
 						long_name = SER_YUG_royal_paternal_autocrat_party_long
@@ -3634,10 +3632,13 @@ SER_The_Road_To_Unification_decisions = {
 						name = SER_YUG_royal_paternal_autocrat_party
 					}
 				}
+				custom_effect_tooltip = tooltip_white_line
+				set_country_flag = YUG_integral_yugoslavia_formed
+				complete_national_focus = SER_YUG_integral_yugoslavia
 			}
 			else_if = {
 				limit = {
-					has_country_leader = { character = SER_petar_ii }
+					is_monarchy = yes
 					has_dictatorship_government = no
 				}
 				set_cosmetic_tag = YUG_mon
@@ -3773,35 +3774,9 @@ SER_The_Road_To_Unification_decisions = {
 					news_event = serbia_flavour_events.42
 				}
 				if = {
-					limit = { has_country_leader = { character = SER_milan_nedic } }
-					SER_milan_stojadinovic = {
-						set_nationality = ROOT
-						if = {
-							limit = { has_ideology = paternal_autocrat_subtype }
-							promote_character = paternal_autocrat_subtype
-						}
-						else = {
-							add_country_leader_role = {
-								country_leader = {
-									desc = SER_milan_stojadinovic_leader_desc
-									ideology = paternal_autocrat_subtype
-								}
-								promote_leader = yes
-							}
-						}
-						if = {
-							limit = { has_ideology = national_populist_subtype }
-							promote_character = national_populist_subtype
-						}
-						else = {
-							add_country_leader_role = {
-								country_leader = {
-									desc = SER_milan_stojadinovic_leader_desc
-									ideology = national_populist_subtype
-								}
-								promote_leader = yes
-							}
-						}
+					limit = {
+						has_country_leader = { character = SER_milan_stojadinovic }
+						is_subject = yes
 					}
 					set_party_name = {
 						ideology = national_populist
@@ -3838,6 +3813,7 @@ SER_The_Road_To_Unification_decisions = {
 						is_ai = no
 						has_idea = SER_konspiracija_idea
 					}
+					set_country_flag = { flag = SER_diplomatic_action days = 30 value = 1 }
 					country_event = { id = serbia_events.73 days = 7 }
 				}
 				else = {
@@ -3856,10 +3832,7 @@ SER_The_Road_To_Unification_decisions = {
 		icon = generic_prepare_civil_war
 
 		visible = {
-			OR = {
-				has_country_leader = { character = SER_petar_ii }
-				has_country_leader = { character = SER_petar_zivkovic }
-			}
+			is_monarchy = yes
 			has_war_with = TUR
 			controls_state = 773 # Constantinople
 		}
@@ -3925,9 +3898,11 @@ SER_contain_konspiracija_decisions = {
 			base = 1000
 			modifier = {
 				factor = 0
-				set_temp_variable = { SER_temp_comparison_var = party_popularity@national_populist }
-				multiply_temp_variable = { SER_temp_comparison_var = -1 }
-				check_variable = { SER_prodanovic_natpop_loss > SER_temp_comparison_var }
+				check_expr = {
+					value = party_popularity@national_populist
+					multiply = -1
+					less_than_or_equals = { value = SER_prodanovic_natpop_loss }
+				}
 			}
 		}
 
@@ -4475,9 +4450,11 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_serbia_expenditure_0"
-			custom_effect_tooltip = YUG_patronage_spending_SER
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
+			custom_override_tooltip = {
+				tooltip = YUG_patronage_spending_SER
+				SER_decrease_political_capital = yes
+				add_to_variable = { YUG_pc_expenditure_serbia = 1 }
+			}
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_serbia_expenditure_1 target = event_target:SER_dummy }
 				remove_targeted_decision = { decision = YUG_serbia_expenditure_0 target = event_target:SER_dummy }
@@ -4515,9 +4492,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_serbia_expenditure_1"
-			custom_effect_tooltip = YUG_patronage_spending_SER
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
+			SER_increase_expenditure_serbia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_serbia_expenditure_2 target = event_target:SER_dummy }
 				remove_targeted_decision = { decision = YUG_serbia_expenditure_1 target = event_target:SER_dummy }
@@ -4555,9 +4530,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_serbia_expenditure_2"
-			custom_effect_tooltip = YUG_patronage_spending_SER
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
+			SER_increase_expenditure_serbia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_serbia_expenditure_3 target = event_target:SER_dummy }
 				remove_targeted_decision = { decision = YUG_serbia_expenditure_2 target = event_target:SER_dummy }
@@ -4595,9 +4568,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_serbia_expenditure_3"
-			custom_effect_tooltip = YUG_patronage_spending_SER
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
+			SER_increase_expenditure_serbia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_serbia_expenditure_4 target = event_target:SER_dummy }
 				remove_targeted_decision = { decision = YUG_serbia_expenditure_3 target = event_target:SER_dummy }
@@ -4635,9 +4606,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_serbia_expenditure_4"
-			custom_effect_tooltip = YUG_patronage_spending_SER
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_serbia = 1 }
+			SER_increase_expenditure_serbia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_serbia_expenditure_5 target = event_target:SER_dummy }
 				remove_targeted_decision = { decision = YUG_serbia_expenditure_4 target = event_target:SER_dummy }
@@ -4692,9 +4661,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_croatia_expenditure_0"
-			custom_effect_tooltip = YUG_patronage_spending_CRO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
+			SER_increase_expenditure_croatia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_croatia_expenditure_1 target = CRO }
 				remove_targeted_decision = { decision = YUG_croatia_expenditure_0 target = CRO }
@@ -4732,9 +4699,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_croatia_expenditure_1"
-			custom_effect_tooltip = YUG_patronage_spending_CRO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
+			SER_increase_expenditure_croatia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_croatia_expenditure_2 target = CRO }
 				remove_targeted_decision = { decision = YUG_croatia_expenditure_1 target = CRO }
@@ -4772,9 +4737,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_croatia_expenditure_2"
-			custom_effect_tooltip = YUG_patronage_spending_CRO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
+			SER_increase_expenditure_croatia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_croatia_expenditure_3 target = CRO }
 				remove_targeted_decision = { decision = YUG_croatia_expenditure_2 target = CRO }
@@ -4812,9 +4775,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_croatia_expenditure_3"
-			custom_effect_tooltip = YUG_patronage_spending_CRO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
+			SER_increase_expenditure_croatia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_croatia_expenditure_4 target = CRO }
 				remove_targeted_decision = { decision = YUG_croatia_expenditure_3 target = CRO }
@@ -4852,9 +4813,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_croatia_expenditure_4"
-			custom_effect_tooltip = YUG_patronage_spending_CRO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_croatia = 1 }
+			SER_increase_expenditure_croatia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_croatia_expenditure_5 target = CRO }
 				remove_targeted_decision = { decision = YUG_croatia_expenditure_4 target = CRO }
@@ -4909,9 +4868,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_bosnia_expenditure_0"
-			custom_effect_tooltip = YUG_patronage_spending_BOS
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
+			SER_increase_expenditure_bosnia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_bosnia_expenditure_1 target = BOS }
 				remove_targeted_decision = { decision = YUG_bosnia_expenditure_0 target = BOS }
@@ -4949,9 +4906,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_bosnia_expenditure_1"
-			custom_effect_tooltip = YUG_patronage_spending_BOS
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
+			SER_increase_expenditure_bosnia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_bosnia_expenditure_2 target = BOS }
 				remove_targeted_decision = { decision = YUG_bosnia_expenditure_1 target = BOS }
@@ -4989,9 +4944,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_bosnia_expenditure_2"
-			custom_effect_tooltip = YUG_patronage_spending_BOS
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
+			SER_increase_expenditure_bosnia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_bosnia_expenditure_3 target = BOS }
 				remove_targeted_decision = { decision = YUG_bosnia_expenditure_2 target = BOS }
@@ -5029,9 +4982,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_bosnia_expenditure_3"
-			custom_effect_tooltip = YUG_patronage_spending_BOS
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
+			SER_increase_expenditure_bosnia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_bosnia_expenditure_4 target = BOS }
 				remove_targeted_decision = { decision = YUG_bosnia_expenditure_3 target = BOS }
@@ -5069,9 +5020,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_bosnia_expenditure_4"
-			custom_effect_tooltip = YUG_patronage_spending_BOS
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_bosnia = 1 }
+			SER_increase_expenditure_bosnia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_bosnia_expenditure_5 target = BOS }
 				remove_targeted_decision = { decision = YUG_bosnia_expenditure_4 target = BOS }
@@ -5126,9 +5075,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_slovenia_expenditure_0"
-			custom_effect_tooltip = YUG_patronage_spending_SLO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
+			SER_increase_expenditure_slovenia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_slovenia_expenditure_1 target = SLV }
 				remove_targeted_decision = { decision = YUG_slovenia_expenditure_0 target = SLV }
@@ -5166,9 +5113,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_slovenia_expenditure_1"
-			custom_effect_tooltip = YUG_patronage_spending_SLO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
+			SER_increase_expenditure_slovenia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_slovenia_expenditure_2 target = SLV }
 				remove_targeted_decision = { decision = YUG_slovenia_expenditure_1 target = SLV }
@@ -5206,9 +5151,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_slovenia_expenditure_2"
-			custom_effect_tooltip = YUG_patronage_spending_SLO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
+			SER_increase_expenditure_slovenia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_slovenia_expenditure_3 target = SLV }
 				remove_targeted_decision = { decision = YUG_slovenia_expenditure_2 target = SLV }
@@ -5246,9 +5189,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_slovenia_expenditure_3"
-			custom_effect_tooltip = YUG_patronage_spending_SLO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
+			SER_increase_expenditure_slovenia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_slovenia_expenditure_4 target = SLV }
 				remove_targeted_decision = { decision = YUG_slovenia_expenditure_3 target = SLV }
@@ -5286,9 +5227,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_slovenia_expenditure_4"
-			custom_effect_tooltip = YUG_patronage_spending_SLO
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_slovenia = 1 }
+			SER_increase_expenditure_slovenia = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_slovenia_expenditure_5 target = SLV }
 				remove_targeted_decision = { decision = YUG_slovenia_expenditure_4 target = SLV }
@@ -5343,9 +5282,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_other_expenditure_0"
-			custom_effect_tooltip = YUG_patronage_spending_OTH
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_other = 1 }
+			SER_increase_expenditure_other_yugoslavs = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_other_expenditure_1 target = ALB }
 				remove_targeted_decision = { decision = YUG_other_expenditure_0 target = ALB }
@@ -5383,9 +5320,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_other_expenditure_1"
-			custom_effect_tooltip = YUG_patronage_spending_OTH
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_other = 1 }
+			SER_increase_expenditure_other_yugoslavs = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_other_expenditure_2 target = ALB }
 				remove_targeted_decision = { decision = YUG_other_expenditure_1 target = ALB }
@@ -5423,9 +5358,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_other_expenditure_2"
-			custom_effect_tooltip = YUG_patronage_spending_OTH
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_other = 1 }
+			SER_increase_expenditure_other_yugoslavs = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_other_expenditure_3 target = ALB }
 				remove_targeted_decision = { decision = YUG_other_expenditure_2 target = ALB }
@@ -5463,9 +5396,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_other_expenditure_3"
-			custom_effect_tooltip = YUG_patronage_spending_OTH
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_other = 1 }
+			SER_increase_expenditure_other_yugoslavs = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_other_expenditure_4 target = ALB }
 				remove_targeted_decision = { decision = YUG_other_expenditure_3 target = ALB }
@@ -5503,9 +5434,7 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete YUG_other_expenditure_4"
-			custom_effect_tooltip = YUG_patronage_spending_OTH
-			subtract_from_variable = { YUG_political_capital = 1 }
-			add_to_variable = { YUG_pc_expenditure_other = 1 }
+			SER_increase_expenditure_other_yugoslavs = yes
 			hidden_effect = {
 				activate_targeted_decision = { decision = YUG_other_expenditure_5 target = ALB }
 				remove_targeted_decision = { decision = YUG_other_expenditure_4 target = ALB }
@@ -5641,12 +5570,10 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 106
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = YUG_pc_expenditure_other }
-				clamp_temp_variable = { var = gained_pp_per_turn max = 3 }
-				custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				set_variable = { YUG_pc_expenditure_other = 0 }
-				custom_effect_tooltip = SER_YUG_other_zero_expenditure_tt
+				set_temp_variable = { YUG_political_capital_gain_change = YUG_pc_expenditure_other }
+				clamp_temp_variable = { var = YUG_political_capital_gain_change max = 3 }
+				SER_increase_political_capital_gain = yes
+				set_variable = { YUG_pc_expenditure_other = 0 tooltip = SER_YUG_other_zero_expenditure_tt }
 				YUG_update_expenditure_missions_other = yes
 			}
 			else_if = {
@@ -5655,12 +5582,10 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 109
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = YUG_pc_expenditure_croatia }
-				clamp_temp_variable = { var = gained_pp_per_turn max = 3 }
-				custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				set_variable = { YUG_pc_expenditure_croatia = 0 }
-				custom_effect_tooltip = SER_YUG_croatia_zero_expenditure_tt
+				set_temp_variable = { YUG_political_capital_gain_change = YUG_pc_expenditure_croatia }
+				clamp_temp_variable = { var = YUG_political_capital_gain_change max = 3 }
+				SER_increase_political_capital_gain = yes
+				set_variable = { YUG_pc_expenditure_croatia = 0 tooltip = SER_YUG_croatia_zero_expenditure_tt }
 				YUG_update_expenditure_missions_croatia = yes
 			}
 			else_if = {
@@ -5669,12 +5594,10 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 104
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = YUG_pc_expenditure_bosnia }
-				clamp_temp_variable = { var = gained_pp_per_turn max = 3 }
-				custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				set_variable = { YUG_pc_expenditure_bosnia = 0 }
-				custom_effect_tooltip = SER_YUG_bosnia_zero_expenditure_tt
+				set_temp_variable = { YUG_political_capital_gain_change = YUG_pc_expenditure_bosnia }
+				clamp_temp_variable = { var = YUG_political_capital_gain_change max = 3 }
+				SER_increase_political_capital_gain = yes
+				set_variable = { YUG_pc_expenditure_bosnia = 0 tooltip = SER_YUG_bosnia_zero_expenditure_tt }
 				YUG_update_expenditure_missions_bosnia = yes
 			}
 			else_if = {
@@ -5683,12 +5606,10 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 102
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = YUG_pc_expenditure_slovenia }
-				clamp_temp_variable = { var = gained_pp_per_turn max = 3 }
-				custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				set_variable = { YUG_pc_expenditure_slovenia = 0 }
-				custom_effect_tooltip = SER_YUG_slovenia_zero_expenditure_tt
+				set_temp_variable = { YUG_political_capital_gain_change = YUG_pc_expenditure_slovenia }
+				clamp_temp_variable = { var = YUG_political_capital_gain_change max = 3 }
+				SER_increase_political_capital_gain = yes
+				set_variable = { YUG_pc_expenditure_slovenia = 0 tooltip = SER_YUG_slovenia_zero_expenditure_tt }
 				YUG_update_expenditure_missions_slovenia = yes
 			}
 			else_if = {
@@ -5697,12 +5618,10 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 107
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = YUG_pc_expenditure_serbia }
-				clamp_temp_variable = { var = gained_pp_per_turn max = 3 }
-				custom_effect_tooltip = YUG_modify_pp_gain_increase_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				set_variable = { YUG_pc_expenditure_serbia = 0 }
-				custom_effect_tooltip = SER_YUG_serbia_zero_expenditure_tt
+				set_temp_variable = { YUG_political_capital_gain_change = YUG_pc_expenditure_serbia }
+				clamp_temp_variable = { var = YUG_political_capital_gain_change max = 3 }
+				SER_increase_political_capital_gain = yes
+				set_variable = { YUG_pc_expenditure_serbia = 0 tooltip = SER_YUG_serbia_zero_expenditure_tt }
 				YUG_update_expenditure_missions_serbia = yes
 			}
 		}
@@ -5744,10 +5663,8 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 106
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = -1 }
-				custom_effect_tooltip = YUG_modify_pp_gain_decrease_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				clamp_variable = { var = YUG_political_capital_gain min = 0 }
+				set_temp_variable = { YUG_political_capital_gain_change = 1 }
+				SER_decrease_political_capital_gain = yes
 				if = {
 					limit = {
 						check_variable = { YUG_other_relations_level < 8 }
@@ -5782,10 +5699,8 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 109
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = -1 }
-				custom_effect_tooltip = YUG_modify_pp_gain_decrease_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				clamp_variable = { var = YUG_political_capital_gain min = 0 }
+				set_temp_variable = { YUG_political_capital_gain_change = 1 }
+				SER_decrease_political_capital_gain = yes
 				if = {
 					limit = {
 						check_variable = { YUG_croatia_relations_level < 8 }
@@ -5820,10 +5735,8 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 104
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = -1 }
-				custom_effect_tooltip = YUG_modify_pp_gain_decrease_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				clamp_variable = { var = YUG_political_capital_gain min = 0 }
+				set_temp_variable = { YUG_political_capital_gain_change = 1 }
+				SER_decrease_political_capital_gain = yes
 				if = {
 					limit = {
 						check_variable = { YUG_bosnia_relations_level < 8 }
@@ -5858,10 +5771,8 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 102
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = -1 }
-				custom_effect_tooltip = YUG_modify_pp_gain_decrease_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				clamp_variable = { var = YUG_political_capital_gain min = 0 }
+				set_temp_variable = { YUG_political_capital_gain_change = 1 }
+				SER_decrease_political_capital_gain = yes
 				if = {
 					limit = {
 						check_variable = { YUG_slovenia_relations_level < 8 }
@@ -5896,10 +5807,8 @@ SER_yugoslavia_ethnic_relations_decisions = {
 						state = 107
 					}
 				}
-				set_temp_variable = { gained_pp_per_turn = -1 }
-				custom_effect_tooltip = YUG_modify_pp_gain_decrease_tt
-				add_to_variable = { YUG_political_capital_gain = gained_pp_per_turn }
-				clamp_variable = { var = YUG_political_capital_gain min = 0 }
+				set_temp_variable = { YUG_political_capital_gain_change = 1 }
+				SER_decrease_political_capital_gain = yes
 				if = {
 					limit = {
 						check_variable = { YUG_serbia_relations_level < 8 }
@@ -5962,10 +5871,8 @@ SER_yugoslavia_ethnic_relations_decisions = {
 
 		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision remove SER_YUG_economic_centralisation"
-			set_temp_variable = { pp_loss = 3 }
-			custom_effect_tooltip = YUG_pp_loss_tt
-			subtract_from_variable = { YUG_political_capital = pp_loss }
-			clamp_variable = { var = YUG_political_capital min = 0 }
+			set_temp_variable = { YUG_political_capital_change = 3 }
+			SER_decrease_political_capital = yes
 			FROM = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {

@@ -21,7 +21,7 @@ economy_decisions = {
 		days_remove = 90
 		cost = 40
 
-		ai_will_do = { factor = 50 }
+		ai_will_do = { base = 2500 }
 
 		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision remove BRA_new_civilian_factory"
@@ -73,7 +73,7 @@ political_actions = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			base = 10000
 			modifier = {
 				factor = 0
 				has_game_rule = { rule = FOP_path option = FOP_PATH_UGARTISTAS_BOOSTED_RADSOC }
@@ -139,7 +139,7 @@ political_actions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 10
+			base = 10000
 			modifier = {
 				factor = 0
 				FROM = { surrender_progress > 0.20 }
@@ -206,7 +206,7 @@ political_actions = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			base = 10000
 			modifier = {
 				factor = 0
 				FROM = { surrender_progress > 0.20 }
@@ -264,9 +264,8 @@ political_actions = {
 		}
 
 		fire_only_once = yes
-		cost = 0
 
-		ai_will_do = { factor = 20 }
+		ai_will_do = { base = 1000 }
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_establish_relations_with_WCA"
@@ -295,7 +294,7 @@ political_actions = {
 		cost = 100
 
 		ai_will_do = {
-			factor = 1
+			base = 5000
 			modifier = {
 				factor = 0
 				has_stability < 0.25
@@ -332,35 +331,11 @@ political_actions = {
 				is_owned_and_controlled_by = ROOT
 				is_core_of = ROOT
 			}
-			custom_override_tooltip = {
-				tooltip = BRA_can_restore_brazil
-				count_triggers = {
-					amount = 3
-					498 = {
-						is_owned_and_controlled_by = ROOT #Northeastern Brazil
-						is_core_of = ROOT
-					}
-					499 = {
-						is_owned_and_controlled_by = ROOT #Bahia
-						is_core_of = ROOT
-					}
-					501 = {
-						is_owned_and_controlled_by = ROOT #São Paulo
-						is_core_of = ROOT
-					}
-					505 = {
-						is_owned_and_controlled_by = ROOT #Goyaz
-						is_core_of = ROOT
-					}
-					502 = {
-						is_owned_and_controlled_by = ROOT #Rio Grande do Sul
-						is_core_of = ROOT
-					}
-					898 = {
-						is_owned_and_controlled_by = ROOT #Para
-						is_core_of = ROOT
-					}
-				}
+			any_state_of = {
+				count = 3
+				target = { 498 499 501 502 505 898 } #Northeastern Brazil, Bahia, São Paulo, Rio Grande do Sul, Goyaz, Para
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
 			}
 		}
 
@@ -374,6 +349,8 @@ political_actions = {
 		fire_only_once = yes
 		cost = 50
 		priority = 100
+
+		ai_will_do = { base = 25000 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete BRA_become_brazil"
@@ -433,8 +410,6 @@ political_actions = {
 				}
 			}
 		}
-
-		ai_will_do = { factor = 100 }
 		fixed_random_seed = no
 	}
 
@@ -475,7 +450,13 @@ political_actions = {
 
 		cost = 100
 
-		ai_will_do = { factor = 1000 }
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 25
+				has_war = yes
+			}
+		}
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete BRA_enact_conscription"
@@ -490,16 +471,22 @@ BRA_estado_novo_decisions = {
 		icon = GFX_decision_eng_trade_unions_demand
 		allowed = { always = no }
 		available = {
-			NOT = { has_decision = BRA_disempower_congress }
-			NOT = { has_decision = BRA_populist_rallies }
-			NOT = { has_decision = BRA_deploy_police }
+			custom_override_tooltip = {
+				tooltip = BRA_consolidation_decision_active
+				NOT = { has_country_flag = BRA_consolidation_decision_active }
+			}
 		}
 
-		ai_will_do = { factor = 1000 }
+		ai_will_do = { base = 3000 }
 
 		fire_only_once = yes
 		days_remove = 60
 		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete BRA_limit_supreme_court"
+			set_country_flag = BRA_consolidation_decision_active
+		}
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove BRA_limit_supreme_court"
@@ -537,6 +524,7 @@ BRA_estado_novo_decisions = {
 					add_idea = BRA_constitution_fixed_2
 				}
 			}
+			clr_country_flag = BRA_consolidation_decision_active
 		}
 		fixed_random_seed = no
 	}
@@ -544,16 +532,22 @@ BRA_estado_novo_decisions = {
 		icon = GFX_decision_generic_break_treaty
 		allowed = { always = no }
 		available = {
-			NOT = { has_decision = BRA_limit_supreme_court }
-			NOT = { has_decision = BRA_populist_rallies }
-			NOT = { has_decision = BRA_deploy_police }
+			custom_override_tooltip = {
+				tooltip = BRA_consolidation_decision_active
+				NOT = { has_country_flag = BRA_consolidation_decision_active }
+			}
 		}
 
-		ai_will_do = { factor = 1000 }
+		ai_will_do = { base = 15000 }
 
 		fire_only_once = yes
 		days_remove = 60
 		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete BRA_disempower_congress"
+			set_country_flag = BRA_consolidation_decision_active
+		}
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove BRA_disempower_congress"
@@ -592,6 +586,7 @@ BRA_estado_novo_decisions = {
 				}
 			}
 			hidden_effect = { activate_advisor = BRA_congresso_nacional_sic }
+			clr_country_flag = BRA_consolidation_decision_active
 		}
 		fixed_random_seed = no
 	}
@@ -599,16 +594,22 @@ BRA_estado_novo_decisions = {
 		icon = GFX_decision_generic_police_action
 		allowed = { always = no }
 		available = {
-			NOT = { has_decision = BRA_populist_rallies }
-			NOT = { has_decision = BRA_disempower_congress }
-			NOT = { has_decision = BRA_limit_supreme_court }
+			custom_override_tooltip = {
+				tooltip = BRA_consolidation_decision_active
+				NOT = { has_country_flag = BRA_consolidation_decision_active }
+			}
 		}
 
-		ai_will_do = { factor = 1000 }
+		ai_will_do = { base = 2900 }
 
 		fire_only_once = yes
 		days_remove = 60
 		cost = 50
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete BRA_deploy_police"
+			set_country_flag = BRA_consolidation_decision_active
+		}
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove BRA_deploy_police"
@@ -646,6 +647,7 @@ BRA_estado_novo_decisions = {
 					add_idea = BRA_constitution_fixed_4
 				}
 			}
+			clr_country_flag = BRA_consolidation_decision_active
 		}
 		fixed_random_seed = no
 	}
@@ -653,13 +655,14 @@ BRA_estado_novo_decisions = {
 		icon = GFX_decision_generic_political_rally
 		allowed = { always = no }
 		available = {
-			NOT = { has_decision = BRA_deploy_police }
-			NOT = { has_decision = BRA_disempower_congress }
-			NOT = { has_decision = BRA_limit_supreme_court }
+			custom_override_tooltip = {
+				tooltip = BRA_consolidation_decision_active
+				NOT = { has_country_flag = BRA_consolidation_decision_active }
+			}
 		}
 
 		ai_will_do = {
-			factor = 25
+			base = 2500
 			modifier = {
 				factor = 0
 				paternal_autocrat > 0.4
@@ -673,12 +676,18 @@ BRA_estado_novo_decisions = {
 		days_remove = 90
 		cost = 30
 
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete BRA_populist_rallies"
+			set_country_flag = BRA_consolidation_decision_active
+		}
+
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove BRA_populist_rallies"
 			add_popularity = {
 				ideology = paternal_autocrat
 				popularity = 0.05
 			}
+			clr_country_flag = BRA_consolidation_decision_active
 		}
 		fixed_random_seed = no
 	}
@@ -691,7 +700,13 @@ BRA_estado_novo_decisions = {
 			}
 		}
 
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 2400
+			modifier = {
+				factor = 0
+				has_war = no
+			}
+		}
 
 		modifier = {
 			political_power_gain = -0.02
@@ -713,7 +728,13 @@ BRA_estado_novo_decisions = {
 		icon = GFX_decision_generic_army_support
 		allowed = { always = no }
 
-		ai_will_do = { factor = 750 }
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 3
+				has_war = yes
+			}
+		}
 
 		cost = 75
 		fire_only_once = yes
@@ -766,7 +787,7 @@ BRA_brazil_war_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 10
+			base = 5000
 			modifier = {
 				factor = 0
 				OR = {
@@ -830,14 +851,12 @@ BRA_brazil_war_decisions = {
 		days_remove = 30
 		days_re_enable = 30
 
-		cost = 0
-
 		modifier = {
 			command_power_gain = -0.25
 			experience_gain_army = 0.05
 		}
 
-		ai_will_do = { factor = 20 }
+		ai_will_do = { base = 1000 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete SPO_recruit_supporters"
@@ -845,12 +864,11 @@ BRA_brazil_war_decisions = {
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove SPO_recruit_supporters"
-			random_state = {
+			random_controlled_state = {
 				limit = {
 					is_core_of = BRA
 					NOT = { is_core_of = ROOT }
 					is_owned_by = BRA
-					is_controlled_by = ROOT
 					any_neighbor_state = {
 						is_core_of = ROOT
 						is_controlled_by = ROOT
@@ -889,7 +907,7 @@ BRA_Resource_decisions = {
 			civilian_factory_use = 2
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
 
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_rubber_army"
@@ -927,7 +945,7 @@ BRA_Resource_decisions = {
 			civilian_factory_use = 1
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 2500 }
 
 		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision remove BRA_lobato"
@@ -960,7 +978,7 @@ BRA_Resource_decisions = {
 			civilian_factory_use = 1
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 3000 }
 
 		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision remove BRA_ram_eater"
@@ -985,7 +1003,8 @@ BRA_Resource_decisions = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 1000 }
+		ai_will_do = { base = 4000 }
+
 		remove_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision remove BRA_CSI"
 			country_event = brazil_events.223
@@ -1009,7 +1028,8 @@ BRA_Resource_decisions = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 1000 }
+		ai_will_do = { base = 4000 }
+
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_CSN_decision"
 			set_country_flag = BRA_CSN_already_selected
@@ -1055,20 +1075,23 @@ BRA_Army_Reform_Soft = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 		}
 
-		custom_cost_text = CP_25
+		ai_hint_pp_cost = 25
 		custom_cost_trigger = {
 			NOT = { command_power < 25 }
+			NOT = { has_political_power < 25 }
 		}
+		custom_cost_text = CP_25_PP_25
 
-		cost = 25
 		days_remove = 180
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_deal_with_Minas_Gerais"
 			hidden_effect = {
+				add_political_power = -25
 				add_command_power = -25
 			}
 		}
@@ -1086,20 +1109,23 @@ BRA_Army_Reform_Soft = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 		}
 
-		custom_cost_text = CP_25
+		ai_hint_pp_cost = 25
 		custom_cost_trigger = {
 			NOT = { command_power < 25 }
+			NOT = { has_political_power < 25 }
 		}
+		custom_cost_text = CP_25_PP_25
 
-		cost = 25
 		days_remove = 180
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_deal_with_Rio_Grande_do_Sul"
 			hidden_effect = {
+				add_political_power = -25
 				add_command_power = -25
 			}
 		}
@@ -1117,20 +1143,23 @@ BRA_Army_Reform_Soft = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 		}
 
-		custom_cost_text = CP_25
+		ai_hint_pp_cost = 25
 		custom_cost_trigger = {
 			NOT = { command_power < 25 }
+			NOT = { has_political_power < 25 }
 		}
+		custom_cost_text = CP_25_PP_25
 
-		cost = 25
 		days_remove = 180
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_deal_with_Nordeste"
 			hidden_effect = {
+				add_political_power = -25
 				add_command_power = -25
 			}
 		}
@@ -1148,20 +1177,23 @@ BRA_Army_Reform_Soft = {
 			FROM = { is_owned_and_controlled_by = ROOT }
 		}
 
-		custom_cost_text = CP_25
+		ai_hint_pp_cost = 25
 		custom_cost_trigger = {
 			NOT = { command_power < 25 }
+			NOT = { has_political_power < 25 }
 		}
+		custom_cost_text = CP_25_PP_25
 
-		cost = 25
 		days_remove = 180
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_deal_with_Sao_Paulo"
 			hidden_effect = {
+				add_political_power = -25
 				add_command_power = -25
 			}
 		}
@@ -1183,7 +1215,8 @@ BRA_Army_Reform_Soft = {
 		days_remove = 180
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete BRA_equipment_standardisation"
 			hidden_effect = {
@@ -1207,7 +1240,8 @@ BRA_Army_Reform_Soft = {
 		days_remove = 180
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove BRA_unified_officer_curriculum"
 			set_temp_variable = { BRA_soft_change = 10 }
@@ -1222,7 +1256,8 @@ BRA_Army_Reform_Soft = {
 		days_remove = 180
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove BRA_local_talent"
 			set_temp_variable = { BRA_soft_change = 10 }
@@ -1237,7 +1272,8 @@ BRA_Army_Reform_Soft = {
 		days_remove = 180
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove BRA_merging_regional_commands"
 			set_temp_variable = { BRA_soft_change = 10 }
@@ -1257,7 +1293,7 @@ BRA_Army_Reform_Soft = {
 		days_remove = 180
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 6000 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete BRA_better_barracks"
@@ -1298,7 +1334,8 @@ BRA_Army_Reform_Soft = {
 		days_remove = 180
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete BRA_reservist_exercises"
 			hidden_effect = { army_experience = -25 }
@@ -1329,7 +1366,8 @@ BRA_Army_Reform_Hard = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_crush_Minas_Gerais"
 			add_stability = -0.05
@@ -1360,7 +1398,8 @@ BRA_Army_Reform_Hard = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_crush_Rio_Grande_do_Sul"
 			add_stability = -0.05
@@ -1391,7 +1430,8 @@ BRA_Army_Reform_Hard = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_crush_Nordeste"
 			add_stability = -0.05
@@ -1422,7 +1462,8 @@ BRA_Army_Reform_Hard = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete BRA_crush_Sao_Paulo"
 			add_stability = -0.05
@@ -1444,10 +1485,24 @@ BRA_Army_Reform_Hard = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		custom_cost_text = war_support5
+		custom_cost_trigger = {
+			NOT = { has_war_support < 0.05 }
+		}
+
+		ai_will_do = {
+			base = 4000
+			modifier = {
+				factor = 0
+				has_war_support < 0.25
+			}
+		}
+
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete BRA_replace_officers"
-			add_war_support = -0.05
+			hidden_effect = {
+				add_war_support = -0.05
+			}
 		}
 		modifier = {
 			land_reinforce_rate = -0.05
@@ -1466,7 +1521,14 @@ BRA_Army_Reform_Hard = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			base = 6000
+			modifier = {
+				factor = 0.2
+				has_war = yes
+			}
+		}
+
 		modifier = {
 			conscription_factor = -0.05
 			industrial_capacity_factory = -0.2
@@ -1485,7 +1547,14 @@ BRA_Army_Reform_Hard = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = {
+			base = 6000
+			modifier = {
+				factor = 0.2
+				has_war = yes
+			}
+		}
+
 		modifier = {
 			conscription_factor = -0.1
 			mobilization_speed = -0.2
@@ -1508,7 +1577,8 @@ BRA_Army_Reform_Hard = {
 		days_remove = 90
 		fire_only_once = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		modifier = {
 			command_power_gain = -0.5
 		}
@@ -1533,7 +1603,9 @@ BRA_Army_Reform_Hard = {
 		available = {
 			num_of_civilian_factories_available_for_projects > 4
 		}
-		ai_will_do = { factor = 10 }
+
+		ai_will_do = { base = 5000 }
+
 		modifier = {
 			civilian_factory_use = 5
 		}
@@ -1565,13 +1637,14 @@ BRA_Army_Reform_Hard = {
 			NOT = { has_army_experience < 50 }
 		}
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 5000 }
+
 		modifier = {
 			experience_gain_army_factor = -0.5
 		}
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete BRA_mandatory_excercies"
-			army_experience = -50
+			hidden_effect = { army_experience = -50 }
 		}
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove BRA_mandatory_excercies"
@@ -1588,7 +1661,7 @@ BRA_Army_Reform_Top_Down = {
 		allowed = { always = no }
 		fire_only_once = yes
 
-		ai_will_do = { factor = 100 }
+		ai_will_do = { base = 1000 }
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete BRA_crush_state_armies"
@@ -1629,7 +1702,8 @@ BRA_naval_infra_expansion = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 500 }
+
 		modifier = {
 			civilian_factory_use = 2
 		}
@@ -1700,7 +1774,7 @@ BRA_naval_infra_expansion = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 500 }
 
 		modifier = {
 			civilian_factory_use = 1
@@ -1769,7 +1843,8 @@ BRA_naval_infra_expansion = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 500 }
+
 		modifier = {
 			civilian_factory_use = 1
 		}
@@ -1837,7 +1912,8 @@ BRA_naval_infra_expansion = {
 		fire_only_once = yes
 		state_target = yes
 
-		ai_will_do = { factor = 10 }
+		ai_will_do = { base = 500 }
+
 		modifier = {
 			civilian_factory_use = 1
 		}

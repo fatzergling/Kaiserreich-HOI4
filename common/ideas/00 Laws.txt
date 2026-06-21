@@ -739,10 +739,6 @@ ideas = {
 					factor = 20
 					manpower_per_military_factory < 600
 				}
-				modifier = { #Telling AI Canada to stop trying to raise conscription law even when they have this idea
-					factor = 0
-					has_idea = CAN_resistance_to_conscription
-				}
 			}
 		}
 
@@ -789,10 +785,6 @@ ideas = {
 				modifier = { #prio if low on manpower
 					factor = 20
 					manpower_per_military_factory < 500
-				}
-				modifier = { #Telling AI Canada to stop trying to raise conscription law even when they have this idea
-					factor = 0
-					has_idea = CAN_resistance_to_conscription
 				}
 			}
 		}

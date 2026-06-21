@@ -154,13 +154,10 @@ ideas = {
 			allowed = { always = no }
 			available = {
 				has_war_with = CAN
-				count_triggers = {
-					amount = 2
-					has_war_with = USA
-					has_war_with = APG
-					has_war_with = ACC
-					has_war_with = CAN
-					has_war_with = NEE
+				any_country_of = {
+					count = 2
+					target = { USA ACC APG NEE }
+					has_war_with = ROOT
 				}
 			}
 			modifier = {

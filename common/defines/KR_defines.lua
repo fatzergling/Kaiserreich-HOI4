@@ -14,8 +14,8 @@ NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 12			-- how many divisions a 
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 12 			-- how many divisions a field marshall is limited to. 0 = inf  < 0 = blocked
 
 -- Game
-NDefines.NGame.SAVE_VERSION = 163											-- Vanilla is 30
-NDefines.NGame.MINOR_SAVE_VERSION = 163										-- Vanilla is 1
+NDefines.NGame.SAVE_VERSION = 164											-- Vanilla is 30
+NDefines.NGame.MINOR_SAVE_VERSION = 164										-- Vanilla is 1
 NDefines.NGame.END_DATE = "1959.1.1.1"										-- Vanilla is 1949.1.1.1
 NDefines.NGame.HANDS_OFF_START_TAG = "BHU"									-- Vanilla is URG
 NDefines.NGame.DECISION_ALERT_TIMEOUT_DAYS = 60								-- Vanilla is 30
@@ -223,6 +223,8 @@ NDefines.NFactions.FACTION_INTELLIGENCE_ALLOWED_ADVISOR_TRAIT  = {
 	"KR_master_diplomat",
 	"KR_savinkovs_shadow",
 	"KR_cavalier_spymaster"
+	"KR_shadowy_laoban_lar",
+	"KR_shadowy_laoban"
 }
 
 NDefines.NDiplomacy.PEACE_COST_FACTOR_COMPLIANCE_STEPS = { 		

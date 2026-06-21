@@ -122,6 +122,11 @@ armour_generic = {
 				motorized = 6
 			}
 
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
+			}
+
 			support = {
 				armored_car_recon = 1
 				artillery = 1
@@ -160,6 +165,11 @@ armour_generic = {
 				medium_armor = 4
 				mechanized = 4
 				medium_sp_artillery_brigade = 2
+			}
+
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
 			}
 
 			support = {
@@ -205,6 +215,11 @@ armour_generic = {
 				modern_armor = 6
 				mechanized = 6
 				modern_sp_artillery_brigade = 2
+			}
+
+			regimental_support = {
+				anti_air_battery = 1
+				mot_fire_support = 1
 			}
 
 			support = {

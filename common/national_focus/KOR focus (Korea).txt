@@ -295,14 +295,11 @@ focus_tree = {
 	focus = {
 		id = KOR_mandate_of_the_KIP
 		icon = {
-			trigger = {
+			GFX_goal_ideology_authoritarian_democrat = {
 				has_completed_focus = KOR_of_the_people_by_the_people_for_the_people
 				has_government = authoritarian_democrat
 			}
-			value = GFX_goal_ideology_authoritarian_democrat
-		}
-		icon = {
-			value = GFX_goal_ideology_social_conservative
+			GFX_goal_ideology_social_conservative = yes
 		}
 		cost = 2
 
@@ -2221,18 +2218,15 @@ focus_tree = {
 	focus = {
 		id = KOR_chinas_revolutionary_bulwark
 		icon = {
-			trigger = {
-				if = {
-					limit = { is_subject = yes }
-					overlord = {
-						china_alignment_left_kuomintang = yes
-					}
+			GFX_goal_china_deal = {
+				is_subject = yes
+				overlord = {
+					china_alignment_left_kuomintang = yes
 				}
 			}
-			value = GFX_goal_china_deal
+			GFX_goal_QIE_zhili_unite_china = yes
 		}
-		icon = GFX_goal_QIE_zhili_unite_china
-		cost = 8
+		cost = 3
 
 		relative_position_id = KOR_rise_of_the_korean_national_revolutionary_party
 		x = 3
@@ -2487,13 +2481,12 @@ focus_tree = {
 	focus = {
 		id = KOR_reconstituting_the_national_army
 		icon = {
-			trigger = {
+			GFX_goal_KOR_socialist_Army = {
 				has_socialist_government = yes
 			}
-			value = GFX_goal_KOR_socialist_Army
+			GFX_goal_KOR_Army = yes
 		}
-		icon = GFX_goal_KOR_Army
-		cost = 8
+		cost = 3
 
 		relative_position_id = KOR_free_at_long_last
 		x = 17
@@ -2588,13 +2581,12 @@ focus_tree = {
 	focus = {
 		id = KOR_in_admiral_yis_honour
 		icon = {
-			trigger = {
+			GFX_goal_KOR_socialist_Navy = {
 				has_socialist_government = yes
 			}
-			value = GFX_goal_KOR_socialist_Navy
+			GFX_goal_KOR_Navy = yes
 		}
-		icon = GFX_goal_KOR_Navy
-		cost = 8
+		cost = 3
 
 		relative_position_id = KOR_reconstituting_the_national_army
 		x = 1
@@ -2614,13 +2606,12 @@ focus_tree = {
 	focus = {
 		id = KOR_taking_first_flight
 		icon = {
-			trigger = {
+			GFX_goal_KOR_socialist_Airforce = {
 				has_socialist_government = yes
 			}
-			value = GFX_goal_KOR_socialist_Airforce
+			GFX_goal_KOR_Airforce = yes
 		}
-		icon = GFX_goal_KOR_Airforce
-		cost = 8
+		cost = 3
 
 		relative_position_id = KOR_reconstituting_the_national_army
 		x = -1
