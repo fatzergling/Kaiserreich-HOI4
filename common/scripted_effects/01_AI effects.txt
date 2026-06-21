@@ -25,11 +25,6 @@ FROM_send_volunteers_to_ROOT = {
 			add_ai_strategy = {
 				type = send_lend_lease_desire
 				id = ROOT
-				value = 400
-			}
-			add_ai_strategy = {
-				type = send_lend_lease_desire
-				id = ROOT
 				value = 200
 			}
 			if = {
@@ -80,12 +75,12 @@ send_volunteers_to_TARGET = {
 		add_ai_strategy = {
 			type = send_volunteers_desire
 			id = event_target:volunteer_target
-			value = 4000
+			value = 400
 		}
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = event_target:volunteer_target
-			value = 1000
+			value = 200
 		}
 		add_ai_strategy = {
 			type = send_lend_lease_desire
@@ -108,7 +103,7 @@ send_volunteers_to_TARGET = {
 					}
 					}
 			add_ai_strategy = {
-				type = send_lend_lease_desire
+				type = event_target:volunteer_target
 				id = ROOT
 				value = 4000
 			}
@@ -197,7 +192,7 @@ send_volunteers_to_PREV = {
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = PREV
-			value = 300
+			value = 200
 		}
 		#add_ai_strategy = {
 		#	type = send_lend_lease_desire
@@ -216,6 +211,11 @@ send_volunteers_to_PREV = {
 								tag = TUR
 							}
 							second_weltkrieg_has_begun = no
+							NOT = { 
+								OR = {
+									PREV = { is_chinese_tag = yes }
+							}
+							}
 						}
 					}
 					}
@@ -249,7 +249,7 @@ clear_volunteers_to_PREV = {
 		add_ai_strategy = {
 			type = send_lend_lease_desire
 			id = PREV
-			value = -300
+			value = -200
 		}
 			if = {
 				limit = { 

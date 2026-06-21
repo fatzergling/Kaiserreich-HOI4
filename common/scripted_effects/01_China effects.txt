@@ -461,6 +461,7 @@ china_add_poor_army = {
 	multiply_variable = { CHN_industry_weakness2 = 1.5 }
 	set_variable = { CHN_industry_weakness3 = -0.04 }
 	set_variable = { CHN_industry_weakness4 = 0.2 }
+	set_variable = { CHN_industry_weakness5 = 2 }
 	add_dynamic_modifier = { modifier = CHN_poor_industry }
 	set_country_flag = china_has_poor_army #enables china_army_reform_ai AI strategy plan
 	set_variable = { CHI_improving_neglected_countryside_mission_time = 180 }
@@ -470,6 +471,7 @@ china_improve_poor_industry = {
 	custom_effect_tooltip = china_improve_industry
 	add_to_variable = { CHN_industry_weakness = 0.01 }
 	subtract_from_variable = { CHN_industry_weakness4 = 0.01 }
+	subtract_from_variable = { CHN_industry_weakness5 = 0.1 }
 	add_to_variable = { CHN_industry_weakness2 = 0.015 }
 	add_to_variable = { CHN_industry_weakness3 = 0.002 }
 	if = {

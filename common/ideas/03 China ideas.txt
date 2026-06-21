@@ -26,7 +26,7 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = LEC
-				cic_to_target_factor = 0.3
+				cic_to_target_factor = 0.2
 			}
 
 			allowed_to_remove = {
@@ -84,7 +84,7 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = LEC
-				cic_to_target_factor = 0.15
+				cic_to_target_factor = 0.1
 			}
 
 			allowed_to_remove = {
@@ -144,7 +144,7 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = JAP
-				cic_to_target_factor = 0.4
+				cic_to_target_factor = 0.3
 			}
 
 			allowed_to_remove = {
@@ -207,7 +207,7 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = JAP
-				cic_to_target_factor = 0.3
+				cic_to_target_factor = 0.15
 			}
 
 			allowed_to_remove = {

@@ -16,8 +16,8 @@ ideas = {
 				no_supply_grace = 168
 				compliance_growth_on_our_occupied_states = -0.25
 				resistance_target_on_our_occupied_states = 0.2
-				surrender_limit = 0.5
-				unit_limit_bonus = 10
+				surrender_limit = 0.2
+				unit_limit_bonus = 48
 			}
 		}
 		amcivwar_idea_WCA = {
@@ -34,7 +34,8 @@ ideas = {
 				no_supply_grace = 168
 				compliance_growth_on_our_occupied_states = -0.25
 				resistance_target_on_our_occupied_states = 0.2
-				surrender_limit = 0.5
+				surrender_limit = 0.2
+				unit_limit_bonus = 48
 			}
 		}
 		amcivwar_idea_APG = { #Fighting for America
@@ -51,7 +52,8 @@ ideas = {
 				no_supply_grace = 168
 				compliance_growth_on_our_occupied_states = -0.25
 				resistance_target_on_our_occupied_states = 0.2
-				surrender_limit = 0.5
+				surrender_limit = 0.2
+				unit_limit_bonus = 48
 			}
 		}
 		amcivwar_idea_ACC = { #Fighting for America
@@ -68,7 +70,8 @@ ideas = {
 				no_supply_grace = 168
 				compliance_growth_on_our_occupied_states = -0.25
 				resistance_target_on_our_occupied_states = 0.2
-				surrender_limit = 0.5
+				surrender_limit = 0.2
+				unit_limit_bonus = 48
 			}
 		}
 		ACW_fired_up = {

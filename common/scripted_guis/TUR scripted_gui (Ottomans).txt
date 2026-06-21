@@ -317,7 +317,7 @@ scripted_gui = {
 			}
 		}
 
-		ai_test_interval = 120
+		ai_test_interval = 60
 		ai_test_scopes = test_self_controlled_states
 		ai_max_weight_taken_per_test = 500
 
@@ -325,12 +325,12 @@ scripted_gui = {
 			OTT_action_centralise_button_click = {
 				ai_will_do = {
 					base = 0
-					modifier = { add = 25	check_variable = { OTT_revolt_risk < 2 } }
-					modifier = { add = 75	check_variable = { OTT_revolt_risk < 1 } }
+					modifier = { add = 25	check_variable = { OTT_revolt_risk < 3 } }
+					modifier = { add = 75	check_variable = { OTT_revolt_risk < 2 } }
 					modifier = {
 						factor = 0
 						OR = {
-							OTT_cairo_pact_defeated = no
+							#OTT_cairo_pact_defeated = no
 							ROOT = { OTT_has_centralist_government = no }
 						}
 					}
@@ -339,7 +339,7 @@ scripted_gui = {
 			OTT_action_declare_martial_law_button_click = {
 				ai_will_do = {
 					base = 0
-					modifier = { add = 250	resistance_target > 0.45 }
+					modifier = { add = 250	resistance_target > 0.25 }
 				}
 			}
 			OTT_action_detain_agitators_button_click = {

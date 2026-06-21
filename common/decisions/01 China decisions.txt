@@ -10744,7 +10744,7 @@ china_mio_arsenal_integration_decision_category = {
 			log = "[GetLogRoot][GetLogFrom]: Decision remove CHN_integrate_major_arsenal_decision"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
-				amount = 2000
+				amount = 4000
 				producer = THIS
 			}
 			add_equipment_to_stockpile = {
@@ -10860,7 +10860,7 @@ china_mio_arsenal_integration_decision_category = {
 			log = "[GetLogRoot][GetLogFrom]: Decision remove CHN_integrate_minor_small_arms_arsenal_decision"
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
-				amount = 1000
+				amount = 2000
 				producer = THIS
 			}
 			mio:CHN_small_arms_industry_organisation = {

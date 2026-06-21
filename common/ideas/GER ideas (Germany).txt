@@ -64,7 +64,7 @@ ideas = {
 			picture = usa_great_depression
 			allowed = { always = no }
 			modifier = {
-				consumer_goods_factor = 0.2
+				consumer_goods_factor = 0.4
 			}
 		}
 		GER_black_monday_3 = {
@@ -76,7 +76,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 				industrial_capacity_factory = -0.1
 				production_speed_buildings_factor = -0.1
-				consumer_goods_factor = 0.3
+				consumer_goods_factor = 0.6
 			}
 		}
 		GER_black_monday_4 = {
@@ -88,7 +88,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.1
 				industrial_capacity_factory = -0.2
 				production_speed_buildings_factor = -0.2
-				consumer_goods_factor = 0.4
+				consumer_goods_factor = 0.8
 			}
 		}
 		GER_black_monday_5 = {
@@ -100,7 +100,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.15
 				industrial_capacity_factory = -0.3
 				production_speed_buildings_factor = -0.3
-				consumer_goods_factor = 0.5
+				consumer_goods_factor = 1
 			}
 		}
 		GER_black_monday_6 = {
@@ -112,7 +112,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.20
 				industrial_capacity_factory = -0.4
 				production_speed_buildings_factor = -0.4
-				consumer_goods_factor = 0.6
+				consumer_goods_factor = 1.2
 			}
 		}
 		GER_black_monday_7 = {
@@ -124,7 +124,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.25
 				industrial_capacity_factory = -0.5
 				production_speed_buildings_factor = -0.5
-				consumer_goods_factor = 0.7
+				consumer_goods_factor = 1.4
 			}
 		}
 		GER_black_monday_8 = {
@@ -136,7 +136,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.30
 				industrial_capacity_factory = -0.6
 				production_speed_buildings_factor = -0.6
-				consumer_goods_factor = 0.8
+				consumer_goods_factor = 1.6
 			}
 		}
 		GER_black_monday_9 = {
@@ -148,7 +148,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.35
 				industrial_capacity_factory = -0.7
 				production_speed_buildings_factor = -0.7
-				consumer_goods_factor = 0.9
+				consumer_goods_factor = 1.8
 			}
 		}
 		GER_black_monday_10 = {
@@ -160,7 +160,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.40
 				industrial_capacity_factory = -0.8
 				production_speed_buildings_factor = -0.8
-				consumer_goods_factor = 1
+				consumer_goods_factor = 2
 			}
 		}
 

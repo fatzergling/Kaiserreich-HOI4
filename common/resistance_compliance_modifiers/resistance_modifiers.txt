@@ -69,6 +69,7 @@ resistance_25 = {
 
 	state_modifier = {
 		resistance_garrison_penetration_chance = 0.5
+			local_supplies_for_controller = -0.25
 	}
 }
 resistance_50 = {
@@ -84,6 +85,7 @@ resistance_50 = {
 
 	state_modifier = {
 		resistance_damage_to_garrison = 1
+			local_supplies_for_controller = -0.25
 	}
 }
 
@@ -103,6 +105,7 @@ resistance_75 = {
 		local_supplies_for_controller = -0.5
 		attrition_for_controller = 0.3
 		disable_strategic_redeployment_for_controller = 1
+			local_supplies_for_controller = -0.25
 	}
 
 	on_enable = {
@@ -123,6 +126,7 @@ resistance_90 = {
 	state_modifier = {
 		local_factories = -0.3
 		attrition_for_controller = 1
+			#local_supplies_for_controller = -0.25
 	}
 }
 

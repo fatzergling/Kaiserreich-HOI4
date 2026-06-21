@@ -2738,7 +2738,7 @@ shared_focus = {
 		focus = OTT_Conference_Alexandria
 	}
 
-	ai_will_do = { factor = 100 }
+	ai_will_do = { factor = 1000 }
 
 	available_if_capitulated = yes
 
@@ -3086,7 +3086,7 @@ shared_focus = {
 		focus = OTT_Ottoman_Renaissance
 	}
 
-	ai_will_do = { factor = 80 }
+	ai_will_do = { factor = 8000 }
 
 	search_filters = { FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_INDUSTRY }
 

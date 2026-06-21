@@ -536,6 +536,12 @@ country_event = { #Indonesian National Revolution - id being 13 wasn't intended 
 	}
 	after = {
 		set_global_flag = indonesian_revolution_fired
+		INS = {
+						add_equipment_to_stockpile = {
+				type = convoy
+				amount = 30
+			}
+		}
 	}
 }
 

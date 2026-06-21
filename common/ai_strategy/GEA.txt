@@ -218,7 +218,7 @@ GEA_ignore_indochina = {
 	ai_strategy = {
 		type = theatre_distribution_demand_increase
 		id = 196 #Indochina
-		value = -100
+		value = -1000
 	}
 	ai_strategy = {
 		type = theatre_distribution_demand_increase

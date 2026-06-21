@@ -258,7 +258,11 @@ JAP_fading_sun_manchuria_not_capitulated = {
 	}
 	else = {
 		#hidden_trigger = { always = no }
-		KOR = { all_core_state = { controller = { is_ally_with = JAP } } }
+		#KOR = { all_core_state = { controller = { is_ally_with = JAP } } }
+		OR = {
+			 country_exists = MAN 
+			 country_exists = FNG 
+		}
 	}
 }
 

@@ -36,7 +36,7 @@ america_shared_civil_war_strategies = {
 	ai_strategy = {
 		type = build_building
 		id = industrial_complex # Type of building
-		value = 75
+		value = 200
 	}
 
 }
@@ -48,7 +48,7 @@ america_build_factories = {
 
 	enable = {
 		has_global_flag = USA_leadup_to_the_war
-		num_of_military_factories > 75
+		num_of_military_factories > 45
 	}
 	abort = {
 		has_global_flag = USA_civil_war_over_flag

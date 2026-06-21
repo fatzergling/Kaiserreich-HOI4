@@ -129,7 +129,7 @@ JAP_invade_phillippines = {
 	ai_strategy = {
 		type = invade
 		id = PHI
-		value = 150
+		value = 300
 	}
 	
 
@@ -138,7 +138,7 @@ JAP_invade_phillippines = {
 	ai_strategy = {
 		type = area_priority
 		id = just_philippines
-		value = 150
+		value = 300
 	}
 
 }
@@ -158,13 +158,13 @@ JAP_invade_dei = {
 	ai_strategy = {
 		type = invade
 		id = DEI
-		value = 150
+		value = 300
 	}
 
 		ai_strategy = {
 		type = area_priority
 		id = east_indies
-		value = 150
+		value = 300
 	}
 
 	abort_when_not_enabled = yes
@@ -172,7 +172,10 @@ JAP_invade_dei = {
 }
 JAP_build_mils = {
 	allowed = { original_tag = JAP }
-	enable = { date < 1941.01.01 }
+	enable = { 
+		date < 1941.01.01 
+		JAP = { has_dictatorship_government = yes }
+		}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
@@ -210,6 +213,7 @@ JAP_no_garrison = {
 JAP_beat_china_first = {
 	allowed = { original_tag = JAP }
 	enable = {
+	surrender_progress < 0.01
 		any_other_country = {
 			OR = {
 				is_chinese_tag = yes
@@ -218,6 +222,28 @@ JAP_beat_china_first = {
 			}
 			has_war_with = JAP
 		}
+		NOT = {
+			AND = {
+			1048 = { # Nanjing
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = FNG
+			}
+			}
+			613 = { # Nanjing
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = FNG
+			}
+			}
+			608 = { # Nanjing
+			OR = {
+				is_controlled_by = JAP
+				is_controlled_by = FNG
+			}
+			}
+			}
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -225,6 +251,17 @@ JAP_beat_china_first = {
 		type = area_priority
 		id = china
 		value = 1000
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = manchuria
+		value = 2000
+	}
+	ai_strategy = {
+		type = area_priority
+		id = korea
+		value = 3000
 	}
 
 	ai_strategy = {
@@ -238,6 +275,18 @@ JAP_beat_china_first = {
 		area = china
 		value = 1000
 	}
+	ai_strategy = {
+		type = front_unit_request
+		area = manchuria
+		value = 2000
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		area = korea
+		value = 3000
+	}
+
 
 	ai_strategy = {
 		type = front_unit_request
@@ -256,10 +305,40 @@ JAP_beat_china_first = {
 		subtract_fronts_from_need = yes
 	}
 }
+JAP_prepare_invasions = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		#has_war_with_major = yes
+		OR = {
+		NOT = { 526 = { is_controlled_by = JAP }}
+		NOT = { 645 = { is_controlled_by = JAP }}
+		NOT = { 524 = { is_controlled_by = JAP }}
+		}
+	}
+	abort_when_not_enabled = yes
+
+		ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 300
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		ratio = 0.35
+		area = japan
+		subtract_fronts_from_need = no
+		subtract_invasions_from_need = no
+	}
+
+
+}
 
 JAP_beat_GEA_and_friends_next = {
 	allowed = { original_tag = JAP }
 	enable = {
+		surrender_progress < 0.01
 		NOT = {
 			any_other_country = {
 				OR = {
@@ -426,19 +505,19 @@ JAP_only_naval_invade_eastern_china = {
 			has_war_with = var:613.owner
 			FNG = { has_war_with = var:613.owner }
 		}
-		1075 = { NOT = { is_controlled_by_ROOT_or_ally = yes } }
+		743 = { NOT = { is_controlled_by_ROOT_or_ally = yes } }
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = invasion_unit_request
 
-		state = 613
-		state = 1075
-		state = 598
-		state = 596
-
-		value = 100
+		#state = 613
+		#state = 1075
+		#state = 598
+		#state = 596
+		state = 743
+		value = 1000
 	}
 
 	ai_strategy = {
@@ -457,7 +536,7 @@ JAP_only_naval_invade_eastern_china = {
 		state = 716
 		state = 745
 		state = 744
-		state = 743
+		#state = 743
 		state = 746
 		state = 1067
 		state = 803
@@ -476,13 +555,13 @@ JAP_only_naval_invade_eastern_china = {
 		state = 1056
 		state = 591
 
-		value = -100
+		value = -1000
 	}
 
-	ai_strategy = {
-		type = naval_invasion_focus
-		value = 100
-	}
+	#ai_strategy = {
+	#	type = naval_invasion_focus
+	#	value = 100
+	#}
 }
 JAP_kill_malaya = {
 	allowed = {
@@ -782,7 +861,7 @@ JAP_defend_home_islands_now = {
 		#state = 1100
 		strategic_region = 154
 		strategic_region = 273
-		value = 500
+		value = 5000
 	}
 
 
@@ -934,30 +1013,10 @@ JAP_only_naval_invade_china_once = {
 			has_war_with = var:613.owner
 			FNG = { has_war_with = var:613.owner }
 		}
-		1075 = { is_controlled_by_ROOT_or_ally = yes }
+		743 = { is_controlled_by_ROOT_or_ally = yes }
 	}
 	abort_when_not_enabled = yes
 
-	ai_strategy = {
-		type = invade
-		id = GEA
-		value = -1000
-	}
-	ai_strategy = {
-		type = invade
-		id = GER
-		value = -1000
-	}
-	ai_strategy = {
-		type = invade
-		id = DEI
-		value = -1000
-	}
-	ai_strategy = {
-		type = invade
-		id = PHI
-		value = -1000
-	}
 	ai_strategy = {
 		type = invade
 		id = USA
@@ -1038,19 +1097,55 @@ JAP_only_naval_invade_china_once = {
 		id = YUN
 		value = -1000
 	}
-
 	ai_strategy = {
 		type = invasion_unit_request
 
-		state_trigger = { always = yes }
-
-		value = -100
+		state = 1047
+		state = 1064
+		state = 1065
+		state = 597
+		state = 1063
+		state = 1062
+		state = 608
+		state = 609
+		state = 614
+		state = 1065
+		state = 716
+		state = 745
+		state = 744
+		state = 743
+		state = 746
+		state = 1067
+		state = 803
+		state = 1069
+		state = 1066
+		state = 747
+		state = 802
+		state = 1046
+		state = 801
+		state = 1012
+		state = 593
+		state = 592
+		state = 326
+		state = 729
+		state = 728
+		state = 1056
+		state = 591
+		value = -1000
 	}
 
-	ai_strategy = {
-		type = naval_invasion_focus
-		value = -100
-	}
+	#ai_strategy = {
+	#	type = invasion_unit_request
+#
+	#	state_trigger = { always = yes }
+#
+	#	value = -100
+	#}
+
+	#ai_strategy = {
+	#	type = naval_invasion_focus
+	#	value = -100
+	#}
 }
 
 JAP_spy_on_QIE = {

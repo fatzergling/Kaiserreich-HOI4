@@ -340,4 +340,25 @@ areas = {
 			265 #Dzungaria
 		}
 	}
+	manchuria = {
+		strategic_regions = {
+			210 #Jilin
+			219 #Heilongjiang
+			218 #Fengtian
+		}
+	}
+
+	korea = {
+		strategic_regions = {
+						191
+
+		}
+	}
+
+	japan = {
+		strategic_regions = {
+			273
+			154
+		}
+	}
 }

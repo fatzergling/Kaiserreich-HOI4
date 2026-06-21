@@ -5106,6 +5106,7 @@ RUS_german_influence = {
 			modifier = {
 				factor = 0
 				NOT = { has_country_flag = RUS_socialist_ai }
+				NOT = { has_country_flag = RUS_voskhod_active }
 				has_idea = civilian_economy
 			}
 			modifier = {
@@ -10878,7 +10879,7 @@ RUS_russian_sphere_decisions = {
 		}
 
 		is_good = no
-		days_mission_timeout = 270
+		days_mission_timeout = 300
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete RUS_defeat_central_asia"

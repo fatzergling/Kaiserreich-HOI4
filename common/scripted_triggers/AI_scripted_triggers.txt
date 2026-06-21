@@ -761,7 +761,10 @@ xinjiang_war_volunteers = {
 				}
 				AND = {
 					original_tag = QIE
-					has_country_flag = QIE_coup_failed
+					OR = {
+					QIE = { has_country_flag = QIE_coup_failed }
+					QIE = { has_country_flag = QIE_coup_failed_early }
+					}
 				}
 			}
 		}
@@ -846,6 +849,14 @@ american_german_sinophile = {
 			tag = RUS
 			has_global_flag = second_weltkrieg_has_ended
 		}
+			AND = {
+				OR = { 
+					tag = RAJ
+					tag = HND
+					tag = PRF
+				}
+				has_global_flag = india_united
+			}
 			AND = {
 				is_in_faction_with = INT
 				OR = {

@@ -3265,7 +3265,7 @@ ACW_spawn_militia_divisions = {
 			meta_effect = {
 				text = {
 					create_unit = {
-						division = "name = [DIVISION] division_template = [TEMPLATE] start_equipment_factor = 0.8"
+						division = "name = [DIVISION] division_template = [TEMPLATE] start_equipment_factor = 0.5"
 						allow_spawning_on_enemy_provs = yes
 						owner = ROOT
 						id = 1776
@@ -3292,7 +3292,7 @@ ACW_spawn_militia_divisions = {
 			meta_effect = {
 				text = {
 					create_unit = {
-						division = "name = [DIVISION] division_template = [TEMPLATE] start_equipment_factor = 0.8"
+						division = "name = [DIVISION] division_template = [TEMPLATE] start_equipment_factor = 0.5"
 						allow_spawning_on_enemy_provs = yes
 						owner = ROOT
 						id = 1776
@@ -3318,7 +3318,7 @@ ACW_spawn_militia_divisions = {
 			meta_effect = {
 				text = {
 					create_unit = {
-						division = "name = [DIVISION] division_template = [TEMPLATE] start_equipment_factor = 0.8"
+						division = "name = [DIVISION] division_template = [TEMPLATE] start_equipment_factor = 0.5"
 						allow_spawning_on_enemy_provs = yes
 						owner = ROOT
 						id = 1776

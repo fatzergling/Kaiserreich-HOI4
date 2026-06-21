@@ -138,9 +138,35 @@ WCA_be_careful_in_yorktown = {
 		execution_type = careful
 		execute_order = no
 	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = USA
+		value = 100
+	}
 }
 
 
+WCA_ignore_canada_temp = {
+	allowed = {
+		original_tag = WCA
+	}
+	enable = {
+	#	AND = {
+	#	date < 1939.1.1
+		NOT = { CAN = { has_completed_focus =  CAN_crossing_the_border }}
+
+	#	}
+	}
+	abort_when_not_enabled = yes
+
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = IMP
+		value = -200
+	}
+}
 WCA_civil_war_prepare_for_war = {
 	allowed = {
 		original_tag = WCA
@@ -206,10 +232,18 @@ WCA_protect_nyc = {
 	enable = {
 		NOT = { has_global_flag = USA_civil_war_over_flag }
 		OR = {
-			358 = { is_in_home_area = no } #NYC
-			country_exists = NEE
+			#358 = { is_in_home_area = no } #NYC
+			AND = {
+				country_exists = NEE
+				OR = {
+					931 = { is_controlled_by = NEE }
+					796 = { is_controlled_by = NEE }
+					359 = { is_controlled_by = NEE }
+				}
+			}
 			931 = { is_controlled_by = USA }
 			796 = { is_controlled_by = USA }
+			359 = { is_controlled_by = USA }
 		}
 	}
 	abort_when_not_enabled = yes
@@ -217,8 +251,10 @@ WCA_protect_nyc = {
 	ai_strategy = {
 		type = put_unit_buffers
 		states = { 358 }
-		ratio = 0.12
+		ratio = 0.1
 		area = north_america
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
 	}
 }
 
@@ -257,15 +293,18 @@ WCA_protect_detriot = {
 		NOT = { has_global_flag = USA_civil_war_over_flag }
 		CAN = { has_completed_focus =  CAN_crossing_the_border }
 		NOT = { has_war_with = CAN }
+			NOT = { 276 = {is_controlled_by = WCA }}
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = put_unit_buffers
 		states = { 393 }
-		ratio = 0.12
+		ratio = 0.05
 		area = north_america
 	}
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = no
 }
 
 WCA_protect_NEE = {

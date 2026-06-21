@@ -16,7 +16,7 @@ line_irregulars = {
 
 	irregulars_default = {
 		upgrade_prio = {
-			base = 1
+			base = 10000
 			modifier = {
 				add = 10
 				num_of_military_factories < 20
@@ -34,7 +34,7 @@ line_irregulars = {
 		target_template = {
 			regiments = {
 				irregular_infantry = 9
-				artillery_brigade = 3
+				artillery_brigade = 1
 			}
 
 			support = {

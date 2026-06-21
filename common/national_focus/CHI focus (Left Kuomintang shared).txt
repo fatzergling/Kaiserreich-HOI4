@@ -712,7 +712,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = CHI_first_congress_focus }
 		ai_will_do = {
-			base = 500
+			base = 5000
 			modifier = {
 				factor = 2
 				has_war = yes
@@ -3521,7 +3521,7 @@ focus_tree = {
 
 		prerequisite = { focus = CHI_second_national_congress }
 		ai_will_do = {
-			base = 259
+			base = 2590
 			modifier = {
 				factor = 0.5
 				has_war = yes

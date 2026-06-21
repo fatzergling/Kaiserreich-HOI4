@@ -1260,7 +1260,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_electrify
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 50
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_nationalise_nanjing_electrical_works"
@@ -1398,7 +1398,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_research
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_establish_the_yongli_chemical_plant"
@@ -1474,7 +1474,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_industry
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 70
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_renovate_shanghai_arsenal"
@@ -1568,7 +1568,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_gre_investment_decisions
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_create_nez_in_shanghai"
 		}
@@ -1637,7 +1637,7 @@ KMT_national_reconstruction_category = {
 		icon = coal
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 60
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_anhui_industrial_plan"
@@ -1834,7 +1834,7 @@ KMT_national_reconstruction_category = {
 		icon = coal
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 30
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_mining_operations_in_five_provinces"
@@ -1934,7 +1934,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_tungsten
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 30
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_mine_yaogangxian_mining_area"
@@ -2020,7 +2020,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_eng_trade_unions_support
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_central_machinery_factory"
@@ -2087,7 +2087,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_steel
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_xiangtan_steel_work"
@@ -2168,7 +2168,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_industry
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 60
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_developing_hunans_industrial_capacity"
@@ -2265,7 +2265,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_gre_investment_decisions
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_create_nez_in_guangzhou"
 		}
@@ -2343,7 +2343,7 @@ KMT_national_reconstruction_category = {
 		modifier = {
 			civilian_factory_use = 2
 		}
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove KMT_construct_yuehan_railway"
@@ -2468,7 +2468,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_hol_drain_water_lines
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 60
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_improve_han_river_infrastructure"
@@ -2595,7 +2595,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_construction
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 50
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_wuzhou_vegetable_oil_company"
@@ -2678,7 +2678,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_construction
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_nanning_grain_storage"
@@ -2761,7 +2761,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_rubber
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 30
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_green_gold_in_qiongya"
@@ -2839,7 +2839,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_factory
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 50
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_chongqing_electric_steel_mill"
@@ -2921,7 +2921,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_industry
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_chongqing_weapon_plant"
@@ -2990,7 +2990,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_oil
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 30
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_tap_into_sichuans_natural_reserves"
@@ -3068,7 +3068,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_aluminium
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 30
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_bauxite_extraction_in_guizhou"
@@ -3145,7 +3145,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_aluminium
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 30
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_expand_tin_production_in_gejiu"
@@ -3231,7 +3231,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_industry
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_refurbish_gongxian_arsenal"
@@ -3300,7 +3300,7 @@ KMT_national_reconstruction_category = {
 		icon = coal
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_kaifeng_mines"
@@ -3380,7 +3380,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_industry
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 60
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_revitalise_hanyang_industry"
@@ -3487,7 +3487,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_hol_drain_water_lines
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_modernise_yellow_river_levees"
@@ -3598,7 +3598,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_steel
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_nationalise_beijing_steel"
@@ -3679,7 +3679,7 @@ KMT_national_reconstruction_category = {
 		icon = coal
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_nationalise_german_mines_zibo"
@@ -3772,7 +3772,7 @@ KMT_national_reconstruction_category = {
 		modifier = {
 			civilian_factory_use = 3
 		}
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove KMT_complete_the_tongpu_railway"
 			if = {
@@ -3938,7 +3938,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_industry
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_revive_jinan_arsenal"
@@ -4006,7 +4006,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_industry
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_refurbish_taiyuan_arsenal"
@@ -4075,7 +4075,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_oil
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_encourage_oil_extraction_in_yanchang"
@@ -4156,7 +4156,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_factory
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_revive_gansu_machine_works"
@@ -4230,7 +4230,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_construction
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 50
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_qinghai_cultivation_programme"
@@ -4363,7 +4363,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_construction
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 50
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_jinghui_irrigation_canal"
@@ -4445,7 +4445,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_construction
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 50
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_minsheng_irrigation_canal"
@@ -4539,7 +4539,7 @@ KMT_national_reconstruction_category = {
 		modifier = {
 			civilian_factory_use = 2
 		}
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove KMT_complete_the_longhai_railway"
 			if = {
@@ -4670,7 +4670,7 @@ KMT_national_reconstruction_category = {
 		modifier = {
 			civilian_factory_use = 2
 		}
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove KMT_create_the_lanxin_railway"
 			if = {
@@ -4832,7 +4832,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_industry
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 40
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_appropriate_shenyang_arsenal"
@@ -4897,7 +4897,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_construction
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 50
 		complete_effect = {
 			log = "[GetLogRoot][GetLogFrom]: Decision complete KMT_finish_fengman_hydroelectric_dam"
@@ -5012,7 +5012,7 @@ KMT_national_reconstruction_category = {
 		icon = coal
 		priority = 30
 		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
+		ai_will_do = { factor = 2500 }
 		cost = 60
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_nationalising_manchurian_iron_industry"
@@ -5099,7 +5099,7 @@ KMT_national_reconstruction_category = {
 		icon = GFX_decision_generic_research
 		cost = 150
 		priority = 100
-		ai_will_do = { factor = 100 }
+		ai_will_do = { factor = 1000 }
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete KMT_add_research_slot_decision"
 			add_research_slot_until_five = yes

@@ -603,6 +603,7 @@ ideas = {
 			allowed = { always = no }
 			modifier = {
 				production_speed_buildings_factor = 0.2
+				industry_free_repair_factor = 2.5
 			}
 		}
 		CHI_tender_to_masses_zhang_idea = {

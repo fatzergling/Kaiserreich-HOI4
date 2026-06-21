@@ -396,3 +396,74 @@ FRA_support_CNT = {
 	}
 }
 
+
+
+INT_dont_support_japan = {
+	allowed = {
+		is_in_faction_with = INT
+	}
+	enable = {
+		JAP = { has_war = yes }
+		JAP = { has_socialist_government = no }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = JAP
+		value = -400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = JAP
+		value = -4000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = JAP
+		value = -400
+	}
+}
+
+JAP_dont_support_INT = {
+	allowed = {
+		tag = JAP
+	}
+	enable = {
+		JAP = { has_socialist_government = no }
+		FRA = { has_war = yes }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = support
+		id = FRA
+		value = -400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = FRA
+		value = -4000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FRA
+		value = -400
+	}
+		ai_strategy = {
+		type = support
+		id = ENG
+		value = -400
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = ENG
+		value = -4000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ENG
+		value = -400
+	}
+
+}

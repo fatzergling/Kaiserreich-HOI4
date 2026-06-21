@@ -32,7 +32,7 @@ NDefines.NSupply.DEFAULT_STARTING_TRUCK_RATIO = 5
 -- Resistance
 NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_PER_STABILITY_LOSS = 0.1	-- Vanilla is 0.2
 NDefines.NResistance.MAXIMUM_GARRISON_HARDNESS_WHEN_ATTACKED = 0.70         -- vanilla is 0.90
-NDefines.NBuildings.BASE_FACTORY_REPAIR = 0.1										-- Default repair rate in percentage before factories are taken into account (1.0 equals 1%).
+NDefines.NBuildings.BASE_FACTORY_REPAIR = 0.03										-- Default repair rate in percentage before factories are taken into account (1.0 equals 1%).
 NDefines.NBuildings.BASE_FACTORY_REPAIR_FACTOR = 6.0								-- Factory speed modifier when repairing.
 NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_REPAIRING = 1.2
 NDefines.NAI.CONSTRUCTION_PRIO_FACTOR_OCCUPIED_TERRITORY = 0.7

@@ -182,6 +182,45 @@ china_declare_war_if_you_have_wargoals = {
 			has_country_flag = KUM_is_chinese_tag
 		}
 		has_war = no
+		NOT = {
+			AND = {
+			608 = { is_controlled_by = THIS }
+			608 = { NOT = { is_core_of = THIS }}
+			}
+		}
+		NOT = {
+			AND = {
+			613 = { is_controlled_by = THIS }
+			613 = { NOT = { is_core_of = THIS }}
+			}
+		}
+		NOT = {
+			AND = {
+			1048 = { is_controlled_by = THIS }
+			1048 = { NOT = { is_core_of = THIS }}
+			}
+		}
+		NOT = {
+			AND = {
+			592 = { is_controlled_by = THIS }
+			592 = { NOT = { is_core_of = THIS }}
+			}
+		}
+				NOT = {
+			AND = {
+			283 = { is_controlled_by = THIS }
+			283 = { NOT = { is_core_of = THIS }}
+			}
+		}
+		#gotta wait 
+		NOT = {
+			AND = {
+			country_exists = FNG
+			date > 1939.7.1
+
+			}
+		}
+
 	}
 	abort_when_not_enabled = yes
 
@@ -202,6 +241,65 @@ china_declare_war_if_you_have_wargoals = {
 	ai_strategy = { type = declare_war id = YUN value = 500 }
 }
 
+china_core_before_declaring_war = {
+		allowed = {
+		is_chinese_or_potential_chinese_tag = yes
+	}
+	enable = {
+		if = {
+			limit = {
+				original_tag = KUM
+			}
+			has_country_flag = KUM_is_chinese_tag
+		}
+		has_war = no
+		OR = {
+			AND = {
+			608 = { is_controlled_by = THIS }
+			608 = { NOT = { is_core_of = THIS }}
+			}
+			AND = {
+			613 = { is_controlled_by = THIS }
+			613 = { NOT = { is_core_of = THIS }}
+			}
+			AND = {
+			1048 = { is_controlled_by = THIS }
+			1048 = { NOT = { is_core_of = THIS }}
+			}
+			AND = {
+			592 = { is_controlled_by = THIS }
+			592 = { NOT = { is_core_of = THIS }}
+			}
+			AND = {
+			283 = { is_controlled_by = THIS }
+			283 = { NOT = { is_core_of = THIS }}
+			}
+			AND = {
+			country_exists = FNG
+			date > 1939.7.1
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = declare_war id = ANQ value = -500 }
+	ai_strategy = { type = declare_war id = CHI value = -500 }
+	ai_strategy = { type = declare_war id = FNG value = -500 }
+	ai_strategy = { type = declare_war id = GXC value = -500 }
+	ai_strategy = { type = declare_war id = HNN value = -500 }
+	ai_strategy = { type = declare_war id = LEP value = -500 }
+	ai_strategy = { type = declare_war id = MON value = -500 }
+	ai_strategy = { type = declare_war id = QIE value = -500 }
+	ai_strategy = { type = declare_war id = SHX value = -500 }
+	ai_strategy = { type = declare_war id = SIK value = -500 }
+	ai_strategy = { type = declare_war id = SHD value = -500 }
+	ai_strategy = { type = declare_war id = SZC value = -500 }
+	ai_strategy = { type = declare_war id = KUM value = -500 }
+	ai_strategy = { type = declare_war id = XSM value = -500 }
+	ai_strategy = { type = declare_war id = YUN value = -500 }
+
+}
+
 china_dont_declare_multiple_wars = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -219,7 +317,7 @@ china_dont_declare_multiple_wars = {
 
 	ai_strategy = {
 		type = avoid_starting_wars
-		value = -1000
+		value = -10000
 	}
 }
 
@@ -512,7 +610,26 @@ china_united_front_leader_wants_to_invite_warlords_KUM = {
 	}
 	enable = {
 		is_faction_leader = yes
+		OR = {
 		KUM = { has_country_flag = KUM_is_chinese_tag }
+		AND = {
+			OR = {
+		KUM = { has_country_leader  = KUM_bashir_shah}
+		KUM = { has_country_leader  = KUM_nasir_shah }
+		KUM = { has_country_leader  = KUM_yulbars_khan }
+
+			}
+			QIE = {
+				NOT = {
+				OR = {
+									has_country_flag = QIE_coup_failed
+									has_country_flag = QIE_coup_failed_early
+				}
+
+				}
+			}
+		}
+		}
 		#KUM = {
 		#	OR = {
 		#		has_offensive_war = no
@@ -1412,22 +1529,129 @@ XSM_crush_mongolia = {
 	}
 }
 
-CUF_kill_MON = {
+
+
+CUF_kill_FNG = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
 	}
 	enable = {
 		has_war_with = JAP
-		has_war_with = MON
+		has_war_with = FNG
 	}
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = front_control
-		tag = MON
-		ordertype = front
-		execution_type = rush_weak
-		execute_order = yes
+		type = front_unit_request
+		tag = FNG
+		value = 150
 	}
+}
+
+CUF_get_access_from_russia = {
+	allowed = {
+		is_chinese_or_potential_chinese_tag = yes
+	}
+	enable = {
+		has_war_with = JAP
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = RUS
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = RUS
+		target = military_access
+		value = 1000
+	}
+}
+
+russia_approve_access = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		CUF = { has_war_with = JAP }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = XSM
+		target = military_access
+		value = 1000
+	}
+		ai_strategy = {
+		type = diplo_action_acceptance
+		id = QIE
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = SHX
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = SIK
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = LEP
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = ANQ
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = SHD
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = CHI
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = GXC
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = YUN
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = HNN
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = SZC
+		target = military_access
+		value = 1000
+	}
+
 }
 

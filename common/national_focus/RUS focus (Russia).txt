@@ -16971,7 +16971,7 @@ focus_tree = {
 				date > 1939.1.1
 			}
 			modifier = {
-				add = 1000
+				add = 10000
 				has_active_mission = RUS_army_focus_demand
 			}
 			modifier = {
@@ -17330,7 +17330,7 @@ focus_tree = {
 				date > 1939.1.1
 			}
 			modifier = {
-				add = 1000
+				add = 10000
 				has_active_mission = RUS_army_focus_demand
 			}
 			modifier = {
@@ -21739,7 +21739,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		ai_will_do = {
-			base = 5
+			base = 1000
 			modifier = {
 				add = 2
 				date > 1937.1.1
@@ -22120,7 +22120,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1500
+			factor = 15000
 			modifier = {
 				add = 200
 				date > 1937.1.1
@@ -25246,7 +25246,7 @@ focus_tree = {
 				date > 1940.1.1
 			}
 			modifier = {
-				add = 1000
+				add = 10000
 				has_active_mission = RUS_navy_focus_demand
 			}
 			modifier = {

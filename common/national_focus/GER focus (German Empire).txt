@@ -8657,7 +8657,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
-				add = 15
+				add = 1500
 				has_completed_focus = GER_reinforce_alsace
 			}
 		}
@@ -8802,7 +8802,7 @@ focus_tree = {
 		x = 2
 		y = 2
 
-		ai_will_do = { factor = 20 }
+		ai_will_do = { factor = 2000 }
 		prerequisite = {
 			focus = GER_china_expeditionary_corps
 		}
@@ -8841,7 +8841,7 @@ focus_tree = {
 		x = 1
 		y = 3
 
-		ai_will_do = { factor = 30 }
+		ai_will_do = { factor = 3000 }
 		prerequisite = {
 			focus = GER_gea_regiments
 		}

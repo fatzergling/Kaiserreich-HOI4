@@ -25,6 +25,7 @@ brazil_focus_on_revolts = {
 	}
 	enable = {
 		has_civil_war = yes
+		surrender_progress > 0.2
 	}
 
 	abort_when_not_enabled = yes

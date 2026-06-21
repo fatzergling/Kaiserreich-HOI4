@@ -10,4 +10,34 @@ peace_ai_desires = {
 		}
 		ai_desire = 400
 	}
+	CHI_give_away_some_lands_to_SHX = {
+		peace_action_type = take_states
+		enable = {
+			is_chinese_tag = yes
+			SHX = { is_subject_of = ROOT.FROM }
+			ROOT.FROM.FROM.FROM = {
+								OR = {
+					state = 799
+					state = 615
+				}
+
+			}
+		}
+		ai_desire = -4000
+	}
+	SHX_take_desired_lands = {
+		peace_action_type = take_states
+		enable = {
+			tag = SHX
+			ROOT.FROM.FROM.FROM = {
+								OR = {
+					state = 799
+					state = 615
+				}
+
+			}
+		}
+		ai_desire = 4000
+	}
+
 }

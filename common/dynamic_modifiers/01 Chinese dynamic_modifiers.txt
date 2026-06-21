@@ -46,6 +46,7 @@ CHN_poor_industry = {
 	production_speed_buildings_factor = CHN_industry_weakness
 	industrial_capacity_factory = CHN_industry_weakness
 	equipment_capture = CHN_industry_weakness4
+					industry_free_repair_factor = CHN_industry_weakness5
 
 }
 

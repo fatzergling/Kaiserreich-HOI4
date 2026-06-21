@@ -4,7 +4,7 @@
 # By Zankoas and The Alpha Dog
 ################################
 
-@JAP_fading_sun_timeout = 360
+@JAP_fading_sun_timeout = 270
 JAP_fading_sun = {
 	JAP_fading_sun_timer = {
 		icon = revolt

@@ -7045,6 +7045,16 @@ focus_tree = {
 				custom_effect_tooltip = tooltip_white_line
 				custom_effect_tooltip = JAP_CHN_may_attack_FNG_tt
 			}
+			hidden_effect = {
+						CHN = {
+			set_global_flag = {
+				flag = CHN_delay_northeastern_gambit_by_one_month_flag
+				days = 90
+				value = 1
+			}
+		}
+
+			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
