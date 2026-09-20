@@ -65,6 +65,7 @@ ANQ_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = ANQ value = 1 }
 }
+
 CHI_do_not_justify_wars = {
 	reversed = yes
 
@@ -73,6 +74,7 @@ CHI_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = CHI value = 1 }
 }
+
 FNG_do_not_justify_wars = {
 	reversed = yes
 
@@ -81,6 +83,7 @@ FNG_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = FNG value = 1 }
 }
+
 GXC_do_not_justify_wars = {
 	reversed = yes
 
@@ -89,6 +92,7 @@ GXC_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = GXC value = 1 }
 }
+
 HNN_do_not_justify_wars = {
 	reversed = yes
 
@@ -97,6 +101,7 @@ HNN_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = HNN value = 1 }
 }
+
 LEP_do_not_justify_wars = {
 	reversed = yes
 
@@ -105,6 +110,7 @@ LEP_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = LEP value = 1 }
 }
+
 QIE_do_not_justify_wars = {
 	reversed = yes
 
@@ -113,6 +119,7 @@ QIE_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = QIE value = 1 }
 }
+
 SHX_do_not_justify_wars = {
 	reversed = yes
 
@@ -121,6 +128,7 @@ SHX_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = SHX value = 1 }
 }
+
 SIK_do_not_justify_wars = {
 	reversed = yes
 
@@ -129,6 +137,7 @@ SIK_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = SIK value = 1 }
 }
+
 SHD_do_not_justify_wars = {
 	reversed = yes
 
@@ -137,6 +146,7 @@ SHD_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = SHD value = 1 }
 }
+
 SZC_do_not_justify_wars = {
 	reversed = yes
 
@@ -145,6 +155,7 @@ SZC_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = SZC value = 1 }
 }
+
 XSM_do_not_justify_wars = {
 	reversed = yes
 
@@ -153,6 +164,7 @@ XSM_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = XSM value = 1 }
 }
+
 YUN_do_not_justify_wars = {
 	reversed = yes
 
@@ -161,6 +173,7 @@ YUN_do_not_justify_wars = {
 
 	ai_strategy = { type = ignore_claim id = YUN value = 1 }
 }
+
 KUM_do_not_justify_wars = {
 	reversed = yes
 
@@ -388,6 +401,7 @@ china_united_front_leader_wants_to_invite_warlords_QIE = {
 	ai_strategy = { type = befriend id = QIE value = 1000 }
 	ai_strategy = { type = alliance id = QIE value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_SHX = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -406,6 +420,7 @@ china_united_front_leader_wants_to_invite_warlords_SHX = {
 	ai_strategy = { type = befriend id = SHX value = 1000 }
 	ai_strategy = { type = alliance id = SHX value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_FNG = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -424,6 +439,7 @@ china_united_front_leader_wants_to_invite_warlords_FNG = {
 	ai_strategy = { type = befriend id = FNG value = 1000 }
 	ai_strategy = { type = alliance id = FNG value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_LEP = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -442,6 +458,7 @@ china_united_front_leader_wants_to_invite_warlords_LEP = {
 	ai_strategy = { type = befriend id = LEP value = 1000 }
 	ai_strategy = { type = alliance id = LEP value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_ANQ = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -460,6 +477,7 @@ china_united_front_leader_wants_to_invite_warlords_ANQ = {
 	ai_strategy = { type = befriend id = ANQ value = 1000 }
 	ai_strategy = { type = alliance id = ANQ value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_CHI = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -478,6 +496,7 @@ china_united_front_leader_wants_to_invite_warlords_CHI = {
 	ai_strategy = { type = befriend id = CHI value = 1000 }
 	ai_strategy = { type = alliance id = CHI value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_SHD = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -496,6 +515,7 @@ china_united_front_leader_wants_to_invite_warlords_SHD = {
 	ai_strategy = { type = befriend id = SHD value = 1000 }
 	ai_strategy = { type = alliance id = SHD value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_GXC = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -514,6 +534,7 @@ china_united_front_leader_wants_to_invite_warlords_GXC = {
 	ai_strategy = { type = befriend id = GXC value = 1000 }
 	ai_strategy = { type = alliance id = GXC value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_HNN = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -532,6 +553,7 @@ china_united_front_leader_wants_to_invite_warlords_HNN = {
 	ai_strategy = { type = befriend id = HNN value = 1000 }
 	ai_strategy = { type = alliance id = HNN value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_YUN = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -550,6 +572,7 @@ china_united_front_leader_wants_to_invite_warlords_YUN = {
 	ai_strategy = { type = befriend id = YUN value = 1000 }
 	ai_strategy = { type = alliance id = YUN value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_SZC = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -568,6 +591,7 @@ china_united_front_leader_wants_to_invite_warlords_SZC = {
 	ai_strategy = { type = befriend id = SZC value = 1000 }
 	ai_strategy = { type = alliance id = SZC value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_XSM = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -586,6 +610,7 @@ china_united_front_leader_wants_to_invite_warlords_XSM = {
 	ai_strategy = { type = befriend id = XSM value = 1000 }
 	ai_strategy = { type = alliance id = XSM value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_SIK = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -604,6 +629,7 @@ china_united_front_leader_wants_to_invite_warlords_SIK = {
 	ai_strategy = { type = befriend id = SIK value = 1000 }
 	ai_strategy = { type = alliance id = SIK value = 1000 }
 }
+
 china_united_front_leader_wants_to_invite_warlords_KUM = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -838,6 +864,7 @@ china_warlords_support_united_front = {
 	ai_strategy = { type = diplo_action_acceptance id = KUM target = call_allies value = 1000 }
 	ai_strategy = { type = diplo_action_acceptance id = KUM target = join_allies value = 1000 }
 }
+
 china_disunity_of_the_united_front = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -870,6 +897,7 @@ china_disunity_of_the_united_front = {
 		value = -25
 	}
 }
+
 china_infighting_of_the_united_front = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -925,6 +953,7 @@ china_infighting_of_the_united_front = {
 		value = -1000
 	}
 }
+
 china_unity_of_the_united_front_1 = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -966,6 +995,7 @@ china_unity_of_the_united_front_1 = {
 		value = 5
 	}
 }
+
 china_unity_of_the_united_front_2 = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -1010,6 +1040,7 @@ china_unity_of_the_united_front_2 = {
 		value = 25
 	}
 }
+
 china_unity_of_the_united_front_3 = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -1048,6 +1079,7 @@ china_unity_of_the_united_front_3 = {
 		value = 51
 	}
 }
+
 china_warlords_garrison_beijing_area = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -1081,6 +1113,7 @@ china_warlords_garrison_beijing_area = {
 		subtract_fronts_from_need = yes
 	}
 }
+
 china_warlords_garrison_nanjing_area = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -1112,6 +1145,7 @@ china_warlords_garrison_nanjing_area = {
 		subtract_fronts_from_need = yes
 	}
 }
+
 china_warlords_garrison_guangdong_area = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -1144,6 +1178,7 @@ china_warlords_garrison_guangdong_area = {
 		subtract_fronts_from_need = yes
 	}
 }
+
 china_warlords_avoid_crossing_the_yellow_sea_during_war_with_JAP = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -1159,6 +1194,7 @@ china_warlords_avoid_crossing_the_yellow_sea_during_war_with_JAP = {
 		value = 1000
 	}
 }
+
 china_warlords_dont_attack_during_JAP_continental_warfare = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes
@@ -1951,9 +1987,11 @@ CHN_careful_attack_timer = {
 		tag = CUF
 		has_equipment = { infantry_equipment > 0 }
 		has_war_with = JAP
-		set_temp_variable = { CUF_attack_day = global.num_days }
-		modulo_temp_variable = { CUF_attack_day = 30 }
-		check_variable = { CUF_attack_day < 8 }
+		check_expr = { #CUF_attack_day
+			value = global.num_days
+			mod = 30
+			less_than = 8
+		}
 	}
 
 	abort_when_not_enabled = yes
@@ -2086,9 +2124,11 @@ CUF_careful_defend_timer = {
 		tag = CUF
 		has_war_with = JAP
 		NOT = { JAP = { surrender_progress > 0.10 } }
-		set_temp_variable = { CUF_passive_day = global.num_days }
-		modulo_temp_variable = { CUF_passive_day = 30 }
-		check_variable = { CUF_passive_day > 7 }
+		check_expr = { #CUF_passive_day
+			value = global.num_days
+			mod = 30
+			greater_than = 7
+		}
 	}
 
 	abort_when_not_enabled = yes
@@ -2106,6 +2146,7 @@ CUF_careful_defend_timer = {
 		execute_order = no
 	}
 }
+
 chinese_tags_buy_equipment_from_market_for_divisions = {
 	allowed = {
 		is_chinese_or_potential_chinese_tag = yes

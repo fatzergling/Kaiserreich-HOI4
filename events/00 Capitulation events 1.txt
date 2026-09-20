@@ -145,6 +145,10 @@ country_event = {
 			country_event = capitulation_events.3
 		}
 
+		remove_ideas = MAF_colonial_budget_idea
+		clear_variable = MAF_offmap_civs
+		clear_variable = MAF_offmap_mils
+		clear_variable = MAF_weekly_manpower
 		remove_relation_rule_override = {
 			trigger = MAF_can_send_volunteers_to_target
 			can_send_volunteers = yes
@@ -1233,7 +1237,7 @@ country_event = {
 						is_controlled_by = NFA
 						is_core_of = FRA
 					}
-					subtract_from_variable = { var = ROOT.cof_states_need value = 1 }
+					subtract_from_variable = { ROOT.cof_states_need = 1 }
 				}
 			}
 		}
@@ -1257,7 +1261,7 @@ country_event = {
 					}
 				}
 			}
-			add_to_variable = { var = ROOT.cof_states_given value = 1 }
+			add_to_variable = { ROOT.cof_states_given = 1 }
 			var:state_target = { set_state_controller_to = ROOT }
 		}
 		else_if = {
@@ -1278,7 +1282,7 @@ country_event = {
 					}
 				}
 			}
-			add_to_variable = { var = ROOT.cof_states_given value = 1 }
+			add_to_variable = { ROOT.cof_states_given = 1 }
 			var:state_target = { set_state_controller_to = ROOT }
 		}
 		else_if = {
@@ -1293,14 +1297,14 @@ country_event = {
 					}
 				}
 			}
-			add_to_variable = { var = ROOT.cof_states_given value = 1 }
+			add_to_variable = { ROOT.cof_states_given = 1 }
 			var:state_target = { set_state_controller_to = ROOT }
 		}
 		else_if = {
 			limit = {
 				GER = { controls_state = 21 }
 			}
-			add_to_variable = { var = ROOT.cof_states_given value = 1 }
+			add_to_variable = { ROOT.cof_states_given = 1 }
 			set_state_controller = 21
 		}
 		else_if = {
@@ -1315,7 +1319,7 @@ country_event = {
 					}
 				}
 			}
-			add_to_variable = { var = ROOT.cof_states_given value = 1 }
+			add_to_variable = { ROOT.cof_states_given = 1 }
 			var:state_target = { set_state_controller_to = ROOT }
 		}
 		else_if = {
@@ -1329,7 +1333,7 @@ country_event = {
 					}
 				}
 			}
-			add_to_variable = { var = ROOT.cof_states_given value = 1 }
+			add_to_variable = { ROOT.cof_states_given = 1 }
 			var:state_target = { set_state_controller_to = ROOT }
 		}
 
@@ -1352,7 +1356,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 			else_if = {
@@ -1373,7 +1377,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 			else_if = {
@@ -1388,7 +1392,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 			else_if = {
@@ -1403,7 +1407,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 			else_if = {
@@ -1417,7 +1421,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 		}
@@ -1441,7 +1445,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 			else_if = {
@@ -1462,7 +1466,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 			else_if = {
@@ -1477,7 +1481,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 			else_if = {
@@ -1492,7 +1496,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 			else_if = {
@@ -1506,7 +1510,7 @@ country_event = {
 						}
 					}
 				}
-				add_to_variable = { var = ROOT.cof_states_given value = 1 }
+				add_to_variable = { ROOT.cof_states_given = 1 }
 				var:state_target = { set_state_controller_to = ROOT }
 			}
 		}

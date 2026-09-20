@@ -402,6 +402,9 @@
  VEN_navegare_necesse_vivere_non_necesse: "Navegare necesse, viviere non necesse"
  VEN_navegare_necesse_vivere_non_necesse_desc: "\"Navigating is Necessary, Living is not\" While Venezuela never had a large fleet, it has strong traditions going back to the country's founding, and is now a modern fighting force to be reckoned with. Its sailors and officers are highly trained and disciplined, ready to protect the nation like their predecessors did."
 
+### Bookmark ###
+ VEN_KR_gathering_storm_desc: "In 1928, Juan Vicente \"the Catfish\" Gómez, President since 1908 and the man largely responsible for building the petroleum industry the nation now depends upon, was deposed. Democracy was restored, elections were held, and the Generación del 1926 came to power. Yet the Generación is far from united: the Acción Democrática, the Unión Democrática Republicana, and the Partido Socialista de Venezuela pull it in social-democratic, liberal, and socialist directions respectively. As things stand, Venezuela's hard-won stability feels anything but assured..."
+
 ### Intro Screen ###
  VEN_country_intro_background: "GFX_VEN_intro"
  VEN_country_intro_header: "Venezuela's Place in the World"
@@ -639,7 +642,7 @@
  venezuela_events.47.a: "A socialist Venezuela? Really?"
 
  venezuela_events.48.t: "U.S-Backed Coup in Venezuela"
- venezuela_events.48.d: "News from Venezuela has leaked out this morning that the recent electoral victory by the socialist PSV has been undone through the work of a major military putsch led by General Marcos Pérez Jiménez. After bloody street fighting against hastily assembled leftist forces the Army regained control of the Palacio Legislativo and arrested a number of leading PSV figures.\n\nThere is little doubt either domestically or internationally that a newly emboldened United States is in some way responsible for backing General Jiménez, for Venezuela's strategic importance makes it vital to American interests. Whether such a bold step represents a new U.S foreign policy shift is unknown, but for now Venezuela is under new management."
+ venezuela_events.48.d: "News from Venezuela has leaked out this morning that the recent electoral victory by the socialist PSV has been undone through the work of a major military putsch led by General Marcos Pérez Jiménez. After bloody street fighting against hastily assembled leftist forces the Army regained control of the Palacio Legislativo and arrested a number of leading PSV figures.\n\nThere is little doubt either domestically or internationally that a newly emboldened United States is in some way responsible for backing General Jiménez, for Venezuela's strategic importance makes it vital to American interests. Whether such a bold step represents a new U.S. foreign policy shift is unknown, but for now Venezuela is under new management."
  venezuela_events.48.a: "The Eagle still has some life in her!"
 
 ### Characters ###

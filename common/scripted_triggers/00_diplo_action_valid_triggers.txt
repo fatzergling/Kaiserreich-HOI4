@@ -27,10 +27,11 @@ is_diplomatic_action_valid_join_faction = {
 }
 
 is_diplomatic_action_valid_offer_join_faction = {
-OR = {
-		is_chinese_tag = yes
-			tag = KUM
-		 }	FROM = { tag = CUF }
+	FROM = { tag = CUF }
+	OR = {
+	is_chinese_tag = yes
+	tag = KUM
+	}
 }
 
 is_diplomatic_action_valid_leave_faction = {

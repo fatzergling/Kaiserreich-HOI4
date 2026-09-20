@@ -48,8 +48,6 @@
  TIB_clash: "War in the Himalayas"
  TIB_intervene_himalayas: "Intervene in [From.GetNameDef]"
  TIB_intervene_himalayas_desc: "The southern kingdoms are in chaos. If we are to liberate this vast land, we must strike now."
- TIB_restore_order_tibet: "Restore Order in [From.GetName]"
- TIB_restore_order_tibet_desc: "Now that [From.GetName] is under [Root.GetAdjective] control, we must make efforts to put down any lingering resistance and integrate it into the rest of [Root.GetNameDef]."
  TIB_NEP_close_border_tt: "With opposition blocked from entering Tibet, the Tibetan §PRegent§! will be able to consolidate power."
  TIB_NEP_open_border_tt: "The §STibet Improvement Party§! will not be stopped from entering Tibet, potentially allowing them to seize power."
 
@@ -308,6 +306,9 @@
 
  TIB_removing_mongol_threat: "Concede to the Tsikhang"
  TIB_removing_mongol_threat_desc: "We must negotiate with the Tsikhang if we are to pass the badly needed education reforms."
+
+### Bookmark ###
+ TIB_KR_gathering_storm_desc: "The death of the 13th Dalai Lama in 1933 left Tibet without clear leadership, and his deathbed warnings of strife and chaos have proven prophetic. The Reting Rinpoche holds the regency in name, but real power lies with Trimön, who has used it to drive the reformist Kyicho Kuntun underground. The last legal opposition is Tsarong Dzasa's Young Tibet. In exile, the 9th Panchen Lama and the disgraced general Kunphela agitate for revolution from across the border. The search for the 14th Dalai Lama continues, and whoever guides that process will hold the strongest hand in whatever comes next."
 
 ### Intro Screen ###
  TIB_country_intro_background: "GFX_TIB_intro"

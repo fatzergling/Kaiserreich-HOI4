@@ -3,7 +3,7 @@
 #################
 country_and_all_subjects = {
 	input = game:scope
-	operators =  { country_and_all_subjects }
+	operators = { country_and_all_subjects }
 	name = COLLECTION_COUNTRY_AND_ALL_SUBJECTS
 }
 
@@ -250,4 +250,8 @@ anti_communist_controlled_states_my_continent = {
 			}
 		}
 	}
+}
+potential_intermarium_countries = {
+	input = constant:country_groups.potential_intermarium_countries
+	name = collection_potential_intermarium_countries
 }

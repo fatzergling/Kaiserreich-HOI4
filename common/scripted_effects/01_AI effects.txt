@@ -103,8 +103,8 @@ send_volunteers_to_TARGET = {
 					}
 					}
 			add_ai_strategy = {
-				type = event_target:volunteer_target
-				id = ROOT
+				type = send_lend_lease_desire
+				id = event_target:volunteer_target
 				value = 4000
 			}
 			}
@@ -157,7 +157,7 @@ clear_volunteers_to_TARGET = {
 					}
 			add_ai_strategy = {
 				type = send_lend_lease_desire
-				id = ROOT
+				id = event_target:volunteer_target
 				value = -4000
 			}
 			}
@@ -221,7 +221,7 @@ send_volunteers_to_PREV = {
 					}
 			add_ai_strategy = {
 				type = send_lend_lease_desire
-				id = ROOT
+				id = PREV
 				value = 4000
 			}
 			}
@@ -267,7 +267,7 @@ clear_volunteers_to_PREV = {
 					}
 			add_ai_strategy = {
 				type = send_lend_lease_desire
-				id = ROOT
+				id = PREV
 				value = -4000
 			}
 			}

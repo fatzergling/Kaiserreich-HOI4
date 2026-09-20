@@ -344,10 +344,7 @@ south_african_civil_war_volunteers = {
 				OR = {
 					is_in_faction_with = ENT
 					is_ally_with = ENT
-					original_tag = GER
 					original_tag = MAF
-					original_tag = HOL
-					original_tag = SWE
 				}
 			}
 		}
@@ -362,7 +359,6 @@ south_african_civil_war_volunteers = {
 			AND = {
 				PREV = { is_ally_with = ZAR }
 				OR = {
-					original_tag = GER
 					original_tag = MAF
 					original_tag = HOL
 					original_tag = SWE
@@ -1095,13 +1091,11 @@ levantine_war_volunteers = {
 				original_tag = PER
 				has_war_with = OTT
 			}
-			AND = {
-				OR = {
-					original_tag = RUS
-					has_socialist_government = yes
-				}
-				both_socialist_or_both_not_socialist = yes
+			OR = {
+				original_tag = RUS
+				has_socialist_government = yes
 			}
+			both_socialist_or_both_not_socialist = yes
 		}
 		AND = {
 			PREV = {

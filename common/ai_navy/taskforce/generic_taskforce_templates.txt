@@ -2,19 +2,15 @@ StrikeForce_1 = {
 	allowed = {
 		NOT = {
 			OR = {
-			original_tag = JAP
-			original_tag = ENG
-			original_tag = RUS
-			original_tag = USA 
-			original_tag = ACC
-			original_tag = WCA
-			original_tag = APG
-			original_tag = GER
-			original_tag = FRA
-			original_tag = GEA
-			original_tag = NEE
+				original_tag = JAP
+				original_tag = ENG
+				original_tag = RUS
+				original_tag = GER
+				original_tag = GEA
+				original_tag = FRA
+				is_american_tag = yes
 			}
-		}		
+		}
 	}
 	ai_will_do = {
 		factor = 1
@@ -52,19 +48,15 @@ StrikeForce_2 = {
 	allowed = {
 		NOT = {
 			OR = {
-			original_tag = JAP
-			original_tag = ENG
-			original_tag = RUS
-			original_tag = USA 
-			original_tag = ACC
-			original_tag = WCA
-			original_tag = APG
-			original_tag = GER
-			original_tag = FRA
-			original_tag = GEA
-			original_tag = NEE
+				original_tag = JAP
+				original_tag = ENG
+				original_tag = RUS
+				original_tag = GER
+				original_tag = GEA
+				original_tag = FRA
+				is_american_tag = yes
 			}
-		}		
+		}
 	}
 	ai_will_do = {
 		factor = 1
@@ -137,19 +129,15 @@ PatrolDominanceForce_CA_1 = {
 	allowed = {
 		NOT = {
 			OR = {
-			original_tag = JAP
-			original_tag = ENG
-			original_tag = RUS
-			original_tag = USA 
-			original_tag = ACC
-			original_tag = WCA
-			original_tag = APG
-			original_tag = GER
-			original_tag = FRA
-			original_tag = GEA
-			original_tag = NEE
+				original_tag = JAP
+				original_tag = ENG
+				original_tag = RUS
+				original_tag = GER
+				original_tag = GEA
+				original_tag = FRA
+				is_american_tag = yes
 			}
-		}		
+		}
 	}
 	ai_will_do = {
 		factor = 5
@@ -178,21 +166,15 @@ PatrolDominanceForce_BC_1 = {
 	allowed = {
 		NOT = {
 			OR = {
-			original_tag = JAP
-			original_tag = ENG
-			original_tag = RUS
-			original_tag = USA 
-			original_tag = ACC
-			original_tag = PSA
-			original_tag = WCA
-			original_tag = CSA
-			original_tag = APG
-			original_tag = GER
-			original_tag = FRA
-			original_tag = NEE
-
+				original_tag = JAP
+				original_tag = ENG
+				original_tag = RUS
+				original_tag = GER
+				original_tag = GEA
+				original_tag = FRA
+				is_american_tag = yes
 			}
-		}		
+		}
 	}
 	ai_will_do = {
 		factor = 5
@@ -218,19 +200,15 @@ ConvoyRaiding_1 = {
 	allowed = {
 		NOT = {
 			OR = {
-			original_tag = JAP
-			original_tag = ENG
-			original_tag = RUS
-			original_tag = USA 
-			original_tag = ACC
-			original_tag = WCA
-			original_tag = APG
-			original_tag = GER
-			original_tag = FRA
-			original_tag = GEA
-			original_tag = NEE
+				original_tag = JAP
+				original_tag = ENG
+				original_tag = RUS
+				original_tag = GER
+				original_tag = GEA
+				original_tag = FRA
+				is_american_tag = yes
 			}
-		}		
+		}
 	}
 	ai_will_do = {
 		factor = 1
@@ -253,22 +231,15 @@ ConvoySurfaceRaiding_1 = {
 	allowed = {
 		NOT = {
 			OR = {
-			original_tag = JAP
-			original_tag = ENG
-			original_tag = RUS
-			original_tag = USA 
-			original_tag = ACC
-			original_tag = WCA
-			original_tag = APG
-			original_tag = GER
-			original_tag = FRA
-			original_tag = GEA
-			original_tag = NEE
+				original_tag = JAP
+				original_tag = ENG
+				original_tag = RUS
+				original_tag = GER
+				original_tag = GEA
+				original_tag = FRA
+				is_american_tag = yes
 			}
-		}		
-	}
-	ai_will_do = {
-		factor = 1
+		}
 	}
 	mission = { convoy_raiding }
 	min_composition = {
@@ -288,19 +259,15 @@ ConvoyEscort_1 = {
 	allowed = {
 		NOT = {
 			OR = {
-			original_tag = JAP
-			original_tag = ENG
-			original_tag = RUS
-			original_tag = USA 
-			original_tag = ACC
-			original_tag = WCA
-			original_tag = APG
-			original_tag = GER
-			original_tag = FRA
-			original_tag = GEA
-			original_tag = NEE
+				original_tag = JAP
+				original_tag = ENG
+				original_tag = RUS
+				original_tag = GER
+				original_tag = GEA
+				original_tag = FRA
+				is_american_tag = yes
 			}
-		}		
+		}
 	}
 	ai_will_do = {
 		factor = 5
@@ -323,19 +290,15 @@ MineLaying_1 = {
 	allowed = {
 		NOT = {
 			OR = {
-			original_tag = JAP
-			original_tag = ENG
-			original_tag = RUS
-			original_tag = USA 
-			original_tag = ACC
-			original_tag = WCA
-			original_tag = APG
-			original_tag = GER
-			original_tag = FRA
-			original_tag = GEA
-			original_tag = NEE
+				original_tag = JAP
+				original_tag = ENG
+				original_tag = RUS
+				original_tag = GER
+				original_tag = GEA
+				original_tag = FRA
+				is_american_tag = yes
 			}
-		}		
+		}
 	}
 	ai_will_do = {
 		factor = 1

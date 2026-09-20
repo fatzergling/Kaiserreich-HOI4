@@ -1,227 +1,113 @@
-USA_StrikeForce_1 = {
+USA_MainFleet_1 = {
 	allowed = {
-		OR = {
-		original_tag = USA 
-		original_tag = ACC
-		original_tag = WCA
-		original_tag = APG
-		original_tag = NEE	
+		is_american_tag = yes
 	}
-	}
-	ai_will_do = {
-		factor = 1
-	}	
+	ai_will_do = { factor = 100 }
+	keep_updated = yes
 	mission = { naval_strike }
+
 	min_composition = {
-		battleship = {
+		carrier = {
 			amount = 1
 		}
 	}
-	
+
 	optimal_composition = {
 		carrier = {
-			amount = 4
+			amount = 3
 		}
-		battleship = {
-			amount = 4
+		battle_cruiser = {
+			amount = 3
 		}
 		heavy_cruiser = {
-			amount = 4
+			amount = 3
 		}
 		light_cruiser = {
-			amount = 8
+			amount = 15
 		}
 		destroyer = {
-			amount = 18
+			amount = 20
+		}
+	}
+}
 
+USA_HunterFleet_1 = {
+	allowed = {
+		is_american_tag = yes
+	}
+	ai_will_do = { factor = 100 }
+	keep_updated = yes
+	mission = { naval_strike }
+
+	min_composition = {
+		light_cruiser = {
+			amount = 10
+		}
+		destroyer = {
+			amount = 10
+		}
+	}
+
+	optimal_composition = {
+		light_cruiser = {
+			amount = 20
+		}
+		destroyer = {
+			amount = 40
 		}
 	}
 }
 
 USA_PatrolReconForce_1 = {
 	allowed = {
-		OR = {
-		original_tag = USA 
-		original_tag = ACC
-		original_tag = WCA
-		original_tag = APG
-		original_tag = NEE
-
-}
+		is_american_tag = yes
 	}
-	ai_will_do = {
-		factor = 5
-	}
+	ai_will_do = { factor = 10 }
 	mission = { naval_patrol }
 	min_composition = {
 		destroyer = {
-			amount = 1
+			amount = 2
 		}
-	}	
+	}
 	optimal_composition = {
 		destroyer = {
-			amount = 5
+			amount = 4
 		}
 	}
 }
-
-USA_PatrolDominanceForce_1 = {
+USA_ConvoyRaiding_1 = {
 	allowed = {
-		OR = {
-		original_tag = USA 
-		original_tag = ACC
-		original_tag = WCA
-		original_tag = APG
-		original_tag = NEE
-
-}
+		is_american_tag = yes
 	}
-	ai_will_do = {
-		factor = 3
-	}	
-	mission = { naval_patrol }
+	ai_will_do = { factor = 1 }
+	keep_updated = yes
+	mission = { convoy_raiding }
 	min_composition = {
-		destroyer = {
+		submarine = {
 			amount = 3
 		}
 	}
 
 	optimal_composition = {
-		heavy_cruiser = {
-			amount = 2
-		}
-		light_cruiser = {
-			amount = 2
-		}
-		destroyer = {
-			amount = 8
-		}
-	}
-}
-
-USA_PatrolDominanceForce_2 = {
-	allowed = {
-		OR = {
-		original_tag = USA 
-		original_tag = ACC
-		original_tag = WCA
-		original_tag = APG
-		original_tag = NEE
-
-}
-	}
-	ai_will_do = {
-		factor = 3
-	}	
-	mission = { naval_patrol }
-	min_composition = {
-		light_cruiser = {
-			amount = 2
-		}
-		destroyer = {
-			amount = 8
-		}
-	}
-
-	optimal_composition = {
-		heavy_cruiser = {
-			amount = 4
-		}
-		light_cruiser = {
-			amount = 4
-		}
-		destroyer = {
-			amount = 8
-		}
-	}
-}
-
-USA_ConvoyRaiding_1 = {
-	allowed = {
-		OR = {
-		original_tag = USA 
-		original_tag = ACC
-		original_tag = WCA
-		original_tag = APG
-		original_tag = NEE
-
-}
-	}
-	ai_will_do = {
-		factor = 5
-	}	
-	mission = { convoy_raiding }
-	min_composition = {
 		submarine = {
-			amount = 4
-		}
-	}
-
-	optimal_composition = {
-		submarine = {
-			amount = 8
+			amount = 6
 		}
 	}
 }
 
 USA_ConvoyEscort_1 = {
 	allowed = {
-		OR = {
-		original_tag = USA 
-		original_tag = ACC
-		original_tag = WCA
-		original_tag = APG
-		original_tag = NEE
-
-}
+		is_american_tag = yes
 	}
-	ai_will_do = {
-		factor = 1
-	}	
+	ai_will_do = { factor = 5 }
 	mission = { convoy_escort }
 	min_composition = {
 		destroyer = {
-			amount = 4
-		}
-	}
-	
-	optimal_composition = {
-		destroyer = {
-			amount = 8
-		}
-	}
-}
-
-USA_NavalInvasionSupport_1 = {
-	allowed = {
-	allowed = {
-		OR = {
-		original_tag = USA 
-		original_tag = ACC
-		original_tag = WCA
-		original_tag = APG
-		original_tag = NEE
-
-}
-	}
-	}
-	ai_will_do = {
-		factor = 5
-	}	
-	mission = { naval_invasion_support }
-	min_composition = {
-		battleship = {
-			amount = 1
-		}
-		destroyer = {
 			amount = 3
 		}
 	}
 
 	optimal_composition = {
-		battleship = {
-			amount = 3
-		}
 		destroyer = {
 			amount = 6
 		}

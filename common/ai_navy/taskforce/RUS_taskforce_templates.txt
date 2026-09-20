@@ -1,20 +1,50 @@
+RUS_PatrolReconForce_1 = {
+	allowed = {
+		original_tag = RUS
+	}
+	ai_will_do = { factor = 100 }
+	mission = { naval_patrol }
+	min_composition = {
+		submarine = {
+			amount = 4
+		}
+	}
+	optimal_composition = {
+		submarine = {
+			amount = 5
+		}
+	}
+}
+
+RUS_PatrolReconForce_2 = {
+	allowed = {
+		original_tag = RUS
+	}
+	ai_will_do = { factor = 5 }
+	mission = { naval_patrol }
+	min_composition = {
+		destroyer = {
+			amount = 5
+		}
+	}
+	optimal_composition = {
+		destroyer = {
+			amount = 10
+		}
+	}
+}
+
 RUS_StrikeForce_1 = {
 	allowed = {
 		original_tag = RUS
 	}
-	ai_will_do = {
-		factor = 1
-	}	
+	ai_will_do = { factor = 200 }
 	mission = { naval_strike }
 	min_composition = {
-		battleship = {
-			amount = 1
-		}
 		destroyer = {
-			amount = 1
+			amount = 10
 		}
 	}
-	
 	optimal_composition = {
 		carrier = {
 			amount = 4
@@ -22,134 +52,53 @@ RUS_StrikeForce_1 = {
 		battleship = {
 			amount = 4
 		}
-		light_cruiser = {
-			amount = 5
-		}
-		destroyer = {
-			amount = 12
-
-		}
-	}
-}
-
-RUS_PatrolReconForce_1 = {
-	allowed = {
-		original_tag = RUS
-	}
-	ai_will_do = {
-		factor = 5
-	}
-	mission = { naval_patrol }
-	min_composition = {
-		destroyer = {
-			amount = 1
-		}
-	}	
-	optimal_composition = {
-		destroyer = {
-			amount = 5
-		}
-	}
-}
-
-RUS_PatrolDominanceForce_1 = {
-	allowed = {
-		original_tag = RUS
-	}
-	ai_will_do = {
-		factor = 5
-	}	
-	mission = { naval_patrol }
-	min_composition = {
-		light_cruiser = {
-			amount = 2
-		}
-		destroyer = {
+		battle_cruiser = {
 			amount = 4
 		}
-	}
-
-	optimal_composition = {
-		battleship = {
-			amount = 3
-		}
-		light_cruiser = {
-			amount = 4
-		}
-		destroyer = {
-			amount = 10
-		}
-	}
-}
-
-RUS_PatrolDominanceForce_2 = {
-	allowed = {
-		original_tag = RUS
-	}
-	ai_will_do = {
-		factor = 3
-	}	
-	mission = { naval_patrol }
-	min_composition = {
-		light_cruiser = {
-			amount = 2
-		}
-		destroyer = {
-			amount = 4
-		}
-	}
-
-	optimal_composition = {
 		heavy_cruiser = {
-			amount = 4
-		}
-		light_cruiser = {
 			amount = 5
 		}
+		light_cruiser = {
+			amount = 30
+		}
 		destroyer = {
-			amount = 10
+			amount = 30
 		}
 	}
 }
 
-RUS_ConvoyRaiding_1 = {
+RUS_StrikeForce_2 = {
 	allowed = {
 		original_tag = RUS
 	}
-	ai_will_do = {
-		factor = 1
-	}	
+	ai_will_do = { factor = 5 }
 	mission = { convoy_raiding }
 	min_composition = {
 		submarine = {
-			amount = 4
+			amount = 5
 		}
 	}
-
 	optimal_composition = {
 		submarine = {
-			amount = 8
+			amount = 10
 		}
 	}
 }
 
-RUS_ConvoyEscort_1 = {
+RUS_StrikeForce_3 = {
 	allowed = {
 		original_tag = RUS
 	}
-	ai_will_do = {
-		factor = 5
-	}
-	mission = { convoy_escort }
+	ai_will_do = { factor = 5 }
+	mission = { naval_strike }
 	min_composition = {
-		destroyer = {
-			amount = 3
+		submarine = {
+			amount = 25
 		}
 	}
-	
 	optimal_composition = {
-		destroyer = {
-			amount = 5
+		submarine = {
+			amount = 100
 		}
 	}
 }

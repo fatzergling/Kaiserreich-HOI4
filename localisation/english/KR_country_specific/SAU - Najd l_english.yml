@@ -249,6 +249,9 @@
  SAU_war_of_resistance: "War of Resistance"
  SAU_war_of_resistance_desc: "We live in an age of total war, where even limited conflicts put everything at stake. Your young nation can fall just as fast as it arose, and be crushed under the iron heels of history. We must resist! Forever Arabia will be Free!"
 
+### Bookmark ###
+ SAU_KR_gathering_storm_desc: "The Emirate of Najd and Hasa allied with Britain during the Great War, receiving arms and subsidy in exchange for campaigning against the Ottoman-backed Rashidis. This partnership ultimately delivered little, as Britain lost its position in the Near East barely half a decade later. Now nominally under Ottoman suzerainty, Ibn Saud's ambitions are undiminished. Militarily, he relies on the Ikhwan, a Wahhabi military brotherhood that has driven Saudi expansion, while Constantinople watches the arrangement with growing unease."
+
 ### Intro Screen ###
  SAU_country_intro_background: "GFX_SAU_intro"
  SAU_country_intro_header: "The Emirate of Najd"
@@ -346,7 +349,7 @@
 
 ### Characters ###
  SAU_abdulaziz_ibn_saud: "Abdulaziz Ibn Saud"
- SAU_abdulaziz_ibn_saud_leader_desc: "§YBorn:§! §LJanuary 15th, 1875, in Riyadh, Emirate of Najd§!\n§YBackground:§! §LAbdulaziz Ibn Saud, the mortal rival of many dead men, now turns his sights towards Saud ibn Abdulaziz Al-Rashid. This rivalry began when the young Ibn Saud was ejected from his tent in Riyadh by the Rashids. Never a pawn of Emirs, Ibn Saud's father rallied the destitute men of the coastal Emirates to the great goal of his dynasty, Wahhabism. The Rashids were then ejected at the cost of many men, including their only western ally. Ibn Saud himself started many feud the Saudis inherited, as he expressed hatred towards any Arab who turned their nose up towards Bedouins. This seed of anger had passed onto his men, who inherited his ferocity and may turn this youthful fury against him yet.§!"
+ SAU_abdulaziz_ibn_saud_leader_desc: "§YBorn:§! §LJanuary 15th, 1876, in Riyadh, Emirate of Najd§!\n§YBackground:§! §LAbdulaziz Ibn Saud, the mortal rival of many dead men, now turns his sights towards Saud ibn Abdulaziz Al-Rashid. This rivalry began when the young Ibn Saud was ejected from his tent in Riyadh by the Rashids. Never a pawn of Emirs, Ibn Saud's father rallied the destitute men of the coastal Emirates to the great goal of his dynasty, Wahhabism. The Rashids were then ejected at the cost of many men, including their only western ally. Ibn Saud himself started many feud the Saudis inherited, as he expressed hatred towards any Arab who turned their nose up towards Bedouins. This seed of anger had passed onto his men, who inherited his ferocity and may turn this youthful fury against him yet.§!"
 
  SAU_saud_bin_abdulaziz_al_saud: "Saud ibn Abdulaziz al-Saud"
  SAU_saud_bin_abdulaziz_al_saud_high_command_desc: "§YBorn:§! §LJanuary 15th, 1902, in Kuwait City, Emirate of Kuwait§!"
