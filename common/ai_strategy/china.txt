@@ -213,13 +213,13 @@ china_declare_war_if_you_have_wargoals = {
 			}
 		}
 		#gotta wait 
-		NOT = {
-			AND = {
-			country_exists = FNG
-			date > 1939.7.1
-
-			}
-		}
+#		NOT = {
+#			AND = {
+#			country_exists = FNG
+#			date > 1939.7.1
+#
+		#	}
+		#}
 
 	}
 	abort_when_not_enabled = yes

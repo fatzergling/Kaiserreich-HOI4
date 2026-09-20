@@ -552,6 +552,30 @@ on_actions = {
 					level = 1
 				}
 			}
+			every_state = {
+				limit = {
+					is_core_china = yes
+					owner = { is_chinese_tag = yes }
+					is_possible_legation_cities_state = no
+					OR = {
+						has_state_flag = ningxia_province_state
+has_state_flag = qinghai_province_state
+has_state_flag = suiyuan_province_state
+has_state_flag = chahar_province_state
+has_state_flag = xinjiang_province_state
+has_state_flag = qinghai_province_state
+state = 601
+state = 774
+state = 788
+state = 816
+state = 1015
+					}
+				}
+				remove_building = {
+					type = infrastructure
+					level = 1
+				}
+			}
 
 			#Initialise LKMT exile status
 			CHI = { become_exiled_in = { target = FRA legitimacy = 10 } }

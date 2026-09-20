@@ -222,7 +222,7 @@ NDefines.NFactions.FACTION_INTELLIGENCE_ALLOWED_ADVISOR_TRAIT  = {
 	"KR_tsingtao_spymaster",
 	"KR_master_diplomat",
 	"KR_savinkovs_shadow",
-	"KR_cavalier_spymaster"
+	"KR_cavalier_spymaster",
 	"KR_shadowy_laoban_lar",
 	"KR_shadowy_laoban"
 }
@@ -243,3 +243,5 @@ NDefines.NAI.NAVAL_STRIKE_PLANES_PER_ARMY = 10		-- Strategic importance of air s
 
 NDefines.NAI.NAVAL_AIR_SUPERIORITY_IMPORTANCE = 1
 NDefines.NAI.NAVAL_TRANSFER_AIR_IMPORTANCE = 1
+NDefines.NAI.MAX_DEPLOYED_ARMY_HQS = 50									-- AI will not deploy more than this many army HQs at once
+NDefines.NAI.ARMY_LEADER_MIN_DIVISIONS_FOR_HQ = 2

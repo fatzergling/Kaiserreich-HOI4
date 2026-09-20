@@ -31,6 +31,8 @@ infantry_artillery_focus_assault_battalion = {
 			regimental_support = {
 				field_guns = 1
 				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -92,6 +94,8 @@ infantry_motorized_artillery_assault = {
 			regimental_support = {
 				field_guns = 1
 				mot_fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -140,6 +144,8 @@ infantry_motorized_artillery_assault = {
 			regimental_support = {
 				field_guns = 1
 				mot_fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {

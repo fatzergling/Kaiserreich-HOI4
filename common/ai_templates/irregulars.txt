@@ -36,6 +36,12 @@ line_irregulars = {
 				irregular_infantry = 9
 				artillery_brigade = 1
 			}
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
+			}
 
 			support = {
 				artillery = 1
@@ -80,6 +86,12 @@ line_irregulars = {
 			regiments = {
 				infantry = 9
 				artillery_brigade = 1
+			}
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -130,6 +142,8 @@ line_irregulars = {
 			regimental_support = {
 				field_guns = 1
 				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -171,6 +185,12 @@ motorised = {
 			regiments = {
 				cavalry = 9
 				mot_artillery_brigade = 1
+			}
+			regimental_support = {
+				field_guns = 1
+				mot_fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -222,8 +242,9 @@ motorised = {
 			regimental_support = {
 				field_guns = 1
 				mot_fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
-
 			support = {
 				engineer = 1
 				artillery = 1
@@ -274,6 +295,8 @@ motorised = {
 			regimental_support = {
 				field_guns = 1
 				mot_fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {

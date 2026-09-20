@@ -17,6 +17,7 @@ state = {
 			6126 = {
 				dam = 1 #Krångede Hydroelectric Power Station
 			}
+			industrial_complex = 1
 		}
 	}
 

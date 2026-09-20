@@ -2905,7 +2905,6 @@ chinese_unification = {
 						}
 					}
 				}
-			}
 			NOT = {
 				has_non_aggression_pact_with = FROM
 				has_truce_with = FROM

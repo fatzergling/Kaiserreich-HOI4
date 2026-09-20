@@ -74,9 +74,14 @@ political_actions = {
 					target = { 50 51 55 57 780 } #Wurttemberg, Eastern Rhineland, Hesse, Westphalia, Baden
 					controller = { is_ally_with = INT }
 				}
+									count_triggers = {
+					amount = 3
+					6 = { controller = { is_ally_with = INT } } #Flanders
+					34 = { controller = { is_ally_with = INT } } #Hainaut
+					925 = { controller = { is_ally_with = INT } } #Brabant
+					948 = { controller = { is_ally_with = INT } } #Liège
 			}
-			modifier = {
-				add = 100 # BEL and HOL are both occupied by INT
+				AND = {
 				any_state_of = {
 					count = 3
 					target = { 6 34 925 948 } #Flanders, Hainaut, Brabant, Liège
@@ -241,23 +246,14 @@ political_actions = {
 					has_capitulated = yes
 					any_core_state = { controller = { is_ally_with = RUS } }
 				}
-			}
-			modifier = {
-				add = 100	# POL or UKR is in MA
 				any_country_of = {
 					target = { POL UKR }
 					is_ally_with = RUS
 				}
-			}
-			modifier = {
-				add = 100	# POL/UKR is at war w/ GER
 				any_country_of = {
 					target = { POL UKR }
 					has_war_with = GER
 				}
-			}
-			modifier = {
-				add = 100	# BUL is in MA and borders DAB
 				BUL = {
 					is_in_faction_with = RUS
 					any_home_area_neighbor_country = { is_ally_with = ROOT }

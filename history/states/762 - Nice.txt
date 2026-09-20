@@ -17,6 +17,7 @@ state = {
 				naval_base = 2
 				coastal_bunker = 1
 			}
+			industrial_complex = 1
 		}
 	}
 

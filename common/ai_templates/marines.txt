@@ -36,6 +36,8 @@ marine_generic = {
 			regimental_support = {
 				field_guns = 1
 				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -70,6 +72,12 @@ marine_generic = {
 				anti_air = 1
 				logistics_company = 1
 				anti_tank = 1
+			}
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			regiments = {
@@ -108,6 +116,12 @@ marine_generic = {
 				anti_air = 1
 				logistics_company = 1
 				anti_tank = 1
+			}
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			regiments = {

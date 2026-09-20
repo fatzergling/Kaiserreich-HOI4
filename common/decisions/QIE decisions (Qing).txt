@@ -3260,7 +3260,7 @@ QIE_zhili_manchu_war_decisions_category = {
 			command_power_gain = -0.25
 		}
 
-		ai_will_do = { factor = 640 }
+		ai_will_do = { factor = 6400 }
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove QIE_push_to_yellow_river"
@@ -3308,7 +3308,7 @@ QIE_zhili_manchu_war_decisions_category = {
 			command_power_gain = -0.25
 		}
 
-		ai_will_do = { factor = 640 }
+		ai_will_do = { factor = 6400 }
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove QIE_assault_luoyang"
@@ -3360,7 +3360,7 @@ QIE_zhili_manchu_war_decisions_category = {
 			command_power_gain = -0.25
 		}
 
-		ai_will_do = { factor = 640 }
+		ai_will_do = { factor = 6400 }
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove QIE_mop_up_south"
@@ -3412,7 +3412,7 @@ QIE_zhili_manchu_war_decisions_category = {
 			command_power_gain = -0.25
 		}
 
-		ai_will_do = { factor = 640 }
+		ai_will_do = { factor = 6400 }
 
 		remove_effect = {
 			log = "[GetLogRoot]: Decision remove QIE_final_push"

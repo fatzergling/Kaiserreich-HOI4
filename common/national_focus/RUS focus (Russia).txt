@@ -22754,7 +22754,7 @@ focus_tree = {
 		prerequisite = { focus = RUS_caucasus }
 		mutually_exclusive = { focus = RUS_new_brother }
 		ai_will_do = {
-			base = 100
+			base = 15
 			modifier = {
 				factor = 0
 				any_allied_country = {
@@ -22791,7 +22791,7 @@ focus_tree = {
 				}
 			}
 			modifier = {
-				add = -5
+				add = -15
 				FNG = {
 					owns_state = 613
 					owns_state = 608

@@ -1929,8 +1929,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = CHI_political_department }
 		available = {
-			OR = { has_completed_focus = CHI_legacy_of_jiangfu has_completed_focus = CHI_look_to_the_west }
-			date > 1938.1.1
+			OR = { has_completed_focus = CHI_legacy_of_jiangfu has_completed_focus = CHI_look_to_the_west 			date > 1938.1.1  }
 		}
 		ai_will_do = {
 			base = 1000

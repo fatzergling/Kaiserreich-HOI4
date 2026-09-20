@@ -27,6 +27,12 @@ line_cavalry = {
 				cavalry = 9
 				mot_artillery_brigade = 1
 			}
+			regimental_support = {
+				field_guns = 1
+				mot_fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
+			}
 
 			support = {
 				artillery = 1
@@ -70,6 +76,8 @@ line_cavalry = {
 			regimental_support = {
 				field_guns = 1
 				mot_fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -118,6 +126,8 @@ line_cavalry = {
 			regimental_support = {
 				field_guns = 1
 				mot_fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -166,6 +176,8 @@ line_cavalry = {
 			regimental_support = {
 				field_guns = 1
 				mot_fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {

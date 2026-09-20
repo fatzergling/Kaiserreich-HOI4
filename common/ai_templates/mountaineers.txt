@@ -46,6 +46,8 @@ mountaineer_generic = {
 			regimental_support = {
 				field_guns = 1
 				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -102,6 +104,12 @@ mountaineer_china = {
 			regiments = {
 				mountaineers = 8
 			}
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
+			}
 
 			support = {
 				artillery = 1
@@ -136,6 +144,12 @@ mountaineer_china = {
 		target_template = {
 			regiments = {
 				mountaineers = 12
+			}
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -180,6 +194,8 @@ mountaineer_china = {
 			regimental_support = {
 				field_guns = 1
 				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {
@@ -235,6 +251,12 @@ mountaineer_artillery = {
 				mountaineers = 8
 				artillery_brigade = 3
 			}
+			regimental_support = {
+				field_guns = 1
+				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
+			}
 
 			support = {
 				artillery = 1
@@ -277,6 +299,8 @@ mountaineer_artillery = {
 			regimental_support = {
 				field_guns = 1
 				fire_support = 1
+				anti_air_battery = 1
+				anti_tank_battery = 1
 			}
 
 			support = {

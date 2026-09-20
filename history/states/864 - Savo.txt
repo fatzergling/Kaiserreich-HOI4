@@ -29,6 +29,7 @@ state = {
 
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 			6146 = {
 				supply_node = 1
 			}

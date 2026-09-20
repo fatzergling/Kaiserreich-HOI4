@@ -11,6 +11,7 @@ state = {
 		add_claim_by = CRO
 		buildings = {
 			infrastructure = 3
+			industrial_complex = 1
 		}
 	}
 

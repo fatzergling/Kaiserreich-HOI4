@@ -12,6 +12,7 @@ state = {
 		victory_points = { 6680 1 } #Bregenz
 
 		buildings = {
+			industrial_complex = 1
 			infrastructure = 2
 		}
 	}
