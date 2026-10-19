@@ -4654,7 +4654,7 @@ focus_tree = {
 				}
 			}
 			modifier = {
-				factor = 0
+				factor = 0.05
 				OR = {
 					AND = {
 						has_global_flag = CAN_supports_USA

@@ -5386,6 +5386,21 @@ country_event = {
 					}
 				}
 				event_target:entente_transfer_to = { remove_from_faction = ROOT }
+				if = { 
+					limit = { country_exists = WCA }
+				if = {
+					limit = { country_exists = NEE
+								} 
+									event_target:entente_transfer_to = { remove_from_faction = NEE }
+				}
+				if = {
+					limit = { country_exists = ACC
+					ACC = { is_in_faction_with = event_target:entente_transfer_to }} 
+									event_target:entente_transfer_to = { remove_from_faction = ACC }
+				}
+				}
+
+
 			}
 		if = {
 				limit = { country_exists = WCA
@@ -5396,18 +5411,23 @@ country_event = {
 				limit = {
 					is_in_faction_with = ENT
 					NOT = { tag = CAN }
+					NOT = { is_american_tag = yes }
 					has_capitulated = no
 					same_continent_as_ROOT = no
 				
 					}
 				if = {
 					limit = {
-						is_subject = yes
-						overlord = { has_capitulated = yes }
+						OR = {
+							is_subject = yes
+							overlord = { has_capitulated = yes }
+						}
+						tag = NEE
+						tag = HAW
 					}
 					remove_puppet_and_leave_faction = yes
 				}
-				white_peace_with_PREV = yes 
+				white_peace = PREV
 				}
 				}
 			}
@@ -5576,7 +5596,7 @@ country_event = {
 				event_target:entente_transfer_to = {
 					news_event = { id = entente_events.255 hours = 8 }
 					remove_from_faction = ROOT
-
+				}
 					# peace out the rest of the Entente if appropriate
 					every_enemy_country = {
 						limit = { is_valid_peace_target = yes }
@@ -5584,7 +5604,6 @@ country_event = {
 					}
 				}
 			}
-		}
 		else = {
 			CAN_entente_collapses = yes
 			news_event = entente_events.256

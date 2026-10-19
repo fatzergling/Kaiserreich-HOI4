@@ -229,9 +229,9 @@ NDefines.NFactions.FACTION_INTELLIGENCE_ALLOWED_ADVISOR_TRAIT  = {
 }
 
 NDefines.NDiplomacy.PEACE_COST_FACTOR_COMPLIANCE_STEPS = { 		
-0,   0.3, -- between 0%  and 30% compliance, factor is 1.0 		
-30,  0.2, -- between 30% and 70% 		
-70,  0.1, -- above 70% 	
+0,   0.03, -- between 0%  and 30% compliance, factor is 1.0 		
+30,  0.02, -- between 30% and 70% 		
+70,  0.01, -- above 70% 	
 }
 NDefines.NNavy.CONVOY_BLOCKED_BY_ENEMY_CONTROLLED_REGION = true
 NDefines.NDiplomacy.NAVAL_BLOCKADE_THREAT_THRESHOLD = 0				-- Target-generated threat threshold to allow naval blockade

@@ -161,7 +161,7 @@ ENG_per_ardua_ad_astra_1 = {
 
 	ai_strategy = {
 		type = air_factory_balance
-		value = 50
+		value = 20
 	}
 }
 
@@ -187,7 +187,7 @@ ENG_per_ardua_ad_astra_2 = {
 
 	ai_strategy = {
 		type = air_factory_balance
-		value = 50
+		value = 20
 	}
 }
 
@@ -202,7 +202,7 @@ ENG_per_ardua_ad_astra_3 = {
 
 	ai_strategy = {
 		type = air_factory_balance
-		value = 30
+		value = 10
 	}
 }
 ENG_per_ardua_ad_astra_4 = {
@@ -213,7 +213,7 @@ ENG_per_ardua_ad_astra_4 = {
 		date > 1936.1.1
 	}
 	abort={
-		date > 1940.8.1
+		date > 1940.1.1
 	}
 	
 	abort_when_not_enabled = yes
@@ -241,7 +241,7 @@ ENG_per_ardua_ad_astra_4 = {
 
 	ai_strategy = {
 		type = air_factory_balance
-		value = 110
+		value = 100
 	}
 }
 

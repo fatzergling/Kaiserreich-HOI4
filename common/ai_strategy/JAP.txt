@@ -618,6 +618,7 @@ JAP_no_naval_invasion_overseas = {
 		JAP = { has_war_with = CUF }
 		capital_scope = { NOT = { is_on_continent = asia } }
 		NOT = { tag = GEA }
+		always = no
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
