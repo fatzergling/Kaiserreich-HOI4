@@ -253,7 +253,7 @@ on_actions = {
 						has_war_with = CUF
 					}
 					FROM = { is_ally_with = CUF }
-					FROM.FROM = { is_coastal = no }
+					#FROM.FROM = { is_coastal = no }
 				}
 				JAP = { set_country_flag = JAP_SSJW_last_major_frontline_change_flag }
 			}

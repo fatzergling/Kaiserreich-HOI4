@@ -3556,13 +3556,11 @@ chinese_unification = {
 					focus = CHI_second_northern_expedition
 					progress > 0
 				}
-					AND = {
-						owns_state = 603
-						OR = {
-						NOT = { 1048 = { is_core_of = CHI }}
-						NOT = { 603 = { is_core_of = CHI }}
-
-						}
+				AND = {
+					owns_state = 603
+					OR = {
+						NOT = { 1048 = { is_core_of = CHI } }
+						NOT = { 603 = { is_core_of = CHI } }
 					}
 				}
 			}

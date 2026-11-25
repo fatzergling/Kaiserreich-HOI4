@@ -9,6 +9,12 @@ division_limiter = {
 	abort_when_not_enabled = yes
 
 	#AI roles
+	# Cover every combat role in common/ai_templates; Army HQs are excluded from the limit.
+	ai_strategy = { type = build_army id = infantry value = -1000 }
+	ai_strategy = { type = build_army id = mass_infantry value = -1000 }
+	ai_strategy = { type = build_army id = light_infantry value = -1000 }
+	ai_strategy = { type = build_army id = mobile value = -1000 }
+	ai_strategy = { type = build_army id = heavy_armor value = -1000 }
 	ai_strategy = { type = build_army id = armor_role			value = -1000 }
 	ai_strategy = { type = build_army id = motorized				value = -1000 }
 	ai_strategy = { type = build_army id = mechanized				value = -1000 }

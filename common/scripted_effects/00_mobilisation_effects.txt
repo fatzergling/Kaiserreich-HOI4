@@ -1,3 +1,4 @@
+
 disband_units_setup = {
 	set_temp_variable = { disband_country = THIS }
 	random_state = {
@@ -225,7 +226,7 @@ calculate_maximum_divisions = {
 		limit = { has_civil_war = yes }
 		every_enemy_country = {
 			limit = { civilwar_target = PREV }
-			#add_to_variable = { PREV.base_states = num_owned_states }
+			add_to_variable = { PREV.base_states = num_owned_states }
 
 			add_to_variable = {
 				PREV.PREV.base_units = {
@@ -276,7 +277,6 @@ calculate_maximum_divisions = {
 							round = yes
 						}
 					}
-				}
 				}
 			}
 		}

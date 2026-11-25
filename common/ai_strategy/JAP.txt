@@ -636,6 +636,7 @@ JAP_no_naval_invasion_overseas = {
 JAP_no_naval_invasion = {
 	allowed = { original_tag = JAP }
 	enable = {
+		always = no
 		if = {
 			limit = { has_war_with = CUF }
 			OR = {
@@ -810,6 +811,7 @@ JAP_no_naval_invasion = {
 JAP_do_not_naval_invade_these_state = {
 	allowed = { original_tag = JAP }
 	enable = {
+		always = no
 		OR = {
 			has_war_with = var:613.owner
 			FNG = { has_war_with = var:613.owner }
@@ -2355,7 +2357,7 @@ JAP_invade_australia = {
 	
 	ai_strategy = {
 		type = front_unit_request
-		state = AST
+		id = AST
 		value = 150
 	}
 
