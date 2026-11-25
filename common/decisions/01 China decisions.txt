@@ -734,7 +734,7 @@ foreign_politics = {
 				if = {
 					limit = {
 						ROOT = { has_socialist_government = yes }
-						NOT = { tag = INC } #Apparently Indochina will basically always be willing to align with Socialist China
+						NOT = { tag = VIN } #Apparently Indochina will basically always be willing to align with Socialist China
 					}
 					has_socialist_government = yes
 				}
@@ -1875,7 +1875,10 @@ chinese_unification = {
 				limit = { tag = QIE }
 				if = {
 					limit = { has_global_flag = QIE_manchu_restoration }
-					set_cosmetic_tag = united_china_manchu
+					if = {
+						limit = { has_cosmetic_tag = QIE_government_manchu }
+						set_cosmetic_tag = united_china_manchu
+					}
 					if = {
 						limit = { is_subject = no }
 						log = "KR_Event_Logging;CHINA UNITED BY Manchu Qing"
@@ -2966,7 +2969,7 @@ chinese_unification = {
 
 		cancel_if_not_visible = yes
 		ai_will_do = {
-			factor = 1000
+			factor = 100500
 			modifier = {
 				factor = 0
 				has_war = yes
@@ -3419,7 +3422,7 @@ chinese_unification = {
 							any_owned_state = {
 								OR = {
 									check_variable = { chinese_province_state = 602.id }
-									check_variable = { chinese_province_state = 1051.id }
+									check_variable = { chinese_province_state = 603.id }
 									check_variable = { chinese_province_state = 592.id }
 									check_variable = { chinese_province_state = 594.id }
 								}
@@ -3470,6 +3473,23 @@ chinese_unification = {
 			}
 			modifier = {
 				factor = 0
+				check_variable = { ROOT.strength_ratio < FROM.strength_ratio }
+				check_expr = {
+					value = num_core_states
+					divide = num_controlled_states
+					less_than_or_equals = 0.5
+				}
+			}
+			modifier = {
+				factor = 0
+				check_expr = {
+					value = ROOT.strength_ratio
+					divide = FROM.strength_ratio
+					less_than_or_equals = 0.5
+				}
+			}
+			modifier = {
+				factor = 0
 				FROM = { has_war = no } #Attack if enemy is already at war
 				FROM = { default_attack_AI_trigger = yes } #Attack if enemy is weaker
 			}
@@ -3495,6 +3515,10 @@ chinese_unification = {
 					}
 				}
 				NOT = { has_war_with = QIE } #Follow this logic only if not already at war with QIE
+				any_country = {
+					is_ally_with = QIE
+					is_neighbor_of = ROOT #Follow this logic only if is neighbor of QIE or QIEs puppets
+				}
 				NOT = {
 					OR = {
 						AND = {
@@ -3511,6 +3535,35 @@ chinese_unification = {
 							}
 						}
 					}
+				}
+			}
+			modifier = {
+				factor = 0
+				country_exists = FNG #Follow this logic only if FNG still exists
+				NOT = { original_tag = FNG } #Ignore this logic if original tag is FNG
+				NOT = {
+					FROM = {
+						OR = {
+							original_tag = FNG
+							original_tag = QIE
+						}
+					}
+				}
+				NOT = {
+					FROM = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								original_tag = FNG #Dont attack warlords that arent FNGs puppets
+								original_tag = QIE #Dont attack warlords that arent QIEs puppets
+							}
+						}
+					}
+				}
+				NOT = { has_war_with = FNG } #Follow this logic only if not already at war with FNG
+				any_country = {
+					is_ally_with = FNG
+					is_neighbor_of = ROOT #Follow this logic only if is neighbor of FNG or FNGs puppets
 				}
 			}
 			modifier = {
@@ -3721,9 +3774,10 @@ chinese_unification = {
 						}
 					}
 					AND = {
-						FROM = {
-							original_tag = QIE
-							has_war = no
+						FROM = { original_tag = QIE }
+						OR = {
+							has_war = yes
+							FROM = { has_war = no }
 						}
 						date < 1938.1.1
 					}
@@ -4326,6 +4380,7 @@ chinese_unification = {
 				###check if they have a non-fitting South China War rule set
 				NOT = { has_global_flag = china_united }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				OR = {
 					AND = {
 						tag = GXC
@@ -5376,6 +5431,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -5582,6 +5638,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -5707,6 +5764,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -5951,6 +6009,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -6148,6 +6207,7 @@ chinese_unification = {
 				tag = HNN
 				FROM = { tag = GXC }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_YUN_BOTH } }
 				GXC = { exists = yes }
 				YUN = {
@@ -6160,6 +6220,7 @@ chinese_unification = {
 				tag = YUN
 				FROM = { tag = GXC }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_HNN_BOTH } }
 				GXC = { exists = yes }
 				HNN = { exists = yes }
@@ -6329,6 +6390,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -6515,6 +6577,7 @@ chinese_unification = {
 				tag = HNN
 				FROM = { tag = GXC }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_YUN_BOTH } }
 				GXC = { exists = yes }
 				YUN = {
@@ -6527,6 +6590,7 @@ chinese_unification = {
 				tag = YUN
 				FROM = { tag = GXC }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_HNN_BOTH } }
 			}
 		}

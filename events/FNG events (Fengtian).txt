@@ -5864,6 +5864,7 @@ country_event = { #Ma Zhanshan and the Heilongjiang Clique offer to Defect!
 				air_ratio = 0
 			}
 
+				retire_character = FNG_Li_Dingyi
 			}
 		}
 	}
@@ -5902,6 +5903,7 @@ country_event = { #Ma Zhanshan and the Heilongjiang Clique Defect!
 			retire_character = FNG_wu_junsheng
 			retire_character = FNG_wan_fulin
 			retire_character = FNG_zhang_tingshu
+			retire_character = FNG_Li_Dingyi
 		}
 		custom_effect_tooltip = tooltip_white_line
 		add_timed_idea = {
@@ -5943,6 +5945,7 @@ country_event = { #The Heilongjiang Insurgency!
 		retire_character = FNG_wu_junsheng
 		retire_character = FNG_wan_fulin
 		retire_character = FNG_zhang_tingshu
+		retire_character = FNG_Li_Dingyi
 	}
 }
 

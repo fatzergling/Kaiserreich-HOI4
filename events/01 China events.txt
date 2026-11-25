@@ -9703,7 +9703,7 @@ news_event = {
 			has_elected_government = yes
 			NOT = { original_tag = JAP }
 			NOT = { original_tag = TIB }
-			NOT = { original_tag = INC }
+			NOT = { original_tag = VIN }
 		}
 	}
 
@@ -9716,7 +9716,7 @@ news_event = {
 				has_elected_government = no
 				original_tag = JAP
 				original_tag = TIB
-				original_tag = INC
+				original_tag = VIN
 			}
 		}
 	}
@@ -10770,8 +10770,8 @@ country_event = {
 			#Game Rules
 			modifier = {
 				factor = 0
-				FROM = { tag = INC }
-				has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN }
+				FROM = { tag = VIN }
+				has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN }
 			}
 			modifier = {
 				factor = 0
@@ -10863,16 +10863,12 @@ country_event = { #invite from CHN
 						has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN }
 					}
 					AND = {
-						tag = HAW
-						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN }
-					}
-					AND = {
 						tag = HND
 						has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN }
 					}
 					AND = {
-						tag = INC
-						has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN }
+						tag = VIN
+						has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN }
 					}
 					AND = {
 						tag = INS
@@ -10909,17 +10905,13 @@ country_event = { #invite from CHN
 						has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN }
 					}
 					AND = {
-						tag = HAW
-						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN }
-					}
-					AND = {
 						tag = HND
 						has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN }
 						NOT = { has_government = radical_socialist } #The Radsocs in HND are isolationists
 					}
 					AND = {
-						tag = INC
-						has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN }
+						tag = VIN
+						has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN }
 					}
 					AND = {
 						tag = INS
@@ -10962,19 +10954,14 @@ country_event = { #invite from CHN
 						NOT = { has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN } }
 					}
 					AND = {
-						tag = HAW
-						NOT = { has_game_rule = { rule = HAW_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN } }
-					}
-					AND = {
 						tag = HND
 						NOT = { has_game_rule = { rule = HND_forpol option = DEFAULT } }
 						NOT = { has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN } }
 					}
 					AND = {
-						tag = INC
-						NOT = { has_game_rule = { rule = INC_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN } }
+						tag = VIN
+						NOT = { has_game_rule = { rule = VIN_forpol option = DEFAULT } }
+						NOT = { has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN } }
 					}
 					AND = {
 						tag = INS
@@ -11039,19 +11026,14 @@ country_event = { #invite from CHN
 						NOT = { has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN } }
 					}
 					AND = {
-						tag = HAW
-						NOT = { has_game_rule = { rule = HAW_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN } }
-					}
-					AND = {
 						tag = HND
 						NOT = { has_game_rule = { rule = HND_forpol option = DEFAULT } }
 						NOT = { has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN } }
 					}
 					AND = {
-						tag = INC
-						NOT = { has_game_rule = { rule = INC_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN } }
+						tag = VIN
+						NOT = { has_game_rule = { rule = VIN_forpol option = DEFAULT } }
+						NOT = { has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN } }
 					}
 					AND = {
 						tag = INS
@@ -11099,19 +11081,14 @@ country_event = { #invite from CHN
 						NOT = { has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN } }
 					}
 					AND = {
-						tag = HAW
-						NOT = { has_game_rule = { rule = HAW_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN } }
-					}
-					AND = {
 						tag = HND
 						NOT = { has_game_rule = { rule = HND_forpol option = DEFAULT } }
 						NOT = { has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN } }
 					}
 					AND = {
-						tag = INC
-						NOT = { has_game_rule = { rule = INC_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN } }
+						tag = VIN
+						NOT = { has_game_rule = { rule = VIN_forpol option = DEFAULT } }
+						NOT = { has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN } }
 					}
 					AND = {
 						tag = INS
@@ -11153,17 +11130,13 @@ country_event = { #invite from CHN
 						has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN }
 					}
 					AND = {
-						tag = HAW
-						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN }
-					}
-					AND = {
 						tag = HND
 						has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN }
 						NOT = { has_government = radical_socialist } #The Radsocs in HND are isolationists
 					}
 					AND = {
-						tag = INC
-						has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN }
+						tag = VIN
+						has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN }
 					}
 					AND = {
 						tag = INS
@@ -12488,6 +12461,7 @@ country_event = {
 			}
 			division_template = {
 				name = "Dongbei Army Defectors"
+				is_locked = yes #Unlocked or deleted in china_events.471
 				regiments = {
 					infantry = { x = 0 y = 0 }
 					infantry = { x = 0 y = 1 }
@@ -12509,7 +12483,7 @@ country_event = {
 		capital_scope = {
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = tooltip_spawn_unit
+					localization_key = tooltip_spawn_units
 					COUNT = 3
 					TYPE = "Dongbei Army Defectors"
 				}
@@ -12659,6 +12633,13 @@ country_event = {
 				days = 365
 			}
 		}
+		if = {
+			limit = { has_template = "Dongbei Army Defectors" }
+			set_division_template_lock = {
+				division_template = "Dongbei Army Defectors"
+				is_locked = no
+			}
+		}
 		custom_effect_tooltip = CHN_devastation_of_dongbei_minimal_idea_recruit_tt
 		if = {
 			limit = { has_idea = CHN_devastation_of_dongbei_minimal_idea }
@@ -12720,7 +12701,7 @@ country_event = {
 		capital_scope = {
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = tooltip_spawn_unit
+					localization_key = tooltip_spawn_units
 					COUNT = 5
 					TYPE = "Reorganised Warlord Division"
 				}
@@ -12826,7 +12807,7 @@ country_event = {
 		capital_scope = {
 			custom_override_tooltip = {
 				tooltip = {
-					localization_key = tooltip_spawn_unit
+					localization_key = tooltip_spawn_units
 					COUNT = 3
 					TYPE = "Reorganised Warlord Division"
 				}
@@ -13085,17 +13066,13 @@ country_event = { #invite from CHI
 						has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN }
 					}
 					AND = {
-						tag = HAW
-						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN }
-					}
-					AND = {
 						tag = HND
 						has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN }
 						NOT = { has_government = radical_socialist } #The Radsocs in HND are isolationists
 					}
 					AND = {
-						tag = INC
-						has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN }
+						tag = VIN
+						has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN }
 					}
 					AND = {
 						tag = INS
@@ -13132,17 +13109,13 @@ country_event = { #invite from CHI
 						has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN }
 					}
 					AND = {
-						tag = HAW
-						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN }
-					}
-					AND = {
 						tag = HND
 						has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN }
 						NOT = { has_government = radical_socialist } #The Radsocs in HND are isolationists
 					}
 					AND = {
-						tag = INC
-						has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN }
+						tag = VIN
+						has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN }
 					}
 					AND = {
 						tag = INS
@@ -13185,19 +13158,14 @@ country_event = { #invite from CHI
 						NOT = { has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN } }
 					}
 					AND = {
-						tag = HAW
-						NOT = { has_game_rule = { rule = HAW_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN } }
-					}
-					AND = {
 						tag = HND
 						NOT = { has_game_rule = { rule = HND_forpol option = DEFAULT } }
 						NOT = { has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN } }
 					}
 					AND = {
-						tag = INC
-						NOT = { has_game_rule = { rule = INC_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN } }
+						tag = VIN
+						NOT = { has_game_rule = { rule = VIN_forpol option = DEFAULT } }
+						NOT = { has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN } }
 					}
 					AND = {
 						tag = INS
@@ -13264,19 +13232,14 @@ country_event = { #invite from CHI
 						NOT = { has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN } }
 					}
 					AND = {
-						tag = HAW
-						NOT = { has_game_rule = { rule = HAW_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN } }
-					}
-					AND = {
 						tag = HND
 						NOT = { has_game_rule = { rule = HND_forpol option = DEFAULT } }
 						NOT = { has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN } }
 					}
 					AND = {
-						tag = INC
-						NOT = { has_game_rule = { rule = INC_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN } }
+						tag = VIN
+						NOT = { has_game_rule = { rule = VIN_forpol option = DEFAULT } }
+						NOT = { has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN } }
 					}
 					AND = {
 						tag = INS
@@ -13324,19 +13287,14 @@ country_event = { #invite from CHI
 						NOT = { has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN } }
 					}
 					AND = {
-						tag = HAW
-						NOT = { has_game_rule = { rule = HAW_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN } }
-					}
-					AND = {
 						tag = HND
 						NOT = { has_game_rule = { rule = HND_forpol option = DEFAULT } }
 						NOT = { has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN } }
 					}
 					AND = {
-						tag = INC
-						NOT = { has_game_rule = { rule = INC_forpol option = DEFAULT } }
-						NOT = { has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN } }
+						tag = VIN
+						NOT = { has_game_rule = { rule = VIN_forpol option = DEFAULT } }
+						NOT = { has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN } }
 					}
 					AND = {
 						tag = INS
@@ -13378,17 +13336,13 @@ country_event = { #invite from CHI
 						has_game_rule = { rule = BRM_forpol option = BRM_FORPOL_CHN }
 					}
 					AND = {
-						tag = HAW
-						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_CHN }
-					}
-					AND = {
 						tag = HND
 						has_game_rule = { rule = HND_forpol option = HND_FORPOL_CHN }
 						NOT = { has_government = radical_socialist } #The Radsocs in HND are isolationists
 					}
 					AND = {
-						tag = INC
-						has_game_rule = { rule = INC_forpol option = INC_FORPOL_CHN }
+						tag = VIN
+						has_game_rule = { rule = VIN_forpol option = VIN_FORPOL_CHN }
 					}
 					AND = {
 						tag = INS
@@ -15200,6 +15154,7 @@ country_event = { #Talks with Chinese Monarchists
 				hidden_effect = {
 					clear_potential_national_government = yes
 				}
+				set_global_flag = QIE_manchu_restoration
 				set_cosmetic_tag = united_china_qing
 				set_politics = {
 					ruling_party = social_conservative

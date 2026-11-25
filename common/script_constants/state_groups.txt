@@ -128,7 +128,7 @@ state_groups = {
 		518 #Tasmania
 		519 #South Australia
 		520 #Northern Territory
-		521 #Southern Queensland
+		521 #South Queensland
 		522 #Western Australia
 		523 #SE. New Guinea
 		539 #Gabon
@@ -265,7 +265,7 @@ state_groups = {
 		984 #Pyrenees
 		985 #Canberra
 		986 #North Queensland
-		987 #Kimberly
+		987 #Kimberley
 		988 #Pilbara
 		999 #Kedah
 		1002 #Pahang
@@ -940,7 +940,7 @@ state_groups = {
 		600 #Ganzhou
 		601 #Xikang
 		602 #Changsha
-		603 #Zunyi
+		603 #Guiyang
 		604 #Babao
 		605 #Chengdu
 		606 #Anqing
@@ -994,7 +994,7 @@ state_groups = {
 		1048 #Wuhan
 		1049 #Shihe
 		1050 #Bengbu
-		1051 #Guiyang
+		1051 #Anshun
 		1052 #Kaili
 		1054 #Tiannan
 		1055 #Liuzhou
@@ -1188,8 +1188,9 @@ state_groups = {
 	### NOT = {
 	###		state = 311 #Belize
 	###		state = 316 #Costa Rica
-	###		state = 304 #Panama
+	###		state = 304 #Eastern Panama
 	###		state = 685 #Panama Canal
+	###		state = 1126 #Western Panama
 	###	}
 	###
 	central_american_states = {
@@ -1385,7 +1386,7 @@ state_groups = {
 		518 #Tasmania
 		519 #South Australia
 		520 #Northern Territory
-		521 #Southern Queensland
+		521 #South Queensland
 		522 #Western Australia
 		523 #SE. New Guinea
 		524 #Taiwan
@@ -1441,7 +1442,7 @@ state_groups = {
 		600 #Ganzhou
 		601 #Xikang
 		602 #Changsha
-		603 #Zunyi
+		603 #Guiyang
 		604 #Babao
 		605 #Chengdu
 		606 #Anqing
@@ -1585,7 +1586,7 @@ state_groups = {
 		972 #Aru Islands
 		985 #Canberra
 		986 #North Queensland
-		987 #Kimberly
+		987 #Kimberley
 		988 #Pilbara
 		996 #Barga
 		999 #Kedah
@@ -1611,7 +1612,7 @@ state_groups = {
 		1048 #Wuhan
 		1049 #Shihe
 		1050 #Bengbu
-		1051 #Guiyang
+		1051 #Anshun
 		1052 #Kaili
 		1054 #Baise
 		1055 #Liuzhou
@@ -1699,7 +1700,7 @@ state_groups = {
 		600 #Ganzhou
 		601 #Chuanbian
 		602 #Changsha
-		603 #Zunyi
+		603 #Guiyang
 		604 #Babao
 		605 #Chengdu
 		606 #Anqing
@@ -1768,7 +1769,7 @@ state_groups = {
 		1048 #Wuhan
 		1049 #Shihe
 		1050 #Bengbu
-		1051 #Guiyang
+		1051 #Anshun
 		1052 #Kaili
 		1054 #Baise
 		1055 #Liuzhou
@@ -2058,7 +2059,7 @@ state_groups = {
 		600 #Ganzhou
 		601 #Xikang
 		602 #Changsha
-		603 #Zunyi
+		603 #Guiyang
 		604 #Babao
 		605 #Chengdu
 		606 #Anqing
@@ -2120,7 +2121,7 @@ state_groups = {
 		1048 #Wuhan
 		1049 #Shihe
 		1050 #Bengbu
-		1051 #Guiyang
+		1051 #Anshun
 		1052 #Kaili
 		1054 #Tiannan
 		1055 #Liuzhou
